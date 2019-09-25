@@ -1,0 +1,71 @@
+\documentclass[runningheads]{llncs}
+
+%%% Local Variables:
+%%% ispell-local-dictionary: "english"
+%%% End:
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs} % For formal tables
+\usepackage{graphicx}
+
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+
+<<setup, cache=FALSE,echo=FALSE>>=
+library(ggplot2)
+library(ggthemes)
+@
+
+\title{}
+ \author{A\inst{1}
+ \and
+ B\inst{1}
+ \and
+ C\inst{1}
+ \and
+ D\inst{1}
+}
+
+	 \institute{%
+   University Z\\
+   \email{an@ema.il}}\\
+}
+
+%\authorrunning{Merelo et al.}
+%\titlerunning{Exploring concurrent and stateless EAs}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+\keywords{Concurrent algorithms, distributed computing, stateless algorithms,
+algorithm implementation, performance evaluation.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+\section{State of the art}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experimental setup and results}
+\label{sec:res}
+
+
+\section{Conclusions and discussion}
+\label{sec:conclusions}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Acknowledgements}
+
+%   This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P) and AMED (co-funded by European Regional Development Fund and the region Normandy).
+
+Acks\\
+Taking\\
+This much space
+
+\bibliographystyle{splncs04}
+\bibliography{geneura,concurrent,perl6}
+
+\end{document}
