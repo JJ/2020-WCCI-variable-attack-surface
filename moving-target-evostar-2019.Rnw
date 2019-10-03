@@ -48,7 +48,13 @@ The {\em moving target defense} consists in changing the profile or signature of
 \section{Introduction}
 Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense} \cite{jajodia2011moving}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
+
+Some authors propose using evolutionary-based optimization techniques to improve detection of SQL injection attacks and anomalies within HTTP requests \cite{CHORAS2018179}.
+while others \cite{Kozik2014} focus on detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting) at the application layer by modeling HTTP requests with the use of regular expressions.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimental setup and results}
