@@ -40,13 +40,13 @@ library(ggthemes)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
+The {\em moving target defense} consists in changing the profile or signature of certain services in an Internet node so that an attacker is not able to identify it uniquely, or find specific angles of attack for it. From an optimization point of view, generating profiles that change and, besides, optimize security is a combinatorial optimization problem where different service configurations are generated and evaluated, seeking the optimum. In this paper we will use an evolutionary algorithm to generate different server profiles that also minimize the risk of being attacked. Working on the well-known web server {\tt nginx}, we will prove that this evolutionary algorithm is able to generate a sufficient amount of different profiles in time for them to be deployed in the server. The system has been released as free software, as is the best practice in security tools.
 \end{abstract}
-\keywords{Concurrent algorithms, distributed computing, stateless algorithms,
-algorithm implementation, performance evaluation.}
+\keywords{Security, cyberattacks, performance evaluation.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-
+Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense}
 \section{State of the art}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
