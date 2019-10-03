@@ -46,7 +46,8 @@ The {\em moving target defense} consists in changing the profile or signature of
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense}
+Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense} \cite{jajodia2011moving}
+
 \section{State of the art}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,6 +70,6 @@ Taking\\
 This much space
 
 \bibliographystyle{splncs04}
-\bibliography{geneura,concurrent,perl6}
+\bibliography{geneura,moving-target}
 
 \end{document}
