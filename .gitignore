@@ -248,3 +248,5 @@ volunteer-wasm.tex
 
 # We're using knitr
 *.tex
+
+.Rhistory
