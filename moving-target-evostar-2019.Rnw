@@ -55,6 +55,8 @@ Many different techniques are used to deflect cyberattacks, that is, attempts to
 Bioinspired metaheuristics have been often used in the area of cybersecurity; for instance, some authors have proposed using evolutionary-based optimization techniques to improve detection of SQL injection attacks and anomalies within HTTP requests \cite{CHORAS2018179}.
 while others \cite{Kozik2014} focus on detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting) at the application layer by modeling HTTP requests with the use of regular expressions.
 
+\bigskip
+Moving target defense has many applications in the field of cybersecurity. For example, in hardware systems, such as the Morpheus processor that is able to change its internal configuration every 50 milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a technique like this would have prevented the Spectre vulnerability suffered by Intel processors that exploited failures in the speculative execution feature.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimental setup and results}
