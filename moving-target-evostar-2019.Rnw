@@ -48,6 +48,21 @@ The {\em moving target defense} from cyberattacks consists in changing the profi
 \section{Introduction}
 Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense} \cite{jajodia2011moving}
 
+Protection against cybersecurity threats can be implemented by a proper software configuration without the need to invest in costly security solutions.
+
+Many vulnerabilities can be caused by misconfiguration or an inadequate combination of parameters. In addition, a given service can have practically infinite possible configurations, some being less functional and/or vulnerable than others.
+
+Also, to improve the mechanism of protection against cyberattacks, the attacker can be fooled by a continuous change in the configuration of a given service, so meanwhile an attacker is fingerprinting your service to discover vulnerabilities the genetic algorithm will have changed the configuration so the attacker can't define an attack based on the knowed vulnerabilities.
+
+Finding these correct configurations, as well as similar fully functional configurations, can be a complex task if it is done manually so ideally would be to find a way to generate such configurations in an automatic way.
+
+Genetic algorithms, which is a search heuristic, can be used to discover new, secure and diverse configurations by modeling a given configuration as if they were chromosomes and the different individual configuration options as if they were genes \cite{john_evolutionary_2014}. The main idea of genetic algorithms is that by mutation, crossing and selection of these chromosomes we get better configurations. These mutations are randomly incorporated, which provides diversity.
+
+To quantify the security of a given configuration we can use software analyzers like OWASP ZAP. This software...
+
+%Explain ZAP
+%Explain CVSS score
+%Explain additional concepts, such as entropy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
