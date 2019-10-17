@@ -17,7 +17,7 @@ library(ggplot2)
 library(ggthemes)
 @
 
-\title{}
+\title{Using evolutionary algorithms for server hardening via the moving target defense technique}
 
  \author{A\inst{1}
  \and
@@ -34,7 +34,7 @@ library(ggthemes)
 }
 
 %\authorrunning{Merelo et al.}
-%\titlerunning{Exploring concurrent and stateless EAs}
+%\titlerunning{Using evolutionary algorithms for server hardening via the moving target defense technique}
 
 \maketitle
 
