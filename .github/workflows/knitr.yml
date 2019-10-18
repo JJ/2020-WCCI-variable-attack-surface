@@ -12,5 +12,5 @@ jobs:
     - name: Install knitr
       run: |
         sudo apt-get update
-        sudo apt-get install -y r-cran-knitr
+        sudo apt-get install -y --no-install-recommends r-cran-knitr texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-bibtex-extra
         /usr/lib/R/site-library/knitr/bin/knit moving-target-evostar-2019.Rnw -o paper.pdf
