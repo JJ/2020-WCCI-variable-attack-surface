@@ -25,12 +25,15 @@ library(ggthemes)
  \and
  C\inst{1}
  \and
- D\inst{1}
+ D\inst{2}
 }
 
 \institute{%
    University Z\\
    \email{an@ema.il}
+\and
+   University Y\\
+   \email{another@ema.il}
 }
 
 %\authorrunning{Merelo et al.}
