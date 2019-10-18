@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install knitr
       run: |
-        apt update
-        apt install -y r-cran-knitr
+        sudo apt-get update
+        sudo apt-get install -y r-cran-knitr
         /usr/lib/R/site-library/knitr/bin/knit moving-target-evostar-2019.Rnw -o paper.pdf
