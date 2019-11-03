@@ -61,10 +61,14 @@ Finding these correct configurations, as well as similar fully functional config
 
 Genetic algorithms, which is a search heuristic, can be used to discover new, secure and diverse configurations by modeling a given configuration as if they were chromosomes and the different individual configuration options as if they were genes \cite{john_evolutionary_2014}. The main idea of genetic algorithms is that by mutation, crossing and selection of these chromosomes we get better configurations. These mutations are randomly incorporated, which provides diversity.
 
-To quantify the security of a given configuration we can use software analyzers like OWASP ZAP. This software...
+To quantify the security of a given configuration we can use tools like ZAP. 
 
-%Explain ZAP
-%Explain CVSS score
+ZAP is an open-source web application security analysis tool software developed by OWASP. It is one of the most active OWASP projects. Basically ZAP spider and analyzes a specified site for security vulnerabilities to give a scalar value based on CVSS score.
+
+The `Common Vulnerability Scoring System' or CVSS is an open standard to measure computer security vulnerabilities. Scores range from 0 to 10, with 10 being the most severe.
+
+For testing the security of our web server we used another open-source OWASP project called Juice-Shop that consists in a vulnerable e-commerce platform written in Node.js, Express and Angular.
+
 %Explain additional concepts, such as entropy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
