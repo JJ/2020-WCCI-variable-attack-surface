@@ -51,23 +51,23 @@ The {\em moving target defense} from cyberattacks consists in changing the profi
 \section{Introduction}
 Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense} \cite{jajodia2011moving}
 
-Protection against cybersecurity threats can be implemented by a proper software configuration without the need to invest in costly security solutions.
+Protection against cybersecurity threats can be implemented by a proper software configuration without the need to invest in costly security solutions. In order to achieve an optimal configuration, an objective score must be used to measure security or its inverse, vulnerabilities \cite{yang2012security}: The `Common Vulnerability Scoring System' or CVSS \cite{cvss} is an open standard to measure computer and network security vulnerabilities. Scores range from 0 to 10, with 10 being the most severe. In order to protect properly a system, we need to optimize this score so that it reaches zero, without compromising any kind of functionality.
 
 Many vulnerabilities can be caused by misconfiguration or an inadequate combination of parameters. In addition, a given service can have practically infinite possible configurations, some being less functional and/or vulnerable than others.
 
-Also, to improve the mechanism of protection against cyberattacks, the attacker can be fooled by a continuous change in the configuration of a given service, so meanwhile an attacker is fingerprinting your service to discover vulnerabilities the genetic algorithm will have changed the configuration so the attacker can't define an attack based on the knowed vulnerabilities.
+Also, to improve the mechanism of protection against cyberattacks, the attacker can be fooled by a continuous change in the configuration of a given service, so meanwhile an attacker is fingerprinting your service to discover vulnerabilities the genetic algorithm will have changed the configuration so the attacker can't define an attack based on the known vulnerabilities.
 
-Finding these correct configurations, as well as similar fully functional configurations, can be a complex task if it is done manually so ideally would be to find a way to generate such configurations in an automatic way.
+Finding these correct configurations, as well as similar and fully functional configurations, can be a complex task if it is done manually so ideally we would need to find a way to generate such configurations in an automatic way, using some search heuristic. % You need to make paragraphs follow each other - JJ
 
 Genetic algorithms, which is a search heuristic, can be used to discover new, secure and diverse configurations by modeling a given configuration as if they were chromosomes and the different individual configuration options as if they were genes \cite{john_evolutionary_2014}. The main idea of genetic algorithms is that by mutation, crossing and selection of these chromosomes we get better configurations. These mutations are randomly incorporated, which provides diversity.
 
-To quantify the security of a given configuration we can use tools like ZAP. 
+While CVSS is an abstract way to score security, we first need to decide on a system for which security is going to be optimized and, second, on a tool that will be able to automatically acompute CVSS. For the former we will use an open-source OWASP project called Juice-Shop \cite{luburic2019utilizing,juice-shop} that consists in a vulnerable e-commerce platform written in Node.js, Express and Angular. % Say something about this: this is a typical application, which is complex enough, and so on and so forth - JJ
 
-ZAP is an open-source web application security analysis tool software developed by OWASP. It is one of the most active OWASP projects. Basically ZAP spider and analyzes a specified site for security vulnerabilities to give a scalar value based on CVSS score.
+For the latter, that is, to quantify the security of a given configuration we can use tools like ZAP \cite{bennetts2013owasp}. ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
 
-The `Common Vulnerability Scoring System' or CVSS is an open standard to measure computer security vulnerabilities. Scores range from 0 to 10, with 10 being the most severe.
 
-For testing the security of our web server we used another open-source OWASP project called Juice-Shop that consists in a vulnerable e-commerce platform written in Node.js, Express and Angular.
+
+
 
 %Explain additional concepts, such as entropy.
 
