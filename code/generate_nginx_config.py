@@ -91,7 +91,7 @@ def generate(config=generate_random_config()):
                 EmptyBlock(add_header=['Server:', set_directive_list(config[12], ['apache', 'caddy', 'nginx/1.16.0'])]),
                 root='/usr/share/nginx/html',
                 index='index.html index.htm',
-                proxy_pass='http://juice-shop:3000',
+                # proxy_pass='http://juice-shop:3000',
             ),
             server_name='www.exampletfm.com',
             listen=80,

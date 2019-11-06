@@ -5,10 +5,6 @@
 version: '3.5'
 services:
 
-  juice-shop:
-    image: bkimminich/juice-shop
-
-
   www.exampletfm.com:
     build: .
     depends_on:
