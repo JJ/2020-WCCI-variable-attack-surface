@@ -1,0 +1,542 @@
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+genes: 15
+individuals : 16
+pressure: 5
+mutation_chance: 0
+generations: 15
+crossover_type: 1
+mutation_type_random: 0
+Alerts:
+14
+Alerts:
+11
+Alerts:
+14
+Alerts:
+11
+Alerts:
+11
+Alerts:
+14
+Alerts:
+14
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+14
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+14
+Alerts:
+14
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+Alerts:
+11
+
+Población de 16 individuos durante 15 generaciones
+Población inicial:
+[(999, [1938, 87, 0, 1, 0, 636, 1485, 0, 1, 3, 3, 0, 0, 1, 1]),
+ (999, [1845, 36, 0, 1, 1, 876, 1958, 0, 1, 3, 4, 1, 2, 0, 1]),
+ (999, [1751, 26, 1, 0, 0, 1235, 1444, 0, 0, 3, 4, 1, 2, 1, 0]),
+ (999, [1619, 44, 1, 1, 1, 1051, 1677, 0, 0, 1, 5, 1, 0, 1, 1]),
+ (999, [1165, 89, 0, 1, 1, 1204, 2016, 1, 1, 3, 4, 1, 1, 1, 2]),
+ (999, [1141, 119, 1, 0, 0, 1777, 1017, 0, 1, 3, 3, 0, 0, 2, 1]),
+ (999, [969, 95, 1, 1, 1, 731, 1128, 1, 0, 0, 5, 1, 0, 0, 2]),
+ (14, [1962, 37, 0, 1, 0, 1644, 1741, 0, 1, 2, 4, 1, 2, 0, 2]),
+ (14, [1566, 105, 1, 0, 0, 1047, 1021, 0, 1, 0, 4, 1, 1, 0, 0]),
+ (14, [1147, 97, 1, 0, 1, 1120, 1200, 1, 0, 2, 0, 1, 0, 0, 0]),
+ (14, [515, 16, 1, 1, 0, 1658, 729, 1, 1, 1, 3, 1, 2, 2, 0]),
+ (11, [1739, 16, 0, 1, 1, 732, 1350, 0, 0, 1, 1, 0, 1, 2, 1]),
+ (11, [1105, 41, -1, 0, 0, 856, 762, 0, 1, 1, 3, 0, 1, 2, 0]),
+ (11, [1078, 36, 0, 0, 0, 1887, 997, 1, 1, 0, 0, 0, 2, 0, 0]),
+ (11, [686, 111, 1, 1, 0, 1449, 896, 2, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [527, 30, 0, 1, 0, 1579, 1348, 0, 1, 2, 3, 0, 2, 0, 2])]
+Población final:
+[(11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 1, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 1, 2, 3, 0, 1, 2, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 2, 2, 3, 0, 1, 2, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 1, 2, 3, 0, 1, 2, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 1, 2, 3, 0, 1, 2, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 1, 2, 3, 0, 1, 2, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 1, 2, 3, 0, 1, 1, 0]),
+ (11, [525, 29, 0, -1, 0, 731, 1350, -1, 1, 2, 3, 0, 1, 1, 0])]
+Elapsed time is 1920.536473 seconds.
