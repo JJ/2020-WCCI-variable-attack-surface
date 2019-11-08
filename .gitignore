@@ -383,3 +383,4 @@ venv.bak/
 .texpadtmp
 *.tpbuild
 wordcount
+.Rproj.user

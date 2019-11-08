@@ -84,6 +84,44 @@ Moving target defense has many applications in the field of cybersecurity. For e
 \section{Experimental setup and results}
 \label{sec:res}
 
+The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening.
+
+\begin{table}
+\begin{tabular}{|l|}
+\hline
+\textbf{Directive name} \\ \hline
+worker\_connections            \\ \hline
+keepalive\_timeout             \\ \hline
+disable\_symlinks              \\ \hline
+autoindex                      \\ \hline
+send\_timeout                  \\ \hline
+large\_client\_header\_buffers \\ \hline
+client\_max\_body\_size        \\ \hline
+server\_tokens                 \\ \hline
+gzip                           \\ \hline
+\end{tabular}
+\label{table:nginx_directives}
+\caption{NGINX directive list}
+\end{table}
+
+And the HTTP headers are the next ones:
+
+\begin{table}
+\begin{tabular}{|l|}
+\hline
+\textbf{Header name}           \\ \hline
+X-Frame-Options                \\ \hline
+X-Powered-By                   \\ \hline
+X-Content-Type-Options         \\ \hline
+Server                         \\ \hline
+X-XSS-Protection	           \\ \hline
+Content-Security-Policy		   \\ \hline
+
+\end{tabular}
+\label{table:http_headers}
+\caption{HTTP header list}
+\end{table}
+
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
