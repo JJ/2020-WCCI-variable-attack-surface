@@ -5,20 +5,29 @@
 version: '3.5'
 services:
 
+  juice-shop:
+    image: bkimminich/juice-shop
+
   www.exampletfm.com:
     build: .
     depends_on:
       - zap
+      - juice-shop
     volumes:
       # We link the local files to easily modify the running code for tests
-      - ./zap.py:/tester/zap.py:ro
-      - ./fitness.py:/tester/fitness.py:ro
-      - ./generate_nginx_config.py:/tester/generate_nginx_config.py:ro
-      - ./genetic.py:/tester/genetic.py:ro
-      - ./run.sh:/tester/run.sh:ro
+      - ./zap.py:/tester/zap.py
+      - ./fitness.py:/tester/fitness.py
+      - ./generate_nginx_config.py:/tester/generate_nginx_config.py
+      - ./genetic.py:/tester/genetic.py
+      - ./docker.py:/tester/docker.py
+      - ./run.sh:/tester/run.sh
       - ./results/:/tester/results/
+      - ./cgroup/:/sys/fs/cgroup/:rw
+
+    # ports:
+    #   - "80:80"
 
   zap:
     image: owasp/zap2docker-bare
+    # image: owasp/zap2docker-weekly
     command: zap.sh -daemon -port 8080 -host 0.0.0.0 -config api.disablekey=true -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true
-
