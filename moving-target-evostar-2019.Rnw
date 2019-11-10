@@ -59,14 +59,24 @@ Also, to improve the mechanism of protection against cyberattacks, the attacker 
 
 Finding these correct configurations, as well as similar and fully functional configurations, can be a complex task if it is done manually so ideally we would need to find a way to generate such configurations in an automatic way, using some search heuristic. % You need to make paragraphs follow each other - JJ
 
-Genetic algorithms, which is a search heuristic, can be used to discover new, secure and diverse configurations by modeling a given configuration as if they were chromosomes and the different individual configuration options as if they were genes \cite{john_evolutionary_2014}. The main idea of genetic algorithms is that by mutation, crossing and selection of these chromosomes we get better configurations. These mutations are randomly incorporated, which provides diversity.
+A genetic algorithm, which is a search heuristic, can be used to
+discover new, secure and diverse configurations by modeling a given
+configuration as if they were chromosomes and the different individual
+configuration options as if they were genes
+\cite{john_evolutionary_2014}. The main idea of genetic algorithms is
+that by mutation, crossing and selection of these chromosomes we get
+better configurations. These mutations are randomly incorporated,
+which provides diversity. 
 
 While CVSS is an abstract way to score security, we first need to decide on a system for which security is going to be optimized and, second, on a tool that will be able to automatically acompute CVSS. For the former we will use an open-source OWASP project called Juice-Shop \cite{luburic2019utilizing,juice-shop} that consists in a vulnerable e-commerce platform written in Node.js, Express and Angular. % Say something about this: this is a typical application, which is complex enough, and so on and so forth - JJ
 
 For the latter, that is, to quantify the security of a given configuration we can use tools like ZAP \cite{bennetts2013owasp}. ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
 
 
-
+The rest of the paper is organized as follows: next we present a brief
+state of the art in the subject of moving target defense. The
+methodology and results is presented in Section \ref{sec:res},
+followed by our conclusions.
 
 
 %Explain additional concepts, such as entropy.
@@ -81,7 +91,7 @@ while others \cite{Kozik2014} focus on detecting SQLIA (SQL Injection Attacks) a
 Moving target defense has many applications in the field of cybersecurity. For example, in hardware systems, such as the Morpheus processor that is able to change its internal configuration every 50 milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a technique like this would have prevented the Spectre vulnerability suffered by Intel processors that exploited failures in the speculative execution feature.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experimental setup and results}
+\section{Methodology, experimental setup and results}
 \label{sec:res}
 
 The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening.
