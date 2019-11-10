@@ -1,0 +1,8 @@
+genes: 15
+individuals : 64
+pressure: 5
+mutation_chance: 0
+generations: 15
+crossover_type: 1
+mutation_type_random: 0
+Alerts:
