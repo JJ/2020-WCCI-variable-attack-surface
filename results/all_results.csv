@@ -1,174 +1,174 @@
 Web, Population, Crossover, Mutation, Fitness
-Juice Shop, 64, 2, random, 11
-Juice Shop, 16, 1, one, 11
+Static, 64, 2, random, 11
+Static, 16, 1, one, 11
 Juice Shop, 32, 2, one, 6
 Juice Shop, 32, 2, one, 12
-Juice Shop, 16, 2, one, 11
-Juice Shop, 64, 1, random, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 16, 2, one, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 32, 2, one, 11
+Static, 16, 2, one, 11
+Static, 64, 1, random, 11
+Static, 32, 2, one, 11
+Static, 16, 2, one, 11
+Static, 32, 2, one, 11
+Static, 16, 1, one, 11
+Static, 32, 2, one, 11
 Juice Shop, 16, 2, one, 12
-Juice Shop, 64, 1, one, 11
-Juice Shop, 32, 1, one, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 32, 1, one, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 16, 2, random, 11
+Static, 64, 1, one, 11
+Static, 32, 1, one, 11
+Static, 32, 2, one, 11
+Static, 32, 1, one, 11
+Static, 16, 2, random, 11
+Static, 16, 2, random, 11
 Juice Shop, 32, 2, random, 12
 Juice Shop, 32, 1, random, 12
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 2, one, 11
-Juice Shop, 16, 1, random, 11
+Static, 16, 1, random, 11
+Static, 16, 2, one, 11
+Static, 16, 1, random, 11
 Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 2, one, 11
-Juice Shop, 32, 2, random, 11
+Static, 32, 2, one, 11
+Static, 32, 2, random, 11
 Juice Shop, 32, 1, random, 12
-Juice Shop, 16, 2, one, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 2, random, 11
+Static, 16, 2, one, 11
+Static, 16, 1, random, 11
+Static, 16, 2, random, 11
 Juice Shop, 16, 1, random, 12
-Juice Shop, 16, 2, one, 11
-Juice Shop, 32, 2, random, 11
+Static, 16, 2, one, 11
+Static, 32, 2, random, 11
 Juice Shop, 32, 2, random, 6
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 2, one, 11
+Static, 16, 1, one, 11
+Static, 16, 2, one, 11
 Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 16, 1, one, 11
+Static, 16, 1, one, 11
+Static, 16, 1, one, 11
+Static, 16, 1, one, 11
+Static, 32, 2, one, 11
+Static, 16, 1, one, 11
+Static, 16, 1, random, 11
+Static, 16, 2, random, 11
+Static, 16, 1, one, 11
 Juice Shop, 32, 1, one, 6
-Juice Shop, 16, 2, random, 11
-Juice Shop, 32, 1, one, 11
-Juice Shop, 32, 1, one, 11
+Static, 16, 2, random, 11
+Static, 32, 1, one, 11
+Static, 32, 1, one, 11
 Juice Shop, 16, 2, one, 12
-Juice Shop, 32, 2, random, 11
+Static, 32, 2, random, 11
 Juice Shop, 32, 1, random, 3
-Juice Shop, 16, 1, random, 11
+Static, 16, 1, random, 11
 Juice Shop, 32, 1, one, 12
-Juice Shop, 32, 1, random, 11
+Static, 32, 1, random, 11
 Juice Shop, 32, 1, one, 12
 Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 2, random, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 32, 2, one, 11
+Static, 32, 2, random, 11
+Static, 16, 2, random, 11
+Static, 32, 2, one, 11
 Juice Shop, 32, 2, one, 12
-Juice Shop, 16, 2, one, 11
-Juice Shop, 16, 1, random, 11
+Static, 16, 2, one, 11
+Static, 16, 1, random, 11
 Juice Shop, 32, 1, random, 12
-Juice Shop, 32, 2, one, 11
+Static, 32, 2, one, 11
 Juice Shop, 16, 1, random, 6
 Juice Shop, 32, 2, one, 6
-Juice Shop, 16, 1, random, 11
-Juice Shop, 32, 2, random, 11
+Static, 16, 1, random, 11
+Static, 32, 2, random, 11
 Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 1, one, 11
+Static, 32, 1, one, 11
 Juice Shop, 16, 2, one, 12
-Juice Shop, 32, 1, random, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 32, 1, random, 11
-Juice Shop, 32, 2, random, 11
+Static, 32, 1, random, 11
+Static, 16, 2, random, 11
+Static, 32, 1, random, 11
+Static, 32, 2, random, 11
 Juice Shop, 16, 2, random, 12
-Juice Shop, 32, 1, random, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 32, 1, random, 11
-Juice Shop, 32, 1, random, 11
+Static, 32, 1, random, 11
+Static, 16, 1, random, 11
+Static, 32, 1, random, 11
+Static, 32, 1, random, 11
 Juice Shop, 32, 2, one, 12
-Juice Shop, 32, 1, random, 11
-Juice Shop, 16, 2, one, 11
+Static, 32, 1, random, 11
+Static, 16, 2, one, 11
 Juice Shop, 16, 2, random, 12
-Juice Shop, 32, 1, random, 11
-Juice Shop, 64, 1, random, 3
+Static, 32, 1, random, 11
+Static, 64, 1, random, 3
 Juice Shop, 16, 1, random, 12
-Juice Shop, 32, 2, one, 11
+Static, 32, 2, one, 11
 Juice Shop, 16, 2, one, 12
-Juice Shop, 32, 1, one, 11
+Static, 32, 1, one, 11
 Juice Shop, 16, 1, random, 12
 Juice Shop, 32, 2, random, 6
-Juice Shop, 32, 2, random, 11
-Juice Shop, 32, 2, random, 11
-Juice Shop, 64, 2, one, 11
-Juice Shop, 32, 1, random, 11
-Juice Shop, 16, 2, one, 11
+Static, 32, 2, random, 11
+Static, 32, 2, random, 11
+Static, 64, 2, one, 11
+Static, 32, 1, random, 11
+Static, 16, 2, one, 11
 Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 2, random, 11
-Juice Shop, 64, 1, random, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 32, 1, random, 11
-Juice Shop, 64, 2, random, 11
-Juice Shop, 32, 2, random, 11
+Static, 16, 2, random, 11
+Static, 64, 1, random, 11
+Static, 32, 2, one, 11
+Static, 32, 1, random, 11
+Static, 64, 2, random, 11
+Static, 32, 2, random, 11
 Juice Shop, 16, 1, one, 12
 Juice Shop, 16, 2, random, 12
 Juice Shop, 16, 2, one, 12
-Juice Shop, 32, 1, one, 11
-Juice Shop, 64, 1, one, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 32, 1, one, 11
+Static, 32, 1, one, 11
+Static, 64, 1, one, 11
+Static, 32, 2, one, 11
+Static, 32, 1, one, 11
 Juice Shop, 16, 1, one, 12
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 32, 2, one, 11
-Juice Shop, 16, 2, random, 11
+Static, 16, 1, random, 11
+Static, 16, 1, random, 11
+Static, 16, 1, one, 11
+Static, 32, 2, one, 11
+Static, 16, 2, random, 11
 Juice Shop, 32, 2, random, 12
 Juice Shop, 32, 1, one, 12
-Juice Shop, 16, 2, random, 11
-Juice Shop, 32, 2, random, 11
-Juice Shop, 32, 1, one, 11
+Static, 16, 2, random, 11
+Static, 32, 2, random, 11
+Static, 32, 1, one, 11
 Juice Shop, 16, 2, one, 12
 Juice Shop, 16, 1, random, 12
-Juice Shop, 32, 2, random, 11
-Juice Shop, 32, 2, random, 11
-Juice Shop, 32, 1, one, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 32, 1, one, 11
+Static, 32, 2, random, 11
+Static, 32, 2, random, 11
+Static, 32, 1, one, 11
+Static, 16, 1, random, 11
+Static, 16, 2, random, 11
+Static, 16, 2, random, 11
+Static, 32, 1, one, 11
 Juice Shop, 32, 1, random, 12
 Juice Shop, 32, 2, random, 6
 Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 2, one, 11
+Static, 32, 2, one, 11
 Juice Shop, 16, 2, one, 12
-Juice Shop, 32, 2, random, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 1, random, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 2, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 32, 1, random, 3
+Static, 32, 2, random, 11
+Static, 16, 1, random, 11
+Static, 16, 1, random, 11
+Static, 16, 1, one, 11
+Static, 16, 1, one, 11
+Static, 16, 2, one, 11
+Static, 16, 1, one, 11
+Static, 32, 1, random, 3
 Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 2, one, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 32, 2, random, 11
-Juice Shop, 32, 1, one, 11
-Juice Shop, 16, 2, one, 11
-Juice Shop, 32, 1, random, 11
+Static, 16, 1, one, 11
+Static, 16, 2, one, 11
+Static, 16, 1, one, 11
+Static, 32, 2, random, 11
+Static, 32, 1, one, 11
+Static, 16, 2, one, 11
+Static, 32, 1, random, 11
 Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 2, one, 11
-Juice Shop, 32, 1, one, 11
-Juice Shop, 64, 2, one, 11
-Juice Shop, 16, 2, one, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 16, 1, random, 3
+Static, 16, 2, one, 11
+Static, 32, 1, one, 11
+Static, 64, 2, one, 11
+Static, 16, 2, one, 11
+Static, 16, 2, random, 11
+Static, 16, 1, random, 3
 Juice Shop, 32, 1, random, 12
-Juice Shop, 32, 1, random, 11
-Juice Shop, 16, 1, random, 11
+Static, 32, 1, random, 11
+Static, 16, 1, random, 11
 Juice Shop, 16, 1, random, 12
-Juice Shop, 32, 1, random, 11
-Juice Shop, 16, 2, random, 11
-Juice Shop, 16, 1, one, 11
-Juice Shop, 16, 2, random, 11
+Static, 32, 1, random, 11
+Static, 16, 2, random, 11
+Static, 16, 1, one, 11
+Static, 16, 2, random, 11
 Juice Shop, 32, 1, one, 12
 Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 1, one, 11
+Static, 32, 1, one, 11
 Juice Shop, 16, 1, random, 3
-Juice Shop, 16, 2, one, 11
+Static, 16, 2, one, 11

@@ -18,6 +18,6 @@ for @files -> $f {
         exit(1);
     }
     my @fitnesses = ( @final-pop[1] ~~ m:g/"("(\d+)/ ).map( *[0].Int );
-    say $juice??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  @fitnesses.sort.first;
+    say ( $juice ne '' )??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  @fitnesses.sort.first;
     
 }
