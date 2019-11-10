@@ -6,6 +6,7 @@ my $prefix = $*ARGS[0] || "results_";
 
 my @files = dir( ".", test => { /^^$prefix/ } );
 
+say "Web, Population, Crossover, Mutation, Fitness";
 for @files -> $f {
     my $match = ($f ~~ /$<juice> = ["juice"?] "_" $<population> = [\d+] "_" $<crossover> = [\d] "_" $<mutation> = [\w+] "_" $<rank> = [\d+] / );
     my ($juice, $population, $crossover, $mutation) =
