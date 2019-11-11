@@ -4,9 +4,7 @@ pressure: 5
 mutation_chance: 0
 generations: 15
 crossover_type: 1
-mutation_type_random: 0
-
-Población de 32 individuos durante 15 generaciones
+mutation_type_random: 0Población de 32 individuos durante 15 generaciones
 Población inicial:
 [(999, [1844, 104, 0, 0, 0, 679, 697, 1, 0, 3, 5, 0, 2, 1, 2]),
  (999, [1816, 91, 0, 1, 0, 597, 877, 0, 0, 3, 4, 0, 1, 0, 2]),
