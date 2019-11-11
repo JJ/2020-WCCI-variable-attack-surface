@@ -72,14 +72,14 @@ While CVSS is an abstract way to score security, we first need to decide on a sy
 
 For the latter, that is, to quantify the security of a given configuration we can use tools like ZAP \cite{bennetts2013owasp}. ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
 
+Our moving target defense approach relies on the diversity of each generated configuration to improve the security of the our system. This is based on the entropy of our random generated and mutated values, but this random configuration can be wrong or vulnerable so we test that configuration and by the genetic algorithm evolve that configuration to get a good one.
+The same process is be applied to the resulting configurations to improve the security through generation, but as we more evolve the configuration we get a much more secure system but we lose diversity. We need to balance security and diversity depending on our system.
 
 The rest of the paper is organized as follows: next we present a brief
 state of the art in the subject of moving target defense. The
 methodology and results is presented in Section \ref{sec:res},
 followed by our conclusions.
 
-
-%Explain additional concepts, such as entropy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
