@@ -98,9 +98,7 @@ The genetic algorithm works generating a population of n individuals. Each indiv
 
 The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening.
 
-After generating the population we calculate the fitness of that population using Zap that gives a scalar value with the number of known vulnerabilities a configuration has.
-
-After getting the fitness values of all population we sort it and get the p (pressure) values that we will evolve during 15 generations.
+After generating the population we calculate the fitness of that population using Zap that gives a scalar value with the number of known vulnerabilities a configuration has, we sort the population list in reverser order to set the better ones at the end of the list and get the p (pressure) values that we will evolve during 15 generations.
 
 For evolving the configuration we are using a crossover in one point and crossover in two-point functions.
 
@@ -111,19 +109,17 @@ For the fitness function, we are using the ZAP Python API calling a container wi
 
 The ZAP Python API will give the mentioned scalar value depending on the number of known vulnerabilities of that configuration.
 
-We ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM.
-
-Each instance run a different set of experiments of 16, 32 and 64 population size. To orquestate the instances we used a simple Ansible playbook.
+We ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM. Each instance run a different set of experiments of 16, 32 and 64 population size. To orquestate the instances we used a simple Ansible playbook.
 
 We run 15 times the next experiments for each 16, 32 and 65 population size:
 
 
-```
-python3 genetic.py --individuals ${POPULATION_SIZE} --crossover-one-point --random-mutation
-python3 genetic.py --individuals ${POPULATION_SIZE} --crossover-one-point --no-random-mutation
-python3 genetic.py --individuals ${POPULATION_SIZE} --crossover-two-points --random-mutation
-python3 genetic.py --individuals ${POPULATION_SIZE} --crossover-two-points --no-random-mutation  
-```
+\begin{verbatim}
+python3 genetic.py --individuals POPULATION_SIZE --crossover-one-point --random-mutation
+python3 genetic.py --individuals POPULATION_SIZE --crossover-one-point --no-random-mutation
+python3 genetic.py --individuals POPULATION_SIZE --crossover-two-points --random-mutation
+python3 genetic.py --individuals POPULATION_SIZE --crossover-two-points --no-random-mutation  
+\end{verbatim}
 
 
 \begin{table}
