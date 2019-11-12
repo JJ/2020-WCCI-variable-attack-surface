@@ -9,6 +9,7 @@
 
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 %\SweaveOpts{concordance=TRUE}
 %\SweaveOpts{concordance=TRUE}
 
@@ -75,7 +76,7 @@ which provides diversity.
 
 While CVSS is an abstract way to score security, we first need to decide on a system for which security is going to be optimized and, second, on a tool that will be able to automatically acompute CVSS. For the former we will use an open-source OWASP project called Juice-Shop \cite{luburic2019utilizing,juice-shop} that consists in a vulnerable e-commerce platform written in Node.js, Express and Angular. % Say something about this: this is a typical application, which is complex enough, and so on and so forth - JJ
 
-For the latter, that is, to quantify the security of a given configuration we can use tools like ZAP \cite{bennetts2013owasp}. ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
+For the latter, that is, to quantify the security of a given configuration we can use tools like OWASP ZAP \cite{bennetts2013owasp}. OWASP ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
 
 Our moving target defense approach relies on the diversity of each generated configuration to improve the security of our system. This is based on the entropy of our random generated and mutated values but this random configuration can be wrong or vulnerable so we test that configuration and by the genetic algorithm evolve that configuration to get a good one.
 The same process is be applied to the resulting configurations to improve the security through generation, but as we more evolve the configuration we get a much more secure system but we lose diversity. We need to balance security and diversity depending on our system.
@@ -121,7 +122,7 @@ The genetic algorithm works generating a population of $n$ individuals. Each ind
 The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening.
 
 After generating the population we calculate the fitness of that
-population using Zap, which gives a scalar value with the number of
+population using OWASP ZAP, which gives a scalar value with the number of
 known vulnerabilities a configuration has, we sort the population list
 in reverser order to set the better ones at the end of the list and
 get the $p$ (pressure) values that we will evolve during 15
@@ -133,9 +134,9 @@ and crossover in two-point functions.
 Also, we are mutating the population with a chance of 0.4 using two different methods, changing random gen with a random correct value or increasing/decreasing random gen.
 After the mutation, we calculate the fitness of the new element, sort the population and run again the algorithm until no more generations left.
 
-For the fitness function, we are using the ZAP Python API calling a container with the Docker version of OWASP ZAP simulating a real environment using the example.com domain and the generated configuration.
+For the fitness function, we are using the OWASP ZAP Python API calling a container with the Docker version of OWASP ZAP simulating a real environment using the example.com domain and the generated configuration.
 
-The ZAP Python API will give the mentioned scalar value depending on the number of known vulnerabilities of that configuration.
+The OWASP ZAP Python API will give the mentioned scalar value depending on the number of known vulnerabilities of that configuration.
 
 We ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM. Each instance run a different set of experiments of 16, 32 and 64 population size. To orquestate the instances we used a simple Ansible playbook.
 
@@ -192,7 +193,7 @@ Content-Security-Policy		   & default-src 'self', default-src 'none', default-sr
 <<results-static,cache=FALSE,echo=FALSE>>=
 ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
 @
-\caption{Scatter plot for ZAP scores for every experiment using the
+\caption{Scatter plot for OWASP ZAP scores for every experiment using the
   static web site }
 \label{fig:zap:static}
 \end{figure*}
@@ -202,7 +203,7 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 <<results-juice-shop,cache=FALSE,echo=FALSE>>=
 ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
 @
-\caption{Scatter plot for ZAP scores for every experiment with the
+\caption{Scatter plot for OWASP ZAP scores for every experiment with the
   Juice Shop site }
 \label{fig:zap:static}
 \end{figure*}
