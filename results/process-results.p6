@@ -6,7 +6,7 @@ my $prefix = $*ARGS[0] || "results_";
 
 my @files = dir( ".", test => { /^^$prefix/ } );
 
-say "Web, Population, Crossover, Mutation, Fitness";
+say "Web, Population, Crossover, Mutation, Fitness, Copies";
 for @files -> $f {
     my $match = ($f ~~ /$<juice> = ["juice"?] "_" $<population> = [\d+] "_" $<crossover> = [\d] "_" $<mutation> = [\w+] "_" $<rank> = [\d+] / );
     my ($juice, $population, $crossover, $mutation) =
@@ -18,6 +18,8 @@ for @files -> $f {
         exit(1);
     }
     my @fitnesses = ( @final-pop[1] ~~ m:g/"("(\d+)/ ).map( *[0].Int );
-    say ( $juice ne '' )??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  @fitnesses.sort.first;
+    my $best = @fitnesses.sort.first;
+    my @best = @fitnesses.grep: * == $best;
+    say ( $juice ne '' )??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  $best, ", ",  @best.elems/@fitnesses.elems;
     
 }

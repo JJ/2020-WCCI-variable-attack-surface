@@ -1,226 +1,226 @@
-Web, Population, Crossover, Mutation, Fitness
-Static, 64, 2, random, 11
-Static, 16, 1, one, 11
-Juice Shop, 32, 2, one, 6
-Juice Shop, 16, 2, one, 12
-Juice Shop, 32, 2, one, 12
-Static, 16, 2, one, 11
-Static, 64, 1, random, 11
-Static, 32, 2, one, 11
-Juice Shop, 16, 1, one, 12
-Static, 16, 2, one, 11
-Static, 32, 2, one, 11
-Static, 16, 1, one, 11
-Juice Shop, 32, 2, random, 6
-Static, 32, 2, one, 11
-Juice Shop, 16, 2, one, 12
-Static, 64, 1, one, 11
-Juice Shop, 32, 1, one, 12
-Juice Shop, 16, 1, random, 12
-Static, 32, 1, one, 11
-Static, 32, 2, one, 11
-Static, 32, 1, one, 11
-Static, 16, 2, random, 11
-Juice Shop, 32, 1, one, 12
-Juice Shop, 16, 2, one, 12
-Static, 16, 2, random, 11
-Juice Shop, 32, 2, random, 12
-Juice Shop, 32, 1, random, 12
-Juice Shop, 32, 2, one, 12
-Juice Shop, 16, 2, random, 12
-Static, 16, 1, random, 11
-Static, 16, 2, one, 11
-Static, 16, 1, random, 11
-Juice Shop, 16, 1, one, 12
-Static, 32, 2, one, 11
-Static, 32, 2, random, 11
-Juice Shop, 32, 1, random, 12
-Static, 16, 2, one, 11
-Static, 16, 1, random, 11
-Static, 16, 2, random, 11
-Juice Shop, 16, 1, random, 12
-Static, 16, 2, one, 11
-Static, 32, 2, random, 11
-Juice Shop, 16, 1, random, 12
-Juice Shop, 32, 2, random, 6
-Static, 16, 1, one, 11
-Static, 16, 2, one, 11
-Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 1, random, 12
-Static, 16, 1, one, 11
-Static, 16, 1, one, 11
-Static, 16, 1, one, 11
-Static, 32, 2, one, 11
-Static, 16, 1, one, 11
-Static, 16, 1, random, 11
-Static, 16, 2, random, 11
-Static, 16, 1, one, 11
-Juice Shop, 32, 1, one, 6
-Static, 16, 2, random, 11
-Static, 32, 1, one, 11
-Static, 32, 1, one, 11
-Juice Shop, 16, 2, one, 12
-Static, 32, 2, random, 11
-Juice Shop, 32, 1, random, 3
-Static, 16, 1, random, 11
-Juice Shop, 32, 1, one, 12
-Static, 32, 1, random, 11
-Juice Shop, 32, 1, one, 12
-Juice Shop, 16, 1, one, 12
-Static, 32, 2, random, 11
-Static, 16, 2, random, 11
-Juice Shop, 16, 2, random, 12
-Static, 32, 2, one, 11
-Juice Shop, 32, 2, one, 12
-Static, 16, 2, one, 11
-Juice Shop, 16, 1, random, 12
-Static, 16, 1, random, 11
-Juice Shop, 32, 2, random, 12
-Juice Shop, 32, 1, random, 12
-Static, 32, 2, one, 11
-Juice Shop, 16, 1, random, 6
-Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 2, one, 6
-Static, 16, 1, random, 11
-Static, 32, 2, random, 11
-Juice Shop, 16, 1, one, 12
-Static, 32, 1, one, 11
-Juice Shop, 32, 1, one, 12
-Juice Shop, 16, 2, one, 12
-Static, 32, 1, random, 11
-Static, 32, 2, random, 11
-Juice Shop, 16, 1, one, 12
-Static, 16, 2, random, 11
-Static, 32, 1, random, 11
-Static, 32, 2, random, 11
-Juice Shop, 16, 2, random, 6
-Juice Shop, 16, 2, random, 12
-Static, 32, 1, random, 11
-Static, 16, 1, random, 11
-Static, 32, 1, random, 11
-Static, 32, 1, random, 11
-Juice Shop, 32, 2, one, 12
-Static, 32, 1, random, 11
-Juice Shop, 16, 2, one, 12
-Static, 16, 2, one, 11
-Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 2, random, 12
-Static, 32, 1, random, 11
-Static, 64, 1, random, 3
-Juice Shop, 16, 1, random, 12
-Static, 32, 2, one, 11
-Juice Shop, 16, 2, one, 12
-Static, 32, 1, one, 11
-Juice Shop, 16, 1, random, 12
-Juice Shop, 32, 2, random, 6
-Static, 32, 2, random, 11
-Static, 32, 2, random, 11
-Static, 64, 2, one, 11
-Static, 32, 1, random, 11
-Static, 16, 2, one, 11
-Juice Shop, 16, 2, random, 12
-Static, 16, 2, random, 11
-Static, 64, 1, random, 11
-Static, 32, 2, one, 11
-Static, 32, 1, random, 11
-Juice Shop, 16, 1, random, 12
-Static, 32, 1, one, 11
-Juice Shop, 32, 1, random, 6
-Juice Shop, 16, 2, one, 12
-Static, 64, 2, random, 11
-Static, 32, 2, random, 11
-Juice Shop, 16, 1, one, 12
-Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 2, one, 12
-Static, 32, 1, one, 11
-Static, 64, 1, one, 11
-Static, 32, 2, one, 11
-Static, 32, 1, one, 11
-Juice Shop, 16, 1, one, 12
-Juice Shop, 16, 1, one, 12
-Static, 16, 1, random, 11
-Static, 16, 1, random, 11
-Static, 16, 1, one, 11
-Static, 32, 2, one, 11
-Static, 16, 2, random, 11
-Juice Shop, 32, 2, random, 12
-Juice Shop, 32, 1, one, 12
-Static, 16, 2, random, 11
-Static, 32, 2, random, 11
-Static, 32, 1, one, 11
-Juice Shop, 16, 2, one, 12
-Juice Shop, 16, 2, one, 12
-Juice Shop, 16, 1, random, 12
-Static, 32, 2, one, 11
-Static, 32, 2, random, 11
-Static, 32, 2, random, 11
-Static, 32, 1, one, 11
-Juice Shop, 32, 2, random, 12
-Static, 16, 1, random, 11
-Juice Shop, 32, 2, one, 6
-Static, 16, 2, random, 11
-Juice Shop, 16, 1, one, 12
-Juice Shop, 16, 2, one, 12
-Static, 16, 2, random, 11
-Static, 32, 1, one, 11
-Juice Shop, 16, 1, one, 12
-Juice Shop, 32, 1, random, 12
-Juice Shop, 32, 2, random, 6
-Juice Shop, 16, 1, one, 12
-Static, 32, 2, one, 11
-Juice Shop, 16, 2, one, 12
-Static, 32, 2, random, 11
-Static, 16, 1, random, 11
-Juice Shop, 16, 1, random, 12
-Static, 16, 1, random, 11
-Static, 16, 1, one, 11
-Static, 16, 1, one, 11
-Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 2, one, 12
-Static, 16, 2, one, 11
-Static, 16, 1, one, 11
-Static, 32, 1, random, 3
-Juice Shop, 16, 2, random, 12
-Static, 16, 1, one, 11
-Static, 16, 2, one, 11
-Static, 16, 1, one, 11
-Static, 32, 2, random, 11
-Static, 32, 1, one, 11
-Static, 16, 2, one, 11
-Juice Shop, 16, 1, random, 6
-Static, 32, 1, random, 11
-Juice Shop, 16, 2, random, 12
-Static, 16, 2, one, 11
-Juice Shop, 16, 2, one, 12
-Static, 32, 1, one, 11
-Static, 64, 2, one, 11
-Juice Shop, 32, 2, one, 12
-Static, 16, 2, one, 11
-Static, 16, 2, random, 11
-Static, 16, 1, random, 3
-Juice Shop, 32, 1, random, 12
-Static, 32, 1, random, 11
-Static, 32, 1, random, 11
-Static, 16, 1, random, 11
-Juice Shop, 16, 1, random, 12
-Static, 32, 1, random, 11
-Juice Shop, 16, 1, one, 12
-Static, 16, 2, random, 11
-Static, 16, 1, one, 11
-Juice Shop, 16, 1, random, 12
-Static, 16, 2, random, 11
-Juice Shop, 32, 1, one, 12
-Juice Shop, 32, 2, random, 12
-Juice Shop, 16, 2, random, 12
-Juice Shop, 16, 1, one, 12
-Juice Shop, 16, 1, one, 12
-Juice Shop, 16, 2, random, 12
-Static, 32, 1, one, 11
-Juice Shop, 32, 2, one, 6
-Static, 32, 2, one, 11
-Juice Shop, 16, 2, random, 12
-Juice Shop, 32, 1, random, 12
-Juice Shop, 32, 1, one, 12
-Juice Shop, 16, 1, random, 3
-Static, 16, 2, one, 11
-Juice Shop, 32, 1, random, 12
+Web, Population, Crossover, Mutation, Fitness, Copies
+Static, 64, 2, random, 11, 1
+Static, 16, 1, one, 11, 1
+Juice Shop, 32, 2, one, 6, 0.03125
+Juice Shop, 16, 2, one, 12, 0.75
+Juice Shop, 32, 2, one, 12, 0.96875
+Static, 16, 2, one, 11, 0.875
+Static, 64, 1, random, 11, 1
+Static, 32, 2, one, 11, 1
+Juice Shop, 16, 1, one, 12, 0.6875
+Static, 16, 2, one, 11, 0.8125
+Static, 32, 2, one, 11, 1
+Static, 16, 1, one, 11, 1
+Juice Shop, 32, 2, random, 6, 0.03125
+Static, 32, 2, one, 11, 0.84375
+Juice Shop, 16, 2, one, 12, 0.625
+Static, 64, 1, one, 11, 0.59375
+Juice Shop, 32, 1, one, 12, 0.875
+Juice Shop, 16, 1, random, 12, 0.5
+Static, 32, 1, one, 11, 1
+Static, 32, 2, one, 11, 1
+Static, 32, 1, one, 11, 0.84375
+Static, 16, 2, random, 11, 1
+Juice Shop, 32, 1, one, 12, 0.75
+Juice Shop, 16, 2, one, 12, 0.5
+Static, 16, 2, random, 11, 1
+Juice Shop, 32, 2, random, 12, 0.875
+Juice Shop, 32, 1, random, 12, 0.875
+Juice Shop, 32, 2, one, 12, 0.8125
+Juice Shop, 16, 2, random, 12, 0.625
+Static, 16, 1, random, 11, 1
+Static, 16, 2, one, 11, 1
+Static, 16, 1, random, 11, 1
+Juice Shop, 16, 1, one, 12, 0.6875
+Static, 32, 2, one, 11, 1
+Static, 32, 2, random, 11, 1
+Juice Shop, 32, 1, random, 12, 0.90625
+Static, 16, 2, one, 11, 0.625
+Static, 16, 1, random, 11, 1
+Static, 16, 2, random, 11, 1
+Juice Shop, 16, 1, random, 12, 0.6875
+Static, 16, 2, one, 11, 1
+Static, 32, 2, random, 11, 1
+Juice Shop, 16, 1, random, 12, 0.5625
+Juice Shop, 32, 2, random, 6, 0.03125
+Static, 16, 1, one, 11, 1
+Static, 16, 2, one, 11, 1
+Juice Shop, 16, 2, random, 12, 0.4375
+Juice Shop, 16, 1, random, 12, 0.8125
+Static, 16, 1, one, 11, 1
+Static, 16, 1, one, 11, 1
+Static, 16, 1, one, 11, 0.875
+Static, 32, 2, one, 11, 1
+Static, 16, 1, one, 11, 1
+Static, 16, 1, random, 11, 1
+Static, 16, 2, random, 11, 1
+Static, 16, 1, one, 11, 1
+Juice Shop, 32, 1, one, 6, 0.0625
+Static, 16, 2, random, 11, 1
+Static, 32, 1, one, 11, 1
+Static, 32, 1, one, 11, 1
+Juice Shop, 16, 2, one, 12, 0.625
+Static, 32, 2, random, 11, 1
+Juice Shop, 32, 1, random, 3, 0.03125
+Static, 16, 1, random, 11, 1
+Juice Shop, 32, 1, one, 12, 0.84375
+Static, 32, 1, random, 11, 1
+Juice Shop, 32, 1, one, 12, 0.65625
+Juice Shop, 16, 1, one, 12, 0.625
+Static, 32, 2, random, 11, 1
+Static, 16, 2, random, 11, 1
+Juice Shop, 16, 2, random, 12, 0.6875
+Static, 32, 2, one, 11, 1
+Juice Shop, 32, 2, one, 12, 0.90625
+Static, 16, 2, one, 11, 1
+Juice Shop, 16, 1, random, 12, 0.6875
+Static, 16, 1, random, 11, 1
+Juice Shop, 32, 2, random, 12, 0.84375
+Juice Shop, 32, 1, random, 12, 0.9375
+Static, 32, 2, one, 11, 0.65625
+Juice Shop, 16, 1, random, 6, 0.0625
+Juice Shop, 16, 1, one, 12, 0.375
+Juice Shop, 32, 2, one, 6, 0.03125
+Static, 16, 1, random, 11, 1
+Static, 32, 2, random, 11, 1
+Juice Shop, 16, 1, one, 12, 0.5
+Static, 32, 1, one, 11, 0.78125
+Juice Shop, 32, 1, one, 12, 0.84375
+Juice Shop, 16, 2, one, 12, 0.875
+Static, 32, 1, random, 11, 1
+Static, 32, 2, random, 11, 1
+Juice Shop, 16, 1, one, 12, 0.75
+Static, 16, 2, random, 11, 1
+Static, 32, 1, random, 11, 1
+Static, 32, 2, random, 11, 1
+Juice Shop, 16, 2, random, 6, 0.0625
+Juice Shop, 16, 2, random, 12, 0.625
+Static, 32, 1, random, 11, 1
+Static, 16, 1, random, 11, 1
+Static, 32, 1, random, 11, 1
+Static, 32, 1, random, 11, 1
+Juice Shop, 32, 2, one, 12, 0.90625
+Static, 32, 1, random, 11, 1
+Juice Shop, 16, 2, one, 12, 0.75
+Static, 16, 2, one, 11, 1
+Juice Shop, 16, 2, random, 12, 0.5625
+Juice Shop, 16, 2, random, 12, 0.625
+Static, 32, 1, random, 11, 1
+Static, 64, 1, random, 3, 0.015625
+Juice Shop, 16, 1, random, 12, 0.625
+Static, 32, 2, one, 11, 1
+Juice Shop, 16, 2, one, 12, 0.875
+Static, 32, 1, one, 11, 1
+Juice Shop, 16, 1, random, 12, 0.625
+Juice Shop, 32, 2, random, 6, 0.03125
+Static, 32, 2, random, 11, 1
+Static, 32, 2, random, 11, 1
+Static, 64, 2, one, 11, 1
+Static, 32, 1, random, 11, 1
+Static, 16, 2, one, 11, 0.9375
+Juice Shop, 16, 2, random, 12, 0.625
+Static, 16, 2, random, 11, 1
+Static, 64, 1, random, 11, 1
+Static, 32, 2, one, 11, 1
+Static, 32, 1, random, 11, 1
+Juice Shop, 16, 1, random, 12, 0.4375
+Static, 32, 1, one, 11, 1
+Juice Shop, 32, 1, random, 6, 0.03125
+Juice Shop, 16, 2, one, 12, 0.5625
+Static, 64, 2, random, 11, 1
+Static, 32, 2, random, 11, 1
+Juice Shop, 16, 1, one, 12, 0.6875
+Juice Shop, 16, 2, random, 12, 0.5
+Juice Shop, 16, 2, one, 12, 0.5625
+Static, 32, 1, one, 11, 1
+Static, 64, 1, one, 11, 1
+Static, 32, 2, one, 11, 1
+Static, 32, 1, one, 11, 1
+Juice Shop, 16, 1, one, 12, 0.4375
+Juice Shop, 16, 1, one, 12, 0.6875
+Static, 16, 1, random, 11, 1
+Static, 16, 1, random, 11, 1
+Static, 16, 1, one, 11, 1
+Static, 32, 2, one, 11, 1
+Static, 16, 2, random, 11, 1
+Juice Shop, 32, 2, random, 12, 0.90625
+Juice Shop, 32, 1, one, 12, 0.78125
+Static, 16, 2, random, 11, 1
+Static, 32, 2, random, 11, 1
+Static, 32, 1, one, 11, 1
+Juice Shop, 16, 2, one, 12, 0.6875
+Juice Shop, 16, 2, one, 12, 0.6875
+Juice Shop, 16, 1, random, 12, 0.75
+Static, 32, 2, one, 11, 1
+Static, 32, 2, random, 11, 1
+Static, 32, 2, random, 11, 1
+Static, 32, 1, one, 11, 1
+Juice Shop, 32, 2, random, 12, 0.84375
+Static, 16, 1, random, 11, 1
+Juice Shop, 32, 2, one, 6, 0.03125
+Static, 16, 2, random, 11, 1
+Juice Shop, 16, 1, one, 12, 0.625
+Juice Shop, 16, 2, one, 12, 0.625
+Static, 16, 2, random, 11, 1
+Static, 32, 1, one, 11, 1
+Juice Shop, 16, 1, one, 12, 0.625
+Juice Shop, 32, 1, random, 12, 0.84375
+Juice Shop, 32, 2, random, 6, 0.03125
+Juice Shop, 16, 1, one, 12, 0.875
+Static, 32, 2, one, 11, 1
+Juice Shop, 16, 2, one, 12, 0.6875
+Static, 32, 2, random, 11, 1
+Static, 16, 1, random, 11, 1
+Juice Shop, 16, 1, random, 12, 0.5
+Static, 16, 1, random, 11, 1
+Static, 16, 1, one, 11, 0.8125
+Static, 16, 1, one, 11, 1
+Juice Shop, 16, 2, random, 12, 0.75
+Juice Shop, 16, 2, one, 12, 0.6875
+Static, 16, 2, one, 11, 0.9375
+Static, 16, 1, one, 11, 1
+Static, 32, 1, random, 3, 0.03125
+Juice Shop, 16, 2, random, 12, 0.5
+Static, 16, 1, one, 11, 0.875
+Static, 16, 2, one, 11, 0.875
+Static, 16, 1, one, 11, 1
+Static, 32, 2, random, 11, 1
+Static, 32, 1, one, 11, 1
+Static, 16, 2, one, 11, 1
+Juice Shop, 16, 1, random, 6, 0.0625
+Static, 32, 1, random, 11, 1
+Juice Shop, 16, 2, random, 12, 0.8125
+Static, 16, 2, one, 11, 1
+Juice Shop, 16, 2, one, 12, 0.875
+Static, 32, 1, one, 11, 1
+Static, 64, 2, one, 11, 0.828125
+Juice Shop, 32, 2, one, 12, 0.84375
+Static, 16, 2, one, 11, 1
+Static, 16, 2, random, 11, 1
+Static, 16, 1, random, 3, 0.0625
+Juice Shop, 32, 1, random, 12, 0.9375
+Static, 32, 1, random, 11, 1
+Static, 32, 1, random, 11, 1
+Static, 16, 1, random, 11, 1
+Juice Shop, 16, 1, random, 12, 0.5
+Static, 32, 1, random, 11, 1
+Juice Shop, 16, 1, one, 12, 0.6875
+Static, 16, 2, random, 11, 1
+Static, 16, 1, one, 11, 1
+Juice Shop, 16, 1, random, 12, 0.8125
+Static, 16, 2, random, 11, 1
+Juice Shop, 32, 1, one, 12, 0.71875
+Juice Shop, 32, 2, random, 12, 0.84375
+Juice Shop, 16, 2, random, 12, 0.8125
+Juice Shop, 16, 1, one, 12, 0.4375
+Juice Shop, 16, 1, one, 12, 0.6875
+Juice Shop, 16, 2, random, 12, 0.75
+Static, 32, 1, one, 11, 0.625
+Juice Shop, 32, 2, one, 6, 0.0625
+Static, 32, 2, one, 11, 1
+Juice Shop, 16, 2, random, 12, 0.75
+Juice Shop, 32, 1, random, 12, 0.84375
+Juice Shop, 32, 1, one, 12, 0.84375
+Juice Shop, 16, 1, random, 3, 0.125
+Static, 16, 2, one, 11, 1
+Juice Shop, 32, 1, random, 12, 0.84375
