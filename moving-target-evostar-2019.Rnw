@@ -89,23 +89,40 @@ followed by our conclusions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
 
-Bioinspired metaheuristics have been often used in the area of cybersecurity; for instance, some authors have proposed using evolutionary-based optimization techniques to improve detection of SQL injection attacks and anomalies within HTTP requests \cite{CHORAS2018179}.
-while others \cite{Kozik2014} focus on detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting) at the application layer by modeling HTTP requests with the use of regular expressions.
+Bioinspired metaheuristics have been often used in the area of
+cybersecurity; for instance, some authors have proposed using
+evolutionary-based optimization techniques to improve detection of SQL
+injection attacks and anomalies within HTTP requests
+\cite{CHORAS2018179}; other authors \cite{Kozik2014} focus on
+detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting)
+at the application layer by modeling HTTP requests with the use of
+regular expressions. 
 
-\bigskip
-Moving target defense has many applications in the field of cybersecurity. For example, in hardware systems, such as the Morpheus processor that is able to change its internal configuration every 50 milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a technique like this would have prevented the Spectre vulnerability suffered by Intel processors that exploited failures in the speculative execution feature.
+Moving target defense has many applications in the field of
+cybersecurity. For example, in hardware systems, such as the Morpheus
+processor that is able to change its internal configuration every 50
+milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a
+technique like this would have prevented the Spectre vulnerability
+suffered by Intel processors that exploited failures in the
+speculative execution feature. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
 \label{sec:res}
 
-The genetic algorithm works generating a population of n individuals. Each individual is a chromosome of 15 gens and each gen refers to an Nginx directive or an HTTP security header. 
+The genetic algorithm works generating a population of $n$ individuals. Each individual is a chromosome of 15 gens and each gen refers to an Nginx directive or an HTTP security header. 
 
 The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening.
 
-After generating the population we calculate the fitness of that population using Zap that gives a scalar value with the number of known vulnerabilities a configuration has, we sort the population list in reverser order to set the better ones at the end of the list and get the p (pressure) values that we will evolve during 15 generations.
+After generating the population we calculate the fitness of that
+population using Zap, which gives a scalar value with the number of
+known vulnerabilities a configuration has, we sort the population list
+in reverser order to set the better ones at the end of the list and
+get the $p$ (pressure) values that we will evolve during 15
+generations. 
 
-For evolving the configuration we are using a crossover in one point and crossover in two-point functions.
+For evolving the configuration we are using a crossover in one point
+and crossover in two-point functions.
 
 Also, we are mutating the population with a chance of 0.4 using two different methods, changing random gen with a random correct value or increasing/decreasing random gen.
 After the mutation, we calculate the fitness of the new element, sort the population and run again the algorithm until no more generations left.
