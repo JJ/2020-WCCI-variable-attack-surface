@@ -141,7 +141,7 @@ The OWASP ZAP Python API will give the mentioned scalar value depending on the n
 
 OWASP ZAP is a heavy-weight process taking so much time to analyze each experiment so we ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM. Each instance runs a different set of experiments of 16, 32 and 64 population size. To orchestrate the instances we used a simple Ansible playbook.
 
-For the 16 individuals population size the experiment took an average of 35 minutes, taking 80 minutes in the 32 individuals population size and 180 minutes for the 64 individuals population size. That's why we run each population size in a different machine. The running time of all instances was 266 hours, equivalent to 11 days of total processing time having a total cost of \$11.07.
+For the 16 individuals population size the experiment took an average of 35 minutes, taking 80 minutes in the 32 individuals population size and 180 minutes for the 64 individuals population size. This times are the reason of running each population size in different EC2 instances. The running time of all instances was 266 hours equivalent to 11 days of total processing time having a total cost of \$11.07.
 
 We will run 15 times the experiments for each 16, 32 and 65 population size, trying the different crossover functions and the different mutation methods to know which one is giving better results. As we said previously, we are searching for a balance between diversity and secure configurations to apply in the final server. 
 
