@@ -9,12 +9,17 @@
 
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+%\SweaveOpts{concordance=TRUE}
 %\SweaveOpts{concordance=TRUE}
 
 <<setup, cache=FALSE,echo=FALSE>>=
 library(ggplot2)
 library(ggthemes)
+data <- read.csv("results/all_results.csv")
+data$Crossover <- as.factor(data$Crossover)
+data$Population <- as.factor(data$Population)
+data.web <- data[data$Web == "Static",]
+data.juice <- data[data$Web == "Juice Shop",]
 @
 
 \title{Using evolutionary algorithms for server hardening via the moving target defense technique}
@@ -157,7 +162,27 @@ Content-Security-Policy		   & default-src 'self', default-src 'none', default-sr
 \label{table:http_headers}
 \caption{HTTP header list}
 \end{table}
-
+%
+%
+\begin{figure*}[h!tb]
+  \centering
+<<results-static,cache=FALSE,echo=FALSE>>=
+ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
+@
+\caption{Scatter plot for ZAP scores for every experiment using the
+  static web site }
+\label{fig:zap:static}
+\end{figure*}
+%
+\begin{figure*}[h!tb]
+  \centering
+<<results-juice-shop,cache=FALSE,echo=FALSE>>=
+ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
+@
+\caption{Scatter plot for ZAP scores for every experiment with the
+  Juice Shop site }
+\label{fig:zap:static}
+\end{figure*}
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
