@@ -138,10 +138,11 @@ For the fitness function, we are using the OWASP ZAP Python API calling a contai
 
 The OWASP ZAP Python API will give the mentioned scalar value depending on the number of known vulnerabilities of that configuration.
 
-We ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM. Each instance run a different set of experiments of 16, 32 and 64 population size. To orquestate the instances we used a simple Ansible playbook.
+OWASP ZAP is a heavy-weight process taking so much time to analyze each experiment so we ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM. Each instance runs a different set of experiments of 16, 32 and 64 population size. To orchestrate the instances we used a simple Ansible playbook.
+
+For the 16 individuals population size the experiment took an average of 35 minutes, taking 80 minutes in the 32 individuals population size and 180 minutes for the 64 individuals population size. That's why we run each population size in a different machine. The running time of all instances was 266 hours, equivalent to 11 days of total processing time having a total cost of \$11.07.
 
 We run 15 times the next experiments for each 16, 32 and 65 population size:
-
 
 \begin{verbatim}
 python3 genetic.py --individuals POPULATION_SIZE --crossover-one-point --random-mutation
