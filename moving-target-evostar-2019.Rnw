@@ -104,7 +104,13 @@ processor that is able to change its internal configuration every 50
 milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a
 technique like this would have prevented the Spectre vulnerability
 suffered by Intel processors that exploited failures in the
-speculative execution feature. 
+speculative execution feature. This type of defense was approached
+using evolutionary algorithms for the first time by John et
+al. \cite{john_evolutionary_2014}. More recently, Buji et al. in
+\cite{buji_genetic_2019} % Add something here - JJ
+, but also applied to reconfiguration of
+software defined networks by Champagne et al. in
+\cite{champagne_genetic_2018}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
