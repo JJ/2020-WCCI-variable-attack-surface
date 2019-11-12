@@ -74,7 +74,7 @@ that by mutation, crossing and selection of these chromosomes we get
 better configurations. These mutations are randomly incorporated,
 which provides diversity. 
 
-While CVSS is an abstract way to score security, we first need to decide on a system for which security is going to be optimized and, second, on a tool that will be able to automatically acompute CVSS. For the former we will use an open-source OWASP project called Juice-Shop \cite{luburic2019utilizing,juice-shop} that consists in a vulnerable e-commerce platform written in Node.js, Express and Angular. % Say something about this: this is a typical application, which is complex enough, and so on and so forth - JJ
+While CVSS is an abstract way to score security, we first need to decide on a system for which security is going to be optimized and, second, on a tool that will be able to automatically compute CVSS. For the former, we will use an open-source OWASP project called Juice-Shop \cite{luburic2019utilizing,juice-shop} that consists in a vulnerable e-commerce platform written in Node.js, Express, and Angular. This is one of the most typical web application configurations, being more complex than a simple welcome webpage and more similar to a real environment
 
 For the latter, that is, to quantify the security of a given configuration we can use tools like OWASP ZAP \cite{bennetts2013owasp}. OWASP ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
 
@@ -117,6 +117,8 @@ software defined networks by Champagne et al. in
 \section{Methodology, experimental setup and results}
 \label{sec:res}
 
+We choose the Python programming language due to the availability of the OWASP ZAP API in that language. In addition, although this project does not require high performance, several publications indicate a very good performance of the Python language when working with genetic algorithms \cite{merelo-guervos_comparison_2016}.
+
 The genetic algorithm works generating a population of $n$ individuals. Each individual is a chromosome of 15 gens and each gen refers to an Nginx directive or an HTTP security header. 
 
 The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening.
@@ -128,13 +130,12 @@ in reverser order to set the better ones at the end of the list and
 get the $p$ (pressure) values that we will evolve during 15
 generations. 
 
-For evolving the configuration we are using a crossover in one point
-and crossover in two-point functions.
+For evolving the configuration we written two different crossover functions. A crossover in one-point and a crossover in two-point functions. We will run the experiments for each function to know which one gives better results \cite{LNCS2439:ID186:pp142}.
 
-Also, we are mutating the population with a chance of 0.4 using two different methods, changing random gen with a random correct value or increasing/decreasing random gen.
+Also, we are mutating the population with a chance of 0.4 using two different mutation methods. One changing random gen with a random correct value or increasing/decreasing random gen.
 After the mutation, we calculate the fitness of the new element, sort the population and run again the algorithm until no more generations left.
 
-For the fitness function, we are using the OWASP ZAP Python API calling a container with the Docker version of OWASP ZAP simulating a real environment using the example.com domain and the generated configuration.
+For the fitness function, we are using the OWASP ZAP Python API calling a container with the Docker version of OWASP ZAP simulating a real environment using the example.com domain and the generated configuration. 
 
 The OWASP ZAP Python API will give the mentioned scalar value depending on the number of known vulnerabilities of that configuration.
 
@@ -142,7 +143,9 @@ OWASP ZAP is a heavy-weight process taking so much time to analyze each experime
 
 For the 16 individuals population size the experiment took an average of 35 minutes, taking 80 minutes in the 32 individuals population size and 180 minutes for the 64 individuals population size. That's why we run each population size in a different machine. The running time of all instances was 266 hours, equivalent to 11 days of total processing time having a total cost of \$11.07.
 
-We run 15 times the next experiments for each 16, 32 and 65 population size:
+We will run 15 times the experiments for each 16, 32 and 65 population size, trying the different crossover functions and the different mutation methods to know which one is giving better results. As we said previously, we are searching for a balance between diversity and secure configurations to apply in the final server. 
+
+The experiment commands are the next ones:
 
 \begin{verbatim}
 python3 genetic.py --individuals POPULATION_SIZE --crossover-one-point --random-mutation
