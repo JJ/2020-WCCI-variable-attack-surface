@@ -67,6 +67,7 @@ practice in security tools.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+
 Many different techniques are used to deflect cyberattacks, that is,
 attempts to gain access to certain assets through running code
 remotely; these techniques include hardening of services, as well as
@@ -78,7 +79,14 @@ attack surface, more difficult \cite{zhuang2014towards}. This kind of
 defense was initially proposed by the Federal Networking and Information Technology Research and
 Development (NITRD) Program for the first time in 2009
 \cite{moving-target}, and since then it has spawned all kind of
-methodologies and software tools to carry it out in practice.
+methodologies and software tools to carry it out in practice. The
+effectivity of this defense technique is variable and will depend on
+the kind of attack \cite{evans2011effectiveness}, but at any rate it
+is a valuable addition to the set of tools that are used against
+cyberattacks nowadays; besides, it can be applied to several different
+services, every one with a different mechanism \cite{Cai2016}, which
+makes it a versatile, active defense methodology, appliable at many
+levels and in many different ways.
 
 This kind of protection against cybersecurity threats can be implemented by a
 proper software configuration without the need to invest in costly
@@ -177,6 +185,32 @@ followed by our conclusions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
 
+% 1. What is moving target defense.
+% 2. Bioinspired techniques in cybersecurity.
+% 3. Moving target defense as solved by other algorithms, and
+% eventually evolutionary (or other) algorithms - JJ
+
+The so-called moving target defense, or MTD, was proposed by the first
+time in 2009 \cite{moving-target} as part of an officially sponsored
+research program to improve the cyber-capabilities of American
+companies and organisms. The NITRD proposed different axes of research
+that included models of MTD mechanisms, assessing the problems and
+opportunities of randomization of service configuration and profiles,
+and creating automatic policies that are able to reduce or eliminate
+human intervention in the enforcement of this kind of defense. This
+MTD is targeted towards making what is called the attack surface \cite{manadhata2011formal}, that
+is, the different mechanisms by which the attacker would be able to
+gain access, unpredictable \cite{jajodia2011moving}, and thus either
+too expensive or too complex to pursue. An attacker, in this case,
+will probably try and pursue different targets, thus reducing security
+costs for the defender.
+
+
+
+
+
+
+% 2. 
 Bioinspired metaheuristics have been often used in the area of
 cybersecurity; for instance, some authors have proposed using
 evolutionary-based optimization techniques to improve detection of SQL
@@ -186,16 +220,21 @@ detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting)
 at the application layer by modeling HTTP requests with the use of
 regular expressions. 
 
+
+% 3.
+
 Moving target defense has many applications in the field of
 cybersecurity. For example, in hardware systems, such as the Morpheus
 processor that is able to change its internal configuration every 50
 milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a
 technique like this would have prevented the Spectre vulnerability
 suffered by Intel processors that exploited failures in the
-speculative execution feature. This type of defense was approached
+speculative execution feature. 
+
+This type of defense was approached
 using evolutionary algorithms for the first time by John et
 al. \cite{john_evolutionary_2014}. More recently, Buji et al. in
-\cite{buji_genetic_2019} % Add something here - JJ
+\cite{buji_genetic_2017} % Add something here - JJ
 , but also applied to reconfiguration of
 software defined networks by Champagne et al. in
 \cite{champagne_genetic_2018}. 
@@ -292,7 +331,9 @@ Content-Security-Policy		   & default-src 'self', default-src 'none', default-sr
 ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
 @
 \caption{Scatter plot for OWASP ZAP scores for every experiment using the
-  static web site }
+  static web site. A ``Copies'' value of 10 indicates that all
+  individuals in the population have reached the highest score
+  (proportion of the population equal to the highest fitness == 1). }
 \label{fig:zap:static}
 \end{figure*}
 %
@@ -302,7 +343,9 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
 @
 \caption{Scatter plot for OWASP ZAP scores for every experiment with the
-  Juice Shop site }
+  Juice Shop site. ``Copies'' is the proportion of the population with
+the same ZAP score as the best; 10.0 indicates that the whole
+population has the same low vulnerability score (proportion equal to 1).}
 \label{fig:zap:static}
 \end{figure*}
 
