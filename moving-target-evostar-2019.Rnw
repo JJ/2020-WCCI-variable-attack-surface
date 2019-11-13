@@ -67,6 +67,7 @@ practice in security tools.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+
 Many different techniques are used to deflect cyberattacks, that is,
 attempts to gain access to certain assets through running code
 remotely; these techniques include hardening of services, as well as
@@ -78,7 +79,14 @@ attack surface, more difficult \cite{zhuang2014towards}. This kind of
 defense was initially proposed by the Federal Networking and Information Technology Research and
 Development (NITRD) Program for the first time in 2009
 \cite{moving-target}, and since then it has spawned all kind of
-methodologies and software tools to carry it out in practice.
+methodologies and software tools to carry it out in practice. The
+effectivity of this defense technique is variable and will depend on
+the kind of attack \cite{evans2011effectiveness}, but at any rate it
+is a valuable addition to the set of tools that are used against
+cyberattacks nowadays; besides, it can be applied to several different
+services, every one with a different mechanism \cite{Cai2016}, which
+makes it a versatile, active defense methodology, appliable at many
+levels and in many different ways.
 
 This kind of protection against cybersecurity threats can be implemented by a
 proper software configuration without the need to invest in costly
@@ -201,6 +209,7 @@ costs for the defender.
 
 
 
+
 % 2. 
 Bioinspired metaheuristics have been often used in the area of
 cybersecurity; for instance, some authors have proposed using
@@ -225,7 +234,7 @@ speculative execution feature.
 This type of defense was approached
 using evolutionary algorithms for the first time by John et
 al. \cite{john_evolutionary_2014}. More recently, Buji et al. in
-\cite{buji_genetic_2019} % Add something here - JJ
+\cite{buji_genetic_2017} % Add something here - JJ
 , but also applied to reconfiguration of
 software defined networks by Champagne et al. in
 \cite{champagne_genetic_2018}. 
