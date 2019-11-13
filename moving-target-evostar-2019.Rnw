@@ -96,27 +96,77 @@ departure for using additional measures such as the moving target
 defense. % See issue #12; insert response here (or below, when you
          % mention ZAP - JJ
 
-Many vulnerabilities can be caused by misconfiguration or an inadequate combination of parameters. In addition, a given service can have practically infinite possible configurations, some being less functional and/or vulnerable than others.
+Many vulnerabilities can be caused by misconfiguration or an
+inadequate combination of parameters. In addition, a given service can
+have practically infinite possible configurations, some being less
+functional and/or vulnerable than others. 
 
-Also, to improve the mechanism of protection against cyberattacks, the attacker can be fooled by a continuous change in the configuration of a given service, so meanwhile an attacker is fingerprinting your service to discover vulnerabilities the genetic algorithm will have changed the configuration so the attacker can't define an attack based on the known vulnerabilities.
+Also, to create a good mechanism of protection against cyberattacks,
+the moving target defense fools the attacker with a continuous change
+in the configuration of a given service, so meanwhile an attacker is
+fingerprinting your service to discover vulnerabilities, the method or
+algorithm applying this kind of defense will have changed the
+configuration so the attacker cannot define an attack based on the
+known vulnerabilities. In practice, you need to create an additional
+policy to change configurations, for instance every time an attack is
+detected or periodically, at random moments within a defined
+schedule.
 
-Finding these correct configurations, as well as similar and fully functional configurations, can be a complex task if it is done manually so ideally we would need to find a way to generate such configurations in an automatic way, using some search heuristic. % You need to make paragraphs follow each other - JJ
+% Finding these correct configurations, as well as similar and fully functional configurations, can be a complex task if it is done manually so ideally we would need to find a way to generate such configurations in an automatic way, using some search heuristic. % You need to make paragraphs follow each other - JJ
+In practice, the moving target defense implies a method that is able
+to yield several low-vulnerability service configurations. In this
+paper we are going to focus on the creation of a search method 
+that is able to find, in every application, several configurations
+with a low vulnerability score. Depending on the (external) policy,
+the chief security officer of a network can run (or establish a policy
+to run) the search algorithm
+once for every scheduled change period, and obtain several candidate
+configurations than can then be applied to the service to make it
+become the {\em moving} target, as was required.
 
-A genetic algorithm, which is a search heuristic, can be used to
-discover new, secure and diverse configurations by modeling a given
+In this paper we will use a genetic algorithm, which is a search
+heuristic that can discover new, secure and diverse configurations by modeling a given
 configuration as if they were chromosomes and the different individual
-configuration options as if they were genes
+configuration options as if they were genes in that chromosome
 \cite{john_evolutionary_2014}. The main idea of genetic algorithms is
-that by mutation, crossing and selection of these chromosomes we get
-better configurations. These mutations are randomly incorporated,
-which provides diversity. 
+that by mutation, crossing and selection of these chromosomes we will
+eventually obtain better configurations. Since mutations are random,
+they are a source of the diversity we are interested in here.
 
-While CVSS is an abstract way to score security, we first need to decide on a system for which security is going to be optimized and, second, on a tool that will be able to automatically compute CVSS. For the former, we will use an open-source OWASP project called Juice-Shop \cite{luburic2019utilizing,juice-shop} that consists in a vulnerable e-commerce platform written in Node.js, Express, and Angular. This is one of the most typical web application configurations, being more complex than a simple welcome webpage and more similar to a real environment
+We need, however, a way to score every individual
+chromosome/solution. While CVSS is an abstract way to score security, we first need to
+decide on a system for which security is going to be optimized and,
+second, on a tool that will be able to automatically compute CVSS or a
+vulnerability score related to it. For
+the former, we will use an open-source OWASP project called Juice-Shop
+\cite{luburic2019utilizing,juice-shop} that consists in a vulnerable
+e-commerce platform written in Node.js, Express, and Angular. This is
+one of the most typical web application configurations, being more
+complex than a simple welcome webpage and more similar to a real
+environment; however, we will also include tests for this kind of
+simple configuration.
 
-For the latter, that is, to quantify the security of a given configuration we can use tools like OWASP ZAP \cite{bennetts2013owasp}. OWASP ZAP is an open-source security analysis tool  for web applications developed by OWASP,  crawls and analyzes a specified site for security vulnerabilities, yielding a scalar value based on CVSS score. 
+Once the system that is going to be tested is chosen, we need to
+quantify the security of a given configuration; for that purpose, we can use tools like
+OWASP ZAP \cite{bennetts2013owasp}. OWASP ZAP is an open-source
+security analysis tool  for web applications developed by OWASP,
+crawls and analyzes a specified site for security vulnerabilities,
+yielding a scalar value based on CVSS score. % Which relation? See #12
+                                % - JJ
 
-Our moving target defense approach relies on the diversity of each generated configuration to improve the security of our system. This is based on the entropy of our random generated and mutated values but this random configuration can be wrong or vulnerable so we test that configuration and by the genetic algorithm evolve that configuration to get a good one.
-The same process is be applied to the resulting configurations to improve the security through generation, but as we more evolve the configuration we get a much more secure system but we lose diversity. We need to balance security and diversity depending on our system.
+Using these two test systems and the automatic ZAP tool as a fitness
+score, our moving target defense evolutionary algorithm will rely on
+the diversity of each generated configuration to improve the security
+of our system. This is based on the entropy of our random generated
+and mutated values but this random configuration can be wrong or
+vulnerable so we test that configuration and by the genetic algorithm
+evolve that configuration to get a good one. 
+The same process is be applied to the resulting configurations to
+improve the security through generation, but as we more evolve the
+configuration we get a much more secure system but we lose
+diversity. We need to boost diversity while keeping security high, depending on our
+system.
+
 
 The rest of the paper is organized as follows: next we present a brief
 state of the art in the subject of moving target defense. The
