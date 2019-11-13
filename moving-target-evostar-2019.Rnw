@@ -160,7 +160,12 @@ quantify the security of a given configuration; for that purpose, we can use too
 OWASP ZAP \cite{bennetts2013owasp}. OWASP ZAP is an open-source
 security analysis tool  for web applications developed by OWASP,
 crawls and analyzes a specified site for security vulnerabilities,
-yielding a scalar value based on the number of vulnerabilities found in a site.
+yielding a scalar value based on the number of vulnerabilities found
+in a site. This score is an alternative to CVSS and STIG, with the
+added advantage that it can be assessed automatically via that
+tool. There is no direct relationship between CVSS and ZAP score,
+although in general a low number in vulnerabilities will result in a
+low CVSS score.
 
 Using these two test systems and the automatic ZAP tool as a fitness
 score, our moving target defense evolutionary algorithm will rely on
@@ -178,7 +183,7 @@ system.
 
 The rest of the paper is organized as follows: next we present a brief
 state of the art in the subject of moving target defense. The
-methodology and results is presented in Section \ref{sec:res},
+methodology and results are presented in Section \ref{sec:res},
 followed by our conclusions.
 
 
