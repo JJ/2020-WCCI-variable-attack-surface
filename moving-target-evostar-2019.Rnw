@@ -9,9 +9,6 @@
 
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
-%\SweaveOpts{concordance=TRUE}
-%\SweaveOpts{concordance=TRUE}
 
 <<setup, cache=FALSE,echo=FALSE>>=
 library(ggplot2)
@@ -49,15 +46,55 @@ data.juice <- data[data$Web == "Juice Shop",]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-The {\em moving target defense} from cyberattacks consists in changing the profile or signature of certain services in an Internet node so that an attacker is not able to identify it uniquely, or find specific angles of attack for it. From an optimization point of view, generating profiles that change and, besides, optimize security is a combinatorial optimization problem where different service configurations are generated and evaluated, seeking the optimum according to a standard server vulnerability evaluation score. In this paper we will use an evolutionary algorithm to generate different server profiles that also minimize the risk of being attacked. Working on the well-known web server {\tt nginx}, and using an industry-standard web configuration, we will prove that this evolutionary algorithm is able to generate a sufficient amount of different and secure profiles in time for them to be deployed in the server. The system has been released as free software, as is the best practice in security tools.
+The {\em moving target defense} from cyberattacks consists in changing
+the profile or signature of certain services in an Internet node so
+that an attacker is not able to identify it uniquely, or find specific
+angles of attack for it. From an optimization point of view,
+generating profiles that change and, besides, optimize security is a
+combinatorial optimization problem where different service
+configurations are generated and evaluated, seeking the optimum
+according to a standard server vulnerability evaluation score. In this
+paper we will use an evolutionary algorithm to generate different
+server profiles that also minimize the risk of being attacked. Working
+on the well-known web server {\tt nginx}, and using an
+industry-standard web configuration, we will prove that this
+evolutionary algorithm is able to generate a sufficient amount of
+different and secure profiles in time for them to be deployed in the
+server. The system has been released as free software, as is the best
+practice in security tools. 
 \end{abstract}
 \keywords{Security, cyberattacks, performance evaluation.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-Many different techniques are used to deflect cyberattacks, that is, attempts to gain access to certain assets through running code remotely. One of them is called {\em moving target defense} \cite{jajodia2011moving}
+Many different techniques are used to deflect cyberattacks, that is,
+attempts to gain access to certain assets through running code
+remotely; these techniques include hardening of services, as well as
+deception. {\em Moving target defense} \cite{nitrd,jajodia2011moving}
+includes both: the system must be hardened as a point of departure,
+but additionally it is going to be changing its attacker-facing profile
+and features to make its identification, and thus selection of an
+attack surface, more difficult \cite{zhuang2014towards}. This kind of
+defense was initially proposed by the Federal Networking and Information Technology Research and
+Development (NITRD) Program for the first time in 2009
+\cite{moving-target}, and since then it has spawned all kind of
+methodologies and software tools to carry it out in practice.
 
-Protection against cybersecurity threats can be implemented by a proper software configuration without the need to invest in costly security solutions. In order to achieve an optimal configuration, an objective score must be used to measure security or its inverse, vulnerabilities \cite{yang2012security}: The `Common Vulnerability Scoring System' or CVSS \cite{cvss} is an open standard to measure computer and network security vulnerabilities. Scores range from 0 to 10, with 10 being the most severe. In order to protect properly a system, we need to optimize this score so that it reaches zero, without compromising any kind of functionality.
+This kind of protection against cybersecurity threats can be implemented by a
+proper software configuration without the need to invest in costly
+security solutions. In order to measure how optimal a configuration is, an
+objective score must be used to measure security or its inverse,
+vulnerabilities \cite{yang2012security}: The `Common Vulnerability
+Scoring System' or CVSS \cite{cvss} is an open standard to measure
+computer and network security vulnerabilities. Scores range from 0 to
+10, with 10 being the most severe. In order to protect properly a
+system, we need to optimize this score so that it gets as close as
+possible to zero without compromising any kind of functionality;
+however, a 0 score is almost impossible, or at any rate impossible to
+measure automatically. Low scores are, thus, desirable as a point of
+departure for using additional measures such as the moving target
+defense. % See issue #12; insert response here (or below, when you
+         % mention ZAP - JJ
 
 Many vulnerabilities can be caused by misconfiguration or an inadequate combination of parameters. In addition, a given service can have practically infinite possible configurations, some being less functional and/or vulnerable than others.
 
@@ -141,7 +178,12 @@ The OWASP ZAP Python API will give the mentioned scalar value depending on the n
 
 OWASP ZAP is a heavy-weight process taking so much time to analyze each experiment so we ran the experiments in three AWS EC2 t3.medium instances all running Ubuntu 18.04 LTS with Docker installed, each instance has 2 vCPU and 4 GiB of RAM. Each instance runs a different set of experiments of 16, 32 and 64 population size. To orchestrate the instances we used a simple Ansible playbook.
 
-For the 16 individuals population size the experiment took an average of 35 minutes, taking 80 minutes in the 32 individuals population size and 180 minutes for the 64 individuals population size. This times are the reason of running each population size in different EC2 instances. The running time of all instances was 266 hours equivalent to 11 days of total processing time having a total cost of \$11.07.
+For the 16 individuals population size the experiment took an average
+of 35 minutes, taking 80 minutes in the 32 individuals population size
+and 180 minutes for the 64 individuals population size. This times are
+the reason of running each population size in different EC2
+instances. The running time of all instances was 266 hours equivalent
+to 11 days of total processing time having a total cost of \$11.07. O
 
 We will run 15 times the experiments for each 16, 32 and 65 population size, trying the different crossover functions and the different mutation methods to know which one is giving better results. As we said previously, we are searching for a balance between diversity and secure configurations to apply in the final server. 
 
