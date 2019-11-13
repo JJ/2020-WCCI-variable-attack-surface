@@ -211,6 +211,7 @@ costs for the defender.
 
 
 % 2. 
+
 Bioinspired metaheuristics have been often used in the area of
 cybersecurity; for instance, some authors have proposed using
 evolutionary-based optimization techniques to improve detection of SQL
@@ -222,6 +223,24 @@ regular expressions.
 
 
 % 3.
+Early MTD techniques included the use of rotating virtual webservers
+\cite{huang2011introducing}, every one with a different attack
+surface, to avoid predictability and achieve a variable attack
+surface. However, while this was a practical and actionnable defense,
+no specific technique was proposed to individually configure every
+virtual server, proposing instead manual configuration of web servers
+(such as nginx and Apache), combined with plug-ins\footnote{It should
+  be noted that some of the proposed configurations, such as Nginx +
+  {\tt mod\_rails}, are simply impossible, since {\tt mod\_rails} is an Apache
+  plugin, apart from being specifically designed for Ruby on Rails applications}.
+
+Curiosly enough, a bioinspired and ad hoc technique called {\em
+  symbiotic embedded machines} (SEM) were proposed by Cui and Stolfo
+\cite{cui2011symbiotes} as a methdology for {\em injecting} code into
+systems that would behave in a way that would be similar to a
+symbiotically-induced immune system. Besides that principled
+biological inspiration, SEMs used mutation as a mechanism for avoiding
+signature based detection methods and thus become a MTD system.
 
 Moving target defense has many applications in the field of
 cybersecurity. For example, in hardware systems, such as the Morpheus
