@@ -232,7 +232,9 @@ virtual server, proposing instead manual configuration of web servers
 (such as nginx and Apache), combined with plug-ins\footnote{It should
   be noted that some of the proposed configurations, such as Nginx +
   {\tt mod\_rails}, are simply impossible, since {\tt mod\_rails} is an Apache
-  plugin, apart from being specifically designed for Ruby on Rails applications}.
+  plugin, apart from being specifically designed for Ruby on Rails
+  applications}. MTD can also be applied to software defined networks
+\cite{al2011toward}. 
 
 Curiosly enough, a bioinspired and ad hoc technique called {\em
   symbiotic embedded machines} (SEM) were proposed by Cui and Stolfo
