@@ -335,10 +335,8 @@ server\_tokens                 & True/False \\ \hline
 gzip                           & True/False \\ \hline
 \end{tabular}
 \label{table:nginx_directives}
-\caption{Nginx directive list}
+\caption{Selected Nginx directives list}
 \end{table}
-
-And the HTTP headers are the next ones:
 
 \begin{table}
 \begin{tabular}{|l|l|}
@@ -353,7 +351,7 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 
 \end{tabular}
 \label{table:http_headers}
-\caption{HTTP header list}
+\caption{Selecte HTTP headers list}
 \end{table}
 %
 %
