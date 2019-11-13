@@ -56,7 +56,7 @@ configurations are generated and evaluated, seeking the optimum
 according to a standard server vulnerability evaluation score. In this
 paper we will use an evolutionary algorithm to generate different
 server profiles that also minimize the risk of being attacked. Working
-on the well-known web server {\tt nginx}, and using an
+on the well-known web server {\tt Nginx}, and using an
 industry-standard web configuration, we will prove that this
 evolutionary algorithm is able to generate a sufficient amount of
 different and secure profiles in time for them to be deployed in the
@@ -204,6 +204,8 @@ software defined networks by Champagne et al. in
 \section{Methodology, experimental setup and results}
 \label{sec:res}
 
+Considering the huge amount of network services with its multiple configuration options, it has been decided to limit this project to alter and optimize the configuration of an HTTP server, specifically Nginx. In recent years Nginx has surpassed Apache as the most used HTTP server in the world \cite{w3techs_usage_2019}.
+
 We choose the Python programming language due to the availability of the OWASP ZAP API in that language. In addition, although this project does not require high performance, several publications indicate a very good performance of the Python language when working with genetic algorithms \cite{merelo-guervos_comparison_2016}.
 
 The genetic algorithm works generating a population of $n$ individuals. Each individual is a chromosome of 15 gens and each gen refers to an Nginx directive or an HTTP security header. 
@@ -262,7 +264,7 @@ server\_tokens                 & True/False \\ \hline
 gzip                           & True/False \\ \hline
 \end{tabular}
 \label{table:nginx_directives}
-\caption{NGINX directive list}
+\caption{Nginx directive list}
 \end{table}
 
 And the HTTP headers are the next ones:
