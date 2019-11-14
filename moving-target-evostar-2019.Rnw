@@ -362,16 +362,26 @@ the reason of running each population size in different EC2
 instances. The running time of all instances was 266 hours equivalent
 to 11 days of total processing time having a total cost of \$11.07. O
 
-We will run 15 times the experiments for each 16, 32 and 65 population size, trying the different crossover functions and the different mutation methods to know which one is giving better results. As we said previously, we are searching for a balance between diversity and secure configurations to apply in the final server. 
+A set of experiments has been carried out with the static site and the juice shop. These have been the parameters that have varied \begin{itemize}
+\item Mutation is either {\sf random} or {\sf one}. In the first case, the selected configuration variable is changed by another random value. In the second case, one is added or substracted from its value.
+\item Crossover uses either one or two points.
+\item Population goes from 16 to 64 in the case of the static web site, it stops at 32 in the juice shop.
+\item The evolutionary algorithm is run for 15 generations.
+\end{itemize}
 
-The experiment commands are the next ones:
+In this case, it's difficult to know in advance what would be the
+correct configuration for the evolutionary algorithm, so all these
+options have been tested and evaluated to check its influence in the
+eventual result. Experiments have been repeated, for each
+configuration, 15 times.
+
+The experiments are run using these commands
 
 \begin{verbatim}
-python3 genetic.py --individuals POPULATION_SIZE --crossover-one-point --random-mutation
-python3 genetic.py --individuals POPULATION_SIZE --crossover-one-point --no-random-mutation
-python3 genetic.py --individuals POPULATION_SIZE --crossover-two-points --random-mutation
-python3 genetic.py --individuals POPULATION_SIZE --crossover-two-points --no-random-mutation  
+python3 genetic.py --individuals {16|32|64}
+    --crossover-{one|two}-point --[no-]random-mutation
 \end{verbatim}
+
 
 \begin{table}
 \centering
@@ -409,6 +419,11 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 \caption{Selected HTTP headers list}
 \end{table}
 %
+
+The results of the experiments are available with a free license in a
+GitHub repository. The results for the static website are represented
+in Figure \ref{fig:zap:static}.
+
 %
 \begin{figure*}[h!tb]
   \centering
@@ -418,7 +433,7 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 \caption{Scatter plot for OWASP ZAP scores for every experiment using the
   static web site. A ``Copies'' value of 10 indicates that all
   individuals in the population have reached the highest score
-  (proportion of the population equal to the highest fitness == 1). }
+  (proportion of the population equal to the highest fitness == 1). "Jitter" is used so that all data points can be visualized. }
 \label{fig:zap:static}
 \end{figure*}
 %
@@ -430,7 +445,7 @@ ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, si
 \caption{Scatter plot for OWASP ZAP scores for every experiment with the
   Juice Shop site. ``Copies'' is the proportion of the population with
 the same ZAP score as the best; 10.0 indicates that the whole
-population has the same low vulnerability score (proportion equal to 1).}
+population has the same low vulnerability score (proportion equal to 1). Jittering is using to make the different results visible.}
 \label{fig:zap:static}
 \end{figure*}
 
