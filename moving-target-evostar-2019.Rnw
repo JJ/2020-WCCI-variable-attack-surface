@@ -413,7 +413,8 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 \begin{figure*}[h!tb]
   \centering
 <<results-static,cache=FALSE,echo=FALSE>>=
-ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
+ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10,alpha=Days)) + geom_jitter(width = 0.3, height=0.2)+ theme_tufte()
+ggsave("static.png",width=190, units="mm")
 @
 \caption{Scatter plot for OWASP ZAP scores for every experiment using the
   static web site. A ``Copies'' value of 10 indicates that all
@@ -425,7 +426,7 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 \begin{figure*}[h!tb]
   \centering
 <<results-juice-shop,cache=FALSE,echo=FALSE>>=
-ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10)) + geom_point()+ theme_tufte()+ geom_jitter(width = 0.3, height=0.2)
+ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10,alpha=Days))+ geom_jitter(width = 0.3, height=0.2) +  theme_tufte()
 @
 \caption{Scatter plot for OWASP ZAP scores for every experiment with the
   Juice Shop site. ``Copies'' is the proportion of the population with
