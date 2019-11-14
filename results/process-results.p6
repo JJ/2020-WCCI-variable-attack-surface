@@ -9,7 +9,6 @@ my %time;
 @time.pop; # Eliminates last
 for @time[1..*] -> $l {
     my @data = $l.split(":");
-    say @data;
     my @times = @data[1].split(",");
     %time{@data[0]} = @times[*-1];
 }
@@ -31,5 +30,4 @@ for @files -> $f {
     my $best = @fitnesses.sort.first;
     my @best = @fitnesses.grep: * == $best;
     say ( $juice ne '' )??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  $best, ", ",  @best.elems/@fitnesses.elems, ", ", %time{$f};
-    
 }
