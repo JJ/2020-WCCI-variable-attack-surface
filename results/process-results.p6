@@ -2,11 +2,21 @@
 
 use v6;
 
-my $prefix = $*ARGS[0] || "results_";
+constant $prefix = "results_";
+my @time = "time.csv".IO.slurp.lines;
+
+my %time;
+@time.pop; # Eliminates last
+for @time[1..*] -> $l {
+    my @data = $l.split(":");
+    say @data;
+    my @times = @data[1].split(",");
+    %time{@data[0]} = @times[*-1];
+}
 
 my @files = dir( ".", test => { /^^$prefix/ } );
 
-say "Web, Population, Crossover, Mutation, Fitness, Copies";
+say "Web, Population, Crossover, Mutation, Fitness, Copies, Days";
 for @files -> $f {
     my $match = ($f ~~ /$<juice> = ["juice"?] "_" $<population> = [\d+] "_" $<crossover> = [\d] "_" $<mutation> = [\w+] "_" $<rank> = [\d+] / );
     my ($juice, $population, $crossover, $mutation) =
@@ -20,6 +30,6 @@ for @files -> $f {
     my @fitnesses = ( @final-pop[1] ~~ m:g/"("(\d+)/ ).map( *[0].Int );
     my $best = @fitnesses.sort.first;
     my @best = @fitnesses.grep: * == $best;
-    say ( $juice ne '' )??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  $best, ", ",  @best.elems/@fitnesses.elems;
+    say ( $juice ne '' )??"Juice Shop"!!"Static", ", $population, $crossover, $mutation, ",  $best, ", ",  @best.elems/@fitnesses.elems, ", ", %time{$f};
     
 }

@@ -9,7 +9,6 @@
 
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
 
 <<setup, cache=FALSE,echo=FALSE>>=
 library(ggplot2)
