@@ -319,32 +319,52 @@ The last stable version of Nginx (1.17) has more than 700 configuration directiv
 
 \subsection{Selected Nginx directives}
 
-\texttt{worker\_connections}:
+\begin{table}
+\centering
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{STIG ID} & \textbf{Directive name} 	   & \textbf{Possible values} \\ \hline
+V-13730 & worker\_connections            & 512 - 2048 \\ \hline
+V-13726 & keepalive\_timeout             & 10 - 120 \\ \hline
+V-13732 & disable\_symlinks              & True/False \\ \hline
+V-13735 & autoindex                      & True/False \\ \hline
+V-13724 & send\_timeout                  & True/False \\ \hline
+V-13738 & large\_client\_header\_buffers & 512 - 2048 \\ \hline
+V-13736 & client\_max\_body\_size        & 512 - 2048 \\ \hline
+V-6724  & server\_tokens                 & True/False \\ \hline
+        & gzip                           & True/False \\ \hline
+\end{tabular}
+\label{table:nginx_directives}
+\caption{Selected Nginx directives list}
+\end{table}
+%
+
+These are the directives that have been used in this paper; their
+equivalent STIG ID is shown in Table
+\ref{table:nginx_directives}. \begin{itemize}
+\item \texttt{worker\_connections}:
 Maximum number of simultaneous connections that can be opened by an Nginx process.
-
-\texttt{keepalive\_timeout}:
+\item \texttt{keepalive\_timeout}:
 Timeout period during which a client connection will remain open on the server side.
-
-\texttt{disable\_symlinks}:
+\item \texttt{disable\_symlinks}:
 Determine if symbolic links can be used when opening files. When activated and some component of the path is a symbolic link the access to that file is denied.
-
-\texttt{autoindex}:
+\item \texttt{autoindex}:
 When activated it shows the contents of the directories, otherwise it does not show anything.
-
-\texttt{send\_timeout}:
+\item \texttt{send\_timeout}:
 The waiting time to transmit a response to the client. The wait time is set only between two successive write operations, not for the transmission of the complete response.
-
-\texttt{large\_client\_header\_buffers}:
+\item \texttt{large\_client\_header\_buffers}:
 Maximum number and size of buffers used to read the headers of large requests.
 
+\item 
 \texttt{client\_max\_body\_size}:
 Maximum allowed size of the client request body, specified in the `Content-Length' field of the request header.
-
+\item 
 \texttt{server\_tokens}:
 Enable or disable the broadcast of the Nginx version on the error pages and in the `Server' response header. It is recommended not giving too extensive informatión of software versions, but we can cheat the attacker telling wrong server version info.
-
+\item 
 \texttt{gzip}:
 Enable or disable the compression of HTTP responses. This directive doesn't affect directly the security but adds entropy to the different generated configurations.
+\end{itemize}
 
 \subsection{Selected HTTP headers}
 
@@ -420,24 +440,7 @@ python3 genetic.py --individuals {16|32|64}
 \end{verbatim}
 
 
-\begin{table}
-\centering
-\begin{tabular}{|l|l|c|}
-\hline
-\textbf{STIG ID} & \textbf{Directive name} 	   & \textbf{Possible values} \\ \hline
-V-13730 & worker\_connections            & 512 - 2048 \\ \hline
-V-13726 & keepalive\_timeout             & 10 - 120 \\ \hline
-V-13732 & disable\_symlinks              & True/False \\ \hline
-V-13735 & autoindex                      & True/False \\ \hline
-V-13724 & send\_timeout                  & True/False \\ \hline
-V-13738 & large\_client\_header\_buffers & 512 - 2048 \\ \hline
-V-13736 & client\_max\_body\_size        & 512 - 2048 \\ \hline
-V-6724  & server\_tokens                 & True/False \\ \hline
-        & gzip                           & True/False \\ \hline
-\end{tabular}
-\label{table:nginx_directives}
-\caption{Selected Nginx directives list}
-\end{table}
+
 
 \begin{table}
 \centering
@@ -458,8 +461,7 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 %
 
 The results of the experiments are available with a free license in a
-GitHub repository. The results for the static website are represented
-in Figure \ref{fig:zap:static}.
+GitHub repository.
 %
 \begin{figure*}[h!tb]
   \centering
@@ -471,8 +473,24 @@ each experiment to be completed. Juice shop experiments were only
 completed up to a population of 32.}
 \label{fig:time}
 \end{figure*}
-
 %
+
+The MTD is based on the frequent and impredictable changing of
+configurations, so the first thing we need to asses is how long it
+takes to generate a set of different Nginx configurations with low
+vulnerability. This is represented in Figure \ref{fig:time}, which
+plots the duration of all experiments for the static web (Static) and
+the juice shop (Juice Shop). Every experiment takes a substantial part
+of a day; it goes from 1\% to approximately 12\%, that is, less than
+an hour and up to two hours in the case of the static web site. The
+time grows linearly with the population, which indicates that it is
+dominated by the scoring performed by ZAP, every one of which takes
+approximately half a second for the juice shop, a third of a second
+for the static web site. This time to generate a configuration
+constrains the frequency of change of configurations; on the other
+hand, every run generates several viable configurations.
+
+
 \begin{figure*}[h!tb]
   \centering
   <<results-static,cache=FALSE,echo=FALSE>>=
@@ -488,6 +506,10 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 \label{fig:zap:static}
 \end{figure*}
 %
+This is shown in Figure \ref{fig:zap:static}, which represents the results for the static website.
+
+
+
 \begin{figure*}[h!tb]
   \centering
   <<results-juice-shop,cache=FALSE,echo=FALSE>>=
