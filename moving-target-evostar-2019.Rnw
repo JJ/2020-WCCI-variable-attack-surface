@@ -53,7 +53,7 @@ configurations are generated and evaluated, seeking the optimum
 according to a standard server vulnerability evaluation score. In this
 paper we will use an evolutionary algorithm to generate different
 server profiles that also minimize the risk of being attacked. Working
-on the well-known web server {\tt Nginx}, and using an
+on the well-known web server {\tt {\sf nginx}}, and using an
 industry-standard web configuration, we will prove that this
 evolutionary algorithm is able to generate a sufficient amount of
 different and secure profiles in time for them to be deployed in the
@@ -186,7 +186,18 @@ system.
 % 1. Use of real systems, with a real workload
 % 2. use of a real security scoring technique
 % 3. Open source, as security systems should be
-% 4. Use of industry-standard Nginx.
+% 4. Use of industry-standard {\sf nginx}.
+Thus, the main objective of our paper will be to design a new system
+that is able to create a MTD in current industry-standard services. In
+order to do that we intend to use real systems, using real (or at
+least real benchmark) workloads, which are also deployed using best
+practices: Docker containers. Instead of ad-hoc scoring techniques for
+every parameters, we use also a standard tool for scoring the
+vulnerabilities of these techniques, from which standard score can be
+deduced. We will also work with a popular open source service, the
+{\sf nginx} web server. Finally, as is a standard practice in the
+cybersercurity world, the whole system is released under a free
+software license.
 
 
 The rest of the paper is organized as follows: next we present a brief
@@ -252,7 +263,7 @@ surface. However, while this was a practical and actionnable defense,
 no specific technique was proposed to individually configure every
 virtual server, proposing instead manual configuration of web servers
 (such as nginx and Apache), combined with plug-ins\footnote{It should
-  be noted that some of the proposed configurations, such as Nginx +
+  be noted that some of the proposed configurations, such as {\sf nginx} +
   {\tt mod\_rails}, are simply impossible, since {\tt mod\_rails} is an Apache
   plugin, apart from being specifically designed for Ruby on Rails
   applications}. A similar technique, taken to the cloud, was proposed
@@ -316,14 +327,14 @@ speculative execution feature.
 Considering the huge amount of network services with its multiple
 configuration options, it has been decided to limit this project to
 alter and optimize the configuration of an HTTP server, specifically
-Nginx. In recent years Nginx has surpassed Apache as the most used
+{\sf nginx}. In recent years {\sf nginx} has surpassed Apache as the most used
 HTTP server in the world \cite{w3techs_usage_2019}. This service was
 chosen over Apache, as was John et al. did in
 \cite{john_evolutionary_2014}, since this web server is nowadays much
 more popular, and can act as static webserver as well as a reverse
 proxy for web services; both configurations will be used and tested.
 
-The last stable version of Nginx (1.17) has more than 700
+The last stable version of {\sf nginx} (1.17) has more than 700
 configuration directives, which in general constitute the user-facing
 attack surface. These parameters, focusing on the ones that will be
 evolved, will be analyzed next. The next Subsection \ref{subs:setup}
@@ -334,12 +345,12 @@ results will be presented last in Subsection \ref{subs:results}.
 
 There is a huge number parameters that could potentially be chosen for
 our experiments so to validate our hypothesis we choose a subset of 9
-Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers
+{\sf nginx} directives (\ref{table:nginx_directives}) and 6 HTTP headers
 (\ref{table:http_headers}), all of them related to security
 hardening. The subset is extracted from the DISA STIG recommendations
 for hardening webservers based in the CVSS score. Most of this values
 are defined as Apache HTTP server configurationv values but have a
-Nginx equivalent directive. 
+{\sf nginx} equivalent directive. 
 
 \begin{table}
 \centering
@@ -357,7 +368,7 @@ V-6724  & server\_tokens                 & True/False \\ \hline
         & gzip                           & True/False \\ \hline
 \end{tabular}
 \label{table:nginx_directives}
-\caption{Selected Nginx directives list}
+\caption{Selected {\sf nginx} directives list}
 \end{table}
 %
 
@@ -365,7 +376,7 @@ These are the directives that have been used in this paper; their
 equivalent STIG ID is shown in Table
 \ref{table:nginx_directives}. \begin{itemize}
 \item \texttt{worker\_connections}:
-Maximum number of simultaneous connections that can be opened by an Nginx process.
+Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
 \item \texttt{keepalive\_timeout}:
 Timeout period during which a client connection will remain open on the server side.
 \item \texttt{disable\_symlinks}:
@@ -382,7 +393,7 @@ Maximum number and size of buffers used to read the headers of large requests.
 Maximum allowed size of the client request body, specified in the `Content-Length' field of the request header.
 \item 
 \texttt{server\_tokens}:
-Enable or disable the broadcast of the Nginx version on the error pages and in the `Server' response header. It is recommended not giving too extensive informatión of software versions, but we can cheat the attacker telling wrong server version info.
+Enable or disable the broadcast of the {\sf nginx} version on the error pages and in the `Server' response header. It is recommended not giving too extensive informatión of software versions, but we can cheat the attacker telling wrong server version info.
 \item 
 \texttt{gzip}:
 Enable or disable the compression of HTTP responses. This directive doesn't affect directly the security but adds entropy to the different generated configurations.
@@ -435,7 +446,7 @@ The HTTP `Content-Security-Policy' response header allows web site administrator
 \bigskip
 To write the genetic algorithm we choose the Python programming language due to the availability of the OWASP ZAP API in that language. In addition, although this project does not require high performance, several publications indicate a very good performance of the Python language when working with genetic algorithms \cite{merelo-guervos_comparison_2016}.
 
-The genetic algorithm works generating a population of $n$ individuals. Each individual is a chromosome of 15 gens and each gen refers to an Nginx directive or an HTTP security header. 
+The genetic algorithm works generating a population of $n$ individuals. Each individual is a chromosome of 15 gens and each gen refers to an {\sf nginx} directive or an HTTP security header. 
 
 After generating the population we calculate the fitness of that
 population using OWASP ZAP, which gives a scalar value with the number of
@@ -508,7 +519,7 @@ completed up to a population of 32.}
 %
 Since the MTD is based on the frequent and impredictable changing of
 configurations, one of the first thing we need to asses is how long it
-takes to generate a set of different Nginx configurations with low
+takes to generate a set of different {\sf nginx} configurations with low
 vulnerability. This is represented in Figure \ref{fig:time}, which
 plots the duration of all experiments for the static web (Static) and
 the juice shop (Juice Shop). Every experiment takes a substantial part
@@ -612,7 +623,7 @@ seems to be a balance between obtaining many results and minimizing
 the vulnerability. However, in general, the objecties of this paper
 have been reached.
 
-We will discuss this results next.
+We will discuss these results next.
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
@@ -627,9 +638,10 @@ Using these evolved configurations we can transform our server into a moving tar
 
 Maybe using a genetic algorithm to generate these configurations using such a small number of chromosomes is not the optimal solution, but one of the objectives was to test if genetic algorithms could be used to generate and evolve the configurations and indeed this has been possible.
 
-\subsection{Future Jobs}
-
-This project could be evolved by adding more Nginx directives as well as more security-related HTTP headers. It could also be an improvement try different HTTP servers such as Apache.
+% Future work 
+This project could be evolved by adding more {\sf nginx} directives as
+well as more security-related HTTP headers. It could also be an
+improvement try different HTTP servers such as Apache. 
 
 Another possible future work would be to improve the genetic algorithm avoiding erroneous individuals in the initial population, generating in this way a safer population, and besides include some program of benchmark in our fitness function to know that besides safe, our configuration has a good performance.
 
