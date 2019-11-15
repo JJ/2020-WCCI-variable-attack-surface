@@ -628,7 +628,20 @@ We will discuss these results next.
 \section{Conclusions and discussion}
 \label{sec:conclusions}
 
-After checking the results we can state that genetic algorithms can help us to improve the security of a system by modifying the configuration parameters of a server. The algorithm was successfully applied, allowing configurations to evolve diversely and securely.
+After checking the results we can state that genetic algorithms can
+help us to improve the security of a system by generating many
+different low-vulnerability configurations for a real, and industry
+standard, server, thus being suitable to carry out the moving target
+defense along with passive or reactive policies of service
+configuration change. An evolutionary algorithm was successfully
+applied, allowing configurations to evolve diversely and securely,
+although there is a trade-off between them, with lower vulnerability
+configurations being generated in less quantity than others with a
+slightly higher vulnerability degree. However, low vulnerability
+configurations are consistently generated, which means that we could
+extract from a population different configurations with different
+degrees of vulnerability, contributing even more to the entropy of the
+system. 
 
 Some vulnerabilities can be caused by a bad configuration or by an unfortunate combination of configurations that it is difficult for an administrator to discover manually due to the large number of parameters and possible combinations.
 
