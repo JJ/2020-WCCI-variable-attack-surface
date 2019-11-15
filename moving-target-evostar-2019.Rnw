@@ -313,11 +313,33 @@ speculative execution feature.
 
 % 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have. 
 
-Considering the huge amount of network services with its multiple configuration options, it has been decided to limit this project to alter and optimize the configuration of an HTTP server, specifically Nginx. In recent years Nginx has surpassed Apache as the most used HTTP server in the world \cite{w3techs_usage_2019}.
+Considering the huge amount of network services with its multiple
+configuration options, it has been decided to limit this project to
+alter and optimize the configuration of an HTTP server, specifically
+Nginx. In recent years Nginx has surpassed Apache as the most used
+HTTP server in the world \cite{w3techs_usage_2019}. This service was
+chosen over Apache, as was John et al. did in
+\cite{john_evolutionary_2014}, since this web server is nowadays much
+more popular, and can act as static webserver as well as a reverse
+proxy for web services; both configurations will be used and tested.
 
-The last stable version of Nginx (1.17) has more than 700 configuration directives, a huge number to do our experiments so to validate our hypothesis we choose a subset of 9 Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers (\ref{table:http_headers}), all of them related to security hardening. The subset is extracted from the DISA STIG recommendations for hardening webservers based in the CVSS score. Most of this values are defined as Apache HTTP server configurationv values but have a Nginx equivalent directive.
+The last stable version of Nginx (1.17) has more than 700
+configuration directives, which in general constitute the user-facing
+attack surface. These parameters, focusing on the ones that will be
+evolved, will be analyzed next. The next Subsection \ref{subs:setup}
+will outline the setup actually used for running the experiments, and
+results will be presented last in Subsection \ref{subs:results}.
 
-\subsection{Selected Nginx directives}
+\subsection{Description of the attack surface parameters}
+
+There is a huge number parameters that could potentially be chosen for
+our experiments so to validate our hypothesis we choose a subset of 9
+Nginx directives (\ref{table:nginx_directives}) and 6 HTTP headers
+(\ref{table:http_headers}), all of them related to security
+hardening. The subset is extracted from the DISA STIG recommendations
+for hardening webservers based in the CVSS score. Most of this values
+are defined as Apache HTTP server configurationv values but have a
+Nginx equivalent directive. 
 
 \begin{table}
 \centering
@@ -366,7 +388,8 @@ Enable or disable the broadcast of the Nginx version on the error pages and in t
 Enable or disable the compression of HTTP responses. This directive doesn't affect directly the security but adds entropy to the different generated configurations.
 \end{itemize}
 
-\subsection{Selected HTTP headers}
+The web servers also send a number of headers, which can be configured
+also. These are presented next.
 
 \texttt{X-Frame-Options}:
 The `X-Frame-Options' header can be used to indicate whether a browser should be allowed to render an embedded page. Web pages can use it to prevent \textit{clickjacking} attacks, making sure that their content is not embedded in other sites.
@@ -386,6 +409,8 @@ The HTTP `X-XSS-Protection' response header is a feature that stops pages from l
 \texttt{Content-Security-Policy}:
 The HTTP `Content-Security-Policy' response header allows web site administrators to control resources the user agent is allowed to load for a given page.
 
+\subsection{Experimental setup}
+\label{subs:setup}
 % 2. Proceed to the evolutionary algorithm used
 \bigskip
 To write the genetic algorithm we choose the Python programming language due to the availability of the OWASP ZAP API in that language. In addition, although this project does not require high performance, several publications indicate a very good performance of the Python language when working with genetic algorithms \cite{merelo-guervos_comparison_2016}.
@@ -459,6 +484,10 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 \caption{Selected HTTP headers list}
 \end{table}
 %
+
+
+\subsection{Experimental results}
+\label{subs:results}
 
 The results of the experiments are available with a free license in a
 GitHub repository.
