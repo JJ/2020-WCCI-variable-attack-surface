@@ -82,7 +82,7 @@ the kind of attack \cite{evans2011effectiveness}, but at any rate it
 is a valuable addition to the set of tools that are used against
 cyberattacks nowadays; besides, it can be applied to several different
 services, every one with a different mechanism \cite{Cai2016}, which
-makes it a versatile, active defense methodology, appliable at many
+makes it a versatile, active defense methodology, applicable at many
 levels and in many different ways.
 
 This kind of protection against cybersecurity threats can be implemented by a
@@ -196,7 +196,7 @@ every parameters, we use also a standard tool for scoring the
 vulnerabilities of these techniques, from which standard score can be
 deduced. We will also work with a popular open source service, the
 {\sf nginx} web server. Finally, as is a standard practice in the
-cybersercurity world, the whole system is released under a free
+cybersecurity world, the whole system is released under a free
 software license.
 
 
@@ -250,16 +250,16 @@ evolutionary algorithms for a general enhancement of security in real systems.
 
 
 % 3.
-Curiosly enough, a bioinspired and ad hoc technique called {\em
+Curiously enough, a bioinspired and ad hoc technique called {\em
   symbiotic embedded machines} (SEM) were proposed by Cui and Stolfo
-\cite{cui2011symbiotes} as a methdology for {\em injecting} code into
+\cite{cui2011symbiotes} as a methodology for {\em injecting} code into
 systems that would behave in a way that would be similar to a
 symbiotically-induced immune system. Besides that principled
 biological inspiration, SEMs used mutation as a mechanism for avoiding
 signature based detection methods and thus become a MTD system. Other early MTD solutions included the use of rotating virtual webservers
 \cite{huang2011introducing}, every one with a different attack
 surface, to avoid predictability and achieve a variable attack
-surface. However, while this was a practical and actionnable defense,
+surface. However, while this was a practical and actionable defense,
 no specific technique was proposed to individually configure every
 virtual server, proposing instead manual configuration of web servers
 (such as nginx and Apache), combined with plug-ins\footnote{It should
@@ -287,20 +287,20 @@ evolutionary algorithms to create new configurations, which are then
 implemented in a virtual machine and scored using scanning tools such
 as Nessus. Later on, John et
 al. \cite{john_evolutionary_2014} make a more explicit and practical
-use of an evolutoinary algorithm, describing a host-level
+use of an evolutionary algorithm, describing a host-level
 defense system, that is, one that operates at the level of a single
 node in the network, not network-wide, and works on the configuration
 of the Apache server, evolving them and evaluating at the parameter
 level using the above mentioned CVSS score. These two systems
 highlighted the need for, first, a practical way of applying the MTD
 to an actual system, to the point of implementing it in a real virtual
-mchine, and second, the problematic of scoring the generated
+machine, and second, the problematic of scoring the generated
 configurations. In the next section we will explain our proposed
 solutions to these two problems.
 
 
 
-MTD can also be aplied at a network level. Makanju et al applied
+MTD can also be applied at a network level. Makanju et al applied
 evolutionary algorithms in e defined networks by Champagne et al. in
 \cite{Makanju:2017:ECM:3067695.3075604}. In this case the SDN have to
 respect the service level agreements, and a fitness function that
@@ -349,7 +349,7 @@ our experiments so to validate our hypothesis we choose a subset of 9
 (\ref{table:http_headers}), all of them related to security
 hardening. The subset is extracted from the DISA STIG recommendations
 for hardening webservers based in the CVSS score. Most of this values
-are defined as Apache HTTP server configurationv values but have a
+are defined as Apache HTTP server configuration values but have a
 {\sf nginx} equivalent directive. 
 
 \begin{table}
@@ -393,7 +393,7 @@ Maximum number and size of buffers used to read the headers of large requests.
 Maximum allowed size of the client request body, specified in the `Content-Length' field of the request header.
 \item 
 \texttt{server\_tokens}:
-Enable or disable the broadcast of the {\sf nginx} version on the error pages and in the `Server' response header. It is recommended not giving too extensive informatión of software versions, but we can cheat the attacker telling wrong server version info.
+Enable or disable the broadcast of the {\sf nginx} version on the error pages and in the `Server' response header. It is recommended not giving too extensive information of software versions, but we can cheat the attacker telling wrong server version info.
 \item 
 \texttt{gzip}:
 Enable or disable the compression of HTTP responses. This directive doesn't affect directly the security but adds entropy to the different generated configurations.
@@ -431,7 +431,7 @@ The `X-Powered-By 'header is used to specify the software that generated the res
 The HTTP response header `X-Content-Type-Options' indicates that the \textit{MIME} types announced in the `Content-Type' header should not be changed to avoid `MIME type sniffing' attacks.
 \item 
 \texttt{server}:
-The `Server 'header contains information about the software used by the server. It is recommended not giving too extensive informatión of software versions, but we can cheat the attacker telling wrong server version info. Doesn't affect directly to the security but adds entropy to the generated configurations.
+The `Server 'header contains information about the software used by the server. It is recommended not giving too extensive information of software versions, but we can cheat the attacker telling wrong server version info. Doesn't affect directly to the security but adds entropy to the generated configurations.
 \item 
 \texttt{X-XSS-Protection}:
 The HTTP `X-XSS-Protection' response header is a feature that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.	     
@@ -451,7 +451,7 @@ The genetic algorithm works generating a population of $n$ individuals. Each ind
 After generating the population we calculate the fitness of that
 population using OWASP ZAP, which gives a scalar value with the number of
 known vulnerabilities a configuration has, we sort the population list
-in reverser order to set the better ones at the end of the list and
+in reverse order to set the better ones at the end of the list and
 get the $p$ (pressure) values that we will evolve during 15
 generations. 
 
@@ -476,7 +476,7 @@ instances. The running time of all instances was 266 hours equivalent
 to 11 days of total processing time having a total cost of \$11.07. O
 
 A set of experiments has been carried out with the static site and the juice shop. These have been the parameters that have varied \begin{itemize}
-\item Mutation is either {\sf random} or {\sf one}. In the first case, the selected configuration variable is changed by another random value. In the second case, one is added or substracted from its value.
+\item Mutation is either {\sf random} or {\sf one}. In the first case, the selected configuration variable is changed by another random value. In the second case, one is added or subtracted from its value.
 \item Crossover uses either one or two points.
 \item Population goes from 16 to 64 in the case of the static web site, it stops at 32 in the juice shop.
 \item The evolutionary algorithm is run for 15 generations.
@@ -517,7 +517,7 @@ completed up to a population of 32.}
 \label{fig:time}
 \end{figure*}
 %
-Since the MTD is based on the frequent and impredictable changing of
+Since the MTD is based on the frequent and unpredictable changing of
 configurations, one of the first thing we need to asses is how long it
 takes to generate a set of different {\sf nginx} configurations with low
 vulnerability. This is represented in Figure \ref{fig:time}, which
@@ -537,7 +537,7 @@ deployment methods, is able to generate a good amount of
 configurations in a reasonable amount of time.
 
 Of course, we need these configurations to have an acceptable degree
-of vulnerabilities. First it should be noted that acceptables ZAP
+of vulnerabilities. First it should be noted that acceptable ZAP
 scores go up to 15; more than that value will not be considered
 acceptable. These vulnerabilities captured by ZAP can be dealt with at
 a different level, but at any rate, it is always desirable to obtain
@@ -620,7 +620,7 @@ vulnerability, or fitness.
 In general, however, and in both cases, the evolutionary algorithm is
 able to find configurations with a low vulnerability level, but there
 seems to be a balance between obtaining many results and minimizing
-the vulnerability. However, in general, the objecties of this paper
+the vulnerability. However, in general, the objectives of this paper
 have been reached.
 
 We will discuss these results next.
@@ -661,7 +661,7 @@ algorithm.
 These results open new and promising new lines of work. Focusing on
 the improvement of {\sf nginx},  more directives as
 well as more security-related HTTP headers can be added. This will
-expand the search space of the evolutionary algorith, and this can be
+expand the search space of the evolutionary algorithm, and this can be
 a problem, which is why another possible future work would be to
 improve the genetic algorithm avoiding erroneous individuals in the
 initial population, generating in this way a safer population, and
@@ -677,14 +677,14 @@ having ZAP score them at the same time. A small (4-fold, in the case
 of the cloud instance used in our problem) could be achieved this
 way. However, much better improvements could be achieved by using
 surrogate models \cite{ong2003evolutionary}. This would mean training
-some machine learning model that is able to inmediately issue a score
+some machine learning model that is able to immediately issue a score
 for a certain configuration level. These surrogate models could be
 combined with real evaluations to give an accurate result, and be able
 to reach a good number of evaluations.
 
 Finally, the algorithm itself can be improved, by testing different
 types of selection procedures, and tuning its greediness. This is
-something that can be done inmediately, and will be one of our next steps.
+something that can be done immediately, and will be one of our next steps.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
