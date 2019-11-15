@@ -9,7 +9,7 @@
 
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+
 
 <<setup, cache=FALSE,echo=FALSE>>=
 library(ggplot2)
@@ -186,6 +186,12 @@ configuration we get a much more secure system but we lose
 diversity. We need to boost diversity while keeping security high, depending on our
 system.
 
+% Introduce here the main points of our paper
+% 1. Use of real systems, with a real workload
+% 2. use of a real security scoring technique
+% 3. Open source, as security systems should be
+% 4. Use of industry-standard Nginx.
+
 
 The rest of the paper is organized as follows: next we present a brief
 state of the art in the subject of moving target defense. The
@@ -217,7 +223,7 @@ will probably try and pursue different targets, thus reducing security
 costs for the defender.
 
 This program was pursued using different kind of techniques, of which
-a good survey is made in \ref{Cai2016}. These techniques include
+a good survey is made in \ref{Cai2016} and more recently in \cite{lei2018moving,ward2018survey}. These techniques include
 bioinspired algorithms; which 
 % 2. 
  have been often used in the area of
@@ -231,7 +237,9 @@ detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting)
 at the application layer by modeling HTTP requests with the use of
 regular expressions. In general, either by evolution of rules or
 programs or by finding the best solution in combinatorial optimization
-problems, such as the one we are dealing with in this paper.
+problems, such as the one we are dealing with in this paper. More
+recently, Buji et al. in \cite{buji_genetic_2017} have applied
+evolutionary algorithms for a general enhancement of security in real systems.
 
 
 % 3.
@@ -260,17 +268,38 @@ Although most of the effort is devoted to creating a MTD for servers,
 it can also be applied to software defined networks \cite{al2011toward}.
 
 After the early {\em bioinspired} approaches to MTD, explicit
-solutions using evolutionary algorithms were described for the first time by John et
-al. \cite{john_evolutionary_2014}. This paper describes a host-level
+solutions using evolutionary algorithms were conceptually described for the first
+time by Crouse and Fulp in \cite{6111663}. This was intended mainly as
+a proof of concept, and describes 80 parameters, of which just half
+are evolved. The GA minimizes the number of vulnerabilities, but the
+study also emphasizes the degree of diversity achieved by successive
+generations in the GA, which impact on the diversity needed by the
+MTD. Lucas et al. in \cite{lucas2014initial} applied those theoretical
+concepts to a framework called EAMT, a Python-based system that uses
+evolutionary algorithms to create new configurations, which are then
+implemented in a virtual machine and scored using scanning tools such
+as Nessus. Later on, John et
+al. \cite{john_evolutionary_2014} make a more explicit and practical
+use of an evolutoinary algorithm, describing a host-level
 defense system, that is, one that operates at the level of a single
 node in the network, not network-wide, and works on the configuration
 of the Apache server, evolving them and evaluating at the parameter
-level using the above mentioned CVSS score. 
-More recently, Buji et al. in
-\cite{buji_genetic_2017} % Add something here - JJ
-, but also applied to reconfiguration of
-software defined networks by Champagne et al. in
-\cite{champagne_genetic_2018}. 
+level using the above mentioned CVSS score. These two systems
+highlighted the need for, first, a practical way of applying the MTD
+to an actual system, to the point of implementing it in a real virtual
+mchine, and second, the problematic of scoring the generated
+configurations. In the next section we will explain our proposed
+solutions to these two problems.
+
+
+
+MTD can also be aplied at a network level. Makanju et al applied
+evolutionary algorithms in e defined networks by Champagne et al. in
+\cite{Makanju:2017:ECM:3067695.3075604}. In this case the SDN have to
+respect the service level agreements, and a fitness function that
+takes into account the adaptation of the SDN to the environment. This work was continued by
+others in \cite{champagne_genetic_2018}, but in this case the EA
+dynamically placed the controller in a network.
 
 
 Moving target defense has many applications in the field of
