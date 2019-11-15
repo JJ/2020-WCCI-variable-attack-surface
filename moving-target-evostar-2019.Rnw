@@ -15,10 +15,6 @@
 library(ggplot2)
 library(ggthemes)
 data <- read.csv("results/all_results.csv")
-data$Crossover <- as.factor(data$Crossover)
-data$Population <- as.factor(data$Population)
-data.web <- data[data$Web == "Static",]
-data.juice <- data[data$Web == "Juice Shop",]
 @
 
 \title{Using evolutionary algorithms for server hardening via the moving target defense technique}
@@ -464,11 +460,25 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 The results of the experiments are available with a free license in a
 GitHub repository. The results for the static website are represented
 in Figure \ref{fig:zap:static}.
+%
+\begin{figure*}[h!tb]
+  \centering
+<<results-time,cache=FALSE,echo=FALSE>>=
+ggplot(data,aes(x=Population,y=Days,color=Web)) + geom_point()+ theme_tufte()
+@
+\caption{Scatter plot representing the time, in days, it has taken for
+each experiment to be completed. Juice shop experiments were only
+completed up to a population of 32.}
+\label{fig:time}
+\end{figure*}
 
 %
 \begin{figure*}[h!tb]
   \centering
-<<results-static,cache=FALSE,echo=FALSE>>=
+  <<results-static,cache=FALSE,echo=FALSE>>=
+ data$Crossover <- as.factor(data$Crossover)
+data$Population <- as.factor(data$Population)
+data.web <- data[data$Web == "Static",]
 ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10,alpha=Days)) + geom_jitter(width = 0.3, height=0)+ theme_tufte()
 @
 \caption{Scatter plot for OWASP ZAP scores for every experiment using the
@@ -480,7 +490,9 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 %
 \begin{figure*}[h!tb]
   \centering
-<<results-juice-shop,cache=FALSE,echo=FALSE>>=
+  <<results-juice-shop,cache=FALSE,echo=FALSE>>=
+data.juice <- data[data$Web == "Juice Shop",]
+
 ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10,alpha=Days))+ geom_jitter(width = 0.3,height=0) +  theme_tufte()
 @
 \caption{Scatter plot for OWASP ZAP scores for every experiment with the
