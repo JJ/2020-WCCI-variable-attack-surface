@@ -566,6 +566,13 @@ is related to time, only seems to depend on the population, that is,
 it is equivalent only to the number of evaluations. Better results, in
 fact, do no need more time.
 
+It is also interesting to note the actual number of individuals found
+in every run, which is inversely proportional to the vulnerability
+levels that have been reached: while with ZAP=11 all individuals in
+the population have the same value, if the level is equal to 3 a very
+small proportion of the population has the same value. This might
+indicate the need to run the evolutionary algorithm for longer.
+
 We will examine the next experiment, using the more complicated Juice
 Shop, to confirm or dismiss these results. These results are charted
 in Figure \ref{fig:zap:juice}.
@@ -584,6 +591,14 @@ the same ZAP score as the best; 10.0 indicates that the whole
 population has the same low vulnerability score (proportion equal to 1). Jittering is using to make the different results visible.}
 \label{fig:zap:juice}
 \end{figure*}
+
+These results are substantially similar to the previous ones, but there
+are differences; for starters, the evaluation takes, as shown above,
+more time, so just the population levels of 16 and 32 could be
+tested. On the other hand, there are three level of
+vulnerabilities, with most experiments resulting in an acceptable
+(below 15), but the highest level of 11; a decreasing number of
+experiments reach 6 and very few ones get to ZAP = 3.
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
