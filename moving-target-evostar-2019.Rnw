@@ -219,7 +219,7 @@ will probably try and pursue different targets, thus reducing security
 costs for the defender.
 
 This program was pursued using different kind of techniques, of which
-a good survey is made in \ref{Cai2016} and more recently in \cite{lei2018moving,ward2018survey}. These techniques include
+a good survey is made in \cite{Cai2016} and more recently in \cite{lei2018moving,ward2018survey}. These techniques include
 bioinspired algorithms; which 
 % 2. 
  have been often used in the area of
@@ -484,12 +484,16 @@ python3 genetic.py --individuals {16|32|64}
     --crossover-{one|two}-point --[no-]random-mutation
 \end{verbatim}
 
+For the two different payloads we use, we need to change one line in
+the {\tt genetic.py} code. This code, as well as the final results of
+every experiment, are available in GitHub and are in fact included in
+the same repository as this paper, and processed as part of the source
+of this paper.
+
+These results will be analyzed next.
 
 \subsection{Experimental results}
 \label{subs:results}
-
-The results of the experiments are available with a free license in a
-GitHub repository.
 %
 \begin{figure*}[h!tb]
   \centering
@@ -502,9 +506,8 @@ completed up to a population of 32.}
 \label{fig:time}
 \end{figure*}
 %
-
-The MTD is based on the frequent and impredictable changing of
-configurations, so the first thing we need to asses is how long it
+Since the MTD is based on the frequent and impredictable changing of
+configurations, one of the first thing we need to asses is how long it
 takes to generate a set of different Nginx configurations with low
 vulnerability. This is represented in Figure \ref{fig:time}, which
 plots the duration of all experiments for the static web (Static) and
@@ -518,6 +521,18 @@ for the static web site. This time to generate a configuration
 constrains the frequency of change of configurations; on the other
 hand, every run generates several viable configurations.
 
+This proves that our method, even using real-life scoring and
+deployment methods, is able to generate a good amount of
+configurations in a reasonable amount of time.
+
+Of course, we need these configurations to have an acceptable degree
+of vulnerabilities. First it should be noted that acceptables ZAP
+scores go up to 15; more than that value will not be considered
+acceptable. These vulnerabilities captured by ZAP can be dealt with at
+a different level, but at any rate, it is always desirable to obtain
+as low a level of vulnerabilities as possible. We will analyze each of
+the two web payloads in turn, starting with the static web site, which
+is the simpler one.
 
 \begin{figure*}[h!tb]
   \centering
@@ -534,8 +549,26 @@ ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size
 \label{fig:zap:static}
 \end{figure*}
 %
-This is shown in Figure \ref{fig:zap:static}, which represents the results for the static website.
+Figure \ref{fig:zap:static}, charts the results for the static
+website, representing the ZAP vulnerability score as $y$ axis and the
+population as $x$ axis. We need to assess the influence of this
+parameter in the final result; but at the same time we need to
+evaluate the importance of mutation operators that are being tested,
+as well as the relationship between the time employed and the results
+obtained.
 
+This figure shows that most experiments result in a vulnerability
+score of 11, but in some exceptional cases a vulnerability score of 3
+is reached. All these cases have used random mutation and a one-point
+crossover, so this might be a combination that, in a few cases, is
+able to obtain better results. The transparency of the points, which
+is related to time, only seems to depend on the population, that is,
+it is equivalent only to the number of evaluations. Better results, in
+fact, do no need more time.
+
+We will examine the next experiment, using the more complicated Juice
+Shop, to confirm or dismiss these results. These results are charted
+in Figure \ref{fig:zap:juice}.
 
 
 \begin{figure*}[h!tb]
@@ -549,7 +582,7 @@ ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, si
   Juice Shop site. ``Copies'' is the proportion of the population with
 the same ZAP score as the best; 10.0 indicates that the whole
 population has the same low vulnerability score (proportion equal to 1). Jittering is using to make the different results visible.}
-\label{fig:zap:static}
+\label{fig:zap:juice}
 \end{figure*}
 
 \section{Conclusions and discussion}
