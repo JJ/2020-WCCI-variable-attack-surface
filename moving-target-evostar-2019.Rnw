@@ -600,6 +600,20 @@ vulnerabilities, with most experiments resulting in an acceptable
 (below 15), but the highest level of 11; a decreasing number of
 experiments reach 6 and very few ones get to ZAP = 3.
 
+In the line of the previous results, the best results are obtained
+with 1-point crossover and random mutation, although for the medium
+level of vulnerability this is not so clear. Besides, when the 
+additive mutation is used it results in more copies with the same
+vulnerability, or fitness.
+
+In general, however, and in both cases, the evolutionary algorithm is
+able to find configurations with a low vulnerability level, but there
+seems to be a balance between obtaining many results and minimizing
+the vulnerability. However, in general, the objecties of this paper
+have been reached.
+
+We will discuss this results next.
+
 \section{Conclusions and discussion}
 \label{sec:conclusions}
 
