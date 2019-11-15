@@ -93,7 +93,12 @@ This kind of protection against cybersecurity threats can be implemented by a
 proper software configuration without the need to invest in costly
 security solutions. In order to measure how optimal a configuration is, an
 objective score must be used to measure security or its inverse,
-vulnerabilities \cite{yang2012security}: The `Security Technical Implementation Guides' or STIGs are the configuration standards for DoD systems provided by the `Defense Information Systems Agency' (DISA) since 1998. These guides give some recommendations to hardening the configuration of software systems based on known vulnerabilities and his impact is classified using the CVSS score.
+vulnerabilities \cite{yang2012security}: The `Security Technical
+Implementation Guides' or STIGs are the configuration standards for
+DoD systems provided by the `Defense Information Systems Agency'
+(DISA) since 1998. These guides give some recommendations to hardening
+the configuration of software systems based on known vulnerabilities
+and his impact is classified using the CVSS score. 
 
 The `Common Vulnerability
 Scoring System' or CVSS \cite{cvss} is an open standard to measure
@@ -211,25 +216,32 @@ too expensive or too complex to pursue. An attacker, in this case,
 will probably try and pursue different targets, thus reducing security
 costs for the defender.
 
-
-
-
-
-
+This program was pursued using different kind of techniques, of which
+a good survey is made in \ref{Cai2016}. These techniques include
+bioinspired algorithms; which 
 % 2. 
-
-Bioinspired metaheuristics have been often used in the area of
-cybersecurity; for instance, some authors have proposed using
+ have been often used in the area of
+cybersecurity; for instance, even before proposing the moving target
+defense technique, evolutionary algorithms were applied to intrusion
+detection systems \cite{WU20101}. Some authors have proposed using
 evolutionary-based optimization techniques to improve detection of SQL
 injection attacks and anomalies within HTTP requests
 \cite{CHORAS2018179}; other authors \cite{Kozik2014} focus on
 detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting)
 at the application layer by modeling HTTP requests with the use of
-regular expressions. 
+regular expressions. In general, either by evolution of rules or
+programs or by finding the best solution in combinatorial optimization
+problems, such as the one we are dealing with in this paper.
 
 
 % 3.
-Early MTD techniques included the use of rotating virtual webservers
+Curiosly enough, a bioinspired and ad hoc technique called {\em
+  symbiotic embedded machines} (SEM) were proposed by Cui and Stolfo
+\cite{cui2011symbiotes} as a methdology for {\em injecting} code into
+systems that would behave in a way that would be similar to a
+symbiotically-induced immune system. Besides that principled
+biological inspiration, SEMs used mutation as a mechanism for avoiding
+signature based detection methods and thus become a MTD system. Other early MTD solutions included the use of rotating virtual webservers
 \cite{huang2011introducing}, every one with a different attack
 surface, to avoid predictability and achieve a variable attack
 surface. However, while this was a practical and actionnable defense,
@@ -247,13 +259,19 @@ mechanism was proposed to establish these configurations.
 Although most of the effort is devoted to creating a MTD for servers,
 it can also be applied to software defined networks \cite{al2011toward}.
 
-Curiosly enough, a bioinspired and ad hoc technique called {\em
-  symbiotic embedded machines} (SEM) were proposed by Cui and Stolfo
-\cite{cui2011symbiotes} as a methdology for {\em injecting} code into
-systems that would behave in a way that would be similar to a
-symbiotically-induced immune system. Besides that principled
-biological inspiration, SEMs used mutation as a mechanism for avoiding
-signature based detection methods and thus become a MTD system.
+After the early {\em bioinspired} approaches to MTD, explicit
+solutions using evolutionary algorithms were described for the first time by John et
+al. \cite{john_evolutionary_2014}. This paper describes a host-level
+defense system, that is, one that operates at the level of a single
+node in the network, not network-wide, and works on the configuration
+of the Apache server, evolving them and evaluating at the parameter
+level using the above mentioned CVSS score. 
+More recently, Buji et al. in
+\cite{buji_genetic_2017} % Add something here - JJ
+, but also applied to reconfiguration of
+software defined networks by Champagne et al. in
+\cite{champagne_genetic_2018}. 
+
 
 Moving target defense has many applications in the field of
 cybersecurity. For example, in hardware systems, such as the Morpheus
@@ -263,13 +281,6 @@ technique like this would have prevented the Spectre vulnerability
 suffered by Intel processors that exploited failures in the
 speculative execution feature. 
 
-This type of defense was approached
-using evolutionary algorithms for the first time by John et
-al. \cite{john_evolutionary_2014}. More recently, Buji et al. in
-\cite{buji_genetic_2017} % Add something here - JJ
-, but also applied to reconfiguration of
-software defined networks by Champagne et al. in
-\cite{champagne_genetic_2018}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
