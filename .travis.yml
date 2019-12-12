@@ -7,12 +7,9 @@ python:
 
 before_install:
   - cd code
-  
+
 install:
   - pip install -r requirements.txt
 
-before_script:
-  - cd code
-  
 script:
   - pytest
