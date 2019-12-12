@@ -59,7 +59,7 @@ def test_mutation(function1, function2):
         [882, 101, 1, 0, 0, 986, 644, 0, 1, 1, 5, 0, 0],
         [1529, 70, 1, 1, 1, 1462, 1834, 0, 0, 1, 1, 1, 0]
     ]
-    result = genetic.mutation(population)
+    result = genetic.mutate(population)
     assert(result == expected_result)
 
 
