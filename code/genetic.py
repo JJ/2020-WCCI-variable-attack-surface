@@ -76,8 +76,8 @@ def crossover_two_points(individual1, individual2):
 
     # Two random cross points is chosen to make the exchange
     crosspoint1 = random.randint(1, genes - 3)
-    crosspoint2 = random.randint(crosspoint1, genes - 1)
-
+    crosspoint2 = random.randint(crosspoint1, genes - 2)
+    print( "Points ", genes, crosspoint1, crosspoint2 )
     return individual1[:crosspoint1] + individual2[crosspoint1:crosspoint2] + individual1[crosspoint2:]
 
 
