@@ -34,7 +34,7 @@ def test_set_directive_list_value_string():
 
 def test_generate_config_good():
     """Test nginx configuration"""
-    config = [200, 39, 0, 1, 0, 1033, 1933, 1, 0, 2, 3, 0, 1]
+    config = [200, 39, 0, 1, 0, 1033, 1933, 1, 0, 1, 0, 1, 1, 0, 1, 0]
     nginx_config = str(generate(config))
 
     assert("worker_connections 200;" in nginx_config)
@@ -43,17 +43,22 @@ def test_generate_config_good():
     assert("autoindex on;" in nginx_config)
     assert("send_timeout 0;" in nginx_config)
     assert("large_client_header_buffers 4 1033;" in nginx_config)
+    assert("client_max_body_size 1979392;" in nginx_config)
+    assert("server_tokens on;" in nginx_config)
+    assert("gzip off;" in nginx_config)
+    assert("add_header X-Frame-Options: \"ALLOW-FROM http://www.exampletfm.com/\";" in nginx_config)
     assert("add_header Server: caddy;" in nginx_config)
-    assert("add_header X-Content-Type-Options: nosniff;" in nginx_config)
-    assert("add_header X-Powered-By: Django2.2;" in nginx_config)
-    assert("add_header X-Frame-Options: DENY;" in nginx_config)
+    assert("add_header X-Content-Type-Options: \"\";" in nginx_config)
+    assert("add_header X-Powered-By: PHP/5.3.3;" in nginx_config)
+    assert("add_header X-XSS-Protection: 0" in nginx_config)
+    assert("add_header Content-Security-Policy: \"default-src 'none'\"" in nginx_config)
 
 
 def test_generate_config_bad():
     """Test nginx configuration"""
     config = [1, 1, 1, 0, 0, 0, 1933, 1, 0, 2, 3, 0, 1]
     nginx_config = str(generate(config))
-
+    print(nginx_config)
     assert("worker_connections 0;" not in nginx_config)
     assert("keepalive_timeout 0;" not in nginx_config)
     assert("disable_symlinks off;" not in nginx_config)
