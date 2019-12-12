@@ -56,7 +56,8 @@ def test_generate_config_good():
 
 def test_generate_config_bad():
     """Test nginx configuration"""
-    config = [1, 1, 1, 0, 0, 0, 1933, 1, 0, 2, 3, 0, 1]
+    config = [1, 1, 1, 0, 0, 0, 1933, 1, 0, 1, 0, 1, 1, 0, 1, 0]
+
     nginx_config = str(generate(config))
     print(nginx_config)
     assert("worker_connections 0;" not in nginx_config)
