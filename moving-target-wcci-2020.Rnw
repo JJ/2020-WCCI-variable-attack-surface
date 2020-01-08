@@ -1,11 +1,12 @@
-\documentclass[runningheads]{llncs}
-
-%%% Local Variables:
-%%% ispell-local-dictionary: "english"
-%%% End:
-\usepackage[utf8]{inputenc}
-\usepackage{booktabs} % For formal tables
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
 \usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
 
 
 \begin{document}
@@ -17,27 +18,22 @@ library(ggthemes)
 data <- read.csv("results/all_results.csv")
 @
 
-\title{Using evolutionary algorithms for server hardening via the moving target defense technique}
+\title{}
 
- \author{A\inst{1}
- \and
- B\inst{1}
- \and
- C\inst{1}
- \and
- D\inst{2}
-}
-
-\institute{%
-   University Z\\
-   \email{an@ema.il}
+\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID} % Add your name here
 \and
-   University Y\\
-   \email{another@ema.il}
+\IEEEauthorblockN{Juan J. Merelo-Guerv\'os}
+\IEEEauthorblockA{\textit{Dept. of Computer Architecture and Technology} \\
+\textit{University of Granada}\\
+Granada, Spain \\
+jmerelo@ugr.es}
+
 }
 
-%\authorrunning{Merelo et al.}
-%\titlerunning{Using evolutionary algorithms for server hardening via the moving target defense technique}
 
 \maketitle
 
