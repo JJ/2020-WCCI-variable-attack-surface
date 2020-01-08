@@ -12,3 +12,10 @@ Inside the www.exampletfm.com container:
 ```
 python3 genetic.py
 ```
+
+## Install and run tests by itself
+
+Just do the usual
+
+    pip install -r requirements.txt
+    pytest
