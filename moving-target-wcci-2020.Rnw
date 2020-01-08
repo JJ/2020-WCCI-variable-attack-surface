@@ -39,24 +39,13 @@ jmerelo@ugr.es}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-The {\em moving target defense} from cyberattacks consists in changing
-the profile or signature of certain services in an Internet node so
-that an attacker is not able to identify it uniquely, or find specific
-angles of attack for it. From an optimization point of view,
-generating profiles that change and, besides, optimize security is a
-combinatorial optimization problem where different service
-configurations are generated and evaluated, seeking the optimum
-according to a standard server vulnerability evaluation score. In this
-paper we will use an evolutionary algorithm to generate different
-server profiles that also minimize the risk of being attacked. Working
-on the well-known web server {\tt {\sf nginx}}, and using an
-industry-standard web configuration, we will prove that this
-evolutionary algorithm is able to generate a sufficient amount of
-different and secure profiles in time for them to be deployed in the
-server. The system has been released as free software, as is the best
-practice in security tools. 
+% Rewrite from scratch
 \end{abstract}
-\keywords{Security, cyberattacks, performance evaluation.}
+\begin{IEEEkeywords}
+
+Security, cyberattacks, performance evaluation.
+\end{IEEEkeywords}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -524,6 +513,7 @@ These results will be analyzed next.
 
 \subsection{Experimental results}
 \label{subs:results}
+
 %
 \begin{figure*}[h!tb]
   \centering
@@ -708,13 +698,9 @@ something that can be done immediately, and will be one of our next steps.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
 
-%   This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P) and AMED (co-funded by European Regional Development Fund and the region Normandy).
+This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P) and AMED (co-funded by European Regional Development Fund and the region Normandy).
 
-Acks\\
-Taking\\
-This much space
-
-\bibliographystyle{splncs04}
+\bibliographystyle{IEEEtran}
 \bibliography{geneura,moving-target}
 
 \end{document}
