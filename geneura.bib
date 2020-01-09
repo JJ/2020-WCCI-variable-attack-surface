@@ -1038,7 +1038,7 @@ annote = {Impact factor: 0.288}
 }
 
 @InProceedings{jeo-gecco2002,
-  author = 		 {M. G. Arenas and B. Dolin and Juan-Julián Merelo-Guerv\\'os and P. A. Castillo and I. Fernández de Viana and M. Schoenauer },
+  author = 		 {M. G. Arenas and B. Dolin and Juan-Julián Merelo-Guervós and P. A. Castillo and I. Fernández de Viana and M. Schoenauer },
   title = 		 {{JEO}: {J}ava {E}volving {O}bjects},
   booktitle = 	 {Poster Accepted at GECCO 2002},
   editor = {W. B. Langdon and E. Cantú-Paz and K. Mathias and R. Roy and D. Davis and R. Poli and K. Balakrishnan and V. Honavar and G. Rudolph and J. Wegener and L. Bull and M. A. Potter and A. C. Schultz and J. F. Miller and E. Burke and N. Jonoska.},
@@ -1217,7 +1217,7 @@ url = {\url{http://es.tldp.org/Presentaciones/200211hispalinux/merelo/ae-hispali
   title = 	 {Parallel Problem Solving from Nature - PPSN VII, 7th International Conference, Granada, Spain, September 7-11, 2002. Proceedings},
   year = 	 2002,
   key =		 {PPSN2002},
-  editor =	 {J.-J. Merelo Guerv\\'os and P. Adamidis and H.-G. Beyer and J.-L. Fernández-Villacañas and H.-P. Schwefel},
+  editor =	 {J.-J. Merelo-Guerv\'os and P. Adamidis and H.-G. Beyer and J.-L. Fernández-Villacañas and H.-P. Schwefel},
   number =	 2439,
   series =	 {Lecture Notes in Computer Science,LNCS},
   month =	 {September},
@@ -4144,6 +4144,15 @@ document_type={Conference Paper},
 source={Scopus},
 }
 
+@inproceedings{arenas2011gpu,
+  title={GPU computation in bioinspired algorithms: a review},
+  author={Arenas, Maribel Garc{\'\i}a and Mora, Antonio Miguel and Romero, Gustavo and Castillo, Pedro A},
+  booktitle={International Work-Conference on Artificial Neural Networks},
+  pages={433--440},
+  year={2011},
+  organization={Springer}
+}
+
 @article{DBLP:journals/corr/abs-1108-1262,
   author    = {Juan Juli{\'a}n Merelo Guerv{\\'o}s and
                Carlos Cotta and
@@ -4155,6 +4164,15 @@ source={Scopus},
   year      = {2011},
   ee        = {http://arxiv.org/abs/1108.1262},
   bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@incollection{arenas2012gpu,
+  title={GPU parallel computation in bioinspired algorithms: a review},
+  author={Arenas, MG and Romero, G and Mora, AM and Castillo, PA and Merelo, JJ},
+  booktitle={Advances in Intelligent Modelling and Simulation},
+  pages={113--134},
+  year={2012},
+  publisher={Springer}
 }
 
 @InProceedings{sofea:evopar2012,
@@ -7542,7 +7560,7 @@ isbn="978-3-319-77538-8"
                Giovanni Squillero and
                Juan Juli{\'{a}}n {Merelo Guerv{\'{o}}s}},
   title     = {Automated playtesting in collectible card games using evolutionary
-               algorithms: {A} case study in hearthstone},
+               algorithms: {A} case study in HearthStone},
   journal   = {Knowl.-Based Syst.},
   volume    = {153},
   pages     = {133--146},
@@ -7734,4 +7752,321 @@ isbn="978-3-030-00350-0"
   timestamp = {Mon, 03 Jun 2019 14:16:23 +0200},
   biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1905-11044},
   bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@conference{ijcci18,
+author={Amaal R. Al Shorman. and Hossam Faris. and Pedro A. Castillo. and J. J. Merelo. and Nailah Al{-}Madi.},
+title={The Influence of Input Data Standardization Methods on the Prediction Accuracy of Genetic Programming Generated Classifiers},
+booktitle={Proceedings of the 10th International Joint Conference on Computational Intelligence - Volume 1: IJCCI,},
+year={2018},
+pages={79-85},
+publisher={SciTePress},
+organization={INSTICC},
+doi={10.5220/0006959000790085},
+isbn={978-989-758-327-8},
+}
+
+@conference{ijcci19,
+author={Carlos M. Fernandes. and Nuno Fachada. and Juan L. J. Laredo. and Juan Julian Merelo. and Pedro A. Castillo. and Agostinho Rosa.},
+title={Revisiting Population Structure and Particle Swarm Performance},
+booktitle={Proceedings of the 10th International Joint Conference on Computational Intelligence - Volume 1: IJCCI,},
+year={2018},
+pages={248-254},
+publisher={SciTePress},
+organization={INSTICC},
+doi={10.5220/0006959502480254},
+isbn={978-989-758-327-8},
+}
+
+@article{10.7717/peerj-cs.202,
+ title = {Steady state particle swarm},
+ author = {Fernandes, Carlos M. and Fachada, Nuno and Merelo, Juan-Julián and Rosa, Agostinho C.},
+ year = 2019,
+ month = aug,
+ keywords = {Bak–Sneppen model, Particle swarm optimization, Velocity update strategy},
+ abstract = {
+This paper investigates the performance and scalability of a new update strategy for the particle swarm optimization (PSO) algorithm. The strategy is inspired by the Bak–Sneppen model of co-evolution between interacting species, which is basically a network of fitness values (representing species) that change over time according to a simple rule: the least fit species and its neighbors are iteratively replaced with random values. Following these guidelines, a steady state and dynamic update strategy for PSO algorithms is proposed: only the least fit particle and its neighbors are updated and evaluated in each time-step; the remaining particles maintain the same position and fitness, unless they meet the update criterion. The steady state PSO was tested on a set of unimodal, multimodal, noisy and rotated benchmark functions, significantly improving the quality of results and convergence speed of the standard PSOs and more sophisticated PSOs with dynamic parameters and neighborhood. A sensitivity analysis of the parameters confirms the performance enhancement with different parameter settings and scalability tests show that the algorithm behavior is consistent throughout a substantial range of solution vector dimensions.
+},
+ volume = 5,
+ pages = {e202},
+ journal = {PeerJ Computer Science},
+ issn = {2376-5992},
+ url = {https://doi.org/10.7717/peerj-cs.202},
+ doi = {10.7717/peerj-cs.202}
+}
+
+
+
+@inproceedings{DBLP:conf/cig/SalemMG19,
+  author    = {Mohammed Salem and
+               Antonio Miguel Mora and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s}},
+  title     = {Beating uncertainty in racing bot evolution through enhanced exploration
+               and pole position selection},
+  booktitle = {{IEEE} Conference on Games, CoG 2019, London, United Kingdom, August
+               20-23, 2019},
+  pages     = {1--8},
+  year      = {2019},
+  crossref  = {DBLP:conf/cig/2019},
+  url       = {https://doi.org/10.1109/CIG.2019.8847998},
+  doi       = {10.1109/CIG.2019.8847998},
+  timestamp = {Wed, 16 Oct 2019 14:14:56 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/cig/SalemMG19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@proceedings{DBLP:conf/cig/2019,
+  title     = {{IEEE} Conference on Games, CoG 2019, London, United Kingdom, August
+               20-23, 2019},
+  publisher = {{IEEE}},
+  year      = {2019},
+  url       = {https://ieeexplore.ieee.org/xpl/conhome/8844551/proceeding},
+  isbn      = {978-1-7281-1884-0},
+  timestamp = {Wed, 16 Oct 2019 14:14:56 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/cig/2019},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+@inproceedings{DBLP:conf/gecco/CalleGGV19,
+  author    = {Laura Calle and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Antonio Mora Garc{\'{\i}}a and
+               Mario Garc{\'{\i}}a Valdez},
+  title     = {Improved free form evolution for angry birds structures},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference
+               Companion, {GECCO} 2019, Prague, Czech Republic, July 13-17, 2019},
+  pages     = {133--134},
+  year      = {2019},
+  crossref  = {DBLP:conf/gecco/2019c},
+  url       = {https://doi.org/10.1145/3319619.3322061},
+  doi       = {10.1145/3319619.3322061},
+  timestamp = {Wed, 25 Sep 2019 18:25:07 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/gecco/CalleGGV19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/gecco/FernandesRLG19,
+  author    = {Carlos M. Fernandes and
+               Agostinho C. Rosa and
+               Juan Luis Jim{\'{e}}nez Laredo and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s}},
+  title     = {Genealogical patterns in evolutionary algorithms},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference
+               Companion, {GECCO} 2019, Prague, Czech Republic, July 13-17, 2019},
+  pages     = {283--284},
+  year      = {2019},
+  crossref  = {DBLP:conf/gecco/2019c},
+  url       = {https://doi.org/10.1145/3319619.3321914},
+  doi       = {10.1145/3319619.3321914},
+  timestamp = {Thu, 11 Jul 2019 11:05:01 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/gecco/FernandesRLG19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@proceedings{DBLP:conf/gecco/2019c,
+  editor    = {Manuel L{\'{o}}pez{-}Ib{\'{a}}{\~{n}}ez and
+               Anne Auger and
+               Thomas St{\"{u}}tzle},
+  title     = {Proceedings of the Genetic and Evolutionary Computation Conference
+               Companion, {GECCO} 2019, Prague, Czech Republic, July 13-17, 2019},
+  publisher = {{ACM}},
+  year      = {2019},
+  url       = {https://doi.org/10.1145/3319619},
+  doi       = {10.1145/3319619},
+  isbn      = {978-1-4503-6748-6},
+  timestamp = {Thu, 11 Jul 2019 09:46:27 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/gecco/2019c},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{DBLP:conf/gecco/GuervosLCVG19,
+  author    = {Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Juan Luis Jim{\'{e}}nez Laredo and
+               Pedro A. Castillo and
+               Mario Garc{\'{\i}}a Valdez and
+               Sergio Rojas Galeano},
+  title     = {Improving the algorithmic efficiency and performance of channel-based
+               evolutionary algorithms},
+  booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference
+               Companion, {GECCO} 2019, Prague, Czech Republic, July 13-17, 2019},
+  pages     = {320--321},
+  year      = {2019},
+  crossref  = {DBLP:conf/gecco/2019c},
+  url       = {https://doi.org/10.1145/3319619.3322042},
+  doi       = {10.1145/3319619.3322042},
+  timestamp = {Wed, 25 Sep 2019 18:25:06 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/gecco/GuervosLCVG19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+@inproceedings{DBLP:conf/ijcci/CalleGVG19,
+  author    = {Laura Calle and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Mario Garc{\'{\i}}a Valdez and
+               Antonio Mora Garc{\'{\i}}a},
+  title     = {Speeding Up Evaluation of Structures for the Angry Birds Game},
+  booktitle = {Proceedings of the 11th International Joint Conference on Computational
+               Intelligence, {IJCCI} 2019, Vienna, Austria, September 17-19, 2019},
+  pages     = {237--244},
+  year      = {2019},
+  crossref  = {DBLP:conf/ijcci/2019},
+  url       = {https://doi.org/10.5220/0008365502370244},
+  doi       = {10.5220/0008365502370244},
+  timestamp = {Thu, 17 Oct 2019 12:51:06 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/ijcci/CalleGVG19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@proceedings{DBLP:conf/ijcci/2019,
+  editor    = {Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Jonathan Garibaldi and
+               Alejandro Linares{-}Barranco and
+               Kurosh Madani and
+               Kevin Warwick},
+  title     = {Proceedings of the 11th International Joint Conference on Computational
+               Intelligence, {IJCCI} 2019, Vienna, Austria, September 17-19, 2019},
+  publisher = {ScitePress},
+  year      = {2019},
+  isbn      = {978-989-758-384-1},
+  timestamp = {Thu, 17 Oct 2019 12:50:41 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/ijcci/2019},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+@inproceedings{DBLP:conf/wea2/GuervosLCVG19,
+  author    = {Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Juan Luis Jim{\'{e}}nez Laredo and
+               Pedro A. Castillo and
+               Jos{\'{e}} Mario Garc{\'{\i}}a Valdez and
+               Sergio Rojas Galeano},
+  title     = {Scaling in Concurrent Evolutionary Algorithms},
+  booktitle = {Applied Computer Sciences in Engineering - 6th Workshop on Engineering
+               Applications, {WEA} 2019, Santa Marta, Colombia, October 16-18, 2019,
+               Proceedings},
+  pages     = {16--27},
+  year      = {2019},
+  crossref  = {DBLP:conf/wea2/2019},
+  url       = {https://doi.org/10.1007/978-3-030-31019-6\_2},
+  doi       = {10.1007/978-3-030-31019-6\_2},
+  timestamp = {Wed, 09 Oct 2019 10:46:51 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/wea2/GuervosLCVG19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@proceedings{DBLP:conf/wea2/2019,
+  editor    = {Juan Carlos Figueroa{-}Garc{\'{\i}}a and
+               Mario Duarte{-}Gonz{\'{a}}lez and
+               Sebasti{\'{a}}n Jaramillo{-}Isaza and
+               Alvaro David Orjuela{-}Ca{\~{n}}on and
+               Yesid D{\'{\i}}az Gutierrez},
+  title     = {Applied Computer Sciences in Engineering - 6th Workshop on Engineering
+               Applications, {WEA} 2019, Santa Marta, Colombia, October 16-18, 2019,
+               Proceedings},
+  series    = {Communications in Computer and Information Science},
+  volume    = {1052},
+  publisher = {Springer},
+  year      = {2019},
+  url       = {https://doi.org/10.1007/978-3-030-31019-6},
+  doi       = {10.1007/978-3-030-31019-6},
+  isbn      = {978-3-030-31018-9},
+  timestamp = {Wed, 09 Oct 2019 10:16:01 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/wea2/2019},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@proceedings{DBLP:conf/ijcci/2017s,
+  editor    = {Christophe Sabourin and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Kurosh Madani and
+               Kevin Warwick},
+  title     = {Computational Intelligence - 9th International Joint Conference, {IJCCI}
+               2017 Funchal-Madeira, Portugal, November 1-3, 2017 Revised Selected
+               Papers},
+  series    = {Studies in Computational Intelligence},
+  volume    = {829},
+  publisher = {Springer},
+  year      = {2019},
+  url       = {https://doi.org/10.1007/978-3-030-16469-0},
+  doi       = {10.1007/978-3-030-16469-0},
+  isbn      = {978-3-030-16468-3},
+  timestamp = {Mon, 03 Jun 2019 15:05:17 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/ijcci/2017s},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@proceedings{DBLP:conf/ijcci/2017s,
+  editor    = {Christophe Sabourin and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Kurosh Madani and
+               Kevin Warwick},
+  title     = {Computational Intelligence - 9th International Joint Conference, {IJCCI}
+               2017 Funchal-Madeira, Portugal, November 1-3, 2017 Revised Selected
+               Papers},
+  series    = {Studies in Computational Intelligence},
+  volume    = {829},
+  publisher = {Springer},
+  year      = {2019},
+  url       = {https://doi.org/10.1007/978-3-030-16469-0},
+  doi       = {10.1007/978-3-030-16469-0},
+  isbn      = {978-3-030-16468-3},
+  timestamp = {Mon, 03 Jun 2019 15:05:17 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/ijcci/2017s},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/fgcs/CamachoLGCCLVO18,
+  author    = {David Camacho and
+               Ra{\'{u}}l Lara{-}Cabrera and
+               Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Pedro A. Castillo and
+               Carlos Cotta and
+               Antonio Jos{\'{e}} Fern{\'{a}}ndez Leiva and
+               Francisco Fern{\'{a}}ndez de Vega and
+               Francisco Ch{\'{a}}vez de la O},
+  title     = {From ephemeral computing to deep bioinspired algorithms: New trends
+               and applications},
+  journal   = {Future Generation Comp. Syst.},
+  volume    = {88},
+  pages     = {735--746},
+  year      = {2018},
+  url       = {https://doi.org/10.1016/j.future.2018.07.056},
+  doi       = {10.1016/j.future.2018.07.056},
+  timestamp = {Wed, 25 Sep 2019 17:42:29 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/fgcs/CamachoLGCCLVO18},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{DBLP:journals/firai/GuervosCV18,
+  author    = {Juan Juli{'{a}}n {Merelo Guerv{'{o}}s} and
+               Pedro A. Castillo and
+               Mario Garc{\'{\i}}a Valdez},
+  title     = {Alife in the Clouds: {A} Short Review of Applications of Artificial
+               Life to Cloud Computing and Back},
+  journal   = {Front. Robotics and {AI}},
+  volume    = {2018},
+  year      = {2018},
+  url       = {https://doi.org/10.3389/frobt.2017.00064},
+  doi       = {10.3389/frobt.2017.00064},
+  timestamp = {Wed, 15 Aug 2018 16:52:39 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/firai/GuervosCV18},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{GARCIASANCHEZ2019105757,
+title = "Distributed multi-objective evolutionary optimization using island-based selective operator application",
+journal = "Applied Soft Computing",
+volume = "85",
+pages = "105757",
+year = "2019",
+issn = "1568-4946",
+doi = "https://doi.org/10.1016/j.asoc.2019.105757",
+url = "http://www.sciencedirect.com/science/article/pii/S1568494619305381",
+author = "P. García-Sánchez and J. Ortega and J. González and P.A. Castillo and J.J. Merelo",
+keywords = "Multi-objective algorithms, NSGA-II, Distributed evolutionary algorithms, Island model",
+abstract = "Parallel island-model co-evolutionary algorithms are well-known methods, suitable for dealing with large multi-objective optimization problems. This paper proposes a version of these algorithms where each island modifies a fragment of the chromosome that encodes a possible solution to the problem. The objective of this paper is to demonstrate that automatically setting the size of the overlapping fragments depending on the number of islands obtains better results than using a fixed overlapping size. This method has been compared to other parallel evolutionary techniques considering a different number of islands, chromosome sizes and benchmarks. The analysis of the obtained experimental results, by using different metrics, shows that our approach can provide statistically significant improvements with respect to the base algorithm in high-dimensional, un-decomposable, multi-objective problems. This opens a very promising line to automatically adapt the overlapping sizes in this kind of algorithms."
 }
