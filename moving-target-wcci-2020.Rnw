@@ -698,7 +698,7 @@ something that can be done immediately, and will be one of our next steps.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
 
-This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P) and AMED (co-funded by European Regional Development Fund and the region Normandy).
+This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P).
 
 \bibliographystyle{IEEEtran}
 \bibliography{geneura,moving-target}
