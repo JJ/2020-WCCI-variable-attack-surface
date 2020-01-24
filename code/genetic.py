@@ -104,7 +104,7 @@ def selection_and_reproduction(population):
     print("population")
     pprint(population)
 
-    population = sorted(population, reverse=True)  # Sorts the ordered pairs and is left alone with the array of values
+    population = sorted(population)  # Sorts the ordered pairs and is left alone with the array of values
 
     print("scored")
     pprint(population)
