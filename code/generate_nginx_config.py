@@ -39,11 +39,11 @@ def in_range_change( value, change, gene ):
     new_value = value + change
     if new_value < gene_ranges[gene][0]:
         return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value
-    else if new_value > gene_ranges[gene][1]:
+    elif new_value > gene_ranges[gene][1]:
         return gene_ranges[gene][0] +  new_value - gene_ranges[gene][0]
     return new_value
 
-def mutate_config( config )
+def mutate_config( config ):
     """
         Selects a single element in the config and generates a "circular" mutation
         If any of the ranges is exceeded, gets out the other side
