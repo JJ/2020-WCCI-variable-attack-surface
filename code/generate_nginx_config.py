@@ -35,6 +35,23 @@ def generate_random_config():
         config.append( random.randint( gene_ranges[i][0], gene_ranges[i][1] ) )
     return config
 
+def in_range_change( value, change, gene ):
+    new_value = value + change
+    if new_value < gene_ranges[gene][0]:
+        return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value
+    else if new_value > gene_ranges[gene][1]:
+        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][0]
+    return new_value
+
+def mutate_config( config )
+    """
+        Selects a single element in the config and generates a "circular" mutation
+        If any of the ranges is exceeded, gets out the other side
+    """
+    gene = random.randint(0, len(config) -1 )
+    change = random.choice( -1, 1 )
+    
+    
 
 def set_directive_on_off(chromosome):
     return 'on' if chromosome else 'off'
