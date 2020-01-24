@@ -1,11 +1,14 @@
 import genetic
 import mock
 import random
+import pytest
+
 """Pytest TDD Test definition file"""
 __author__ = "Ernesto Serrano"
 __license__ = "GPLv3"
 __email__ = "erseco@correo.ugr.es"
 
+population = genetic.initialize()
 
 def test_individual():
     """Test individual generation"""
@@ -16,7 +19,6 @@ def test_individual():
 
 def test_initialize():
     """Test population initalization"""
-    population = genetic.initialize()
     assert(isinstance(population, list))
     assert(len(population) == genetic.individuals)
 
@@ -24,43 +26,17 @@ def test_initialize():
 @mock.patch('genetic.calculate_fitness', return_value=1)
 def test_selection_and_reproduction(function):
     """Test selection and reproduction"""
-    population = [
-        [1523, 42, 0, 1, 1, 2045, 537, 1, 1, 2, 2, 0, 0],
-        [1971, 117, 0, 1, 0, 1140, 1737, 1, 1, 2, 2, 0, 0],
-        [882, 101, 1, 0, 0, 986, 644, 0, 1, 1, 5, 0, 0],
-        [1529, 70, 1, 1, 1, 1462, 1834, 0, 0, 1, 1, 1, 0],
-    ]
-
-    expected_result = [
-        [1971, 117, 0, 1, 0, 1140, 1737, 1, 1, 2, 2, 0, 0],
-        [1529, 70, 1, 1, 1, 1462, 1834, 0, 0, 1, 1, 1, 0],
-        [1523, 42, 0, 1, 1, 2045, 537, 1, 1, 2, 2, 0, 0],
-        [882, 101, 1, 0, 0, 986, 644, 0, 1, 1, 5, 0, 0]
-    ]
-
     result = genetic.selection_and_reproduction(population)
 
-    assert(result == expected_result)
+    assert(len(result) == len(population))
 
 
 @mock.patch('random.random', return_value=0.1)
 @mock.patch('fitness.generate_random_config', return_value=[200, 39, 0, 1, 0, 1033, 1933, 1, 0, 2, 3, 0, 1])
 def test_mutation(function1, function2):
     """Test mutation function"""
-    population = [
-        [1523, 42, 0, 1, 1, 2045, 537, 1, 1, 2, 2, 0, 0],
-        [1971, 117, 0, 1, 0, 1140, 1737, 1, 1, 2, 2, 0, 0],
-        [882, 101, 1, 0, 0, 986, 644, 0, 1, 1, 5, 0, 0],
-        [1529, 70, 1, 1, 1, 1462, 1834, 0, 0, 1, 1, 1, 0],
-    ]
-    expected_result = [
-        [1523, 42, 0, 1, 1, 2045, 537, 1, 1, 2, 2, 0, 0],
-        [1971, 117, 0, 1, 0, 1140, 1737, 1, 1, 2, 2, 0, 0],
-        [882, 101, 1, 0, 0, 986, 644, 0, 1, 1, 5, 0, 0],
-        [1529, 70, 1, 1, 1, 1462, 1834, 0, 0, 1, 1, 1, 0]
-    ]
     result = genetic.mutate(population)
-    assert(result == expected_result)
+    assert(len(result) == len(population))
 
 
 @mock.patch('random.randint', return_value=6)

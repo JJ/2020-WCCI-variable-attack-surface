@@ -101,20 +101,22 @@ def selection_and_reproduction(population):
         modify).
     """
 
-    # print("population")
-    # pprint(population)
+    print("population")
+    pprint(population)
 
     population = sorted(population, reverse=True)  # Sorts the ordered pairs and is left alone with the array of values
 
-    # print("scored")
-    # pprint(population)
+    print("scored")
+    pprint(population)
 
     selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
 
     # Shuffle the individuals
     random.shuffle(selected)
     crossed_population = []
-
+    print("Selected")
+    pprint(selected)
+    
     # Genetic material is mixed to create new individuals
     for i in range(len(selected) // 2, 2):
         parent = random.sample(selected, 2)  # Two parents are selected
