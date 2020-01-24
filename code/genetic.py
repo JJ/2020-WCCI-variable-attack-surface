@@ -111,7 +111,7 @@ def selection_and_reproduction(population):
     pprint(population)
 
     #selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
-    selected =  minTournament(population, k=(len(population) - pressure), tournament_size)
+    selected =  minTournament(population, k=(len(population) - pressure), tournsize = tournament_size)
     
     # Shuffle the individuals
     random.shuffle(selected)
