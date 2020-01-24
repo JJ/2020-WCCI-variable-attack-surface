@@ -9,6 +9,7 @@ __email__ = "erseco@correo.ugr.es"
 
 import random
 from fitness import *
+from selection import minTournament
 from generate_nginx_config import *
 import click
 from pytictoc import TicToc
@@ -20,7 +21,7 @@ mutation_chance = 0.2  # The probability that an individual mutates
 generations = 15  # The number of generations that we will evolve
 crossover_type = 1  # The crossover type, can be 1 or 2
 mutation_type_random = True  # Set if the mutation is random or +-1
-
+tournament_size = 5 
 
 def print_variable_info():
     print("genes: %d" % genes)
@@ -109,8 +110,9 @@ def selection_and_reproduction(population):
     print("scored")
     pprint(population)
 
-    selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
-
+    #selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
+    selected =  minTournament(population, k=(len(population) - pressure), tournament_size)
+    
     # Shuffle the individuals
     random.shuffle(selected)
     crossed_population = []
