@@ -63,6 +63,10 @@ def calculate_fitness(config):
         print(alerts)
 
         check_kill_process("nginx")
+        time.sleep(2)
+        check_kill_process("nginx")
+        time.sleep(2)
+        check_kill_process("nginx")
 
         Popen(["service", "nginx", "zap"])
         time.sleep(2)
