@@ -151,25 +151,27 @@ def mutate(crossed_population):
         solution could never be reached.
     """
     for i in range(len(crossed_population)):
+        print("Crossed population")
+        pprint(crossed_population)
         if random.random() <= mutation_chance:  # Every individual in the population (except the parents) has a chance to mutate.
-            gen = random.randint(0, genes - 1)  # A random gen is chosen
+            gene = random.randint(0, genes - 1)  # A random gen is chosen
 
             new_value = None
 
             if mutation_type_random:
-                new_value = generate_random_config()[gen]  # and a new value for this gen
+                new_value = generate_random_config()[gene]  # and a new value for this gene
 
                 # It is important to see that the new value is not equal to the old one.
-                while new_value == crossed_population[i][1][gen]:
-                    new_value = generate_random_config()[gen]
+                while new_value == crossed_population[i][1][gene]:
+                    new_value = generate_random_config()[gene]
 
             else:
                 # In this case we are randomly adding(+) or substracting(-) 1
-                new_value = crossed_population[i][1][gen]
+                new_value = crossed_population[i][1][gene]
                 new_value += 1 if random.random() < 0.5 else -1
 
             # Applying mutation
-            crossed_population[i][1][gen] = new_value
+            crossed_population[i][1][gene] = new_value
 
     return crossed_population
 

@@ -9,29 +9,31 @@ __email__ = "erseco@correo.ugr.es"
 from nginx.config.api import Config, Section, Location, EmptyBlock, KeyMultiValueOption
 import random
 
+gene_ranges = [[512, 2048],   # worker_connections
+               [10, 120],     # keepalive_timeout
+               [0, 1],        # disable_symlinks
+               [0, 1],        # autoindex
+               [0, 1],        # send_timeout
+               [512, 2048],   # large_client_header_buffers
+               [512, 2048],   # client_max_body_size
+               [0, 1],        # server_tokens
+               [0, 1],        # gzip
+               [0, 3],        # X-Frame-Options
+               [0, 5],        # X-Powered-By
+               [0, 1],        # X-Content-Type-Options
+               [0, 2],        # server
+               [0, 2],        # xss
+               [0, 2]]        # content-policy
 
 def generate_random_config():
     """
         Generate a random configuration, the positions are the selected NGINX
         directives to test, we have binary, integer and list directives
     """
-    return [
-        random.randint(512, 2048),   # worker_connections
-        random.randint(10, 120),     # keepalive_timeout
-        random.randint(0, 1),        # disable_symlinks
-        random.randint(0, 1),        # autoindex
-        random.randint(0, 1),        # send_timeout
-        random.randint(512, 2048),   # large_client_header_buffers
-        random.randint(512, 2048),   # client_max_body_size
-        random.randint(0, 1),        # server_tokens
-        random.randint(0, 1),        # gzip
-        random.randint(0, 3),        # X-Frame-Options
-        random.randint(0, 5),        # X-Powered-By
-        random.randint(0, 1),        # X-Content-Type-Options
-        random.randint(0, 2),        # server
-        random.randint(0, 2),        # xss
-        random.randint(0, 2),        # content-policy
-    ]
+    config = []
+    for i in range(len(gene_ranges)):
+        config.append( random.randint( gene_ranges[i][0], gene_ranges[i][1] ) )
+    return config
 
 
 def set_directive_on_off(chromosome):
