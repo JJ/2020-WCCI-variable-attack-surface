@@ -55,7 +55,7 @@ def calculate_fitness(config):
     alerts = 999
 
     if p.returncode == 0:
-        Popen(["service", "nginx", "start"], stdout=PIPE, encoding='ascii')
+        Popen(["nginx", "-c", filename], stdout=PIPE, encoding='ascii')
 
         alerts = zap_test()
 
@@ -67,7 +67,7 @@ def calculate_fitness(config):
         time.sleep(2)
         check_kill_process("nginx")
         time.sleep(2)
-        check_kill_process("nginx") # This is a lot of kill... 
+        check_kill_process("nginx") # This is a lot of killing... 
 
         Popen(["service", "nginx", "zap"])
         time.sleep(2)

@@ -13,6 +13,7 @@ from selection import minTournament
 from generate_nginx_config import *
 import click
 from pytictoc import TicToc
+from pprint import pprint
 
 genes = 15  # The length of each individual's genetic material
 individuals = 20  # The number of individuals in the population
@@ -93,12 +94,12 @@ def selection_and_reproduction(population):
         modify).
     """
 
-    print("population")
+    # print("population")
     # pprint(population)
 
     population = sorted(population)  # Sorts the ordered pairs and is left alone with the array of values
 
-    print("scored")
+    # print("scored")
     # pprint(population)
 
     #selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
@@ -130,8 +131,8 @@ def selection_and_reproduction(population):
     # Sort again the population
     population = sorted(population, reverse=True)
 
-    # print("sorted")
-    # pprint(population)
+    print("sorted")
+    pprint(population)
 
     return population  # The array now has a new population of individuals, which are returned.
 
