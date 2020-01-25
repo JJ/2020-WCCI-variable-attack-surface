@@ -21,13 +21,13 @@ RUN echo "auto lo" > /etc/network/interfaces
 Run echo "iface lo inet loopback" >> /etc/network/interfaces
 
 # Installing python requirements
-RUN	pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Show package versions
 RUN pip3 freeze
 
 # Copying rest of files
-COPY . .
+COPY *.py .
 
 # Avoid exiting this script (PID 1)
 # CMD tail -f /dev/null
