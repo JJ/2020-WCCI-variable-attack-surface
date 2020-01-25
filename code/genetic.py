@@ -136,7 +136,7 @@ def selection_and_reproduction(population):
     population = population + crossed_population
 
     # Sort again the population
-    population = sorted(population, reverse=True)
+    # population = sorted(population, reverse=True)
 
     # print("sorted")
     # pprint(population)
