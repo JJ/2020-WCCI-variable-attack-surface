@@ -45,7 +45,7 @@ def calculate_fitness(config):
     with open(filename, 'w') as f:
         f.write(str(nginx))
 
-    p = run(['nginx', '-t', '-c', filename], stdout=PIPE, encoding='ascii')
+    p = run(['nginx', '-t', '-c', filename], stdout=PIPE)
 
     # Print values (for debug purposes)
     # print(p.returncode)
