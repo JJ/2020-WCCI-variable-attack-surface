@@ -13,8 +13,8 @@ def test_generate_random_config_len():
     assert(isinstance(config, list))
     assert(len(config) == genetic.genes)
 
-def test_fitness():
-    config = generate_nginx_config.generate_random_config()
-    this_fitness = fitness.calculate_fitness(config)
-    assert(this_fitness)
-    assert(this_fitness >= 0)
+# def test_fitness():
+#     config = generate_nginx_config.generate_random_config()
+#     this_fitness = fitness.calculate_fitness(config)
+#     assert(this_fitness)
+#     assert(this_fitness >= 0)
