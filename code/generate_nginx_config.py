@@ -96,7 +96,7 @@ def generate(config=generate_random_config()):
         'http',
         include='/etc/nginx/mime.types',
         default_type='application/octet-stream',
-        access_log='/var/log/nginx/access.log',
+        access_log='/tmp/nginx-access.log',
         sendfile='on',
         keepalive_timeout=set_directive_int(config[1]),
         disable_symlinks=set_directive_on_off(config[2]),
@@ -124,7 +124,7 @@ def generate(config=generate_random_config()):
             ),
             Location(
                 '/form',
-                EmptyBlock(access_log=['/var/log/access.log', 'my_tracking']),
+                EmptyBlock(access_log=['/tmp/access.log', 'my_tracking']),
                 # duplicate_options('return'=['200']),
             ),
             Location(
@@ -155,7 +155,7 @@ def generate(config=generate_random_config()):
         pid='/var/run/nginx.pid',
         worker_processes=1,
         daemon='on',  # passed in Dockerfile CMD
-        error_log='/var/log/nginx/error.log warn',
+        error_log='/tmp/nginx-error.log warn',
     )
     # print(nginx)
 
