@@ -31,14 +31,6 @@ def test_selection_and_reproduction(function):
     assert(len(result) == len(population))
 
 
-@mock.patch('random.random', return_value=0.1)
-@mock.patch('fitness.generate_random_config', return_value=[200, 39, 0, 1, 0, 1033, 1933, 1, 0, 2, 3, 0, 1])
-def test_mutation(function1, function2):
-    """Test mutation function"""
-    result = genetic.mutate(population)
-    assert(len(result) == len(population))
-
-
 @mock.patch('random.randint', return_value=6)
 def test_crossover_one_point_6(function):
     """Test crossover function"""
