@@ -27,7 +27,7 @@ RUN pip3 install -r requirements.txt
 RUN pip3 freeze
 
 # Copying rest of files
-COPY *.py .
+COPY *.py ./
 
 # Avoid exiting this script (PID 1)
 # CMD tail -f /dev/null
