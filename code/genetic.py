@@ -131,12 +131,13 @@ def selection_and_reproduction(population):
 
     # print("crossed")
     # pprint(population)
-
+    crossed_population = [(fitnes(i), i) for i in crossed_population]
+    
     # Add the crossed_population to the population
     population = population + crossed_population
 
     # Sort again the population
-    # population = sorted(population, reverse=True)
+    population = sorted(population, reverse=True)
 
     # print("sorted")
     # pprint(population)
