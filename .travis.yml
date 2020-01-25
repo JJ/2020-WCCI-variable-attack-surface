@@ -9,7 +9,7 @@ before_install:
   - cd code
 
 install:
-  - sudo apt update && sudo apt upgrade && sudo apt install nginx
+  - sudo apt update && sudo apt install nginx
   - pip install -r requirements.txt
 
 script:
