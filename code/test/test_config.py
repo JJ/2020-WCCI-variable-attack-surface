@@ -13,4 +13,7 @@ class TestClass:
         self.config = generate_random_config()
 
     def test_initial_config( self ):
-        assert len(self.config) == 15 
+        assert len(self.config) == 15
+        for i in range(0,len(self.config)):
+            assert self.config[i] >= gene_ranges[i][0]
+            assert self.config[i] <= gene_ranges[i][1]
