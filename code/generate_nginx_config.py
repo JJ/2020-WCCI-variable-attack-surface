@@ -38,6 +38,10 @@ def generate_random_config():
     return config
 
 def in_range_change( value, change, gene ):
+    """
+       Changes the value in gene by the quantity change taking into account ranges. Circles back to max or min if these are exceeded
+    """
+    
     new_value = value + change
     if new_value < gene_ranges[gene][0]:
         return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value + 1
