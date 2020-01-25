@@ -70,7 +70,7 @@ def zap_test():
     # Report the results (for debug purposes)
     # print('Hosts: {}'.format(', '.join(zap.core.hosts)))
     # print('Alerts: ')
-    pprint(zap.core.alerts())
+    # pprint(zap.core.alerts())
 
     print("Total: %s" % len(zap.core.alerts()), file=sys.stderr)
 
