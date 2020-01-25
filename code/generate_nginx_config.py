@@ -8,6 +8,8 @@ __email__ = "erseco@correo.ugr.es"
 
 from nginx.config.api import Config, Section, Location, EmptyBlock, KeyMultiValueOption
 import random
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 gene_ranges = [[512, 2048],   # worker_connections
                [10, 120],     # keepalive_timeout
@@ -38,9 +40,9 @@ def generate_random_config():
 def in_range_change( value, change, gene ):
     new_value = value + change
     if new_value < gene_ranges[gene][0]:
-        return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value
+        return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value + 1
     elif new_value > gene_ranges[gene][1]:
-        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][0]
+        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][0] - 1
     return new_value
 
 def mutate_config( config ):
@@ -49,9 +51,11 @@ def mutate_config( config ):
         If any of the ranges is exceeded, gets out the other side
     """
     gene = random.randint(0, len(config) -1 )
-    change = random.choice( -1, 1 )
-    
-    
+    change = random.choice( [-1, 1] )
+    new_config = config.copy()
+    new_config[gene] = in_range_change( config[gene], change, gene )
+    return new_config
+
 
 def set_directive_on_off(chromosome):
     return 'on' if chromosome else 'off'
