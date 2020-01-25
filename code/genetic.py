@@ -103,12 +103,12 @@ def selection_and_reproduction(population):
     """
 
     print("population")
-    pprint(population)
+    # pprint(population)
 
     population = sorted(population)  # Sorts the ordered pairs and is left alone with the array of values
 
     print("scored")
-    pprint(population)
+    # pprint(population)
 
     #selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
     selected =  minTournament(population, k=(len(population) - pressure), tournsize = tournament_size)
@@ -117,7 +117,7 @@ def selection_and_reproduction(population):
     random.shuffle(selected)
     crossed_population = []
     print("Selected")
-    pprint(selected)
+    # pprint(selected)
     
     # Genetic material is mixed to create new individuals
     for i in range(len(selected) // 2, 2):
