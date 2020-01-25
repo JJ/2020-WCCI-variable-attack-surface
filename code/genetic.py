@@ -50,15 +50,6 @@ def initialize():
     return [individual() for i in range(individuals)]
 
 
-def fitnes(individual):
-    """
-        Calculates the fitness of a specific individual.
-    """
-    # return random.randint(1, 99)
-    # return 99
-    return calculate_fitness(individual)
-
-
 def crossover_one_point(individual1, individual2):
     """
         Executes a one point crossover on the input individuals.
@@ -90,7 +81,7 @@ def crossover(individual1, individual2):
     else:
         result = crossover_two_points(individual1, individual2)
 
-    return (fitnes(result), result)
+    return (calculate_fitness(result), result)
 
 
 def selection_and_reproduction(population):
@@ -131,7 +122,7 @@ def selection_and_reproduction(population):
 
     # print("crossed")
     # pprint(population)
-    crossed_population = [(fitnes(i), i) for i in crossed_population]
+    crossed_population = [(calculate_fitness(i), i) for i in crossed_population]
     
     # Add the crossed_population to the population
     population = population + crossed_population
@@ -178,7 +169,7 @@ def main(individuals_number, crossover, mutation):
     # Initialize a population
     population = initialize()
 
-    population = [(fitnes(i), i) for i in population] # Calculates the fitness of each individual, and stores it in pairs ordered in the form (5 , [1,2,1,1,1,4,1,8,9,4,1])
+    population = [(calculate_fitness(i), i) for i in population] # Calculates the fitness of each individual, and stores it in pairs ordered in the form (5 , [1,2,1,1,1,4,1,8,9,4,1])
 
     initial_population = sorted(population, reverse=True)
 
