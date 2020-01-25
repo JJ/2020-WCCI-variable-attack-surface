@@ -124,13 +124,10 @@ def selection_and_reproduction(population):
         parent = random.sample(selected, 2)  # Two parents are selected
 
         # Generate a new crossed individual
-        crossed_individual = crossover(selected[i][1], selected[i+1][1])
+        crossed_individual = mutate_config(crossover(selected[i][1], selected[i+1][1]))
 
         # Add the crossed one to the population
         crossed_population.append(crossed_individual)
-
-    # Mutate the crossed population
-    crossed_population = mutate(crossed_population)
 
     # print("crossed")
     # pprint(population)
@@ -145,38 +142,6 @@ def selection_and_reproduction(population):
     # pprint(population)
 
     return population  # The array now has a new population of individuals, which are returned.
-
-
-def mutate(crossed_population):
-    """
-        Crossed individuals mutate randomly. Without the mutation of new genes the
-        solution could never be reached.
-    """
-    for i in range(len(crossed_population)):
-        print("Crossed population")
-        pprint(crossed_population)
-        if random.random() <= mutation_chance:  # Every individual in the population (except the parents) has a chance to mutate.
-            gene = random.randint(0, genes - 1)  # A random gen is chosen
-
-            new_value = None
-
-            if mutation_type_random:
-                new_value = generate_random_config()[gene]  # and a new value for this gene
-
-                # It is important to see that the new value is not equal to the old one.
-                while new_value == crossed_population[i][1][gene]:
-                    new_value = generate_random_config()[gene]
-
-            else:
-                # In this case we are randomly adding(+) or substracting(-) 1
-                new_value = crossed_population[i][1][gene]
-                new_value += 1 if random.random() < 0.5 else -1
-
-            # Applying mutation
-            crossed_population[i][1][gene] = new_value
-
-    return crossed_population
-
 
 def print_results(initial_population, last_population):
     """
