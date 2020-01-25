@@ -18,6 +18,7 @@ import tempfile
 import os
 import sys
 import time
+import tempfile
 
 import signal
 
@@ -39,7 +40,7 @@ def calculate_fitness(config):
 
     nginx = generate(config)
 
-    filename = '/etc/nginx/nginx.conf'
+    filename = tempfile.mktemp(".conf")
 
     with open(filename, 'w') as f:
         f.write(str(nginx))
