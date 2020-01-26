@@ -7,6 +7,8 @@ __license__ = "GPLv3"
 __email__ = "erseco@correo.ugr.es"
 
 from nginx.config.api import Config, Section, Location, EmptyBlock, KeyMultiValueOption
+from copy import deepcopy
+
 import random
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -56,7 +58,7 @@ def mutate_config( config ):
     """
     gene = random.randint(0, len(config) -1 )
     change = random.choice( [-1, 1] )
-    new_config = config.copy()
+    new_config = config[:]
     new_config[gene] = in_range_change( config[gene], change, gene )
     return new_config
 

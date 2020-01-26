@@ -24,10 +24,10 @@ def test_initialize():
     assert(len(population) == genetic.individuals)
 
 
-@mock.patch('fitness.calculate_fitness', return_value=1)
+@mock.patch('fitness.calculate_fitness', return_value=random.randint(0,999))
 def test_selection_and_reproduction(function):
     """Test selection and reproduction"""
-    local_population = [(fitness.calculate_fitness(i), i) for i in population] # Calculates the fitness of each individual, and stores it in pairs ordered in the form (5 , [1,2,1,1,1,4,1,8,9,4,1])
+    local_population = [(i[0], i) for i in population]
 
     result = genetic.selection_and_reproduction(local_population)
 

@@ -9,7 +9,6 @@ __email__ = "erseco@correo.ugr.es"
 
 import random
 from fitness import *
-from selection import minTournament
 from generate_nginx_config import *
 import click
 from pytictoc import TicToc
@@ -17,12 +16,12 @@ from pprint import pprint
 
 genes = 15  # The length of each individual's genetic material
 individuals = 20  # The number of individuals in the population
-pressure = 5  # How many individuals are selected for reproduction. Must be greater than 2
+pressure = 2  # How many individuals are selected for reproduction. Must be greater than 2
 mutation_chance = 0.2  # The probability that an individual mutates
 generations = 15  # The number of generations that we will evolve
 crossover_type = 1  # The crossover type, can be 1 or 2
 mutation_type_random = True  # Set if the mutation is random or +-1
-tournament_size = 5 
+tournament_size = 3 
 
 def print_variable_info():
     print("genes: %d" % genes)
@@ -84,6 +83,12 @@ def crossover(individual1, individual2):
 
     return (calculate_fitness(result), result)
 
+def minTournament(population, k, tournsize):
+    selection = []
+    for _ in range(k):
+        players = random.sample(population, tournsize)
+        selection.append(min(players))
+    return selection[:]
 
 def selection_and_reproduction(population):
     """
@@ -97,7 +102,7 @@ def selection_and_reproduction(population):
     # print("population")
     # pprint(population)
 
-    population = sorted(population)  # Sorts the ordered pairs and is left alone with the array of values
+    #population = sorted(population)  # Sorts the ordered pairs and is left alone with the array of values
 
     # print("scored")
     # pprint(population)
@@ -109,20 +114,23 @@ def selection_and_reproduction(population):
     random.shuffle(selected)
     crossed_population = []
     print("Selected")
-    # pprint(selected)
+    pprint(selected)
     
     # Genetic material is mixed to create new individuals
-    for i in range(len(selected) // 2, 2):
+    for i in range(0, len(selected)):
         parent = random.sample(selected, 2)  # Two parents are selected
-
+        print("parent")
+        pprint(parent)
         # Generate a new crossed individual
-        crossed_individual = mutate_config(crossover(selected[i][1], selected[i+1][1]))
-
+        crossed_individual = mutate_config(crossover_two_points(parent[0][1], parent[1][1]))
+        print("Crossed")
+        pprint(crossed_individual)
+        
         # Add the crossed one to the population
         crossed_population.append(crossed_individual)
 
-    # print("crossed")
-    # pprint(population)
+    print("crossed")
+    pprint(crossed_population)
     crossed_population = [(calculate_fitness(i), i) for i in crossed_population]
     
     # Add the crossed_population to the population
