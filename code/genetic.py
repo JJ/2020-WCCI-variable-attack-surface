@@ -100,12 +100,12 @@ def selection_and_reproduction(population):
     """
 
     selected =  minTournament(population, k=len(population), tournsize = tournament_size)
-    
-    # Shuffle the individuals
-    random.shuffle(selected)
-    crossed_population = []
     print("Selected")
     pprint(selected)
+
+    # Shuffle the individuals
+    # random.shuffle(selected)
+    crossed_population = []
     
     # Genetic material is mixed to create new individuals
     for i in range(0, len(selected)):
@@ -122,6 +122,8 @@ def selection_and_reproduction(population):
 
     print("crossed")
     pprint(crossed_population)
+
+    print("Computing fitness")
     crossed_population = [(calculate_fitness(i), i) for i in crossed_population]
     
     # Add the crossed_population to the population
