@@ -18,10 +18,10 @@ genes = 15  # The length of each individual's genetic material
 individuals = 20  # The number of individuals in the population
 pressure = 2  # How many individuals are selected for reproduction. Must be greater than 2
 mutation_chance = 0.2  # The probability that an individual mutates
-generations = 15  # The number of generations that we will evolve
+generations = 32  # The number of generations that we will evolve
 crossover_type = 1  # The crossover type, can be 1 or 2
 mutation_type_random = True  # Set if the mutation is random or +-1
-tournament_size = 3 
+tournament_size = 4
 
 def print_variable_info():
     print("genes: %d" % genes)

@@ -7,10 +7,15 @@ docker-compose build
 docker-compose up -d
 docker-compose exec www.exampletfm.com sh
 ```
-
 Inside the www.exampletfm.com container:
 ```
 python3 genetic.py
+```
+
+or 
+
+```
+docker-compose exec www.exampletfm.com python3 genetic.py --individuals=16
 ```
 
 ## Install and run tests by itself
