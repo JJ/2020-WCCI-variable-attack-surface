@@ -149,7 +149,7 @@ def print_results(initial_population, last_population):
 @click.option('--individuals', '-i', 'individuals_number', help='Number of individuals', default=16)
 @click.option('--crossover-one-point', '-1', 'crossover', help='Crossover function in one point', flag_value=1, default=True)
 @click.option('--crossover-two-points', '-2', 'crossover', help='Crossover function in two points', flag_value=2)
-def main(individuals_number, crossover, mutation):
+def main(individuals_number, crossover):
 
     global individuals
     individuals = individuals_number
