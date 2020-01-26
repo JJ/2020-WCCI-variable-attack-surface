@@ -66,7 +66,6 @@ def mutate_config( config ):
 def set_directive_on_off(chromosome):
     return 'on' if chromosome else 'off'
 
-
 def set_directive_int(chromosome):
     return chromosome
 

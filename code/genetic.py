@@ -69,7 +69,7 @@ def crossover_two_points(individual1, individual2):
     # Two random cross points is chosen to make the exchange
     crosspoint1 = random.randint(1, genes - 3)
     crosspoint2 = random.randint(crosspoint1, genes - 2)
-    print( "Points ", genes, crosspoint1, crosspoint2 )
+#    print( "Points ", genes, crosspoint1, crosspoint2 )
     return individual1[:crosspoint1] + individual2[crosspoint1:crosspoint2] + individual1[crosspoint2:]
 
 
@@ -99,16 +99,7 @@ def selection_and_reproduction(population):
         modify).
     """
 
-    # print("population")
-    # pprint(population)
-
-    #population = sorted(population)  # Sorts the ordered pairs and is left alone with the array of values
-
-    # print("scored")
-    # pprint(population)
-
-    #selected = population[(len(population) - pressure):]  # This line selects the 'n' individuals from the end, where n is given by 'pressure'.
-    selected =  minTournament(population, k=(len(population) - pressure), tournsize = tournament_size)
+    selected =  minTournament(population, k=len(population), tournsize = tournament_size)
     
     # Shuffle the individuals
     random.shuffle(selected)
@@ -119,11 +110,11 @@ def selection_and_reproduction(population):
     # Genetic material is mixed to create new individuals
     for i in range(0, len(selected)):
         parent = random.sample(selected, 2)  # Two parents are selected
-        print("parent")
-        pprint(parent)
+#        print("parent")
+#        pprint(parent)
         # Generate a new crossed individual
         crossed_individual = mutate_config(crossover_two_points(parent[0][1], parent[1][1]))
-        print("Crossed")
+#        print("Crossed")
         pprint(crossed_individual)
         
         # Add the crossed one to the population
