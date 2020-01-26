@@ -26,11 +26,7 @@ tournament_size = 3
 def print_variable_info():
     print("genes: %d" % genes)
     print("individuals : %d" % individuals)
-    print("pressure: %d" % pressure)
-    print("mutation_chance: %d" % mutation_chance)
     print("generations: %d" % generations)
-    print("crossover_type: %d" % crossover_type)
-    print("mutation_type_random: %d" % mutation_type_random)
 
 
 def individual():
@@ -150,19 +146,13 @@ def print_results(initial_population, last_population):
 
 
 @click.command()
-@click.option('--individuals', '-i', 'individuals_number', help='Number of individuals', default=16, prompt=True)
+@click.option('--individuals', '-i', 'individuals_number', help='Number of individuals', default=16)
 @click.option('--crossover-one-point', '-1', 'crossover', help='Crossover function in one point', flag_value=1, default=True)
 @click.option('--crossover-two-points', '-2', 'crossover', help='Crossover function in two points', flag_value=2)
-@click.option('--random-mutation/--no-random-mutation', 'mutation', is_flag=True, help='Random value mutation or +-1', default=False, prompt=True)
 def main(individuals_number, crossover, mutation):
 
     global individuals
     individuals = individuals_number
-    global crossover_type
-    crossover_type = crossover
-    global mutation_type_random
-    mutation_type_random = mutation
-
     print_variable_info()
 
     t = TicToc()
@@ -173,7 +163,7 @@ def main(individuals_number, crossover, mutation):
 
     population = [(calculate_fitness(i), i) for i in population] # Calculates the fitness of each individual, and stores it in pairs ordered in the form (5 , [1,2,1,1,1,4,1,8,9,4,1])
 
-    initial_population = sorted(population, reverse=True)
+    initial_population = sorted(population)
 
     # Evolves the population
     for i in range(generations):
