@@ -45,10 +45,11 @@ def in_range_change( value, change, gene ):
     """
     
     new_value = value + change
+#    print( "New value ", new_value, " gene ", gene )
     if new_value < gene_ranges[gene][0]:
-        return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value + 1
+        return gene_ranges[gene][1] -  ( new_value - gene_ranges[gene][0] + 1 )
     elif new_value > gene_ranges[gene][1]:
-        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][1]
+        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][1] - 1
     return new_value
 
 def mutate_config( config ):

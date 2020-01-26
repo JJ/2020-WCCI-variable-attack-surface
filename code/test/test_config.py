@@ -20,8 +20,8 @@ class TestClass:
 
     def test_mutate_config( self ):
         for i in range(0,len(gene_ranges)):
-            assert in_range_change( gene_ranges[i][0], -1, i ), gene_ranges[i][1]
-            assert in_range_change( gene_ranges[i][1], 1, i ), gene_ranges[i][0]
+            assert in_range_change( gene_ranges[i][0], -1, i ) == gene_ranges[i][1]
+            assert in_range_change( gene_ranges[i][1], 1, i ) == gene_ranges[i][0]
 
         for j in range(0,200):
             new_config = mutate_config( self.config )
