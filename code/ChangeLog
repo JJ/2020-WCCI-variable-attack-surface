@@ -1,0 +1,4 @@
+2020-01-26  Juan J. merelo  <jmerelo@penny>
+
+	* genetic.py: Tests 4 for tournament size and 32 for generations.
+
