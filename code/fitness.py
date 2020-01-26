@@ -18,6 +18,7 @@ import tempfile
 import os
 import sys
 import time
+import tempfile
 
 import signal
 
@@ -39,12 +40,12 @@ def calculate_fitness(config):
 
     nginx = generate(config)
 
-    filename = '/etc/nginx/nginx.conf'
+    filename = tempfile.mktemp(".conf")
 
     with open(filename, 'w') as f:
         f.write(str(nginx))
 
-    p = run(['nginx', '-t', '-c', filename], stdout=PIPE, encoding='ascii')
+    p = run(['nginx', '-t', '-c', filename], stdout=PIPE)
 
     # Print values (for debug purposes)
     # print(p.returncode)
@@ -54,7 +55,7 @@ def calculate_fitness(config):
     alerts = 999
 
     if p.returncode == 0:
-        Popen(["service", "nginx", "start"], stdout=PIPE, encoding='ascii')
+        Popen(["nginx", "-c", filename], stdout=PIPE, encoding='ascii')
 
         alerts = zap_test()
 
@@ -66,7 +67,7 @@ def calculate_fitness(config):
         time.sleep(2)
         check_kill_process("nginx")
         time.sleep(2)
-        check_kill_process("nginx")
+        check_kill_process("nginx") # This is a lot of killing... 
 
         Popen(["service", "nginx", "zap"])
         time.sleep(2)

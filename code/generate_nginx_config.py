@@ -7,7 +7,11 @@ __license__ = "GPLv3"
 __email__ = "erseco@correo.ugr.es"
 
 from nginx.config.api import Config, Section, Location, EmptyBlock, KeyMultiValueOption
+from copy import deepcopy
+
 import random
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
 gene_ranges = [[512, 2048],   # worker_connections
                [10, 120],     # keepalive_timeout
@@ -36,11 +40,16 @@ def generate_random_config():
     return config
 
 def in_range_change( value, change, gene ):
+    """
+       Changes the value in gene by the quantity change taking into account ranges. Circles back to max or min if these are exceeded
+    """
+    
     new_value = value + change
+#    print( "New value ", new_value, " gene ", gene )
     if new_value < gene_ranges[gene][0]:
-        return gene_ranges[gene][1] +  gene_ranges[gene][0] - new_value
+        return gene_ranges[gene][1] -  ( new_value - gene_ranges[gene][0] + 1 )
     elif new_value > gene_ranges[gene][1]:
-        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][0]
+        return gene_ranges[gene][0] +  new_value - gene_ranges[gene][1] - 1
     return new_value
 
 def mutate_config( config ):
@@ -49,13 +58,14 @@ def mutate_config( config ):
         If any of the ranges is exceeded, gets out the other side
     """
     gene = random.randint(0, len(config) -1 )
-    change = random.choice( -1, 1 )
-    
-    
+    change = random.choice( [-1, 1] )
+    new_config = config[:]
+    new_config[gene] = in_range_change( config[gene], change, gene )
+    return new_config
+
 
 def set_directive_on_off(chromosome):
     return 'on' if chromosome else 'off'
-
 
 def set_directive_int(chromosome):
     return chromosome
@@ -88,7 +98,7 @@ def generate(config=generate_random_config()):
         'http',
         include='/etc/nginx/mime.types',
         default_type='application/octet-stream',
-        access_log='/var/log/nginx/access.log',
+        access_log='/tmp/nginx-access.log',
         sendfile='on',
         keepalive_timeout=set_directive_int(config[1]),
         disable_symlinks=set_directive_on_off(config[2]),
@@ -116,7 +126,7 @@ def generate(config=generate_random_config()):
             ),
             Location(
                 '/form',
-                EmptyBlock(access_log=['/var/log/access.log', 'my_tracking']),
+                EmptyBlock(access_log=['/tmp/access.log', 'my_tracking']),
                 # duplicate_options('return'=['200']),
             ),
             Location(
@@ -147,7 +157,7 @@ def generate(config=generate_random_config()):
         pid='/var/run/nginx.pid',
         worker_processes=1,
         daemon='on',  # passed in Dockerfile CMD
-        error_log='/var/log/nginx/error.log warn',
+        error_log='/tmp/nginx-error.log warn',
     )
     # print(nginx)
 

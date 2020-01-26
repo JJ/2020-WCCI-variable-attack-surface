@@ -1,4 +1,5 @@
 import genetic
+import fitness
 import mock
 import random
 import pytest
@@ -23,20 +24,14 @@ def test_initialize():
     assert(len(population) == genetic.individuals)
 
 
-@mock.patch('genetic.calculate_fitness', return_value=1)
+@mock.patch('fitness.calculate_fitness', return_value=random.randint(0,999))
 def test_selection_and_reproduction(function):
     """Test selection and reproduction"""
-    result = genetic.selection_and_reproduction(population)
+    local_population = [(i[0], i) for i in population]
 
-    assert(len(result) == len(population))
+    result = genetic.selection_and_reproduction(local_population)
 
-
-@mock.patch('random.random', return_value=0.1)
-@mock.patch('fitness.generate_random_config', return_value=[200, 39, 0, 1, 0, 1033, 1933, 1, 0, 2, 3, 0, 1])
-def test_mutation(function1, function2):
-    """Test mutation function"""
-    result = genetic.mutate(population)
-    assert(len(result) == len(population))
+    assert(len(result) == len(local_population))
 
 
 @mock.patch('random.randint', return_value=6)
