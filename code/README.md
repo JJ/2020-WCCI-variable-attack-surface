@@ -15,6 +15,8 @@ python3 genetic.py
 
 ## Install and run tests by itself
 
+You need to have nginx installed first, do it using your OS command.
+
 Just do the usual
 
     pip install -r requirements.txt
