@@ -384,3 +384,4 @@ venv.bak/
 *.tpbuild
 wordcount
 .Rproj.user
+sftp-config.json
