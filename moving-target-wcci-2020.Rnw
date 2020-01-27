@@ -73,6 +73,8 @@ Security, cyberattacks, performance evaluation.
 % POTTEIGER2020102954 integrated defense and control reconfiguration,
 % as we do in this paper
 
+% Amplifying randomization as an effective defense kansal2020improving
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
 
@@ -377,21 +379,6 @@ correct configuration for the evolutionary algorithm, so all these
 options have been tested and evaluated to check its influence in the
 eventual result. Experiments have been repeated, for each
 configuration, 15 times.
-
-The experiments are run using these commands
-
-\begin{verbatim}
-python3 genetic.py --individuals {16|32|64}
-    --crossover-{one|two}-point --[no-]random-mutation
-\end{verbatim}
-
-For the two different payloads we use, we need to change one line in
-the {\tt genetic.py} code. This code, as well as the final results of
-every experiment, are available in GitHub and are in fact included in
-the same repository as this paper, and processed as part of the source
-of this paper.
-
-These results will be analyzed next.
 
 \subsection{Experimental results}
 \label{subs:results}
