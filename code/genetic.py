@@ -96,13 +96,13 @@ def selection_and_reproduction(population):
     """
 
     selected =  minTournament(population, k=len(population), tournsize = tournament_size)
-    print("Selected")
-    pprint(selected)
+    # print("Selected")
+    # pprint(selected)
 
     # Shuffle the individuals
     # random.shuffle(selected)
     crossed_population = []
-    
+
     # Genetic material is mixed to create new individuals
     for i in range(0, len(selected)):
         parent = random.sample(selected, 2)  # Two parents are selected
@@ -111,25 +111,25 @@ def selection_and_reproduction(population):
         # Generate a new crossed individual
         crossed_individual = mutate_config(crossover_two_points(parent[0][1], parent[1][1]))
 #        print("Crossed")
-        pprint(crossed_individual)
-        
+        # pprint(crossed_individual)
+
         # Add the crossed one to the population
         crossed_population.append(crossed_individual)
 
-    print("crossed")
-    pprint(crossed_population)
+    # print("crossed")
+    # pprint(crossed_population)
 
-    print("Computing fitness")
+    # print("Computing fitness")
     crossed_population = [(calculate_fitness(i), i) for i in crossed_population]
-    
+
     # Add the crossed_population to the population
     population = population + crossed_population
 
     # Sort again the population
     population = sorted(population)[0:individuals]
 
-    print("sorted")
-    pprint(population)
+    # print("sorted")
+    # pprint(population)
 
     return population  # The array now has a new population of individuals, which are returned.
 
