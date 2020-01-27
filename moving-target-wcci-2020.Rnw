@@ -18,7 +18,8 @@ library(ggthemes)
 data <- read.csv("results/all_results.csv")
 @
 
-\title{}
+\title{Improving evolution of service configurations for moving target
+defense}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
 \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\

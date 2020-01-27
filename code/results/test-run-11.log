@@ -854,3 +854,3750 @@ Total: 68
 Stopping all scans...
 Alerts:
 68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpy980sgpq.conf syntax is ok
+nginx: configuration file /tmp/tmpy980sgpq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 50
+Scan progress %: 86
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+sorted
+[(62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 1]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 2]),
+ (68, [789, 46, 0, 0, 1, 718, 825, 0, 1, 2, 1, 0, 2, 2, 2]),
+ (68, [789, 46, 0, 0, 1, 718, 825, 0, 1, 2, 1, 1, 0, 2, 2]),
+ (68, [789, 46, 0, 0, 1, 1486, 1812, 0, 0, 1, 1, 1, 2, 2, 2]),
+ (68, [807, 64, 1, 0, 0, 754, 558, 1, 0, 1, 3, 0, 1, 1, 0]),
+ (68, [880, 93, 0, 1, 1, 918, 1177, 0, 1, 0, 4, 1, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 1, 1046, 1076, 1, 1, 1, 4, 0, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 1, 2, 1, 0]),
+ (68, [922, 118, 1, 0, 0, 565, 941, 0, 0, 2, 4, 1, 0, 1, 1]),
+ (68, [1085, 71, 1, 0, 0, 1251, 591, 1, 0, 2, 1, 1, 0, 2, 1]),
+ (68, [1110, 116, 0, 0, 0, 912, 1029, 1, 1, 2, 2, 1, 2, 0, 2]),
+ (68, [1177, 77, 0, 0, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1]),
+ (68, [1246, 90, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 0, 2, 0]),
+ (68, [1349, 30, 0, 0, 1, 1626, 710, 0, 0, 0, 0, 0, 0, 1, 1]),
+ (68, [1398, 38, 1, 1, 0, 740, 1858, 1, 1, 1, 4, 1, 0, 0, 2]),
+ (68, [1436, 34, 0, 0, 0, 1104, 1908, 1, 1, 1, 4, 1, 2, 2, 1]),
+ (68, [1476, 30, 0, 0, 0, 918, 1177, 0, 1, 2, 0, 1, 2, 2, 0]),
+ (68, [1476, 30, 0, 0, 0, 1627, 1521, 0, 1, 1, 2, 1, 2, 2, 1]),
+ (68, [1476, 30, 0, 0, 1, 1627, 1521, 0, 0, 1, 2, 1, 2, 2, 1])]
+Selected
+[(68, [1177, 77, 0, 0, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 2]),
+ (68, [1349, 30, 0, 0, 1, 1626, 710, 0, 0, 0, 0, 0, 0, 1, 1]),
+ (68, [743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [922, 118, 1, 0, 0, 565, 941, 0, 0, 2, 4, 1, 0, 1, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (68, [1246, 90, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 0, 2, 0]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 1]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [789, 46, 0, 0, 1, 718, 825, 0, 1, 2, 1, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [807, 64, 1, 0, 0, 754, 558, 1, 0, 1, 3, 0, 1, 1, 0]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 1, 2, 1, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [1398, 38, 1, 1, 0, 740, 1858, 1, 1, 1, 4, 1, 0, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [1177, 77, 0, 0, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [807, 64, 1, 0, 0, 754, 558, 1, 0, 1, 3, 0, 1, 1, 0])]
+[880, 93, 0, 1, 0, 1626, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[1177, 77, 0, 0, 1, 1612, 1286, 0, 0, 2, 4, 0, 2, 2, 1]
+[743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]
+[880, 93, 0, 1, 1, 1511, 1812, 0, 0, 3, 4, 1, 2, 1, 0]
+[2042, 102, 0, 1, 1, 918, 1864, 1, 1, 2, 3, 1, 2, 0, 0]
+[1398, 38, 1, 1, 0, 740, 1858, 1, 1, 1, 3, 1, 0, 0, 2]
+[2041, 102, 0, 1, 0, 1045, 1076, 1, 1, 2, 3, 1, 2, 0, 0]
+[1398, 38, 1, 1, 0, 740, 558, 1, 0, 1, 2, 0, 1, 0, 2]
+[2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 4, 1, 2, 2, 0]
+[743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]
+[743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 0]
+[1177, 77, 0, 1, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1]
+[1349, 30, 0, 0, 1, 1626, 710, 1, 0, 0, 4, 0, 0, 1, 1]
+[743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]
+[880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 0, 2, 1, 0]
+[880, 92, 0, 1, 0, 1019, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[1349, 30, 0, 0, 1, 1019, 710, 0, 0, 3, 0, 0, 0, 1, 1]
+[880, 93, 0, 1, 0, 1627, 1521, 0, 0, 0, 4, 0, 2, 1, 2]
+[1177, 78, 0, 0, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1]
+[1177, 77, 0, 0, 1, 1612, 1864, 1, 1, 2, 4, 0, 1, 0, 1]
+[743, 96, 0, 1, 1, 917, 1177, 0, 1, 2, 0, 0, 0, 0, 2]
+[1246, 96, 0, 0, 1, 1486, 1812, 0, 0, 1, 3, 0, 0, 2, 0]
+[1478, 67, 0, 1, 0, 1019, 1864, 0, 1, 0, 2, 0, 2, 0, 2]
+[742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]
+[789, 46, 0, 1, 1, 718, 825, 0, 1, 2, 1, 0, 2, 1, 2]
+[880, 93, 0, 1, 1, 1511, 1968, 0, 0, 0, 4, 1, 2, 1, 0]
+[880, 93, 0, 1, 0, 912, 1029, 1, 1, 2, 4, 0, 0, 1, 2]
+[1349, 30, 0, 0, 1, 1626, 1967, 0, 0, 0, 0, 0, 0, 0, 1]
+[880, 93, 0, 1, 0, 565, 941, 0, 0, 2, 3, 1, 2, 1, 2]
+[2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 0, 0]
+[1349, 30, 0, 0, 1, 1626, 710, 0, 0, 0, 0, 0, 0, 0, 1]
+[743, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 1, 0, 2, 2, 2]
+crossed
+[[880, 93, 0, 1, 0, 1626, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [1177, 77, 0, 0, 1, 1612, 1286, 0, 0, 2, 4, 0, 2, 2, 1],
+ [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2],
+ [880, 93, 0, 1, 1, 1511, 1812, 0, 0, 3, 4, 1, 2, 1, 0],
+ [2042, 102, 0, 1, 1, 918, 1864, 1, 1, 2, 3, 1, 2, 0, 0],
+ [1398, 38, 1, 1, 0, 740, 1858, 1, 1, 1, 3, 1, 0, 0, 2],
+ [2041, 102, 0, 1, 0, 1045, 1076, 1, 1, 2, 3, 1, 2, 0, 0],
+ [1398, 38, 1, 1, 0, 740, 558, 1, 0, 1, 2, 0, 1, 0, 2],
+ [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 4, 1, 2, 2, 0],
+ [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 0],
+ [1177, 77, 0, 1, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1],
+ [1349, 30, 0, 0, 1, 1626, 710, 1, 0, 0, 4, 0, 0, 1, 1],
+ [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2],
+ [880, 93, 0, 1, 1, 1511, 1967, 0, 0, 0, 4, 0, 2, 1, 0],
+ [880, 92, 0, 1, 0, 1019, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [1349, 30, 0, 0, 1, 1019, 710, 0, 0, 3, 0, 0, 0, 1, 1],
+ [880, 93, 0, 1, 0, 1627, 1521, 0, 0, 0, 4, 0, 2, 1, 2],
+ [1177, 78, 0, 0, 1, 1612, 1286, 0, 1, 2, 4, 0, 1, 2, 1],
+ [1177, 77, 0, 0, 1, 1612, 1864, 1, 1, 2, 4, 0, 1, 0, 1],
+ [743, 96, 0, 1, 1, 917, 1177, 0, 1, 2, 0, 0, 0, 0, 2],
+ [1246, 96, 0, 0, 1, 1486, 1812, 0, 0, 1, 3, 0, 0, 2, 0],
+ [1478, 67, 0, 1, 0, 1019, 1864, 0, 1, 0, 2, 0, 2, 0, 2],
+ [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2],
+ [789, 46, 0, 1, 1, 718, 825, 0, 1, 2, 1, 0, 2, 1, 2],
+ [880, 93, 0, 1, 1, 1511, 1968, 0, 0, 0, 4, 1, 2, 1, 0],
+ [880, 93, 0, 1, 0, 912, 1029, 1, 1, 2, 4, 0, 0, 1, 2],
+ [1349, 30, 0, 0, 1, 1626, 1967, 0, 0, 0, 0, 0, 0, 0, 1],
+ [880, 93, 0, 1, 0, 565, 941, 0, 0, 2, 3, 1, 2, 1, 2],
+ [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 0, 0],
+ [1349, 30, 0, 0, 1, 1626, 710, 0, 0, 0, 0, 0, 0, 0, 1],
+ [743, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 1, 0, 2, 2, 2]]
+Computing fitness
+nginx: the configuration file /tmp/tmpsnqk0e5v.conf syntax is ok
+nginx: configuration file /tmp/tmpsnqk0e5v.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpc68u4pm_.conf syntax is ok
+nginx: configuration file /tmp/tmpc68u4pm_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 42
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpb7wirnc0.conf syntax is ok
+nginx: configuration file /tmp/tmpb7wirnc0.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 41
+Scan progress %: 65
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmpgdic5fsh.conf:42
+nginx: configuration file /tmp/tmpgdic5fsh.conf test failed
+nginx: the configuration file /tmp/tmp969dwcfx.conf syntax is ok
+nginx: configuration file /tmp/tmp969dwcfx.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnov2tc9k.conf syntax is ok
+nginx: configuration file /tmp/tmpnov2tc9k.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp653q6xt4.conf syntax is ok
+nginx: configuration file /tmp/tmp653q6xt4.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 75
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp19lrpkfi.conf syntax is ok
+nginx: configuration file /tmp/tmp19lrpkfi.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpbes8nab9.conf syntax is ok
+nginx: configuration file /tmp/tmpbes8nab9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp2e9i83vn.conf syntax is ok
+nginx: configuration file /tmp/tmp2e9i83vn.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnhwswaru.conf syntax is ok
+nginx: configuration file /tmp/tmpnhwswaru.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp39n7p002.conf syntax is ok
+nginx: configuration file /tmp/tmp39n7p002.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmparj54oa9.conf syntax is ok
+nginx: configuration file /tmp/tmparj54oa9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpe3w9qrod.conf syntax is ok
+nginx: configuration file /tmp/tmpe3w9qrod.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmplyufdekb.conf syntax is ok
+nginx: configuration file /tmp/tmplyufdekb.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpi4dc7qzi.conf syntax is ok
+nginx: configuration file /tmp/tmpi4dc7qzi.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmp25gon8dr.conf:42
+nginx: configuration file /tmp/tmp25gon8dr.conf test failed
+nginx: the configuration file /tmp/tmp273ovsno.conf syntax is ok
+nginx: configuration file /tmp/tmp273ovsno.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9f7gjpzb.conf syntax is ok
+nginx: configuration file /tmp/tmp9f7gjpzb.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp3i5ef0_3.conf syntax is ok
+nginx: configuration file /tmp/tmp3i5ef0_3.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpo7g46v7z.conf syntax is ok
+nginx: configuration file /tmp/tmpo7g46v7z.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpu8jpfhi4.conf syntax is ok
+nginx: configuration file /tmp/tmpu8jpfhi4.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 43
+Scan progress %: 81
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnt7p_fvs.conf syntax is ok
+nginx: configuration file /tmp/tmpnt7p_fvs.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpfup_53sg.conf syntax is ok
+nginx: configuration file /tmp/tmpfup_53sg.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp0zh2047r.conf syntax is ok
+nginx: configuration file /tmp/tmp0zh2047r.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp1gglwrff.conf syntax is ok
+nginx: configuration file /tmp/tmp1gglwrff.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpyaebyztu.conf syntax is ok
+nginx: configuration file /tmp/tmpyaebyztu.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpqvjhu4bv.conf syntax is ok
+nginx: configuration file /tmp/tmpqvjhu4bv.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 36
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp023l_agt.conf syntax is ok
+nginx: configuration file /tmp/tmp023l_agt.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpjbv8hp3s.conf syntax is ok
+nginx: configuration file /tmp/tmpjbv8hp3s.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpepaqcw3k.conf syntax is ok
+nginx: configuration file /tmp/tmpepaqcw3k.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 61
+Scan progress %: 91
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpskvg2el1.conf syntax is ok
+nginx: configuration file /tmp/tmpskvg2el1.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 45
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+sorted
+[(62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 0]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 917, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 1]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 1, 0, 2, 2, 2]),
+ (68, [743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 2]),
+ (68, [789, 46, 0, 0, 1, 718, 825, 0, 1, 2, 1, 0, 2, 2, 2]),
+ (68, [789, 46, 0, 0, 1, 718, 825, 0, 1, 2, 1, 1, 0, 2, 2]),
+ (68, [789, 46, 0, 0, 1, 1486, 1812, 0, 0, 1, 1, 1, 2, 2, 2]),
+ (68, [789, 46, 0, 1, 1, 718, 825, 0, 1, 2, 1, 0, 2, 1, 2]),
+ (68, [807, 64, 1, 0, 0, 754, 558, 1, 0, 1, 3, 0, 1, 1, 0]),
+ (68, [880, 92, 0, 1, 0, 1019, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 0, 565, 941, 0, 0, 2, 3, 1, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 0, 912, 1029, 1, 1, 2, 4, 0, 0, 1, 2]),
+ (68, [880, 93, 0, 1, 0, 1626, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 0, 1627, 1521, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 1, 918, 1177, 0, 1, 0, 4, 1, 2, 1, 2]),
+ (68, [880, 93, 0, 1, 1, 1046, 1076, 1, 1, 1, 4, 0, 2, 1, 2])]
+Selected
+[(68, [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 1, 0, 2, 2]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [880, 92, 0, 1, 0, 1019, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [789, 46, 0, 0, 1, 1486, 1812, 0, 0, 1, 1, 1, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [743, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 1, 0, 2, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 917, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 0]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2])]
+[880, 92, 0, 1, 0, 1020, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[743, 96, 0, 0, 0, 912, 1030, 1, 1, 2, 0, 0, 2, 2, 2]
+[880, 93, 0, 1, 0, 1019, 1522, 0, 0, 0, 4, 1, 2, 1, 2]
+[880, 93, 0, 0, 1, 1487, 1812, 0, 0, 1, 2, 0, 2, 1, 2]
+[2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 1, 2, 2, 0]
+[629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2]
+[629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]
+[743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]
+[743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 2, 2, 2]
+[743, 96, 0, 0, 0, 912, 1029, 0, 1, 2, 0, 0, 0, 2, 2]
+[880, 93, 0, 0, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 1, 1, 2]
+[743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 0, 2]
+[880, 92, 0, 1, 0, 1485, 1812, 0, 1, 1, 0, 0, 2, 1, 2]
+[743, 102, 1, 1, 1, 1485, 1812, 0, 1, 2, 0, 1, 0, 2, 2]
+[743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 2, 2, 2]
+[743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 0]
+[743, 96, 0, 1, 1, 918, 1177, 1, 1, 2, 0, 0, 0, 1, 2]
+[743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 0, 2, 2, 2]
+[880, 93, 1, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[2042, 102, 0, 0, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 1, 0]
+[743, 102, 1, 0, 1, 1486, 1521, 0, 1, 2, 0, 1, 0, 2, 2]
+[743, 96, 0, 0, 0, 912, 1966, 0, 0, 3, 4, 1, 2, 2, 2]
+[1478, 67, 0, 1, 1, 1449, 1635, 0, 1, 1, 2, 0, 2, 0, 1]
+[742, 102, 1, 0, 1, 1486, 1812, 0, 0, 3, 4, 1, 0, 2, 2]
+[2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 1, 0, 0, 0]
+[743, 96, 0, 1, 0, 1046, 1076, 0, 0, 0, 4, 0, 2, 2, 2]
+[743, 96, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 0, 2, 0, 2]
+[743, 96, 0, 0, 0, 912, 1966, 1, 0, 0, 4, 1, 2, 2, 2]
+[789, 46, 1, 0, 1, 1486, 1812, 0, 0, 1, 1, 1, 2, 2, 2]
+[743, 96, 0, 1, 0, 1486, 1812, 1, 1, 2, 0, 0, 2, 2, 0]
+[629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]
+crossed
+[[880, 92, 0, 1, 0, 1020, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [743, 96, 0, 0, 0, 912, 1030, 1, 1, 2, 0, 0, 2, 2, 2],
+ [880, 93, 0, 1, 0, 1019, 1522, 0, 0, 0, 4, 1, 2, 1, 2],
+ [880, 93, 0, 0, 1, 1487, 1812, 0, 0, 1, 2, 0, 2, 1, 2],
+ [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 1, 2, 2, 0],
+ [629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0],
+ [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 2, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1029, 0, 1, 2, 0, 0, 0, 2, 2],
+ [880, 93, 0, 0, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 1, 1, 2],
+ [743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 0, 2],
+ [880, 92, 0, 1, 0, 1485, 1812, 0, 1, 1, 0, 0, 2, 1, 2],
+ [743, 102, 1, 1, 1, 1485, 1812, 0, 1, 2, 0, 1, 0, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 2, 2, 2],
+ [743, 102, 1, 0, 1, 1486, 1812, 0, 1, 2, 0, 1, 0, 2, 0],
+ [743, 96, 0, 1, 1, 918, 1177, 1, 1, 2, 0, 0, 0, 1, 2],
+ [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 0, 2, 2, 2],
+ [880, 93, 1, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [2042, 102, 0, 0, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 1, 0],
+ [743, 102, 1, 0, 1, 1486, 1521, 0, 1, 2, 0, 1, 0, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1966, 0, 0, 3, 4, 1, 2, 2, 2],
+ [1478, 67, 0, 1, 1, 1449, 1635, 0, 1, 1, 2, 0, 2, 0, 1],
+ [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 3, 4, 1, 0, 2, 2],
+ [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 1, 0, 0, 0],
+ [743, 96, 0, 1, 0, 1046, 1076, 0, 0, 0, 4, 0, 2, 2, 2],
+ [743, 96, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 0, 2, 0, 2],
+ [743, 96, 0, 0, 0, 912, 1966, 1, 0, 0, 4, 1, 2, 2, 2],
+ [789, 46, 1, 0, 1, 1486, 1812, 0, 0, 1, 1, 1, 2, 2, 2],
+ [743, 96, 0, 1, 0, 1486, 1812, 1, 1, 2, 0, 0, 2, 2, 0],
+ [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]]
+Computing fitness
+nginx: the configuration file /tmp/tmpf7j7x0us.conf syntax is ok
+nginx: configuration file /tmp/tmpf7j7x0us.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 68
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpd5kfovaq.conf syntax is ok
+nginx: configuration file /tmp/tmpd5kfovaq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpmin50hbi.conf syntax is ok
+nginx: configuration file /tmp/tmpmin50hbi.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp64w53osi.conf syntax is ok
+nginx: configuration file /tmp/tmp64w53osi.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpyxy9d123.conf syntax is ok
+nginx: configuration file /tmp/tmpyxy9d123.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpd31hz8ib.conf syntax is ok
+nginx: configuration file /tmp/tmpd31hz8ib.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 72
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp5tcjq_o1.conf syntax is ok
+nginx: configuration file /tmp/tmp5tcjq_o1.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpe09xjb_c.conf syntax is ok
+nginx: configuration file /tmp/tmpe09xjb_c.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmppqn_67v9.conf syntax is ok
+nginx: configuration file /tmp/tmppqn_67v9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpm__or7lq.conf syntax is ok
+nginx: configuration file /tmp/tmpm__or7lq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpi_sgxt4i.conf syntax is ok
+nginx: configuration file /tmp/tmpi_sgxt4i.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 50
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpmesbk_xt.conf syntax is ok
+nginx: configuration file /tmp/tmpmesbk_xt.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnhmxeyd_.conf syntax is ok
+nginx: configuration file /tmp/tmpnhmxeyd_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmphx4nshel.conf syntax is ok
+nginx: configuration file /tmp/tmphx4nshel.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 61
+Scan progress %: 91
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpzqu3ifj_.conf syntax is ok
+nginx: configuration file /tmp/tmpzqu3ifj_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpe2mzfics.conf syntax is ok
+nginx: configuration file /tmp/tmpe2mzfics.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpj3nxlxcu.conf syntax is ok
+nginx: configuration file /tmp/tmpj3nxlxcu.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp3k0wfi3f.conf syntax is ok
+nginx: configuration file /tmp/tmp3k0wfi3f.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpvtfx6gwx.conf syntax is ok
+nginx: configuration file /tmp/tmpvtfx6gwx.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpid77i6sb.conf syntax is ok
+nginx: configuration file /tmp/tmpid77i6sb.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 36
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpfw82mhnr.conf syntax is ok
+nginx: configuration file /tmp/tmpfw82mhnr.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp_64tf6oq.conf syntax is ok
+nginx: configuration file /tmp/tmp_64tf6oq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmp7w4yxbfi.conf:42
+nginx: configuration file /tmp/tmp7w4yxbfi.conf test failed
+nginx: the configuration file /tmp/tmp_fjhtz1g.conf syntax is ok
+nginx: configuration file /tmp/tmp_fjhtz1g.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmpfi0mff70.conf:42
+nginx: configuration file /tmp/tmpfi0mff70.conf test failed
+nginx: the configuration file /tmp/tmp3rhzxujo.conf syntax is ok
+nginx: configuration file /tmp/tmp3rhzxujo.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp0b7vs6jj.conf syntax is ok
+nginx: configuration file /tmp/tmp0b7vs6jj.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpkp8t25fb.conf syntax is ok
+nginx: configuration file /tmp/tmpkp8t25fb.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpuvxob0dh.conf syntax is ok
+nginx: configuration file /tmp/tmpuvxob0dh.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpw0q6dvfj.conf syntax is ok
+nginx: configuration file /tmp/tmpw0q6dvfj.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp8kpjth9u.conf syntax is ok
+nginx: configuration file /tmp/tmp8kpjth9u.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpcdvw4gj3.conf syntax is ok
+nginx: configuration file /tmp/tmpcdvw4gj3.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 86
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+sorted
+[(62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 0]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1030, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 1, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 1, 0, 1486, 1812, 1, 1, 2, 0, 0, 2, 2, 0]),
+ (68, [743, 96, 0, 1, 1, 917, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 0, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 0, 2]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 1]),
+ (68, [743, 96, 0, 1, 1, 918, 1177, 0, 1, 2, 0, 0, 0, 2, 2])]
+Selected
+[(68, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 2, 2, 2]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (68, [629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (68, [629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 1, 0, 1046, 1076, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [743, 96, 0, 0, 0, 912, 1030, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 2, 2, 2])]
+[743, 96, 0, 0, 0, 912, 1028, 1, 1, 2, 0, 0, 2, 2, 2]
+[629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 2, 2, 2]
+[2042, 102, 0, 1, 1, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]
+[2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 1, 2, 0, 2, 0, 2]
+[2041, 102, 1, 1, 0, 1019, 1864, 1, 0, 0, 4, 1, 2, 0, 0]
+[743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 4, 0, 2, 2, 2]
+[2041, 102, 0, 1, 0, 1019, 1521, 1, 1, 2, 3, 1, 2, 0, 0]
+[1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 2, 1]
+[629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]
+[743, 96, 0, 1, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]
+[743, 96, 0, 0, 0, 910, 1966, 0, 0, 0, 4, 0, 2, 0, 2]
+[744, 102, 0, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]
+[743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1]
+[743, 96, 0, 0, 0, 1019, 1865, 1, 1, 2, 0, 0, 2, 2, 2]
+[880, 93, 0, 1, 0, 911, 1966, 0, 1, 0, 4, 1, 2, 1, 2]
+[2041, 102, 0, 0, 0, 1019, 1864, 1, 1, 2, 0, 0, 2, 0, 0]
+[743, 96, 0, 0, 0, 912, 1966, 0, 0, 1, 2, 0, 2, 2, 2]
+[2041, 102, 1, 1, 0, 1449, 1864, 1, 1, 2, 3, 1, 2, 0, 0]
+[743, 102, 0, 1, 0, 912, 1029, 1, 1, 2, 5, 0, 2, 2, 2]
+[2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 0, 0]
+[743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 1, 2, 2, 2]
+[743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]
+[743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 1, 2, 2]
+[743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]
+[743, 96, 1, 0, 0, 911, 1966, 0, 0, 0, 5, 1, 2, 2, 2]
+[629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 2, 0]
+[743, 96, 0, 1, 1, 1046, 1076, 0, 1, 2, 3, 0, 2, 2, 2]
+[743, 96, 0, 0, 1, 1449, 1635, 0, 0, 0, 4, 1, 2, 2, 0]
+[743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 0, 2, 2]
+[629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]
+[2042, 102, 1, 1, 0, 1046, 1076, 1, 0, 1, 2, 0, 2, 2, 0]
+[1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 5, 0, 2, 0, 1]
+crossed
+[[743, 96, 0, 0, 0, 912, 1028, 1, 1, 2, 0, 0, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 2, 2, 2],
+ [2042, 102, 0, 1, 1, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0],
+ [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 1, 2, 0, 2, 0, 2],
+ [2041, 102, 1, 1, 0, 1019, 1864, 1, 0, 0, 4, 1, 2, 0, 0],
+ [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 4, 0, 2, 2, 2],
+ [2041, 102, 0, 1, 0, 1019, 1521, 1, 1, 2, 3, 1, 2, 0, 0],
+ [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 2, 1],
+ [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2],
+ [743, 96, 0, 1, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2],
+ [743, 96, 0, 0, 0, 910, 1966, 0, 0, 0, 4, 0, 2, 0, 2],
+ [744, 102, 0, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2],
+ [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1],
+ [743, 96, 0, 0, 0, 1019, 1865, 1, 1, 2, 0, 0, 2, 2, 2],
+ [880, 93, 0, 1, 0, 911, 1966, 0, 1, 0, 4, 1, 2, 1, 2],
+ [2041, 102, 0, 0, 0, 1019, 1864, 1, 1, 2, 0, 0, 2, 0, 0],
+ [743, 96, 0, 0, 0, 912, 1966, 0, 0, 1, 2, 0, 2, 2, 2],
+ [2041, 102, 1, 1, 0, 1449, 1864, 1, 1, 2, 3, 1, 2, 0, 0],
+ [743, 102, 0, 1, 0, 912, 1029, 1, 1, 2, 5, 0, 2, 2, 2],
+ [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 0, 0],
+ [743, 96, 0, 1, 0, 1046, 1076, 0, 1, 2, 3, 1, 2, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 1, 2, 2],
+ [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0],
+ [743, 96, 1, 0, 0, 911, 1966, 0, 0, 0, 5, 1, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 2, 0],
+ [743, 96, 0, 1, 1, 1046, 1076, 0, 1, 2, 3, 0, 2, 2, 2],
+ [743, 96, 0, 0, 1, 1449, 1635, 0, 0, 0, 4, 1, 2, 2, 0],
+ [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 0, 2, 2],
+ [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2],
+ [2042, 102, 1, 1, 0, 1046, 1076, 1, 0, 1, 2, 0, 2, 2, 0],
+ [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 5, 0, 2, 0, 1]]
+Computing fitness
+nginx: the configuration file /tmp/tmppnlo5afl.conf syntax is ok
+nginx: configuration file /tmp/tmppnlo5afl.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp6gg3q3hv.conf syntax is ok
+nginx: configuration file /tmp/tmp6gg3q3hv.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp7_l_s8y6.conf syntax is ok
+nginx: configuration file /tmp/tmp7_l_s8y6.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 52
+Scan progress %: 74
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpxmt7q2gm.conf syntax is ok
+nginx: configuration file /tmp/tmpxmt7q2gm.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmplmgho22b.conf syntax is ok
+nginx: configuration file /tmp/tmplmgho22b.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp06iyjobt.conf syntax is ok
+nginx: configuration file /tmp/tmp06iyjobt.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp2qye39b1.conf syntax is ok
+nginx: configuration file /tmp/tmp2qye39b1.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpu8eyuta9.conf syntax is ok
+nginx: configuration file /tmp/tmpu8eyuta9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9cdni_3r.conf syntax is ok
+nginx: configuration file /tmp/tmp9cdni_3r.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp4qd645h0.conf syntax is ok
+nginx: configuration file /tmp/tmp4qd645h0.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpslmvii99.conf syntax is ok
+nginx: configuration file /tmp/tmpslmvii99.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9zhbknw0.conf syntax is ok
+nginx: configuration file /tmp/tmp9zhbknw0.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpbx53gb7e.conf syntax is ok
+nginx: configuration file /tmp/tmpbx53gb7e.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpkqe6qa3p.conf syntax is ok
+nginx: configuration file /tmp/tmpkqe6qa3p.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpu05mvvim.conf syntax is ok
+nginx: configuration file /tmp/tmpu05mvvim.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpd0wap_sr.conf syntax is ok
+nginx: configuration file /tmp/tmpd0wap_sr.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmph748zdsf.conf syntax is ok
+nginx: configuration file /tmp/tmph748zdsf.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp8z3o6rna.conf syntax is ok
+nginx: configuration file /tmp/tmp8z3o6rna.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmpxerpd821.conf:43
+nginx: configuration file /tmp/tmpxerpd821.conf test failed
+nginx: the configuration file /tmp/tmp2jr4bzp3.conf syntax is ok
+nginx: configuration file /tmp/tmp2jr4bzp3.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9vz0b6ey.conf syntax is ok
+nginx: configuration file /tmp/tmp9vz0b6ey.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp40l1yp_9.conf syntax is ok
+nginx: configuration file /tmp/tmp40l1yp_9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpf1gmp985.conf syntax is ok
+nginx: configuration file /tmp/tmpf1gmp985.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnqh6pz99.conf syntax is ok
+nginx: configuration file /tmp/tmpnqh6pz99.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmps09qzqgp.conf:43
+nginx: configuration file /tmp/tmps09qzqgp.conf test failed
+nginx: the configuration file /tmp/tmpe0v3w3wo.conf syntax is ok
+nginx: configuration file /tmp/tmpe0v3w3wo.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnhndomww.conf syntax is ok
+nginx: configuration file /tmp/tmpnhndomww.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 51
+Scan progress %: 68
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpvuoz588a.conf syntax is ok
+nginx: configuration file /tmp/tmpvuoz588a.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpwb137cse.conf syntax is ok
+nginx: configuration file /tmp/tmpwb137cse.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 75
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpmfy8jg3s.conf syntax is ok
+nginx: configuration file /tmp/tmpmfy8jg3s.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9_nle6v4.conf syntax is ok
+nginx: configuration file /tmp/tmp9_nle6v4.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmpl_qf6brx.conf:43
+nginx: configuration file /tmp/tmpl_qf6brx.conf test failed
+sorted
+[(62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 910, 1966, 0, 0, 0, 4, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 1, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1028, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 0]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1030, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1966, 0, 0, 1, 2, 0, 2, 2, 2])]
+Selected
+[(68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 2, 0, 0, 1, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1029, 1, 1, 2, 0, 0, 2, 0, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 912, 1521, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [743, 96, 0, 0, 0, 910, 1966, 0, 0, 0, 4, 0, 2, 0, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0])]
+[629, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]
+[629, 102, 1, 0, 1, 1448, 1635, 1, 1, 2, 0, 0, 2, 2, 0]
+[742, 102, 1, 0, 1, 1449, 1635, 0, 0, 2, 1, 1, 0, 2, 2]
+[1478, 67, 1, 1, 0, 1449, 1635, 0, 1, 0, 4, 0, 2, 0, 1]
+[743, 102, 1, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2]
+[1478, 67, 0, 0, 1, 1486, 1812, 0, 1, 1, 2, 0, 1, 0, 1]
+[1478, 67, 0, 1, 0, 1449, 1635, 0, 0, 0, 2, 0, 2, 0, 1]
+[629, 102, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 1, 2, 2, 2]
+[742, 102, 1, 0, 0, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]
+[629, 102, 1, 1, 0, 1019, 1864, 1, 1, 0, 3, 0, 2, 2, 2]
+[743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]
+[629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 3, 0, 2, 2, 2]
+[742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 0, 0, 0, 2]
+[629, 102, 1, 0, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0]
+[1477, 67, 0, 1, 0, 1449, 1635, 0, 0, 2, 2, 0, 2, 0, 1]
+[743, 96, 0, 0, 0, 912, 1028, 0, 0, 0, 4, 1, 0, 2, 0]
+[629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 1, 2, 2, 2]
+[743, 96, 0, 0, 0, 911, 1966, 0, 0, 1, 1, 0, 2, 2, 1]
+[743, 96, 0, 0, 0, 1449, 1635, 0, 1, 0, 4, 1, 2, 2, 2]
+[629, 102, 1, 0, 1, 1448, 1812, 1, 1, 1, 2, 0, 2, 2, 0]
+[629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 1, 0, 2, 2, 0]
+[743, 96, 0, 0, 0, 911, 1966, 1, 0, 0, 4, 1, 2, 2, 1]
+[743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 0, 2, 1]
+[743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 0, 0, 2, 0, 2]
+[743, 96, 0, 0, 0, 910, 1864, 1, 1, 2, 3, 0, 1, 0, 2]
+[629, 102, 0, 0, 1, 1486, 1812, 0, 0, 0, 4, 1, 2, 2, 2]
+[1477, 67, 0, 1, 0, 1448, 1635, 0, 1, 0, 2, 0, 2, 0, 1]
+[629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2]
+[743, 96, 0, 1, 0, 910, 1966, 0, 0, 0, 4, 1, 2, 2, 0]
+[743, 97, 0, 0, 0, 911, 1966, 0, 0, 2, 3, 0, 2, 2, 2]
+[743, 96, 1, 1, 0, 1449, 1635, 0, 0, 0, 4, 1, 2, 2, 1]
+[743, 95, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]
+crossed
+[[629, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1448, 1635, 1, 1, 2, 0, 0, 2, 2, 0],
+ [742, 102, 1, 0, 1, 1449, 1635, 0, 0, 2, 1, 1, 0, 2, 2],
+ [1478, 67, 1, 1, 0, 1449, 1635, 0, 1, 0, 4, 0, 2, 0, 1],
+ [743, 102, 1, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 2],
+ [1478, 67, 0, 0, 1, 1486, 1812, 0, 1, 1, 2, 0, 1, 0, 1],
+ [1478, 67, 0, 1, 0, 1449, 1635, 0, 0, 0, 2, 0, 2, 0, 1],
+ [629, 102, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 1, 2, 2, 2],
+ [742, 102, 1, 0, 0, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2],
+ [629, 102, 1, 1, 0, 1019, 1864, 1, 1, 0, 3, 0, 2, 2, 2],
+ [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2],
+ [629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 3, 0, 2, 2, 2],
+ [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 0, 0, 0, 2],
+ [629, 102, 1, 0, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0],
+ [1477, 67, 0, 1, 0, 1449, 1635, 0, 0, 2, 2, 0, 2, 0, 1],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 0, 0, 4, 1, 0, 2, 0],
+ [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 1, 2, 2, 2],
+ [743, 96, 0, 0, 0, 911, 1966, 0, 0, 1, 1, 0, 2, 2, 1],
+ [743, 96, 0, 0, 0, 1449, 1635, 0, 1, 0, 4, 1, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1448, 1812, 1, 1, 1, 2, 0, 2, 2, 0],
+ [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 1, 0, 2, 2, 0],
+ [743, 96, 0, 0, 0, 911, 1966, 1, 0, 0, 4, 1, 2, 2, 1],
+ [743, 96, 0, 0, 0, 911, 1966, 0, 0, 0, 4, 1, 0, 2, 1],
+ [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 0, 0, 2, 0, 2],
+ [743, 96, 0, 0, 0, 910, 1864, 1, 1, 2, 3, 0, 1, 0, 2],
+ [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 0, 4, 1, 2, 2, 2],
+ [1477, 67, 0, 1, 0, 1448, 1635, 0, 1, 0, 2, 0, 2, 0, 1],
+ [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2],
+ [743, 96, 0, 1, 0, 910, 1966, 0, 0, 0, 4, 1, 2, 2, 0],
+ [743, 97, 0, 0, 0, 911, 1966, 0, 0, 2, 3, 0, 2, 2, 2],
+ [743, 96, 1, 1, 0, 1449, 1635, 0, 0, 0, 4, 1, 2, 2, 1],
+ [743, 95, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]]
+Computing fitness
+nginx: the configuration file /tmp/tmpj3n2tnny.conf syntax is ok
+nginx: configuration file /tmp/tmpj3n2tnny.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpspghyx76.conf syntax is ok
+nginx: configuration file /tmp/tmpspghyx76.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp4riv3yjp.conf syntax is ok
+nginx: configuration file /tmp/tmp4riv3yjp.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 72
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp4lcjvc_4.conf syntax is ok
+nginx: configuration file /tmp/tmp4lcjvc_4.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpgfnbpjw0.conf syntax is ok
+nginx: configuration file /tmp/tmpgfnbpjw0.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp5j7m5dzm.conf syntax is ok
+nginx: configuration file /tmp/tmp5j7m5dzm.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp60rr911t.conf syntax is ok
+nginx: configuration file /tmp/tmp60rr911t.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpmgtqzers.conf syntax is ok
+nginx: configuration file /tmp/tmpmgtqzers.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpzer77b52.conf syntax is ok
+nginx: configuration file /tmp/tmpzer77b52.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmprl0de1hx.conf syntax is ok
+nginx: configuration file /tmp/tmprl0de1hx.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpf5kiyf63.conf syntax is ok
+nginx: configuration file /tmp/tmpf5kiyf63.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpwf524ya9.conf syntax is ok
+nginx: configuration file /tmp/tmpwf524ya9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 52
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp8rengrt7.conf syntax is ok
+nginx: configuration file /tmp/tmp8rengrt7.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp673ff6_9.conf syntax is ok
+nginx: configuration file /tmp/tmp673ff6_9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpkaj_jigt.conf syntax is ok
+nginx: configuration file /tmp/tmpkaj_jigt.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpesaqkrwi.conf syntax is ok
+nginx: configuration file /tmp/tmpesaqkrwi.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmps677egxh.conf syntax is ok
+nginx: configuration file /tmp/tmps677egxh.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 82
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmprghkx5vh.conf syntax is ok
+nginx: configuration file /tmp/tmprghkx5vh.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp1sap7jmf.conf syntax is ok
+nginx: configuration file /tmp/tmp1sap7jmf.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp76bafsdx.conf syntax is ok
+nginx: configuration file /tmp/tmp76bafsdx.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpdwwvol05.conf syntax is ok
+nginx: configuration file /tmp/tmpdwwvol05.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpgz08cd99.conf syntax is ok
+nginx: configuration file /tmp/tmpgz08cd99.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 47
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpb7oty6qa.conf syntax is ok
+nginx: configuration file /tmp/tmpb7oty6qa.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpzdzshrhv.conf syntax is ok
+nginx: configuration file /tmp/tmpzdzshrhv.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpxc6l1o2d.conf syntax is ok
+nginx: configuration file /tmp/tmpxc6l1o2d.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 45
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9yf_s3rs.conf syntax is ok
+nginx: configuration file /tmp/tmp9yf_s3rs.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpo8gvntkl.conf syntax is ok
+nginx: configuration file /tmp/tmpo8gvntkl.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpe73ykzh_.conf syntax is ok
+nginx: configuration file /tmp/tmpe73ykzh_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpsutn_rhq.conf syntax is ok
+nginx: configuration file /tmp/tmpsutn_rhq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpdn48ltj9.conf syntax is ok
+nginx: configuration file /tmp/tmpdn48ltj9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpzg6qqzph.conf syntax is ok
+nginx: configuration file /tmp/tmpzg6qqzph.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmprc6iy7f_.conf syntax is ok
+nginx: configuration file /tmp/tmprc6iy7f_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+sorted
+[(62, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 1, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1448, 1635, 1, 1, 2, 0, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1448, 1812, 1, 1, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 1, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1449, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1485, 1812, 1, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 1, 0, 1019, 1864, 1, 1, 0, 3, 0, 2, 2, 2]),
+ (68, [742, 102, 1, 0, 0, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1449, 1635, 0, 0, 2, 1, 1, 0, 2, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 0, 0, 0, 2]),
+ (68, [742, 102, 1, 0, 1, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2])]
+Selected
+[(68, [629, 102, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 1, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (68, [629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 3, 0, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1448, 1812, 1, 1, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [742, 102, 1, 0, 0, 1486, 1812, 0, 0, 2, 0, 1, 0, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1448, 1812, 1, 1, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 1, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (62, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 1, 0, 1019, 1864, 1, 1, 0, 3, 0, 2, 2, 2])]
+[743, 102, 1, 1, 1, 1485, 1812, 0, 1, 2, 3, 0, 0, 2, 2]
+[628, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]
+[629, 102, 0, 1, 1, 1486, 1812, 0, 0, 1, 2, 0, 1, 2, 2]
+[743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 2]
+[629, 102, 1, 0, 1, 1448, 1813, 0, 0, 0, 2, 0, 2, 2, 0]
+[2042, 102, 0, 0, 0, 1046, 1076, 1, 1, 2, 3, 0, 2, 2, 0]
+[1478, 67, 0, 1, 1, 1449, 1864, 1, 1, 2, 3, 1, 2, 0, 1]
+[742, 102, 1, 0, 0, 1485, 1812, 0, 0, 2, 0, 1, 0, 2, 2]
+[629, 102, 1, 0, 1, 1486, 1812, 0, 1, 1, 2, 0, 1, 2, 2]
+[628, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]
+[629, 102, 1, 1, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0]
+[628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]
+[629, 102, 1, 0, 1, 912, 1521, 0, 0, 0, 2, 0, 0, 2, 2]
+[743, 96, 1, 1, 0, 1019, 1864, 1, 1, 0, 3, 0, 2, 0, 2]
+[629, 102, 0, 0, 1, 911, 1966, 1, 1, 1, 2, 0, 2, 1, 0]
+[629, 102, 1, 0, 0, 913, 1521, 0, 0, 2, 2, 0, 2, 2, 0]
+[630, 102, 0, 1, 0, 1449, 1635, 0, 1, 1, 2, 0, 2, 2, 2]
+[628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 1, 2, 2, 2]
+[629, 102, 0, 0, 1, 1448, 1812, 1, 1, 2, 2, 0, 2, 2, 0]
+[629, 102, 1, 0, 0, 912, 1520, 0, 0, 1, 2, 0, 2, 2, 0]
+[629, 102, 1, 0, 1, 1628, 1522, 0, 0, 0, 2, 0, 1, 2, 2]
+[629, 102, 1, 0, 1, 1486, 1812, 0, 0, 3, 2, 0, 1, 2, 2]
+[629, 101, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2]
+[629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 1]
+[629, 102, 0, 0, 1, 1486, 1811, 0, 0, 0, 4, 1, 2, 2, 2]
+[629, 102, 1, 1, 0, 1019, 1522, 0, 1, 2, 3, 0, 2, 2, 2]
+[880, 102, 0, 1, 1, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[629, 102, 1, 0, 1, 1020, 1812, 1, 1, 1, 3, 0, 2, 2, 2]
+[629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]
+[629, 102, 1, 1, 0, 1019, 1865, 1, 1, 2, 3, 1, 1, 2, 2]
+[629, 103, 1, 0, 0, 1020, 1864, 0, 0, 0, 4, 0, 2, 2, 2]
+[629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 0, 0]
+crossed
+[[743, 102, 1, 1, 1, 1485, 1812, 0, 1, 2, 3, 0, 0, 2, 2],
+ [628, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2],
+ [629, 102, 0, 1, 1, 1486, 1812, 0, 0, 1, 2, 0, 1, 2, 2],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1448, 1813, 0, 0, 0, 2, 0, 2, 2, 0],
+ [2042, 102, 0, 0, 0, 1046, 1076, 1, 1, 2, 3, 0, 2, 2, 0],
+ [1478, 67, 0, 1, 1, 1449, 1864, 1, 1, 2, 3, 1, 2, 0, 1],
+ [742, 102, 1, 0, 0, 1485, 1812, 0, 0, 2, 0, 1, 0, 2, 2],
+ [629, 102, 1, 0, 1, 1486, 1812, 0, 1, 1, 2, 0, 1, 2, 2],
+ [628, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2],
+ [629, 102, 1, 1, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0],
+ [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0],
+ [629, 102, 1, 0, 1, 912, 1521, 0, 0, 0, 2, 0, 0, 2, 2],
+ [743, 96, 1, 1, 0, 1019, 1864, 1, 1, 0, 3, 0, 2, 0, 2],
+ [629, 102, 0, 0, 1, 911, 1966, 1, 1, 1, 2, 0, 2, 1, 0],
+ [629, 102, 1, 0, 0, 913, 1521, 0, 0, 2, 2, 0, 2, 2, 0],
+ [630, 102, 0, 1, 0, 1449, 1635, 0, 1, 1, 2, 0, 2, 2, 2],
+ [628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 1, 2, 2, 2],
+ [629, 102, 0, 0, 1, 1448, 1812, 1, 1, 2, 2, 0, 2, 2, 0],
+ [629, 102, 1, 0, 0, 912, 1520, 0, 0, 1, 2, 0, 2, 2, 0],
+ [629, 102, 1, 0, 1, 1628, 1522, 0, 0, 0, 2, 0, 1, 2, 2],
+ [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 3, 2, 0, 1, 2, 2],
+ [629, 101, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2],
+ [629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 1],
+ [629, 102, 0, 0, 1, 1486, 1811, 0, 0, 0, 4, 1, 2, 2, 2],
+ [629, 102, 1, 1, 0, 1019, 1522, 0, 1, 2, 3, 0, 2, 2, 2],
+ [880, 102, 0, 1, 1, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [629, 102, 1, 0, 1, 1020, 1812, 1, 1, 1, 3, 0, 2, 2, 2],
+ [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0],
+ [629, 102, 1, 1, 0, 1019, 1865, 1, 1, 2, 3, 1, 1, 2, 2],
+ [629, 103, 1, 0, 0, 1020, 1864, 0, 0, 0, 4, 0, 2, 2, 2],
+ [629, 102, 1, 0, 1, 1448, 1635, 0, 0, 1, 2, 0, 2, 0, 0]]
+Computing fitness
+nginx: the configuration file /tmp/tmpn_2hriuc.conf syntax is ok
+nginx: configuration file /tmp/tmpn_2hriuc.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpn41pxz5w.conf syntax is ok
+nginx: configuration file /tmp/tmpn41pxz5w.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpvd_09er5.conf syntax is ok
+nginx: configuration file /tmp/tmpvd_09er5.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp2a8t9m7_.conf syntax is ok
+nginx: configuration file /tmp/tmp2a8t9m7_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 44
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp_msh2h4s.conf syntax is ok
+nginx: configuration file /tmp/tmp_msh2h4s.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpumr2ri3t.conf syntax is ok
+nginx: configuration file /tmp/tmpumr2ri3t.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp20h97282.conf syntax is ok
+nginx: configuration file /tmp/tmp20h97282.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp_1xh9e14.conf syntax is ok
+nginx: configuration file /tmp/tmp_1xh9e14.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpaip984z_.conf syntax is ok
+nginx: configuration file /tmp/tmpaip984z_.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp3wzyrlk1.conf syntax is ok
+nginx: configuration file /tmp/tmp3wzyrlk1.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmplkqf08qq.conf syntax is ok
+nginx: configuration file /tmp/tmplkqf08qq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpl2wgqj86.conf syntax is ok
+nginx: configuration file /tmp/tmpl2wgqj86.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpsbfw8ryd.conf syntax is ok
+nginx: configuration file /tmp/tmpsbfw8ryd.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpuq5t7ah9.conf syntax is ok
+nginx: configuration file /tmp/tmpuq5t7ah9.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpd48_afad.conf syntax is ok
+nginx: configuration file /tmp/tmpd48_afad.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpnllp2yr7.conf syntax is ok
+nginx: configuration file /tmp/tmpnllp2yr7.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpdn2xkn6p.conf syntax is ok
+nginx: configuration file /tmp/tmpdn2xkn6p.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpz7vbb3rm.conf syntax is ok
+nginx: configuration file /tmp/tmpz7vbb3rm.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 41
+Scan progress %: 77
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpm_u5vj7w.conf syntax is ok
+nginx: configuration file /tmp/tmpm_u5vj7w.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp83bgxx31.conf syntax is ok
+nginx: configuration file /tmp/tmp83bgxx31.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmph20jqh7o.conf syntax is ok
+nginx: configuration file /tmp/tmph20jqh7o.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 43
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmpzqd0j97h.conf:42
+nginx: configuration file /tmp/tmpzqd0j97h.conf test failed
+nginx: the configuration file /tmp/tmpknvh1i9r.conf syntax is ok
+nginx: configuration file /tmp/tmpknvh1i9r.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp9i0ylu15.conf syntax is ok
+nginx: configuration file /tmp/tmp9i0ylu15.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpct_vlzdp.conf syntax is ok
+nginx: configuration file /tmp/tmpct_vlzdp.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp8efeaxo2.conf syntax is ok
+nginx: configuration file /tmp/tmp8efeaxo2.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpw_k_xq1n.conf syntax is ok
+nginx: configuration file /tmp/tmpw_k_xq1n.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpyg009u7q.conf syntax is ok
+nginx: configuration file /tmp/tmpyg009u7q.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpwr9m3teu.conf syntax is ok
+nginx: configuration file /tmp/tmpwr9m3teu.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 56
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmprzxzbuwa.conf syntax is ok
+nginx: configuration file /tmp/tmprzxzbuwa.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpwp1tgj47.conf syntax is ok
+nginx: configuration file /tmp/tmpwp1tgj47.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 46
+Scan progress %: 85
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpwrw628dj.conf syntax is ok
+nginx: configuration file /tmp/tmpwrw628dj.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+sorted
+[(62, [629, 102, 0, 0, 1, 911, 1966, 1, 1, 1, 2, 0, 2, 1, 0]),
+ (62, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (68, [628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 1, 2, 2, 2]),
+ (68, [628, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]),
+ (68, [628, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 101, 1, 0, 1, 1486, 1812, 0, 0, 0, 2, 0, 1, 2, 2]),
+ (68, [629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 1]),
+ (68, [629, 102, 0, 0, 1, 1448, 1812, 1, 1, 2, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1811, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 1, 2, 0, 2, 2, 2]),
+ (68, [629, 102, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 1, 2, 2, 2]),
+ (68, [629, 102, 0, 1, 1, 1486, 1812, 0, 0, 1, 2, 0, 1, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 912, 1520, 0, 0, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 912, 1521, 0, 0, 2, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 913, 1521, 0, 0, 2, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 3, 0, 2, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 912, 1521, 0, 0, 0, 2, 0, 0, 2, 2]),
+ (68, [629, 102, 1, 0, 1, 1019, 1864, 1, 1, 2, 3, 0, 2, 2, 2])]
+Selected
+[(62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (62, [743, 96, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 1, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [2041, 102, 0, 1, 0, 1019, 1864, 1, 1, 2, 3, 1, 2, 0, 0]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (62, [2042, 102, 0, 1, 0, 1046, 1076, 1, 1, 2, 3, 1, 2, 2, 0]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [629, 102, 0, 1, 1, 1486, 1812, 0, 0, 1, 2, 0, 1, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (68, [629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 3, 0, 2, 2, 2]),
+ (62, [629, 102, 0, 0, 1, 911, 1966, 1, 1, 1, 2, 0, 2, 1, 0]),
+ (68, [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (62, [743, 102, 1, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]),
+ (68, [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]),
+ (68, [629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 1]),
+ (68, [628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 1, 2, 2, 2]),
+ (68, [628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 1, 2, 2, 2]),
+ (68, [629, 102, 0, 0, 1, 1486, 1812, 0, 0, 0, 4, 1, 2, 2, 2]),
+ (62, [1478, 67, 0, 1, 0, 1449, 1635, 0, 1, 0, 2, 0, 2, 0, 1]),
+ (62, [880, 93, 0, 1, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]),
+ (68, [629, 102, 0, 1, 1, 1486, 1812, 0, 0, 1, 2, 0, 1, 2, 2]),
+ (62, [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]),
+ (62, [629, 102, 0, 0, 1, 911, 1966, 1, 1, 1, 2, 0, 2, 1, 0]),
+ (68, [629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 2, 0, 2, 2, 1]),
+ (62, [1478, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 2, 0, 1, 0, 1]),
+ (68, [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 2, 0, 2, 2, 0]),
+ (62, [629, 102, 1, 0, 1, 1486, 1812, 0, 0, 1, 2, 1, 2, 2, 2]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]),
+ (62, [743, 96, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0])]
+[629, 102, 0, 0, 0, 1486, 1812, 0, 1, 0, 4, 1, 2, 2, 2]
+[743, 96, 0, 1, 0, 911, 1966, 0, 1, 0, 4, 1, 2, 2, 0]
+[628, 102, 1, 0, 1, 913, 1028, 0, 1, 1, 2, 0, 2, 2, 0]
+[743, 95, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]
+[743, 96, 0, 0, 1, 911, 1966, 1, 0, 0, 4, 0, 2, 2, 2]
+[628, 102, 1, 0, 1, 1019, 1864, 1, 1, 1, 2, 1, 2, 2, 2]
+[2042, 102, 0, 1, 0, 1046, 1076, 0, 0, 0, 4, 1, 2, 2, 0]
+[743, 96, 0, 1, 0, 912, 1027, 0, 1, 1, 2, 1, 2, 2, 0]
+[629, 102, 0, 0, 1, 1486, 1812, 0, 1, 0, 2, 0, 2, 2, 2]
+[629, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 4, 0, 2, 2, 2]
+[880, 93, 0, 0, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2]
+[628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 3, 0, 2, 2, 0]
+[628, 102, 1, 0, 1, 1485, 1812, 0, 1, 0, 2, 0, 1, 2, 0]
+[743, 96, 0, 0, 0, 912, 1028, 0, 0, 0, 4, 0, 2, 2, 0]
+[628, 102, 1, 1, 0, 1019, 1864, 1, 1, 1, 2, 0, 2, 2, 0]
+[743, 96, 0, 0, 0, 912, 1028, 0, 0, 3, 4, 1, 2, 2, 2]
+[629, 102, 0, 0, 1, 911, 1966, 1, 0, 1, 2, 0, 2, 1, 0]
+[743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1]
+[629, 102, 0, 1, 1, 1486, 1865, 1, 0, 1, 2, 0, 1, 2, 2]
+[744, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2]
+[743, 96, 0, 1, 1, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0]
+[629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 4, 0, 2, 2, 2]
+[1478, 67, 0, 1, 0, 1019, 1635, 1, 1, 0, 2, 0, 2, 0, 1]
+[743, 96, 0, 1, 0, 911, 1966, 0, 1, 0, 4, 1, 2, 2, 0]
+[629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 4, 0, 2, 0, 1]
+[628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 0, 2, 2, 1]
+[743, 96, 1, 0, 1, 1485, 1812, 0, 0, 1, 4, 0, 2, 2, 2]
+[628, 102, 1, 1, 1, 1485, 1864, 1, 0, 1, 2, 1, 2, 2, 2]
+[629, 102, 0, 0, 1, 1486, 1966, 0, 0, 0, 4, 1, 2, 0, 2]
+[629, 102, 0, 1, 1, 1485, 1812, 0, 0, 1, 2, 0, 2, 2, 2]
+[743, 102, 0, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2]
+[2042, 102, 0, 0, 1, 1485, 1812, 0, 1, 2, 3, 0, 2, 2, 0]
+crossed
+[[629, 102, 0, 0, 0, 1486, 1812, 0, 1, 0, 4, 1, 2, 2, 2],
+ [743, 96, 0, 1, 0, 911, 1966, 0, 1, 0, 4, 1, 2, 2, 0],
+ [628, 102, 1, 0, 1, 913, 1028, 0, 1, 1, 2, 0, 2, 2, 0],
+ [743, 95, 0, 1, 0, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2],
+ [743, 96, 0, 0, 1, 911, 1966, 1, 0, 0, 4, 0, 2, 2, 2],
+ [628, 102, 1, 0, 1, 1019, 1864, 1, 1, 1, 2, 1, 2, 2, 2],
+ [2042, 102, 0, 1, 0, 1046, 1076, 0, 0, 0, 4, 1, 2, 2, 0],
+ [743, 96, 0, 1, 0, 912, 1027, 0, 1, 1, 2, 1, 2, 2, 0],
+ [629, 102, 0, 0, 1, 1486, 1812, 0, 1, 0, 2, 0, 2, 2, 2],
+ [629, 67, 0, 1, 1, 1449, 1635, 0, 0, 1, 4, 0, 2, 2, 2],
+ [880, 93, 0, 0, 0, 1627, 1522, 0, 0, 0, 4, 0, 2, 1, 2],
+ [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 1, 3, 0, 2, 2, 0],
+ [628, 102, 1, 0, 1, 1485, 1812, 0, 1, 0, 2, 0, 1, 2, 0],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 0, 0, 4, 0, 2, 2, 0],
+ [628, 102, 1, 1, 0, 1019, 1864, 1, 1, 1, 2, 0, 2, 2, 0],
+ [743, 96, 0, 0, 0, 912, 1028, 0, 0, 3, 4, 1, 2, 2, 2],
+ [629, 102, 0, 0, 1, 911, 1966, 1, 0, 1, 2, 0, 2, 1, 0],
+ [743, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 1],
+ [629, 102, 0, 1, 1, 1486, 1865, 1, 0, 1, 2, 0, 1, 2, 2],
+ [744, 96, 0, 0, 1, 911, 1966, 0, 0, 0, 4, 0, 2, 2, 2],
+ [743, 96, 0, 1, 1, 911, 1966, 0, 0, 0, 4, 1, 2, 2, 0],
+ [629, 102, 1, 0, 0, 1020, 1864, 1, 1, 0, 4, 0, 2, 2, 2],
+ [1478, 67, 0, 1, 0, 1019, 1635, 1, 1, 0, 2, 0, 2, 0, 1],
+ [743, 96, 0, 1, 0, 911, 1966, 0, 1, 0, 4, 1, 2, 2, 0],
+ [629, 102, 0, 0, 0, 912, 1028, 0, 1, 1, 4, 0, 2, 0, 1],
+ [628, 102, 1, 0, 1, 1019, 1864, 1, 0, 1, 2, 0, 2, 2, 1],
+ [743, 96, 1, 0, 1, 1485, 1812, 0, 0, 1, 4, 0, 2, 2, 2],
+ [628, 102, 1, 1, 1, 1485, 1864, 1, 0, 1, 2, 1, 2, 2, 2],
+ [629, 102, 0, 0, 1, 1486, 1966, 0, 0, 0, 4, 1, 2, 0, 2],
+ [629, 102, 0, 1, 1, 1485, 1812, 0, 0, 1, 2, 0, 2, 2, 2],
+ [743, 102, 0, 0, 1, 1485, 1812, 0, 1, 2, 0, 0, 0, 2, 2],
+ [2042, 102, 0, 0, 1, 1485, 1812, 0, 1, 2, 3, 0, 2, 2, 0]]
+Computing fitness
+nginx: the configuration file /tmp/tmpq5koc6zx.conf syntax is ok
+nginx: configuration file /tmp/tmpq5koc6zx.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpmrvwp1j2.conf syntax is ok
+nginx: configuration file /tmp/tmpmrvwp1j2.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpioccgmaa.conf syntax is ok
+nginx: configuration file /tmp/tmpioccgmaa.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp8m1ug4w0.conf syntax is ok
+nginx: configuration file /tmp/tmp8m1ug4w0.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 54
+Scan progress %: 79
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp8a9g1pkj.conf syntax is ok
+nginx: configuration file /tmp/tmp8a9g1pkj.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp125q51q2.conf syntax is ok
+nginx: configuration file /tmp/tmp125q51q2.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmptob56kbu.conf syntax is ok
+nginx: configuration file /tmp/tmptob56kbu.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmplw5_wmqh.conf syntax is ok
+nginx: configuration file /tmp/tmplw5_wmqh.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 36
+Scan progress %: 63
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpqy0ukp01.conf syntax is ok
+nginx: configuration file /tmp/tmpqy0ukp01.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpvdkk1fjj.conf syntax is ok
+nginx: configuration file /tmp/tmpvdkk1fjj.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 45
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpwwhbqjhu.conf syntax is ok
+nginx: configuration file /tmp/tmpwwhbqjhu.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpvkpc9o6c.conf syntax is ok
+nginx: configuration file /tmp/tmpvkpc9o6c.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmppbvj8v7l.conf syntax is ok
+nginx: configuration file /tmp/tmppbvj8v7l.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp1s4vihk5.conf syntax is ok
+nginx: configuration file /tmp/tmp1s4vihk5.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpu38h4llx.conf syntax is ok
+nginx: configuration file /tmp/tmpu38h4llx.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmpuadxog0g.conf:42
+nginx: configuration file /tmp/tmpuadxog0g.conf test failed
+nginx: the configuration file /tmp/tmpa2zg2z1z.conf syntax is ok
+nginx: configuration file /tmp/tmpa2zg2z1z.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpa_gmg4b6.conf syntax is ok
+nginx: configuration file /tmp/tmpa_gmg4b6.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 64
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp4ubgi950.conf syntax is ok
+nginx: configuration file /tmp/tmp4ubgi950.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 45
+Scan progress %: 79
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmphue7p6d2.conf syntax is ok
+nginx: configuration file /tmp/tmphue7p6d2.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp7hgff6pb.conf syntax is ok
+nginx: configuration file /tmp/tmp7hgff6pb.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmps4g14ysl.conf syntax is ok
+nginx: configuration file /tmp/tmps4g14ysl.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 42
+Scan progress %: 79
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpckznbyzs.conf syntax is ok
+nginx: configuration file /tmp/tmpckznbyzs.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpscvimump.conf syntax is ok
+nginx: configuration file /tmp/tmpscvimump.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 71
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpt1eal4he.conf syntax is ok
+nginx: configuration file /tmp/tmpt1eal4he.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 40
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp3tymbs0t.conf syntax is ok
+nginx: configuration file /tmp/tmp3tymbs0t.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpy5ope37p.conf syntax is ok
+nginx: configuration file /tmp/tmpy5ope37p.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpuc36ksnb.conf syntax is ok
+nginx: configuration file /tmp/tmpuc36ksnb.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpaqoje9pk.conf syntax is ok
+nginx: configuration file /tmp/tmpaqoje9pk.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 37
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpjdnq1xrq.conf syntax is ok
+nginx: configuration file /tmp/tmpjdnq1xrq.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmponcdnhre.conf syntax is ok
+nginx: configuration file /tmp/tmponcdnhre.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 51
+Scan progress %: 78
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpfwynn_r0.conf syntax is ok
+nginx: configuration file /tmp/tmpfwynn_r0.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
