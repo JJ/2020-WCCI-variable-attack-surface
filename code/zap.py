@@ -25,24 +25,23 @@ def zap_test():
 
     zap = ZAPv2(apikey=apikey, proxies={'http': proxy})
 
-
     zap.core.new_session(name="abc", overwrite=True)
     # Proxy a request to the target so that ZAP has something to deal with
     print('Accessing target {}'.format(target), file=sys.stderr)
     # zap.urlopen(target)
     zap.core.access_url(url=target)
     # Give the sites tree a chance to get updated
-    time.sleep(1)
+    time.sleep(2)
 
     print('Spidering target {}'.format(target), file=sys.stderr)
     # scanid = zap.spider.scan(target, maxchildren="10", recurse="false", subtreeonly="true")
     scanid = zap.spider.scan(target, maxchildren="20")
     # Give the Spider a chance to start
-    time.sleep(1)
+    time.sleep(2)
     while (int(zap.spider.status(scanid)) < 100):
         # Loop until the spider has finished
         print('Spider progress %: {}'.format(int(zap.spider.status(scanid))), file=sys.stderr)
-        time.sleep(1)
+        time.sleep(2)
 
     print('Spider completed', file=sys.stderr)
     zap.spider.stop_all_scans()
@@ -63,7 +62,7 @@ def zap_test():
     while (int(zap.ascan.status(scanid)) < 100):
         # Loop until the scanner has finished
         print('Scan progress %: {}'.format(zap.ascan.status(scanid)), file=sys.stderr)
-        time.sleep(2)
+        time.sleep(5)
 
     print('Active Scan completed', file=sys.stderr)
 
