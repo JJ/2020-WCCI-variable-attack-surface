@@ -60,146 +60,28 @@ Security, cyberattacks, performance evaluation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Many different techniques are used to deflect cyberattacks, that is,
-attempts to gain access to certain assets through running code
-remotely; these techniques include hardening of services, as well as
-deception. {\em Moving target defense} \cite{nitrd,jajodia2011moving}
-includes both: the system must be hardened as a point of departure,
-but additionally it is going to be changing its attacker-facing profile
-and features to make its identification, and thus selection of an
-attack surface, more difficult \cite{zhuang2014towards}. This kind of
-defense was initially proposed by the Federal Networking and Information Technology Research and
-Development (NITRD) Program for the first time in 2009
-\cite{moving-target}, and since then it has spawned all kind of
-methodologies and software tools to carry it out in practice. The
-effectivity of this defense technique is variable and will depend on
-the kind of attack \cite{evans2011effectiveness}, but at any rate it
-is a valuable addition to the set of tools that are used against
-cyberattacks nowadays; besides, it can be applied to several different
-services, every one with a different mechanism \cite{Cai2016}, which
-makes it a versatile, active defense methodology, applicable at many
-levels and in many different ways.
 
-This kind of protection against cybersecurity threats can be implemented by a
-proper software configuration without the need to invest in costly
-security solutions. In order to measure how optimal a configuration is, an
-objective score must be used to measure security or its inverse,
-vulnerabilities \cite{yang2012security}: The `Security Technical
-Implementation Guides' or STIGs are the configuration standards for
-DoD systems provided by the `Defense Information Systems Agency'
-(DISA) since 1998. These guides give some recommendations to hardening
-the configuration of software systems based on known vulnerabilities
-and his impact is classified using the CVSS score.
+% Some attackers rely on byte patterns: piskozub2019resilience. This
+% paper tries to change those patterns by changing the behavior of the
+% server. 
 
-The `Common Vulnerability
-Scoring System' or CVSS \cite{cvss} is an open standard to measure
-computer and network security vulnerabilities. Scores range from 0 to
-10, with 10 being the most severe. In order to protect properly a
-system, we need to optimize this score so that it gets as close as
-possible to zero without compromising any kind of functionality;
-however, a 0 score is almost impossible, or at any rate impossible to
-measure automatically. Low scores are, thus, desirable as a point of
-departure for using additional measures such as the moving target
-defense.
+% Defense but also detection technique: tian2019moving
 
-Many vulnerabilities can be caused by misconfiguration or an
-inadequate combination of parameters. In addition, a given service can
-have practically infinite possible configurations, some being less
-functional and/or vulnerable than others.
+% eghtesad2019deep deep reinforcement learning to find the best moment
+% for changing configurations.
 
-Also, to create a good mechanism of protection against cyberattacks,
-the moving target defense fools the attacker with a continuous change
-in the configuration of a given service, so meanwhile an attacker is
-fingerprinting your service to discover vulnerabilities, the method or
-algorithm applying this kind of defense will have changed the
-configuration so the attacker cannot define an attack based on the
-known vulnerabilities. In practice, you need to create an additional
-policy to change configurations, for instance every time an attack is
-detected or periodically, at random moments within a defined
-schedule.
+% POTTEIGER2020102954 integrated defense and control reconfiguration,
+% as we do in this paper
 
-% Finding these correct configurations, as well as similar and fully functional configurations, can be a complex task if it is done manually so ideally we would need to find a way to generate such configurations in an automatic way, using some search heuristic. % You need to make paragraphs follow each other - JJ
-In practice, the moving target defense implies a method that is able
-to yield several low-vulnerability service configurations. In this
-paper we are going to focus on the creation of a search method
-that is able to find, in every application, several configurations
-with a low vulnerability score. Depending on the (external) policy,
-the chief security officer of a network can run (or establish a policy
-to run) the search algorithm
-once for every scheduled change period, and obtain several candidate
-configurations than can then be applied to the service to make it
-become the {\em moving} target, as was required.
+% Amplifying randomization as an effective defense kansal2020improving
 
-In this paper we will use a genetic algorithm, which is a search
-heuristic that can discover new, secure and diverse configurations by modeling a given
-configuration as if they were chromosomes and the different individual
-configuration options as if they were genes in that chromosome
-\cite{john_evolutionary_2014}. The main idea of genetic algorithms is
-that by mutation, crossing and selection of these chromosomes we will
-eventually obtain better configurations. Since mutations are random,
-they are a source of the diversity we are interested in here.
+% Review that includes MTD for combating DDoS attacks with biological
+% inspiration. prathyusha2020review
 
-We need, however, a way to score every individual
-chromosome/solution. While CVSS is an abstract way to score security, we first need to
-decide on a system for which security is going to be optimized and,
-second, on a tool that will be able to automatically compute CVSS or a
-vulnerability score related to it. For
-the former, we will use an open-source OWASP project called Juice-Shop
-\cite{luburic2019utilizing,juice-shop} that consists in a vulnerable
-e-commerce platform written in Node.js, Express, and Angular. This is
-one of the most typical web application configurations, being more
-complex than a simple welcome webpage and more similar to a real
-environment; however, we will also include tests for this kind of
-simple configuration.
+% MTD proved effective against exfiltration techniques shade2020moonraker
 
-Once the system that is going to be tested is chosen, we need to
-quantify the security of a given configuration; for that purpose, we can use tools like
-OWASP ZAP \cite{bennetts2013owasp}. OWASP ZAP is an open-source
-security analysis tool  for web applications developed by OWASP,
-crawls and analyzes a specified site for security vulnerabilities,
-yielding a scalar value based on the number of vulnerabilities found
-in a site. This score is an alternative to CVSS and STIG, with the
-added advantage that it can be assessed automatically via that
-tool. There is no direct relationship between CVSS and ZAP score,
-although in general a low number in vulnerabilities will result in a
-low CVSS score.
-
-Using these two test systems and the automatic ZAP tool as a fitness
-score, our moving target defense evolutionary algorithm will rely on
-the diversity of each generated configuration to improve the security
-of our system. This is based on the entropy of our random generated
-and mutated values but this random configuration can be wrong or
-vulnerable so we test that configuration and by the genetic algorithm
-evolve that configuration to get a good one.
-The same process is be applied to the resulting configurations to
-improve the security through generation, but as we more evolve the
-configuration we get a much more secure system but we lose
-diversity. We need to boost diversity while keeping security high, depending on our
-system.
-
-% Introduce here the main points of our paper
-% 1. Use of real systems, with a real workload
-% 2. use of a real security scoring technique
-% 3. Open source, as security systems should be
-% 4. Use of industry-standard {\sf nginx}.
-Thus, the main objective of our paper will be to design a new system
-that is able to create a MTD in current industry-standard services. In
-order to do that we intend to use real systems, using real (or at
-least real benchmark) workloads, which are also deployed using best
-practices: Docker containers. Instead of ad-hoc scoring techniques for
-every parameters, we use also a standard tool for scoring the
-vulnerabilities of these techniques, from which standard score can be
-deduced. We will also work with a popular open source service, the
-{\sf nginx} web server. Finally, as is a standard practice in the
-cybersecurity world, the whole system is released under a free
-software license.
-
-
-The rest of the paper is organized as follows: next we present a brief
-state of the art in the subject of moving target defense. The
-methodology and results are presented in Section \ref{sec:res},
-followed by our conclusions.
-
+% cho2019toward a recent survey, including evolutionary
+% algorithms. Also mention the problem of designing a fitness function"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
@@ -505,21 +387,6 @@ correct configuration for the evolutionary algorithm, so all these
 options have been tested and evaluated to check its influence in the
 eventual result. Experiments have been repeated, for each
 configuration, 15 times.
-
-The experiments are run using these commands
-
-\begin{verbatim}
-python3 genetic.py --individuals {16|32|64}
-    --crossover-{one|two}-point --[no-]random-mutation
-\end{verbatim}
-
-For the two different payloads we use, we need to change one line in
-the {\tt genetic.py} code. This code, as well as the final results of
-every experiment, are available in GitHub and are in fact included in
-the same repository as this paper, and processed as part of the source
-of this paper.
-
-These results will be analyzed next.
 
 \subsection{Experimental results}
 \label{subs:results}
