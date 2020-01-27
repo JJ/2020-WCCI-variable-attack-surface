@@ -21,7 +21,7 @@ mutation_chance = 0.2  # The probability that an individual mutates
 generations = 32  # The number of generations that we will evolve
 crossover_type = 1  # The crossover type, can be 1 or 2
 mutation_type_random = True  # Set if the mutation is random or +-1
-tournament_size = 2
+tournament_size = 4
 
 def print_variable_info():
     print("genes: %d" % genes)
@@ -45,18 +45,6 @@ def initialize():
     """
     return [individual() for i in range(individuals)]
 
-
-def crossover_one_point(individual1, individual2):
-    """
-        Executes a one point crossover on the input individuals.
-    """
-
-    # A random crosspoint is chosen to make the exchange
-    crosspoint = random.randint(1, genes - 1)
-
-    return individual2[:crosspoint] + individual1[crosspoint:]
-
-
 def crossover_two_points(individual1, individual2):
     """
         Executes a two-point crossover on the input individuals.
@@ -68,16 +56,6 @@ def crossover_two_points(individual1, individual2):
 #    print( "Points ", genes, crosspoint1, crosspoint2 )
     return individual1[:crosspoint1] + individual2[crosspoint1:crosspoint2] + individual1[crosspoint2:]
 
-
-def crossover(individual1, individual2):
-
-    # Genetic material from parents is mixed into the new individual
-    if crossover_type == 1:
-        result = crossover_one_point(individual1, individual2)
-    else:
-        result = crossover_two_points(individual1, individual2)
-
-    return (calculate_fitness(result), result)
 
 def minTournament(population, k, tournsize):
     selection = []
