@@ -75,6 +75,14 @@ Security, cyberattacks, performance evaluation.
 
 % Amplifying randomization as an effective defense kansal2020improving
 
+% Review that includes MTD for combating DDoS attacks with biological
+% inspiration. prathyusha2020review
+
+% MTD proved effective against exfiltration techniques shade2020moonraker
+
+% cho2019toward a recent survey, including evolutionary
+% algorithms. Also mention the problem of designing a fitness function"
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
 
