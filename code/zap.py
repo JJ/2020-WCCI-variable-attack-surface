@@ -63,7 +63,7 @@ def zap_test():
     while (int(zap.ascan.status(scanid)) < 100):
         # Loop until the scanner has finished
         print('Scan progress %: {}'.format(zap.ascan.status(scanid)), file=sys.stderr)
-        time.sleep(2)
+        time.sleep(3)
 
     print('Active Scan completed', file=sys.stderr)
 
