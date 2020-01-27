@@ -61,7 +61,11 @@ Security, cyberattacks, performance evaluation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
+% Some attackers rely on byte patterns: piskozub2019resilience. This
+% paper tries to change those patterns by changing the behavior of the
+% server. 
 
+% Defense but also detection technique: tian2019moving
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
