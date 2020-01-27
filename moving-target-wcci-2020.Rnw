@@ -21,11 +21,10 @@ data <- read.csv("results/all_results.csv")
 \title{Improving evolution of service configurations for moving target
 defense}
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID} % Add your name here
+\author{\IEEEauthorblockN{Ernesto Serrano Collado}
+\textit{University of Granada}\\
+Granada, Spain \\
+info@ernesto.es} % Add your name here
 \and
 \IEEEauthorblockN{Juan J. Merelo-Guerv\'os}
 \IEEEauthorblockA{\textit{Dept. of Computer Architecture and Technology} \\
@@ -90,7 +89,7 @@ Implementation Guides' or STIGs are the configuration standards for
 DoD systems provided by the `Defense Information Systems Agency'
 (DISA) since 1998. These guides give some recommendations to hardening
 the configuration of software systems based on known vulnerabilities
-and his impact is classified using the CVSS score. 
+and his impact is classified using the CVSS score.
 
 The `Common Vulnerability
 Scoring System' or CVSS \cite{cvss} is an open standard to measure
@@ -106,7 +105,7 @@ defense.
 Many vulnerabilities can be caused by misconfiguration or an
 inadequate combination of parameters. In addition, a given service can
 have practically infinite possible configurations, some being less
-functional and/or vulnerable than others. 
+functional and/or vulnerable than others.
 
 Also, to create a good mechanism of protection against cyberattacks,
 the moving target defense fools the attacker with a continuous change
@@ -122,7 +121,7 @@ schedule.
 % Finding these correct configurations, as well as similar and fully functional configurations, can be a complex task if it is done manually so ideally we would need to find a way to generate such configurations in an automatic way, using some search heuristic. % You need to make paragraphs follow each other - JJ
 In practice, the moving target defense implies a method that is able
 to yield several low-vulnerability service configurations. In this
-paper we are going to focus on the creation of a search method 
+paper we are going to focus on the creation of a search method
 that is able to find, in every application, several configurations
 with a low vulnerability score. Depending on the (external) policy,
 the chief security officer of a network can run (or establish a policy
@@ -171,7 +170,7 @@ the diversity of each generated configuration to improve the security
 of our system. This is based on the entropy of our random generated
 and mutated values but this random configuration can be wrong or
 vulnerable so we test that configuration and by the genetic algorithm
-evolve that configuration to get a good one. 
+evolve that configuration to get a good one.
 The same process is be applied to the resulting configurations to
 improve the security through generation, but as we more evolve the
 configuration we get a much more secure system but we lose
@@ -227,8 +226,8 @@ costs for the defender.
 
 This program was pursued using different kind of techniques, of which
 a good survey is made in \cite{Cai2016} and more recently in \cite{lei2018moving,ward2018survey}. These techniques include
-bioinspired algorithms; which 
-% 2. 
+bioinspired algorithms; which
+% 2.
  have been often used in the area of
 cybersecurity; for instance, even before proposing the moving target
 defense technique, evolutionary algorithms were applied to intrusion
@@ -266,7 +265,7 @@ virtual server, proposing instead manual configuration of web servers
 by Peng et al. \cite{peng2014moving}. In this case, a specific
 mechanism that uses different cloud instances and mechanism for moving
 virtual machines between them is proposed; still, no specific
-mechanism was proposed to establish these configurations. 
+mechanism was proposed to establish these configurations.
 Although most of the effort is devoted to creating a MTD for servers,
 it can also be applied to software defined networks \cite{al2011toward}.
 
@@ -311,14 +310,14 @@ processor that is able to change its internal configuration every 50
 milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a
 technique like this would have prevented the Spectre vulnerability
 suffered by Intel processors that exploited failures in the
-speculative execution feature. 
+speculative execution feature.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
 \label{sec:res}
 
-% 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have. 
+% 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
 
 Considering the huge amount of network services with its multiple
 configuration options, it has been decided to limit this project to
@@ -346,7 +345,7 @@ our experiments so to validate our hypothesis we choose a subset of 9
 hardening. The subset is extracted from the DISA STIG recommendations
 for hardening webservers based in the CVSS score. Most of this values
 are defined as Apache HTTP server configuration values but have a
-{\sf nginx} equivalent directive. 
+{\sf nginx} equivalent directive.
 
 \begin{table}
 \centering
@@ -384,13 +383,13 @@ The waiting time to transmit a response to the client. The wait time is set only
 \item \texttt{large\_client\_header\_buffers}:
 Maximum number and size of buffers used to read the headers of large requests.
 
-\item 
+\item
 \texttt{client\_max\_body\_size}:
 Maximum allowed size of the client request body, specified in the `Content-Length' field of the request header.
-\item 
+\item
 \texttt{server\_tokens}:
 Enable or disable the broadcast of the {\sf nginx} version on the error pages and in the `Server' response header. It is recommended not giving too extensive information of software versions, but we can cheat the attacker telling wrong server version info.
-\item 
+\item
 \texttt{gzip}:
 Enable or disable the compression of HTTP responses. This directive doesn't affect directly the security but adds entropy to the different generated configurations.
 \end{itemize}
@@ -416,22 +415,22 @@ The web servers also send a number of headers, which can be configured
 also. These are presented next, with possible values represented in
 Table \ref{table:http_headers}.
 \begin{itemize}
-\item 
+\item
 \texttt{X-Frame-Options}:
 The `X-Frame-Options' header can be used to indicate whether a browser should be allowed to render an embedded page. Web pages can use it to prevent \textit{clickjacking} attacks, making sure that their content is not embedded in other sites.
-\item 
+\item
 \texttt{X-Powered-By}:
 The `X-Powered-By 'header is used to specify the software that generated the response. It is recommended not giving too extensive information in this header because can reveal details that can facilitate the task of finding and exploiting security flaws. Doesn't affect directly to the security by itself but adds entropy to the generated configurations.
-\item 
+\item
 \texttt{X-Content-Type-Options}:
 The HTTP response header `X-Content-Type-Options' indicates that the \textit{MIME} types announced in the `Content-Type' header should not be changed to avoid `MIME type sniffing' attacks.
-\item 
+\item
 \texttt{server}:
 The `Server 'header contains information about the software used by the server. It is recommended not giving too extensive information of software versions, but we can cheat the attacker telling wrong server version info. Doesn't affect directly to the security but adds entropy to the generated configurations.
-\item 
+\item
 \texttt{X-XSS-Protection}:
-The HTTP `X-XSS-Protection' response header is a feature that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.	     
-\item 
+The HTTP `X-XSS-Protection' response header is a feature that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.
+\item
 \texttt{Content-Security-Policy}:
 The HTTP `Content-Security-Policy' response header allows web site administrators to control resources the user agent is allowed to load for a given page.
 \end{itemize}
@@ -464,28 +463,28 @@ for that configuration.
 Once every individual has been assigned a fitness, we sort the population list
 in reverse order to set the better ones at the end of the list and
 get the $p$ (pressure) values that we will evolve using mutation and
-crossover. This will be repeated  during 15 generations. 
+crossover. This will be repeated  during 15 generations.
 
 For evolving the configuration we have written two different crossover
 functions that use either one or two points. We will run the
 experiments for each function to find out which
-one gives better results \cite{LNCS2439:ID186:pp142}. 
+one gives better results \cite{LNCS2439:ID186:pp142}.
 
 Also, we are mutating the population with a chance of 0.4 using two
 different mutation methods. One changing random gen with a random
-correct value or increasing/decreasing random gen. 
+correct value or increasing/decreasing random gen.
 After the mutation, we calculate the fitness of the new element, sort
 the population and run again the algorithm until no more generations
-left. 
+left.
 
-% 4. Detail the cloud infrastructure that has been created for this. 
+% 4. Detail the cloud infrastructure that has been created for this.
 
 OWASP ZAP is a heavy-weight process taking a certain amount of time to analyze
 each web configuration so we ran the experiments in three AWS EC2 t3.medium
 instances all running Ubuntu 18.04 LTS with Docker installed, each
 instance has 2 vCPU and 4 GiB of RAM. Each instance runs a different
 set of experiments of 16, 32 and 64 population size. To orchestrate
-the instances we used a simple Ansible playbook. 
+the instances we used a simple Ansible playbook.
 
 For the 16 individuals population size the experiment took an average
 of 35 minutes, taking 80 minutes in the 32 individuals population size
@@ -633,7 +632,7 @@ experiments reach 6 and very few ones get to ZAP = 3.
 
 In the line of the previous results, the best results are obtained
 with 1-point crossover and random mutation, although for the medium
-level of vulnerability this is not so clear. Besides, when the 
+level of vulnerability this is not so clear. Besides, when the
 additive mutation is used it results in more copies with the same
 vulnerability, or fitness.
 
@@ -661,7 +660,7 @@ slightly higher vulnerability degree. However, low vulnerability
 configurations are consistently generated, which means that we could
 extract from a population different configurations with different
 degrees of vulnerability, contributing even more to the entropy of the
-system. 
+system.
 
 Some vulnerabilities can be caused by a bad configuration or by an
 unfortunate combination of configurations that it is difficult for an
