@@ -1,0 +1,57 @@
+genes: 15
+individuals : 32
+generations: 32
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmpoi3dbejd.conf:43
+nginx: configuration file /tmp/tmpoi3dbejd.conf test failed
+nginx: the configuration file /tmp/tmp__oh6dtd.conf syntax is ok
+nginx: configuration file /tmp/tmp__oh6dtd.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmpngny77f2.conf:43
+nginx: configuration file /tmp/tmpngny77f2.conf test failed
+nginx: the configuration file /tmp/tmpd81b_byn.conf syntax is ok
+nginx: configuration file /tmp/tmpd81b_byn.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmphn4y3bal.conf:42
+nginx: configuration file /tmp/tmphn4y3bal.conf test failed
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmp7u63okk8.conf:43
+nginx: configuration file /tmp/tmp7u63okk8.conf test failed
+nginx: [emerg] invalid parameter "VALUE" in /tmp/tmppp1ejkbi.conf:42
+nginx: configuration file /tmp/tmppp1ejkbi.conf test failed
+nginx: [emerg] invalid parameter "SERVER" in /tmp/tmp2brt5rvs.conf:43
+nginx: configuration file /tmp/tmp2brt5rvs.conf test failed
+nginx: the configuration file /tmp/tmpsr7qzbal.conf syntax is ok
+nginx: configuration file /tmp/tmpsr7qzbal.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 39
+Scan progress %: 66
