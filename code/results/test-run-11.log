@@ -9332,3 +9332,36 @@ Spider completed
 Active Scanning target http://www.exampletfm.com
 Enable all scanners -> OK
 Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmplfs1gbng.conf syntax is ok
+nginx: configuration file /tmp/tmplfs1gbng.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
+Scan progress %: 66
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmpf_u33262.conf syntax is ok
+nginx: configuration file /tmp/tmpf_u33262.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 38
