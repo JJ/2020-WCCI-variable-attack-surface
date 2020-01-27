@@ -9366,3 +9366,11 @@ Enable all scanners -> OK
 Scan progress %: 0
 Scan progress %: 38
 Scan progress %: 65
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp68y9xezq.conf syntax is ok
+nginx: configuration file /tmp/tmp68y9xezq.conf test is successful
