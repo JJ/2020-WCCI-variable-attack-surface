@@ -831,3 +831,26 @@ Spider completed
 Active Scanning target http://www.exampletfm.com
 Enable all scanners -> OK
 Scan progress %: 0
+Scan progress %: 45
+Scan progress %: 75
+Active Scan completed
+Total: 62
+Stopping all scans...
+Alerts:
+62
+ [1m[32m*[m Manually resetting nginx to stopped state[K
+nginx: the configuration file /tmp/tmp29b525ko.conf syntax is ok
+nginx: configuration file /tmp/tmp29b525ko.conf test is successful
+Accessing target http://www.exampletfm.com
+Spidering target http://www.exampletfm.com
+Spider completed
+Active Scanning target http://www.exampletfm.com
+Enable all scanners -> OK
+Scan progress %: 0
+Scan progress %: 40
+Scan progress %: 69
+Active Scan completed
+Total: 68
+Stopping all scans...
+Alerts:
+68
