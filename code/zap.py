@@ -42,7 +42,7 @@ def zap_test():
     while (int(zap.spider.status(scanid)) < 100):
         # Loop until the spider has finished
         print('Spider progress %: {}'.format(int(zap.spider.status(scanid))), file=sys.stderr)
-        time.sleep(1)
+        time.sleep(3)
 
     print('Spider completed', file=sys.stderr)
     zap.spider.stop_all_scans()
