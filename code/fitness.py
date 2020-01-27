@@ -62,7 +62,8 @@ def calculate_fitness(config):
         # Print alerts (for debug purposes)
         print("Alerts:")
         print(alerts)
-
+        check_kill_process("nginx")
+        time.sleep(0.5)
         check_kill_process("nginx")
         time.sleep(0.5)
         check_kill_process("nginx") # This is a lot of killing... 
