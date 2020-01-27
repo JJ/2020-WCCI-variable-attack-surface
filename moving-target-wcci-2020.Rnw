@@ -67,6 +67,12 @@ Security, cyberattacks, performance evaluation.
 
 % Defense but also detection technique: tian2019moving
 
+% eghtesad2019deep deep reinforcement learning to find the best moment
+% for changing configurations.
+
+% POTTEIGER2020102954 integrated defense and control reconfiguration,
+% as we do in this paper
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art}
 
