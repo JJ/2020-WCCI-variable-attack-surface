@@ -1,3 +1,9 @@
+2020-01-27  JJMerelo  <jmerelo@bojack>
+
+	* zap.py (zap_test): Reduce sleep time all over.
+
+	* genetic.py (selection_and_reproduction): Changes tournament size to 2
+
 2020-01-26  Juan J. merelo  <jmerelo@penny>
 
 	* genetic.py: Tests 4 for tournament size and 32 for generations.
