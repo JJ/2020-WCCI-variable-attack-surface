@@ -40,7 +40,17 @@ jmerelo@ugr.es}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-% Rewrite from scratch
+The term {\em moving target defense} or MTD describes a series of
+techniques that change configuration of an Internet-facing system; in
+general, the technique consists in changing visible configuration to
+avoid offering a fixed target to service profiling
+techniques. Additionally, configurations need to be as secure as
+possible and, since change needs to be frequent, to generate also as many as
+possible. We introduced previously a proof of concept where a
+simplified evolutionary algorithms was used for generating these
+configurations. In this paper we improve this algorithm, trying to
+adapt it to the specific characteristics of the fitness landscape, and
+also looking at finding as many solutions as possible.
 \end{abstract}
 \begin{IEEEkeywords}
 
