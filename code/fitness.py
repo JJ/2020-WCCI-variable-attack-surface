@@ -37,6 +37,8 @@ def calculate_fitness(config):
     # print("Stopping NGINX servicer...", file=sys.stderr)
     # Popen(["service", "nginx", "stop"])
     # time.sleep(1)
+    check_kill_process("nginx")
+    time.sleep(0.5)
 
     nginx = generate(config)
 
@@ -44,6 +46,8 @@ def calculate_fitness(config):
 
     with open(filename, 'w') as f:
         f.write(str(nginx))
+
+    check_kill_process("nginx")
 
     p = run(['nginx', '-t', '-c', filename], stdout=PIPE)
 
@@ -60,18 +64,16 @@ def calculate_fitness(config):
         alerts = zap_test()
 
         # Print alerts (for debug purposes)
-        print("Alerts:")
-        print(alerts)
+        # print("Alerts:")
+        # print(alerts)
         check_kill_process("nginx")
         time.sleep(1)
         check_kill_process("nginx")
         time.sleep(1)
-        check_kill_process("nginx") # This is a lot of killing...
+        check_kill_process("nginx")  # This is a lot of killing...
 
-        Popen(["service", "nginx", "zap"])
-        time.sleep(1)
+        # Popen(["service", "nginx", "zap"])
+        # time.sleep(2)
 
         # os.unlink(filename)
-
-
     return alerts
