@@ -28,7 +28,11 @@ def check_kill_process(pstring):
         fields = line.split()
         pid = fields[0]
         pid = pid.replace("root", "").replace("nginx", "").strip()
-        os.kill(int(pid), signal.SIGKILL)
+
+        try:
+           os.kill(int(pid), signal.SIGKILL)
+        except Exception as e:
+            pass
 
 
 def calculate_fitness(config):
