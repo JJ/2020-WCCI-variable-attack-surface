@@ -109,6 +109,7 @@ followed by the experimental results, which will we discussed next,
 finishing with our conclusions and future lines of work.
 
 \section{State of the art}
+\label{sec:soa}
 
 % Some attackers rely on byte patterns: piskozub2019resilience. This
 % paper tries to change those patterns by changing the behavior of the
@@ -244,7 +245,7 @@ speculative execution feature.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
-\label{sec:res}
+\label{sec:met}
 
 % 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
 
@@ -292,23 +293,28 @@ V-6724  & server\_tokens                 & True/False \\ \hline
         & gzip                           & True/False \\ \hline
 \end{tabular}
 \label{table:nginx_directives}
-\caption{Selected {\sf nginx} directives list}
+\caption{List of {\sf nginx} directives whose value is evolved in this
+work}
 \end{table}
 %
 
 These are the directives that have been used in this paper; their
 equivalent STIG ID is shown in Table
-\ref{table:nginx_directives}. \begin{itemize}
-\item \texttt{worker\_connections}:
-Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
-\item \texttt{keepalive\_timeout}:
-Timeout period during which a client connection will remain open on the server side.
-\item \texttt{disable\_symlinks}:
-Determine if symbolic links can be used when opening files. When activated and some component of the path is a symbolic link the access to that file is denied.
-\item \texttt{autoindex}:
-When activated it shows the contents of the directories, otherwise it does not show anything.
-\item \texttt{send\_timeout}:
-The waiting time to transmit a response to the client. The wait time is set only between two successive write operations, not for the transmission of the complete response.
+\ref{table:nginx_directives}. 
+\begin{itemize}
+\item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
+\item \texttt{keepalive\_timeout}: Period during which a server-side client
+  connection will remain open  before timing out.
+\item \texttt{disable\_symlinks}: Restricts opening files that are
+  actually symbolic links. When set to off (the default), if  some component of the
+  path is a symbolic link the access to that file is denied. An
+  additional value, if_not_owner, is not considered in this study.
+\item \texttt{autoindex}: When activated it shows the contents of the directories, otherwise it does not show anything.
+\item \texttt{send\_timeout}: sets a value for the waiting time to
+  transmit a response to the client; the client will close the
+  connection if nothing is received during that time. It is set by
+  default to 60s, we will disable it completely (setting it to 0) or
+  set it to 1s.
 \item \texttt{large\_client\_header\_buffers}:
 Maximum number and size of buffers used to read the headers of large requests.
 
@@ -334,7 +340,6 @@ X-Content-Type-Options         & nosniff \\ \hline
 Server                         & \shortstack[l]{apache \\ caddy \\ nginx/1.16.0} \\ \hline
 X-XSS-Protection	           & \shortstack[l]{0 \\ 1 \\ 1; mode=block} \\ \hline
 Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src 'none' \\ default-src 'host *.google.com'} \\ \hline
-
 \end{tabular}
 \label{table:http_headers}
 \caption{Selected HTTP headers list}

@@ -7,7 +7,6 @@ __license__ = "GPLv3"
 __email__ = "erseco@correo.ugr.es"
 
 from nginx.config.api import Config, Section, Location, EmptyBlock, KeyMultiValueOption
-from copy import deepcopy
 
 import random
 import pprint
