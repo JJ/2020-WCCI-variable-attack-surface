@@ -21,10 +21,10 @@ data <- read.csv("results/all_results.csv")
 \title{Improving evolution of service configurations for moving target
 defense}
 
-\author{\IEEEauthorblockN{Ernesto Serrano Collado}
+\author{\IEEEauthorblockN{Ernesto Serrano-Collado}
 \textit{University of Granada}\\
 Granada, Spain \\
-info@ernesto.es} % Add your name here
+info@ernesto.es % Add your name here
 \and
 \IEEEauthorblockN{Juan J. Merelo-Guerv\'os}
 \IEEEauthorblockA{\textit{Dept. of Computer Architecture and Technology} \\
@@ -100,6 +100,15 @@ from a sets of pre-established configurations through more ellaborate
 systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
 security or some other measure, like performance.
 
+% rest of the intro here
+
+The rest of the paper is organized as follows: next we will present
+the state of the art in evolutionary methods applied to MTD; the next
+Section \ref{sec:met} will present the methodology used in this paper,
+followed by the experimental results, which will we discussed next,
+finishing with our conclusions and future lines of work.
+
+\section{State of the art}
 
 % Some attackers rely on byte patterns: piskozub2019resilience. This
 % paper tries to change those patterns by changing the behavior of the
@@ -124,7 +133,7 @@ security or some other measure, like performance.
 % algorithms. Also mention the problem of designing a fitness function"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{State of the art}
+
 
 % 1. What is moving target defense.
 % 2. Bioinspired techniques in cybersecurity.
@@ -214,8 +223,6 @@ to an actual system, to the point of implementing it in a real virtual
 machine, and second, the problematic of scoring the generated
 configurations. In the next section we will explain our proposed
 solutions to these two problems.
-
-
 
 MTD can also be applied at a network level. Makanju et al applied
 evolutionary algorithms in e defined networks by Champagne et al. in
@@ -430,126 +437,6 @@ configuration, 15 times.
 
 \subsection{Experimental results}
 \label{subs:results}
-
-%
-\begin{figure*}[h!tb]
-  \centering
-<<results-time,cache=FALSE,echo=FALSE>>=
-ggplot(data,aes(x=Population,y=Days,color=Web)) + geom_point()+ theme_tufte()
-@
-\caption{Scatter plot representing the time, in days, it has taken for
-each experiment to be completed. Juice shop experiments were only
-completed up to a population of 32.}
-\label{fig:time}
-\end{figure*}
-%
-Since the MTD is based on the frequent and unpredictable changing of
-configurations, one of the first thing we need to asses is how long it
-takes to generate a set of different {\sf nginx} configurations with low
-vulnerability. This is represented in Figure \ref{fig:time}, which
-plots the duration of all experiments for the static web (Static) and
-the juice shop (Juice Shop). Every experiment takes a substantial part
-of a day; it goes from 1\% to approximately 12\%, that is, less than
-an hour and up to two hours in the case of the static web site. The
-time grows linearly with the population, which indicates that it is
-dominated by the scoring performed by ZAP, every one of which takes
-approximately half a second for the juice shop, a third of a second
-for the static web site. This time to generate a configuration
-constrains the frequency of change of configurations; on the other
-hand, every run generates several viable configurations.
-
-This proves that our method, even using real-life scoring and
-deployment methods, is able to generate a good amount of
-configurations in a reasonable amount of time.
-
-Of course, we need these configurations to have an acceptable degree
-of vulnerabilities. First it should be noted that acceptable ZAP
-scores go up to 15; more than that value will not be considered
-acceptable. These vulnerabilities captured by ZAP can be dealt with at
-a different level, but at any rate, it is always desirable to obtain
-as low a level of vulnerabilities as possible. We will analyze each of
-the two web payloads in turn, starting with the static web site, which
-is the simpler one.
-
-\begin{figure*}[h!tb]
-  \centering
-  <<results-static,cache=FALSE,echo=FALSE>>=
- data$Crossover <- as.factor(data$Crossover)
-data$Population <- as.factor(data$Population)
-data.web <- data[data$Web == "Static",]
-ggplot(data.web, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10,alpha=Days)) + geom_jitter(width = 0.3, height=0)+ theme_tufte()
-@
-\caption{Scatter plot for OWASP ZAP scores for every experiment using the
-  static web site. A ``Copies'' value of 10 indicates that all
-  individuals in the population have reached the highest score
-  (proportion of the population equal to the highest fitness == 1). "Jitter" is used so that all data points can be visualized. }
-\label{fig:zap:static}
-\end{figure*}
-%
-Figure \ref{fig:zap:static}, charts the results for the static
-website, representing the ZAP vulnerability score as $y$ axis and the
-population as $x$ axis. We need to assess the influence of this
-parameter in the final result; but at the same time we need to
-evaluate the importance of mutation operators that are being tested,
-as well as the relationship between the time employed and the results
-obtained.
-
-This figure shows that most experiments result in a vulnerability
-score of 11, but in some exceptional cases a vulnerability score of 3
-is reached. All these cases have used random mutation and a one-point
-crossover, so this might be a combination that, in a few cases, is
-able to obtain better results. The transparency of the points, which
-is related to time, only seems to depend on the population, that is,
-it is equivalent only to the number of evaluations. Better results, in
-fact, do no need more time.
-
-It is also interesting to note the actual number of individuals found
-in every run, which is inversely proportional to the vulnerability
-levels that have been reached: while with ZAP=11 all individuals in
-the population have the same value, if the level is equal to 3 a very
-small proportion of the population has the same value. This might
-indicate the need to run the evolutionary algorithm for longer.
-
-We will examine the next experiment, using the more complicated Juice
-Shop, to confirm or dismiss these results. These results are charted
-in Figure \ref{fig:zap:juice}.
-
-
-\begin{figure*}[h!tb]
-  \centering
-  <<results-juice-shop,cache=FALSE,echo=FALSE>>=
-data.juice <- data[data$Web == "Juice Shop",]
-
-ggplot(data.juice, aes(x=Population,y=Fitness,color=Crossover,shape=Mutation, size=Copies*10,alpha=Days))+ geom_jitter(width = 0.3,height=0) +  theme_tufte()
-@
-\caption{Scatter plot for OWASP ZAP scores for every experiment with the
-  Juice Shop site. ``Copies'' is the proportion of the population with
-the same ZAP score as the best; 10.0 indicates that the whole
-population has the same low vulnerability score (proportion equal to 1). Jittering is using to make the different results visible.}
-\label{fig:zap:juice}
-\end{figure*}
-
-These results are substantially similar to the previous ones, but there
-are differences; for starters, the evaluation takes, as shown above,
-more time, so just the population levels of 16 and 32 could be
-tested. On the other hand, there are three level of
-vulnerabilities, with most experiments resulting in an acceptable
-(below 15), but the highest level of 11; a decreasing number of
-experiments reach 6 and very few ones get to ZAP = 3.
-
-In the line of the previous results, the best results are obtained
-with 1-point crossover and random mutation, although for the medium
-level of vulnerability this is not so clear. Besides, when the
-additive mutation is used it results in more copies with the same
-vulnerability, or fitness.
-
-In general, however, and in both cases, the evolutionary algorithm is
-able to find configurations with a low vulnerability level, but there
-seems to be a balance between obtaining many results and minimizing
-the vulnerability. However, in general, the objectives of this paper
-have been reached.
-
-We will discuss these results next.
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
