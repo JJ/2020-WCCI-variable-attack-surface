@@ -370,20 +370,39 @@ possible: only allow if the embedding page belongs to the same site,
 for instance, but you can also directly ban it. We have 4 different
 options for this, including a value that's intentionally wrong.
 \item
-\texttt{X-Powered-By}: This header is used to specify the software that generated the response. It is recommended not giving too extensive information in this header because can reveal details that can facilitate the task of finding and exploiting security flaws. Doesn't affect directly to the security by itself but adds entropy to the generated configurations.
+\texttt{X-Powered-By}: This is a string that is supposed to tell the
+name and versions of the application that generated the response. It
+is generally recommended not giving too extensive information in this
+header because can reveal details that can facilitate the task of
+finding and exploiting security flaws for specific versions just
+looking up in an online database. Setting different values do not affect directly to the
+security by itself but adds entropy to the generated configurations. 
 \item
-\texttt{X-Content-Type-Options}:
-The HTTP response header `X-Content-Type-Options' indicates that the \textit{MIME} types announced in the `Content-Type' header should not be changed to avoid `MIME type sniffing' attacks.
+\texttt{X-Content-Type-Options}: The HTTP response header
+`X-Content-Type-Options' indicates that the \textit{MIME} types
+announced in the `Content-Type' header should not be changed to avoid
+`MIME type sniffing' attacks. % Add something about these attacks - JJ
 \item
-\texttt{server}:
-The `Server 'header contains information about the software used by the server. It is recommended not giving too extensive information of software versions, but we can cheat the attacker telling wrong server version info. Doesn't affect directly to the security but adds entropy to the generated configurations.
+\texttt{server}: The `Server 'header contains information about the
+software used by the server. It is recommended not giving too
+extensive information of software versions, but we can cheat the
+attacker telling wrong server version info. Doesn't affect directly to
+the security but adds entropy to the generated configurations. % Difference with X-Powered-By? - JJ
 \item
 \texttt{X-XSS-Protection}:
-The HTTP `X-XSS-Protection' response header is a feature that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.
+The HTTP `X-XSS-Protection' response header is a feature that, when
+set, stops pages from loading when they detect reflected cross-site
+scripting (XSS) attacks.
 \item
-\texttt{Content-Security-Policy}:
-The HTTP `Content-Security-Policy' response header allows web site administrators to control resources the user agent is allowed to load for a given page.
+\texttt{Content-Security-Policy}: The HTTP `Content-Security-Policy'
+response header allows web site administrators to control resources
+the user agent is allowed to load for a given page. 
 \end{itemize}
+
+% Say something about how every one of these directives has a value
+% that is generally more secure than others, or at least corresponds
+% to better practices, but in some cases it covers cases that are not
+% really an issue in the specific application - JJ
 
 \subsection{Experimental setup}
 \label{subs:setup}
