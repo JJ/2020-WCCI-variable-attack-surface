@@ -100,7 +100,25 @@ from a sets of pre-established configurations through more ellaborate
 systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
 security or some other measure, like performance.
 
-% rest of the intro here
+Our previous paper \cite{erseco:evostar} was a proof of concept and
+tested the framework we have created for evolving a set of
+configurations that can be used in a MTD policy. Our target was
+hardening {\sf nginx} installations and we used as a fitness function
+Zap, an open source tool that gives as score for an installation the
+number of {\em alerts}, or possible security vulnerabilities, it
+raises. We tested different configurations and found that evolutionary
+algorithm are able to generate configurations with low score (lower is
+better), and also that every execution of the algorithm yields several
+configurations with the same fitness, which can then be used straight
+away to change the configuration of the server.
+
+However, that was intended as a proof of concept, and we needed to
+explore the possibilities of the evolutionary algorithm further, by
+tuning the parameters of the evolutionary algorithm so that better
+configurations can be found in less time. Also, we needed to explore
+different possibilities of the scoring tool, to check which mode would
+be better for the MTD task. These will be the main two objectives of
+this paper.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
