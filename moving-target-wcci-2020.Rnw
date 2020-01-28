@@ -60,6 +60,46 @@ Security, cyberattacks, performance evaluation.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
+While security is a constant concern in modern computer systems, the
+amount of services a typical application relies on and offers, and the
+sheer quantity of services and microservices modern, cloud-native,
+applications are composed for, makes extremely complicated to create
+configurations, for every one of them, that are at the same time
+secure and performant.
+
+The wide variety of attack and attack techniques makes also difficult
+to create a single, static defense, that is able to deflect every
+possible attach an interested third party might mount. Defense needs
+then to adapt to be able to confuse, deflect or avoid kind of
+attacks. As an example, simply imagine that the name or IP of a node
+in a service is constantly changing; the attacker will be unable to
+use stored information (such as vulnerabilities) from that particular
+node to, later on, scale privileges, extract information (exfiltrate)
+from the net, or simply check if that service is on. Fortunately,
+modern cloud-native deployments facilitate that kind of defense: since
+the whole deployment is software defined, we can embed these changes
+within the deployment instruction themselves.
+
+The kind of defense tecnhique that tries to present a variable target
+to possible attackers is called {\em moving target defense} or
+MTD. The concept was proposed initially the Federal Networking and
+Information Technology Research and Development (NITRD) Program for the first time in 2009
+\cite{moving-target}, and presented in a series of documents
+\cite{nitrd} and books that bind the papers presented in the first
+symposium dedicated to the topic \cite{jajodia2011moving}. The moving
+target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
+is being put up against, which could be from privilege scalation to
+denial of service attacks 
+, the service that is being hardened or secured
+using this technique, which can go from a web or proxy server to a
+software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
+the kind of technique that is used to generate a moving target, which
+can also be simple randomization \cite{gallagher_morpheus:_2019} of
+the user-facing information through churn, that is, changing often
+from a sets of pre-established configurations through more ellaborate
+systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
+security or some other measure, like performance.
+
 
 % Some attackers rely on byte patterns: piskozub2019resilience. This
 % paper tries to change those patterns by changing the behavior of the
