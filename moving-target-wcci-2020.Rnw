@@ -326,7 +326,7 @@ equivalent STIG ID is shown in Table
 \item \texttt{disable\_symlinks}: Restricts opening files that are
   actually symbolic links. When set to off (the default), if  some component of the
   path is a symbolic link the access to that file is denied. An
-  additional value, if_not_owner, is not considered in this study.
+  additional value, {\tt if\_not\_owner}, is not considered in this study.
 \item \texttt{autoindex}: When activated it shows the contents of the directories, otherwise it does not show anything.
 \item \texttt{send\_timeout}: sets a value for the waiting time to
   transmit a response to the client; the client will close the
@@ -352,7 +352,7 @@ directive can also use a {\em build} value and simply a string.
 responses. This directive doesn't affect directly the security but
 adds entropy to the different generated configurations; it also
 affects the performance of the server and its throughput. You can
-additionaly use {\tt gzip_min_length} to establish the length under
+additionaly use {\tt gzip\_min\_length} to establish the length under
 which there will be no compression.
 \end{itemize}
 
