@@ -176,7 +176,9 @@ evolutionary-like bioinspired algorithm  called {\em
 systems that would behave in a way that would be similar to a
 symbiotically-induced immune system. Besides that principled
 biological inspiration, SEMs used mutation as a mechanism for avoiding
-signature based detection methods and thus become a MTD system. Other early MTD solutions included the use of rotating virtual webservers
+signature based detection methods and thus become a MTD system.
+% Larsen "Larsen201428
+Other early MTD solutions included the use of rotating virtual webservers
 \cite{huang2011introducing}, every one with a different attack
 surface, to avoid predictability and achieve a variable attack
 surface. However, while this was a practical and actionable defense,
