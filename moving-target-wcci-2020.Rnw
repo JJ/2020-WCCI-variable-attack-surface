@@ -82,32 +82,35 @@ within the deployment instructions themselves.
 
 The kind of defense tecnhique that tries to present a variable target
 to possible attackers is called {\em moving target defense} or
-MTD. The concept was proposed initially the Federal Networking and
+MTD. The concept was proposed initially by the Federal Networking and
 Information Technology Research and Development (NITRD) Program for the first time in 2009
 \cite{moving-target}, and presented in a series of documents
 \cite{nitrd} and books that bind the papers presented in the first
 symposium dedicated to the topic \cite{jajodia2011moving}. The moving
 target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
 is being put up against, which could be from privilege scalation to
-denial of service attacks 
-, the service that is being hardened or secured
+denial of service attacks, the service that is being hardened or secured
 using this technique, which can go from a web or proxy server to a
 software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
 the kind of technique that is used to generate a moving target, which
 can also be simple randomization \cite{gallagher_morpheus:_2019} of
 the user-facing information through churn, that is, changing often
-from a sets of pre-established configurations through more ellaborate
+from a set of pre-established configurations through more ellaborate
 systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
-security or some other measure, like performance.
+security or some other measure, like performance. % Performance of what? less overhead?
+% The above could be easier to understand if we say first:
+% ... does not specify either the kind of attack, the service is protecting or the technique .. 
+% and after that we give the examples. - Mario
+
 
 Our previous paper \cite{erseco:evostar} was a proof of concept and
 tested the framework we have created for evolving a set of
 configurations that can be used in a MTD policy. Our target was
 hardening {\sf nginx} installations and we used as a fitness function
-Zap, an open source tool that gives as score for an installation the
+Zap, an open source tool that gives as a score for an installation the
 number of {\em alerts}, or possible security vulnerabilities, it
 raises. We tested different configurations and found that evolutionary
-algorithm are able to generate configurations with low score (lower is
+algorithms are able to generate configurations with a low score (lower is
 better), and also that every execution of the algorithm yields several
 configurations with the same fitness, which can then be used straight
 away to change the configuration of the server.
@@ -117,13 +120,13 @@ explore the possibilities of the evolutionary algorithm further, by
 tuning the parameters of the evolutionary algorithm so that better
 configurations can be found in less time. Also, we needed to explore
 different possibilities of the scoring tool, to check which mode would
-be better for the MTD task. These will be the main two objectives of
+be better for the MTD task. These will be the two main objectives of
 this paper.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
 Section \ref{sec:met} will present the methodology used in this paper,
-followed by the experimental results, which will we discussed next,
+followed by the experimental results, which we will discuss next,
 finishing with our conclusions and future lines of work.
 
 \section{State of the art}
