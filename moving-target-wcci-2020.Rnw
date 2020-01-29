@@ -62,8 +62,8 @@ Security, cyberattacks, performance evaluation.
 
 While security is a constant concern in modern computer systems, the
 amount of services a typical application relies on and offers, and the
-sheer quantity of services and microservices modern, cloud-native,
-applications are composed for, makes extremely complicated to create
+sheer quantity of services and microservices, modern cloud-native,
+applications are composed of, makes extremely complicated to create
 configurations, for every one of them, that are at the same time
 secure and performant.
 
