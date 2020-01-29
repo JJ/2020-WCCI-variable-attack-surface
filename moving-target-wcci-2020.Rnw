@@ -67,18 +67,18 @@ applications are composed of, makes extremely complicated to create
 configurations, for every one of them, that are at the same time
 secure and performant.
 
-The wide variety of attack and attack techniques makes also difficult
-to create a single, static defense, that is able to deflect every
-possible attach an interested third party might mount. Defense needs
-then to adapt to be able to confuse, deflect or avoid kind of
-attacks. As an example, simply imagine that the name or IP of a node
+The wide variety of attacks and attack techniques also makes it difficult
+to create a single, static defense that can deflect every
+possible attack an interested third party might mount. Defense needs
+then to adapt to be able to confuse, deflect or avoid this kind of
+attacks. As an example, we can simply imagine that the name or IP of a node
 in a service is constantly changing; the attacker will be unable to
 use stored information (such as vulnerabilities) from that particular
 node to, later on, scale privileges, extract information (exfiltrate)
-from the net, or simply check if that service is on. Fortunately,
+from the net, or simply check if that service is up. Fortunately,
 modern cloud-native deployments facilitate that kind of defense: since
 the whole deployment is software defined, we can embed these changes
-within the deployment instruction themselves.
+within the deployment instructions themselves.
 
 The kind of defense tecnhique that tries to present a variable target
 to possible attackers is called {\em moving target defense} or
