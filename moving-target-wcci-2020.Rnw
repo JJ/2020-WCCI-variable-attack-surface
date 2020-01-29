@@ -139,12 +139,12 @@ finishing with our conclusions and future lines of work.
 
 MTD was proposed by the first time in 2009 \cite{moving-target} by An
 organism called NITRD as part of an officially sponsored research
-program to improve the cyberdefense skills in America. MTD is targeted
+program to improve the cyberdefense skills in America. MTD is targeted % America -> USA? - Mario
 towards making what is called the attack surface
 \cite{manadhata2011formal}, that is, the different mechanisms by which
 the attacker would be able to gain access, unpredictable
-\cite{jajodia2011moving}, and thus attacks against it either too
-expensive or too complex to pursue, possibly making the attacker
+\cite{jajodia2011moving}, and thus making attacks against it either too
+expensive or too complex to pursue, possibly forcing the attacker to
 choose some other, more affordable, place. For instance, an attacker
 analyzing byte patterns coming from different nodes such as the one
 described in \cite{piskozub2019resilience} will find those patterns
