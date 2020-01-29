@@ -1,0 +1,3 @@
+genes: 15
+individuals : 16
+generations: 32
