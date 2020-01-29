@@ -305,7 +305,8 @@ work}
 
 These are the directives that have been used in this paper; their
 equivalent STIG ID is shown in Table
-\ref{table:nginx_directives}. 
+\ref{table:nginx_directives}.
+% It would be convenient to rewrite most of these directives.
 \begin{itemize}
 \item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
 \item \texttt{keepalive\_timeout}: Period during which a server-side client
@@ -344,7 +345,12 @@ which there will be no compression.
 \end{itemize}
 
 \begin{table}
-\centering
+
+  \centering
+  \caption{Selected list of directives affecting HTTP headers, and the
+  values that we are using in this paper.}
+  \label{table:http_headers}
+
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Header name}           & \textbf{Possible values} \\ \hline
@@ -356,8 +362,7 @@ Server                         & \shortstack[l]{apache \\ caddy \\ nginx/1.16.0}
 X-XSS-Protection	           & \shortstack[l]{0 \\ 1 \\ 1; mode=block} \\ \hline
 Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src 'none' \\ default-src 'host *.google.com'} \\ \hline
 \end{tabular}
-\label{table:http_headers}
-\caption{Selected HTTP headers list}
+
 \end{table}
 %
 The web servers also send a number of headers, which can be configured
@@ -365,9 +370,8 @@ also. These are presented next, with possible values represented in
 Table \ref{table:http_headers}.
 \begin{itemize}
 \item
-\texttt{X-Frame-Options}: The `X-Frame-Options' header can be used to
-indicate whether a browser should be allowed to render a page
-embedded as a frame. Web servers can use it to prevent what are called
+\texttt{X-Frame-Options}: The header that has the same name as this
+directive, when set, bans browsers rendering of frame-embedded pages. Web servers can use it to prevent what are called
 \textit{clickjacking} attacks on their pages, that is, overlaying a
 transparent frame over a site to make users click on the transparent
 layer believing they are clicking on the one below. Several values are
@@ -383,25 +387,32 @@ finding and exploiting security flaws for specific versions just
 looking up in an online database. Setting different values do not affect directly to the
 security by itself but adds entropy to the generated configurations. 
 \item
-\texttt{X-Content-Type-Options}: The HTTP response header
-`X-Content-Type-Options' indicates that the \textit{MIME} types
-announced in the `Content-Type' header should not be changed to avoid
+\texttt{X-Content-Type-Options}: This directive controls the opration
+of the homonym HTTP response header; when set,  changing the \textit{MIME} types
+announced in the `Content-Type' is disabled, which is used to avoid
 `MIME type sniffing' attacks. % Add something about these attacks - JJ
 \item
-\texttt{server}: The `Server 'header contains information about the
-software used by the server. It is recommended not giving too
+\texttt{server}: This directive is related to the {\tt Server} HTTP
+header, which is used to communicate to browsers metadata about the
+server software used by the application. This can be as informative or
+as misleading as we want; as a matter of fact, it is a good practice
+not to give too
 extensive information of software versions, but we can cheat the
 attacker telling wrong server version info. Doesn't affect directly to
 the security but adds entropy to the generated configurations. % Difference with X-Powered-By? - JJ
 \item
-\texttt{X-XSS-Protection}:
-The HTTP `X-XSS-Protection' response header is a feature that, when
-set, stops pages from loading when they detect reflected cross-site
-scripting (XSS) attacks.
+\texttt{X-XSS-Protection}: This directive is used to set the value of
+the corresponding HTTP response header; as the rest of these server
+directives, it's interpreted by browsers and used by them to avoid
+loading pages when they detect reflected cross-site
+scripting (XSS) attacks. % Need to clarify this.
 \item
-\texttt{Content-Security-Policy}: The HTTP `Content-Security-Policy'
-response header allows web site administrators to control resources
-the user agent is allowed to load for a given page. 
+\texttt{Content-Security-Policy}: we can set this directive to
+different values to avoid the load of certain kind of content. We have
+three different values for this directive, allowing content only if
+it's loaded from the same page ({\tt self}), loading from nowhere
+({\tt none}), or including google domains {\tt hots:*.google.com}, in
+this case mainly for user tracking. These values are shown in Table 
 \end{itemize}
 
 % Say something about how every one of these directives has a value
