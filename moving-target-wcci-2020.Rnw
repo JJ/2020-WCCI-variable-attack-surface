@@ -46,7 +46,7 @@ avoid offering a fixed target to service profiling
 techniques. Additionally, configurations need to be as secure as
 possible and, since change needs to be frequent, to generate also as many as
 possible. We previously introduced a proof of concept where we used
-a simplified evolutionary algorithm for generating these configurations. 
+a simplified evolutionary algorithm for generating these configurations.
 In this paper we improve this algorithm, trying to
 adapt it to the specific characteristics of the fitness landscape, and
 also looking at finding as many solutions as possible.
@@ -99,7 +99,7 @@ from a set of pre-established configurations through more ellaborate
 systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
 security or some other measure, like performance. % Performance of what? less overhead?
 % The above could be easier to understand if we say first:
-% ... does not specify either the kind of attack, the service is protecting or the technique .. 
+% ... does not specify either the kind of attack, the service is protecting or the technique ..
 % and after that we give the examples. - Mario
 
 
@@ -107,7 +107,7 @@ Our previous paper \cite{erseco:evostar} was a proof of concept and
 tested the framework we have created for evolving a set of
 configurations that can be used in a MTD policy. Our target was
 hardening {\sf nginx} installations and we used as a fitness function
-Zap, an open source tool that gives as a score for an installation the
+{\em Zep Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
 number of {\em alerts}, or possible security vulnerabilities, it
 raises. We tested different configurations and found that evolutionary
 algorithms are able to generate configurations with a low score (lower is
@@ -148,7 +148,7 @@ expensive or too complex to pursue, possibly forcing the attacker to
 choose some other, more affordable, place. For instance, an attacker
 analyzing byte patterns coming from different nodes such as the one
 described in \cite{piskozub2019resilience} will find those patterns
-disrupted. 
+disrupted.
 
 
 This program was pursued using different kind of techniques, of which
@@ -378,7 +378,7 @@ is generally recommended not giving too extensive information in this
 header because can reveal details that can facilitate the task of
 finding and exploiting security flaws for specific versions just
 looking up in an online database. Setting different values do not affect directly to the
-security by itself but adds entropy to the generated configurations. 
+security by itself but adds entropy to the generated configurations.
 \item
 \texttt{X-Content-Type-Options}: This directive controls the opration
 of the homonym HTTP response header; when set,  changing the \textit{MIME} types
@@ -405,7 +405,7 @@ different values to avoid the load of certain kind of content. We have
 three different values for this directive, allowing content only if
 it's loaded from the same page ({\tt self}), loading from nowhere
 ({\tt none}), or including google domains {\tt hots:*.google.com}, in
-this case mainly for user tracking. These values are shown in Table 
+this case mainly for user tracking. These values are shown in Table
 \end{itemize}
 
 % Say something about how every one of these directives has a value
@@ -512,7 +512,7 @@ parameters and possible combinations. Thanks to a genetic algorithm it
 was possible to find more secure configurations. The configurations
 were represented as chromosomes and the algorithm took those
 chromosomes through a series of selection, crossover and mutation
-operators 
+operators
  that resulted in  configurations  that were safer than the previous
 generation. Using these evolved configurations we achieve the main
 objective of this paper, which is transforming our server into a
