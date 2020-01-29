@@ -160,21 +160,18 @@ applied recently; for instance, natural randomization in services can
 be enhanced \cite{kansal2020improving}; or, beyond the technique that
 is used, deep reinforcement learning can try and find the best moment
 for changing configurations \cite{eghtesad2019deep}, a topic that is
-normally left behind.
+normally left behind. These techniques have been surveyed in
+\cite{Zheng2019207,cho2019toward}, to which we direct the interested
+reader.
 
-These techniques include
-bioinspired algorithms; which
-% 2.
- have been often used in the area of
-cybersecurity; for instance, even before proposing the moving target
-defense technique, evolutionary algorithms were applied to intrusion
-detection systems \cite{WU20101}. % point to a survey or something
-                                % like that.
-
-
-% 3.
-Curiously enough, a bioinspired and ad hoc technique called {\em
-  symbiotic embedded machines} (SEM) were proposed by Cui and Stolfo
+However, in this paper we focus on those that use evolutionary
+algorithms as a method of optimization as well as generation of new
+configurations; evolutionary algorithms are no strangers in the
+cybersecurity world, and in fact, since early on, they were applied to intrusion
+detection systems \cite{WU20101}. It was only natural that they were
+also applied, since the inception of the technique, to MTD. An
+evolutionary-like bioinspired algorithm  called {\em
+  symbiotic embedded machines} (SEM) was proposed by Cui and Stolfo
 \cite{cui2011symbiotes} as a methodology for {\em injecting} code into
 systems that would behave in a way that would be similar to a
 symbiotically-induced immune system. Besides that principled
