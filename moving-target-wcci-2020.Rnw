@@ -153,7 +153,7 @@ a good survey is made in \cite{Cai2016} and more recently in
 \cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a defense as well
 as detection technique \cite{tian2019moving,POTTEIGER2020102954}, for instance, it can be
 used to deflect distributed denial of service attacks
-\cite{prathyusha2020review} and it has been proved effective against
+\cite{prathyusha2020review}; besides, it has been proved effective against
 exfiltration techniques via the use of an open source framework called
 MoonRaker \cite{shade2020moonraker}. Several techniques have been
 applied recently; for instance, natural randomization in services can
@@ -168,17 +168,8 @@ bioinspired algorithms; which
  have been often used in the area of
 cybersecurity; for instance, even before proposing the moving target
 defense technique, evolutionary algorithms were applied to intrusion
-detection systems \cite{WU20101}. Some authors have proposed using
-evolutionary-based optimization techniques to improve detection of SQL
-injection attacks and anomalies within HTTP requests
-\cite{CHORAS2018179}; other authors \cite{Kozik2014} focus on
-detecting SQLIA (SQL Injection Attacks) and XSS (Cross Site Scripting)
-at the application layer by modeling HTTP requests with the use of
-regular expressions. In general, either by evolution of rules or
-programs or by finding the best solution in combinatorial optimization
-problems, such as the one we are dealing with in this paper. More
-recently, Buji et al. in \cite{buji_genetic_2017} have applied
-evolutionary algorithms for a general enhancement of security in real systems.
+detection systems \cite{WU20101}. % point to a survey or something
+                                % like that.
 
 
 % 3.
@@ -518,8 +509,9 @@ administrator to discover manually due to the large number of
 parameters and possible combinations. Thanks to a genetic algorithm it
 was possible to find more secure configurations. The configurations
 were represented as chromosomes and the algorithm took those
-chromosomes through a series of selection, crossing and mutation
-processes that resulted in even safer configurations than the previous
+chromosomes through a series of selection, crossover and mutation
+operators 
+ that resulted in  configurations  that were safer than the previous
 generation. Using these evolved configurations we achieve the main
 objective of this paper, which is transforming our server into a
 moving target by changing the configuration with a reasonable
