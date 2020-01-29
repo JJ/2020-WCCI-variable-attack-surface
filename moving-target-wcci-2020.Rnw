@@ -129,53 +129,40 @@ finishing with our conclusions and future lines of work.
 \section{State of the art}
 \label{sec:soa}
 
-% Some attackers rely on byte patterns: piskozub2019resilience. This
-% paper tries to change those patterns by changing the behavior of the
-% server. 
-
-% Defense but also detection technique: tian2019moving
 
 % eghtesad2019deep deep reinforcement learning to find the best moment
 % for changing configurations.
 
-% POTTEIGER2020102954 integrated defense and control reconfiguration,
-% as we do in this paper
 
-% Amplifying randomization as an effective defense kansal2020improving
+MTD was proposed by the first time in 2009 \cite{moving-target} by An
+organism called NITRD as part of an officially sponsored research
+program to improve the cyberdefense skills in America. MTD is targeted
+towards making what is called the attack surface
+\cite{manadhata2011formal}, that is, the different mechanisms by which
+the attacker would be able to gain access, unpredictable
+\cite{jajodia2011moving}, and thus attacks against it either too
+expensive or too complex to pursue, possibly making the attacker
+choose some other, more affordable, place. For instance, an attacker
+analyzing byte patterns coming from different nodes such as the one
+described in \cite{piskozub2019resilience} will find those patterns
+disrupted. 
 
-% Review that includes MTD for combating DDoS attacks with biological
-% inspiration. prathyusha2020review
-
-% MTD proved effective against exfiltration techniques shade2020moonraker
-
-% cho2019toward a recent survey, including evolutionary
-% algorithms. Also mention the problem of designing a fitness function"
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% 1. What is moving target defense.
-% 2. Bioinspired techniques in cybersecurity.
-% 3. Moving target defense as solved by other algorithms, and
-% eventually evolutionary (or other) algorithms - JJ
-
-The so-called moving target defense, or MTD, was proposed by the first
-time in 2009 \cite{moving-target} as part of an officially sponsored
-research program to improve the cyber-capabilities of American
-companies and organisms. The NITRD proposed different axes of research
-that included models of MTD mechanisms, assessing the problems and
-opportunities of randomization of service configuration and profiles,
-and creating automatic policies that are able to reduce or eliminate
-human intervention in the enforcement of this kind of defense. This
-MTD is targeted towards making what is called the attack surface \cite{manadhata2011formal}, that
-is, the different mechanisms by which the attacker would be able to
-gain access, unpredictable \cite{jajodia2011moving}, and thus either
-too expensive or too complex to pursue. An attacker, in this case,
-will probably try and pursue different targets, thus reducing security
-costs for the defender.
 
 This program was pursued using different kind of techniques, of which
-a good survey is made in \cite{Cai2016} and more recently in \cite{lei2018moving,ward2018survey}. These techniques include
+a good survey is made in \cite{Cai2016} and more recently in
+\cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a defense as well
+as detection technique \cite{tian2019moving,POTTEIGER2020102954}, for instance, it can be
+used to deflect distributed denial of service attacks
+\cite{prathyusha2020review} and it has been proved effective against
+exfiltration techniques via the use of an open source framework called
+MoonRaker \cite{shade2020moonraker}. Several techniques have been
+applied recently; for instance, natural randomization in services can
+be enhanced \cite{kansal2020improving}; or, beyond the technique that
+is used, deep reinforcement learning can try and find the best moment
+for changing configurations \cite{eghtesad2019deep}, a topic that is
+normally left behind.
+
+These techniques include
 bioinspired algorithms; which
 % 2.
  have been often used in the area of
