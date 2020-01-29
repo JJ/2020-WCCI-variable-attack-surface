@@ -42,7 +42,7 @@ def calculate_fitness(config):
     # Popen(["service", "nginx", "stop"])
     # time.sleep(1)
     check_kill_process("nginx")
-    time.sleep(0.5)
+    time.sleep(1)
 
     nginx = generate(config)
 
@@ -76,8 +76,8 @@ def calculate_fitness(config):
         time.sleep(1)
         check_kill_process("nginx")  # This is a lot of killing...
 
-        # Popen(["service", "nginx", "zap"])
-        # time.sleep(2)
+        Popen(["service", "nginx", "zap"])
+        time.sleep(2)
 
         # os.unlink(filename)
     return alerts

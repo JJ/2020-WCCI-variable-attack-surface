@@ -106,12 +106,8 @@ def selection_and_reproduction(population):
     # Genetic material is mixed to create new individuals
     for i in range(0, len(selected)):
         parent = random.sample(selected, 2)  # Two parents are selected
-#        print("parent")
-#        pprint(parent)
         # Generate a new crossed individual
         crossed_individual = mutate_config(crossover_two_points(parent[0][1], parent[1][1]))
-#        print("Crossed")
-        # pprint(crossed_individual)
 
         # Add the crossed one to the population
         crossed_population.append(crossed_individual)
@@ -128,8 +124,8 @@ def selection_and_reproduction(population):
     # Sort again the population
     population = sorted(population)[0:individuals]
 
-    # print("sorted")
-    # pprint(population)
+    print("sorted")
+    pprint(population)
 
     return population  # The array now has a new population of individuals, which are returned.
 
