@@ -1,0 +1,726 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\begin{document}
+
+
+<<setup, cache=FALSE,echo=FALSE>>=
+library(ggplot2)
+library(ggthemes)
+active.fitness.data <- read.csv("results/initial-fitness.dat")
+experiments.data <- read.csv("results/all_results.csv")
+@
+
+\title{Improving evolution of service configurations for moving target
+defense}
+
+\author{\IEEEauthorblockN{Ernesto Serrano-Collado}
+\IEEEauthorblockA{\textit{University of Granada}\\
+Granada, Spain \\
+info@ernesto.es}% Add your name here
+\and
+\IEEEauthorblockN{Mario Garc\'ia-Valdez}
+\IEEEauthorblockA{\textit{Instituto Tecnol\'ogico de Tijuana} \\
+  mario@tectijuana.edu.mx}
+\and
+\IEEEauthorblockN{Juan J. Merelo-Guerv\'os}
+\IEEEauthorblockA{\textit{Dept. of Computer Architecture and Technology} \\
+\textit{University of Granada}\\
+Granada, Spain \\
+jmerelo@ugr.es}
+
+}
+
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+The term {\em moving target defense} or MTD describes a series of
+techniques that change the configuration of an Internet-facing system; in
+general, the technique consists of changing the visible configuration to
+avoid offering a fixed target to service profiling
+techniques. Additionally, configurations need to be as secure as
+possible and, since change needs to be frequent, to generate also as many as
+possible. We previously introduced a proof of concept where we used
+a simplified evolutionary algorithm for generating these configurations.
+In this paper we improve this algorithm, trying to
+adapt it to the specific characteristics of the fitness landscape, and
+also looking at finding as many solutions as possible.
+\end{abstract}
+\begin{IEEEkeywords}
+
+Security, cyberattacks, performance evaluation.
+\end{IEEEkeywords}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+While security is a constant concern in modern computer systems, the
+amount of services a typical application relies on and offers, and the
+sheer quantity of services and microservices, modern cloud-native,
+applications are composed of, makes extremely complicated to create
+configurations, for every one of them, that are at the same time
+secure and performant.
+
+The wide variety of attacks and attack techniques also makes it difficult
+to create a single, static defense that can deflect every
+possible attack an interested third party might mount. Defense needs
+then to adapt to be able to confuse, deflect or avoid this kind of
+attacks. As an example, we can simply imagine that the name or IP of a node
+in a service is constantly changing; the attacker will be unable to
+use stored information (such as vulnerabilities) from that particular
+node to, later on, scale privileges, extract information (exfiltrate)
+from the net, or simply check if that service is up. Fortunately,
+modern cloud-native deployments facilitate that kind of defense: since
+the whole deployment is software defined, we can embed these changes
+within the deployment instructions themselves.
+
+The kind of defense technique that tries to present a variable target
+to possible attackers is called {\em moving target defense} or
+MTD. The concept was proposed initially by the Federal Networking and
+Information Technology Research and Development (NITRD) Program for the first time in 2009
+\cite{moving-target}, and presented in a series of documents
+\cite{nitrd} and books that bind the papers presented in the first
+symposium dedicated to the topic \cite{jajodia2011moving}. The moving
+target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
+is being put up against, which could be from privilege escalation to
+denial of service attacks, the service that is being hardened or secured
+using this technique, which can go from a web or proxy server to a
+software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
+the kind of technique that is used to generate a moving target, which
+can also be simple randomization \cite{gallagher_morpheus:_2019} of
+the user-facing information through churn, that is, changing often
+from a set of pre-established configurations through more elaborate
+systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
+security or some other measure, like performance. % Performance of what? less overhead?
+% The above could be easier to understand if we say first:
+% ... does not specify either the kind of attack, the service is protecting or the technique ..
+% and after that we give the examples. - Mario
+% Good call, but a bit late for that... - JJ
+
+
+Our previous paper \cite{erseco:evostar} was a proof of concept and
+tested the framework we have created for evolving a set of
+configurations that can be used in a MTD policy. Our target was
+hardening {\sf nginx} installations and we used as a fitness function
+{\em Zed Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
+number of {\em alerts}, or possible security vulnerabilities, it
+raises. We tested different configurations and found that evolutionary
+algorithms are able to generate configurations with a low score (lower is
+better), and also that every execution of the algorithm yields several
+configurations with the same fitness, which can then be used straight
+away to change the configuration of the server.
+
+However, that was intended as an initial exploration of the concept of
+using evolutionary algorithms to generate low-vulnerability and
+diverse nginx configurations. We needed to
+explore the possibilities of the evolutionary algorithm further, by
+tuning its parameters so that better
+configurations can be found with less evaluations. Also, we needed to explore
+different possibilities of the scoring tool, to check which mode would
+be better for the MTD task. These will be the two main objectives of
+this paper.
+
+The rest of the paper is organized as follows: next we will present
+the state of the art in evolutionary methods applied to MTD; the next
+Section \ref{sec:met} will present the methodology used in this paper,
+followed by the experimental results, which we will discuss in Section \ref{sec:met}
+finishing with our conclusions and future lines of work.
+
+\section{State of the art}
+\label{sec:soa}
+
+
+MTD was proposed by the first time in 2009 \cite{moving-target} by an
+organism called NITRD as part of an officially sponsored research
+program to improve the cyberdefense skills in the United States. MTD is targeted % America -> USA? - Mario
+% right, fixed - JJ
+towards making what is called the attack surface
+\cite{manadhata2011formal}, that is, the different mechanisms by which
+the attacker would be able to gain access, unpredictable
+\cite{jajodia2011moving}, and thus rendering attacks against it either too
+expensive or too complex to pursue, possibly forcing the attacker to
+choose some other, more affordable, place. For instance, an attacker
+analyzing byte patterns coming from different nodes such as the one
+described in \cite{piskozub2019resilience} will find those patterns
+disrupted, and so profiling of specific nodes impossible.
+
+
+This program was pursued using different kind of techniques, of which
+a good initial survey was made in \cite{Cai2016}, reexamined in
+\cite{Larsen201428} and more recently in
+\cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a
+defense as well as detection technique
+\cite{tian2019moving,POTTEIGER2020102954}; for instance, it can be
+used to deflect distributed denial of service attacks
+\cite{prathyusha2020review}; besides, it has been proved effective
+against exfiltration techniques via the use of an open source
+framework called MoonRaker \cite{shade2020moonraker} or to protect
+software defined networks \cite{al2011toward}. Several techniques have
+been applied recently; for instance, natural randomization in services
+can be enhanced \cite{kansal2020improving}; or, beyond the technique
+that is used, deep reinforcement learning can try and find the best
+moment for changing configurations \cite{eghtesad2019deep}, a topic
+that is normally left behind. These techniques have been surveyed in
+\cite{Zheng2019207,cho2019toward}, to which we direct the interested
+reader.
+
+However, in this paper we focus on those that use evolutionary
+algorithms as a method of optimization as well as generation of new
+configurations; evolutionary algorithms are no strangers in the
+cybersecurity world, and in fact, since early on, they were applied to intrusion
+detection systems \cite{WU20101}. It was only natural that they were
+also applied, since the inception of the technique, to MTD. An
+evolutionary-like bioinspired algorithm  called {\em
+  symbiotic embedded machines} (SEM) was proposed by Cui and Stolfo
+\cite{cui2011symbiotes} as a methodology for {\em injecting} code into
+systems that would behave in a way that would be similar to a
+symbiotically-induced immune system. Besides that principled
+biological inspiration, SEMs used mutation as a mechanism for avoiding
+signature based detection methods and thus become a MTD system.
+
+Other early MTD solutions included the use of rotating virtual webservers
+\cite{huang2011introducing}, every one with a different attack
+surface, to avoid predictability and achieve the variable attack
+surface that was being sought. However, while this was a practical and
+actionable kind of defense,
+no specific technique was proposed to individually configure every
+virtual server, proposing instead manual configuration of web servers
+(such as nginx and Apache), combined with plug-ins (some of which do
+not actually work together). A similar technique, taken to the cloud, was proposed
+by Peng et al. \cite{peng2014moving}:  a specific
+mechanism that uses different cloud instances and procedures for moving
+virtual machines between them; still, no other
+mechanism was proposed to establish these configurations, which were
+simply left to being designed by hand, as long as there were enough of them.
+
+Bioinspired solutions filled that gap: after the early {\em bioinspired} approaches to MTD, explicit
+methodologies that used evolutionary algorithms were conceptually described for the first
+time by Crouse and Fulp in \cite{6111663}. This was intended mainly as
+a proof of concept, and describes 80 parameters, of which just half
+are evolved. The GA minimizes the number of vulnerabilities, but the
+study also emphasizes the degree of diversity achieved by successive
+generations in the GA, which impact on the diversity needed by the
+MTD. Lucas et al. in \cite{lucas2014initial} applied those theoretical
+concepts to a framework called EAMT, a Python-based system that uses
+evolutionary algorithms to create new configurations, which are then
+implemented in a virtual machine and scored using scanning tools such
+as Nessus. Later on, John et
+al. \cite{john_evolutionary_2014} make a more explicit and practical
+use of an evolutionary algorithm, describing a host-level
+defense system, that is, one that operates at the level of a single
+node in the network, not network-wide, and works on the configuration
+of the Apache server, evolving them and evaluating at the parameter
+level using the so called CVSS score \cite{cvss}, a score that is computed from a
+the categories of vulnerabilities detected and how severe they are. These two systems
+highlighted the need for, first, a practical way of applying the MTD
+to an actual system, to the point of implementing it in a real virtual
+machine, and second, the problematic of scoring the generated
+configurations. In the next section we will explain our proposed
+solutions to these two problems.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methodology, experimental setup and results}
+\label{sec:met}
+
+% 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
+
+As in our previous paper \cite{erseco:evostar}, we have chosen
+{\sf nginx}; it's a very popular static web server, which is also used
+as an inverse proxy, API gateway and load balancer. Latest versions
+of{\sf nginx} (1.17.x) have more than 700 configuration
+directives. As a matter of fact, {\sf nginx} has been the target of
+optimization by evolutionary algorithms recently \cite{chi2018hybrid},
+but this is not the main focus of our work presently.
+
+
+These directives affect in different ways the behavior of
+the web site (or service) that is behind it, or simply change the
+values in the response headers; we will show the ones we will working
+with next. The following Subsection \ref{subs:setup}
+will outline the setup actually used for running the experiments, and
+results will be presented last in Subsection \ref{subs:results}.
+
+\subsection{Description of the attack surface parameters}
+
+From all the parameters used to change the behavior of {\sf nginx}, we
+have used fifteen, the same as in out previous paper
+\cite{erseco:evostar}; nine of then are {\sf nginx} directives
+(shown in Table \ref{table:nginx_directives}) and 6 are set from the same
+configuration file, but affect HTTP headers (shown in Table
+\ref{table:http_headers}), which in turn affect how the browser
+receiving the information behaves. This subset is extracted from the DISA STIG recommendations
+for hardening webservers based in the CVSS score \cite{disa20:apache}. Most of these values
+are defined in the original document as Apache HTTP server configuration values but have a
+{\sf nginx} equivalent directive.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{STIG ID} & \textbf{Directive name} 	   & \textbf{Possible values} \\ \hline
+V-13730 & worker\_connections            & 512 - 2048 \\ \hline
+V-13726 & keepalive\_timeout             & 10 - 120 \\ \hline
+V-13732 & disable\_symlinks              & True/False \\ \hline
+V-13735 & autoindex                      & True/False \\ \hline
+V-13724 & send\_timeout                  & True/False \\ \hline
+V-13738 & large\_client\_header\_buffers & 512 - 2048 \\ \hline
+V-13736 & client\_max\_body\_size        & 512 - 2048 \\ \hline
+V-6724  & server\_tokens                 & True/False \\ \hline
+        & gzip                           & True/False \\ \hline
+\end{tabular}
+\label{table:nginx_directives}
+\caption{List of {\sf nginx} directives whose value is evolved in this
+work}
+\end{table}
+%
+
+These are the {\sf nginx} directives that have been used in this paper; their
+equivalent STIG ID is shown in Table
+\ref{table:nginx_directives} along with the range of values for
+generation and ulterior evolution:\begin{itemize}
+\item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
+\item \texttt{keepalive\_timeout}: Period during which a server-side client
+  connection will remain open  before timing out.
+\item \texttt{disable\_symlinks}: Restricts opening files that are
+  actually symbolic links. When set to off (the default), if  some component of the
+  path is a symbolic link the access to that file is denied. An
+  additional value, {\tt if\_not\_owner}, is not considered in this study.
+\item \texttt{autoindex}: When activated it shows the contents of the directories, otherwise it does not show anything.
+\item \texttt{send\_timeout}: sets a value for the waiting time to
+  transmit a response to the client; the client will close the
+  connection if nothing is received during that time. It is set by
+  default to 60s, we will disable it completely (setting it to 0) or
+  set it to 1 second.
+\item \texttt{large\_client\_header\_buffers}: This directive has two
+  values: the number of buffers that will read large client request
+  headers, and their size. We just evolve the second number, while the
+  first one is set to 4.
+
+\item
+\texttt{client\_max\_body\_size}: Maximum allowed size of the client request body, specified in the {\tt
+  Content-Length} field of the request header. The value will indicate
+the maximum number of Megabytes allowed. Over that value, requests
+will simply return an error.
+
+\item \texttt{server\_tokens}: Enable or disable the broadcast of the {\sf
+  nginx} version on the error pages and in the {\tt Server} response
+header. It's on by default, and we admit on or off values, although the
+directive can also use a {\em build} value and simply a string.
+\item
+\texttt{gzip}: This directive enables or disables compression of HTTP
+responses. This directive doesn't affect directly the security but
+adds entropy to the different generated configurations; it also
+affects the performance of the server and its throughput. You can
+additionally use {\tt gzip\_min\_length} to establish the length under
+which there will be no compression.
+\end{itemize}
+
+\begin{table}
+
+  \centering
+  \caption{Selected list of directives affecting HTTP headers, and the
+  values that we are using in this paper.}
+  \label{table:http_headers}
+
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Header name}           & \textbf{Possible values} \\ \hline
+X-Frame-Options                & \shortstack[l]{SAMEORIGIN \\
+  ALLOW-FROM \\ DENY \\ WRONG VALUE} \\ \hline
+X-Powered-By                   & \shortstack[l]{PHP/5.3.3 \\ PHP/5.6.8 \\ PHP/7.2.1 \\ Django2.2 \\ nginx/1.16.0} \\ \hline
+X-Content-Type-Options         & nosniff \\ \hline
+Server                         & \shortstack[l]{apache \\ caddy \\ nginx/1.16.0} \\ \hline
+X-XSS-Protection	           & \shortstack[l]{0 \\ 1 \\ 1; mode=block} \\ \hline
+Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src 'none' \\ default-src 'host *.google.com'} \\ \hline
+\end{tabular}
+
+\end{table}
+%
+The web servers also send a number of headers, whose value can be
+configured from the {\sf nginx} configuration file. These are
+presented next, with possible values represented in Table \ref{table:http_headers}.
+\begin{itemize}
+\item
+\texttt{X-Frame-Options}: The header that has the same name as this
+directive, when set, bans browsers rendering of frame-embedded pages. Web servers can use it to prevent what are called
+\textit{clickjacking} attacks on their pages, that is, overlaying a
+transparent frame over a site to make users click on the transparent
+layer believing they are clicking on the one below. Several values are
+possible: only allow if the embedding page belongs to the same site,
+for instance, but you can also directly ban it. We have 4 different
+options for this, including a value that's intentionally wrong.
+\item
+\texttt{X-Powered-By}: This is a string that is supposed to tell the
+name and versions of the application that generated the response. It
+is generally recommended not giving too extensive information in this
+header because can reveal details that can facilitate the task of
+finding and exploiting security flaws for specific versions just
+looking up in an online database. Setting different values do not affect directly to the
+security by itself but adds entropy to the generated configurations.
+\item
+\texttt{X-Content-Type-Options}: This directive controls the operation
+of the homonym HTTP response header; when set,  changing the \textit{MIME} types
+announced in the `Content-Type' is disabled, which is used to avoid
+`MIME type sniffing' attacks; that is, using what browser's heuristics
+for detecting MIME type from content to launch a cross-site scripting
+attack. 
+\item
+\texttt{server}: This directive is related to the {\tt Server} HTTP
+header, which is used to communicate to browsers metadata about the
+server software used by the application. This can be as informative or
+as misleading as we want; as a matter of fact, it is a good practice
+not to give too
+extensive information of software versions, but we can cheat the
+attacker telling wrong server version info. Doesn't affect directly to
+the security but adds entropy to the generated configurations. This
+directive, along with {\tt X-Powered-By}, are mainly used for
+informative or statistics purposes and do not really change anything
+either in content or how it is rendered by the server.
+\item
+\texttt{X-XSS-Protection}: This directive is used to set the value of
+the corresponding HTTP response header; as the rest of these server
+directives, it's interpreted by browsers and used by them to avoid
+loading pages when they detect reflected cross-site
+scripting (XSS) attacks. % Need to clarify this.
+\item
+\texttt{Content-Security-Policy}: we can set this directive to
+different values to avoid the load of certain kind of content. We have
+three different values for this directive, allowing content only if
+it's loaded from the same page ({\tt self}), loading from nowhere
+({\tt none}), or including google domains {\tt hots:*.google.com}, in
+this case mainly for user tracking. These values are shown in Table
+\end{itemize}
+
+The problem of optimizing security in configuration is two fold: some
+of these directives are security-neutral, and do not actually alter
+the security score, they simply add to overall byte-level diversity;
+some of them, by themselves, will make a site more secure; in some
+other cases, it will be its combination what makes it safer. That is
+why a global optimization algorithm is needed to get variable, and
+also secure, attack surface.
+
+\subsection{Experimental setup}
+\label{subs:setup}
+
+The most important part of the evolutionary algorithm is designing
+correctly the fitness function that is going to be tested and used.
+A configuration is meaningless without
+content behind, and we need to choose what is going to be the
+content. In our previous paper \cite{erseco:evostar}, a basic application was created, and
+additionally, a intentionally vulnerable application, OWASP's Juice
+Shop \cite{juice-shop}, were also tested. Since their vulnerabilities are different, the
+scores are going to be different. In this paper, we will focus on the
+Juice Shop, which is intended to be vulnerable and is thus a bigger
+challenge for the evolutionary algorithm.
+
+The setup used for computing this score is exactly the same as in the
+last paper: standard docker containers for the juice shop and the ZAP
+API were composed (using Docker Compose) together with the container
+hosting the evolutionary algorithm, which calls from the fitness
+function the ZAP library, written in Python. What ZAP does is to run
+over all pages in the site, making different attacks and raising
+alerts if they detect any vulnerability; the score is equivalent to
+the number of alerts raised. From these alerts a CVSS standard score
+could be computed, but this is a direct transformation so we will
+stick to this score for our evolutionary algorithm. A 0 score will
+imply a totally secure configuration, while higher scores are related
+to the number of alerts. Please bear in mind that it is not a linear
+scale: a score of 58 does not indicate that the site is 20 times less
+secure than one with score equal to 3, it can mean that a new alert
+has been raised on 55 different pages. As a matter of fact, a score
+equal to 3 is due to a single alert raised three times in 3 different
+web pages of the Juice Shop store. This also implies that a score of
+58 does not really indicate a very insecure place; it just means that
+it is less secure than a configuration with score equal to
+3. Additionally, we are using a score of 999 as indicative of a
+invalid configuration, as checked by nginx command line.
+
+The evaluation is then performed in the following sequence:\begin{itemize}
+  
+\item A new configuration is generated from the evolutionary algorithm
+  values and stored in a configuration file with random name. This has
+  been introduced in this version, and makes sure that every
+  configuration is evaluated only once.
+
+\item This configuration is checked for correctness, and 999 returned
+  as score if it's incorrect.
+\item The program ensures the previous instance of the server has been
+  killed, and starts up the server.
+\item ZAP scans the site
+\item The program kills the server, checking several times until it's gone
+
+\end{itemize}
+
+The more time-consuming part of this process is the scanning, which
+might take up to 15 seconds; this means that evaluation is a very slow
+process, which is a problem. Besides, ZAP is able to perform two types
+of scanning: passive and active. In our previous paper, we focused on
+active scanning, which makes requests and examines responses; however,
+one of the things we wanted to try in this case was passive scanning,
+which besides checks headers and performs other analyses on the
+requests and responses. Before actually using it in the evolutionary
+algorithm, we generated a series of random configurations and tested
+its score; its distribution is shown in Table \ref{table:fitness}.
+%
+\begin{table}
+\centering
+\caption{Distribution of ZAP passive scanning scores}
+\label{table:fitness}
+<<passive-scan, cache=FALSE,echo=FALSE>>=
+kable(col.names=c("Zap Score","Number of instances"),as.data.frame(table(active.fitness.data)))
+@
+\end{table}
+%
+There are several problems with this fitness landscape: there are just
+a few values, which makes evolution extremely difficult, since most of
+the fitness landscape is flat, and most changes in configuration will
+not result in a change of fitness. But the bigger problem is the
+amount of time passive scanning adds, which makes this way of
+evaluating fitness score totally impracticable. Eventually, we will
+have to use only active scanning, the same as in our previous paper.
+
+
+\begin{figure*}[h!tb]
+  
+  \includegraphics[width=0.95\linewidth]{fitness-evolution-32-32.png}
+  \caption{3D mesh representation of evolution of fitness, with z axis
+    representing score (lower is better), $y$ axis representing simply
+    the rank order of every individual in the population, and $x$ axis
+    representing generations; evolution proceeds from right to left.}
+  \label{fig:evolution}
+  \end{figure*}
+%
+As in our previous paper, \cite{erseco:evostar}, we have designed the
+rest of the algorithm in Python, to be able to accommodate the ZAPpy
+library which is written in that language; Python has a reasonable
+performance on evolutionary algorithms
+\cite{DBLP:conf/cec/GuervosBCRRVHR16}, but in this case the bottleneck
+is actually scanning, with evolutionary operations themselves taking
+but a very small fraction of the total time, so this choice is not
+really critical. But one of the main problems of our former
+implementation was that there was very little exploration of the
+search space, with final values being mostly small modifications of
+configurations that were already present in the initial
+population. There was little actual improvement of score during
+evolution, which was probably due to a naive implementation of the
+evolutionary algorithm, so the main objective of this research was to
+improve the evolutionary algorithm so that exploration is better and
+is able to find solutions way beyond the immediate vicinity of the
+initial set of solutions. Of course, this might also be due to the
+fact that we were only doing 15 generations, which is why we are
+increasing this number during the current phase of research.
+
+The next part of the implementation of the evolutionary algorithms is
+choosing a data structure that is able to hold it efficiently and
+expressively. We have used a simple Python list of 15 integers, one
+per directive; this list is converted to a configuration file using a
+specific Python library, {\tt nginx.config}, which makes easier the
+generation of configuration files. When the chromosome is evaluated,
+it becomes a two-element list, whose first element is the fitness and
+a second containing the data structure itself. This speeds sorting of
+the population, since these can simply be sorted by the first element
+in the list.
+
+After testing different types of crossover and mutation in our
+previous paper \cite{erseco:evostar} in this paper we have tried to
+simplify; those experiments resulted in any kind of mutation and
+crossover being approximately as effective as the next one. However,
+mutation used was too disruptive, and didn't allow for gradual change
+and exploration of the configuration space, so in this case we have
+used a {\em incremental} mutation, that adds or subtracts one from
+current values, and circles back to the opposite end of the range if
+these are exceeded; thus, if the value of the {\tt disable\_symlinks}
+element is 1, it will become 0 no matter what (either if it's added
+one or subtracted one); if the value of {\tt worker\_connections} is
+2048 it will become 512 if it's added one. This guarantees that every
+mutation will result in a different value; also, only one randomly
+chosen value is changed every time.
+
+Crossover will be 2-point crossover, and it will return a single
+value, with pieces taken from both parents.
+
+While in the previous paper we were using a simple rank-based,
+non-fitness-proportional selection, which probably resulted in less
+exploitation of the best results, which is why in this paper we have
+changed that to 2-tournament selection.
+
+All together, every generation, a reproduction pool of the same size
+as the population is created; these are randomly picked in couples,
+crossed and the result mutated, creating a new set of individuals;
+this new set of individuals is evaluated; the result is merged with
+the previous population, with just the best ones selected to pass to
+the next generation.
+
+
+This evolutionary algorithm should offer better results than the
+previous naive one, so we explored its result by making some test runs
+using 32 individuals and 32 generations, double the number of
+generations we had used in our previous paper. How the fitness score
+evolves along all the generations is shown in Figure
+\ref{fig:evolution}, which is an overview on how evolution
+proceeds. It shows many plateaus, first at score equal to 68 and then
+a big plateau for value = 62, to a point in which all the population
+has that score. However, exploration proceeds apace and eventually we
+obtain a ZAP score of 59 by the end of the evaluation budget.
+
+From this initial exploration of values, we can conclude that even a
+small number of evaluations (only 1024) is able to obtain good
+results, and that the evolutionary algorithm is able to overcome, at
+least in some cases, plateaus with low fitness diversity across all
+the population. It is also evident that the evaluation budget is not
+enough and that more generations could be used to obtain better values
+of this score, down to 3 which seems to be the absolute minimum for
+the Juice Shop. This initial exploration took 6 hours in a Lenovo
+Carbon X5 laptop with a i7 CPU and Ubuntu 16.04, which also gave us an
+idea of the time we were going to need to devote to these
+experiments. The results of these will be shown next.
+
+\subsection{Experimental results}
+\label{subs:results}
+
+% Show average results and how many of the same value are generated in
+% the last generation.
+
+We performed several runs for population 16 and population 32, in
+every case with 32 generations. The main objective of these runs was
+not so much to measure the final result, since there are not so many
+evaluations, but to evaluate in which measure the evolutionary
+algorithm contributed to the improvement of the score of the generated
+configurations, as well as how many configurations, in the last
+generation, had the best score. We will examine individual results,
+shown in table \ref{tab:experiments}.
+%
+\begin{table*}
+\centering
+\caption{Experiment results for every run made for population 16 and
+  32. ``Copies'' indicates the fraction of the population whose value
+  is the same as the best individual.}
+\label{tab:experiments}
+<<experiments, cache=FALSE,echo=FALSE>>=
+kable(experiments.data)
+@
+\end{table*}
+%
+Experiments with population = 16 took around 6 hours in an Amazon EC2
+instance, while experiments with population = 32 took twice as much;
+this is the main reason why no more results are shown. In practice,
+moving target defense would change configuration every few hours,
+which makes these results acceptable for its purpose, although it
+obviously would admit a certain degree of improvement.
+
+The results in which population is only 16 evidence that what it
+essentially does is to generate different configurations with the best
+fitness found originally in the population: the final population is
+filled with mutated copies of a configuration, all of which have the
+same fitness. It happens to be 12 in these cases, which is a low ZAP
+score, but in the case an element with that score wouldn't have been
+in the initial population it would have been difficult to achieve that
+value with just a few evaluations (512, in this case). However, this
+result is acceptable, and shows that an evolutionary algorithm is
+able, at least, to generate a good amount of diverse configuration,
+even if at this population level it's not able to improve initial
+scores, just to weed out invalid configurations, or simply those with
+a low score.
+
+The runs we were able to make with population = 32, and double the
+amount of evaluations we did before, 1024, do show a lot of
+improvement of initial configurations. In two cases, there's just one
+configuration with the same value, but most of them have a ZAP score
+below 62, which is a good value. In one case it was able to generate a
+quarter of the population with the same ZAP score, 53, but also a few
+more with values 54, 58 and 59, and all of them below 62, eliminating
+in any case all invalid configurations from the population. In all
+cases average is around 58, which is quite an improvement over initial
+averages, which are high mainly due to the presence of invalid
+configurations.
+
+At any case, these results prove that improving the evolutionary
+algorithm makes our method able to extract many more valid
+configurations that can be used in the movable target defense method,
+and is able to do so in a reasonable amount of time; compared to our
+previous paper, the exploitation of values present in the initial
+population is better, and we are also able to improve initial values
+by some measure. 
+
+All the results of experiments, as well as their code and the scripts
+needed to generate this data can be found in
+\url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and can
+be reused with a free license.
+
+\section{Conclusions and discussion}
+\label{sec:conclusions}
+
+% Write conclusions here
+In this paper our main objective was to try and improve the
+evolutionary algorithm used for hardening and obtaining multiple
+configurations that can be used in a MTD policy. We tried first to use
+different options of the vulnerability scanning tool, finding them too
+costly to use, but also worse from the point of view of giving diverse
+scores to the configurations so that the evolutionary algorithm will
+work on them.
+
+We then focused on working on a very limited evaluation budget, and
+used a 512 and 1024 evaluation evolutionary algorithm to try and
+generate a good set of configurations. In general, there are many
+``good'' values that can be generated randomly for {\sf nginx}
+configuration; however, to generate a diverse set of them with a low
+vulnerability score is more complicated. In this case, an evolutionary
+algorithm succeeded in finding that set, with 32 individuals being
+actually the minimum configuration that should be used in case we want
+to obtain configurations with a low average ZAP score; the few
+experiments we managed to do achieved a consistent score of around
+58.
+
+However, while these experiments are promising, and in fact deliver
+what we were looking for, diverse configurations in a reasonable
+amount of time, they did reveal the need for faster evaluation, or
+simply another way of computing fitness.
+
+
+% Future lins of work.
+This is why, in the immediate future, now that the evolutionary algorithm is
+working correctly, we will focus in trying to obtain the ZAP score
+faster. This is one of the main drawbacks of the algorithm right now,
+and although part of it is inherent, we could try to achieve faster
+evaluation by using a different web for generating the configuration
+and for deploying the configuration. Using the actual web for evolving
+configurations can be incredibly time-consuming; the use of surrogates
+would speed up evolution, either by creating surrogates of the web
+itself or by trying to make parts of the evaluation via surrogates
+found by using machine learning; this has been done already with CVSS
+scores \cite{edkrantz2015predicting} so it should be possible in principle. Simply working with implementation
+details might allow not only  making things faster, but also doing
+parallel evaluation of several configurations at the same time, which
+right now is impossible due mainly to the fact that we're fixing the
+ports that are used for the websites we are evaluating.
+
+But, more interestingly, we will try and expand the range of
+configurations we are using by going beyond initial requirements (used
+in STIG); this will expand the fitness landscape, so we might have to
+find a way of speeding up the evolutionary algorithm. 
+
+Finally, the evolutionary algorithm itself can be improved, by testing different
+types of selection procedures, and tuning its greediness. This is
+something that can be done immediately, and will be one of our next steps.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Acknowledgements}
+
+This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P).
+
+\bibliographystyle{IEEEtran}
+\bibliography{geneura,moving-target}
+
+\end{document}
