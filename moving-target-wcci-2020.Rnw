@@ -136,37 +136,37 @@ finishing with our conclusions and future lines of work.
 \label{sec:soa}
 
 
-% eghtesad2019deep deep reinforcement learning to find the best moment
-% for changing configurations.
-
-
-MTD was proposed by the first time in 2009 \cite{moving-target} by An
+MTD was proposed by the first time in 2009 \cite{moving-target} by an
 organism called NITRD as part of an officially sponsored research
-program to improve the cyberdefense skills in America. MTD is targeted % America -> USA? - Mario
+program to improve the cyberdefense skills in the United States. MTD is targeted % America -> USA? - Mario
+% right, fixed - JJ
 towards making what is called the attack surface
 \cite{manadhata2011formal}, that is, the different mechanisms by which
 the attacker would be able to gain access, unpredictable
-\cite{jajodia2011moving}, and thus making attacks against it either too
+\cite{jajodia2011moving}, and thus rendering attacks against it either too
 expensive or too complex to pursue, possibly forcing the attacker to
 choose some other, more affordable, place. For instance, an attacker
 analyzing byte patterns coming from different nodes such as the one
 described in \cite{piskozub2019resilience} will find those patterns
-disrupted.
+disrupted, and so profiling of specific nodes impossible.
 
 
 This program was pursued using different kind of techniques, of which
-a good survey is made in \cite{Cai2016} and more recently in
-\cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a defense as well
-as detection technique \cite{tian2019moving,POTTEIGER2020102954}, for instance, it can be
+a good initial survey was made in \cite{Cai2016}, reexamined in
+\cite{Larsen201428} and more recently in
+\cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a
+defense as well as detection technique
+\cite{tian2019moving,POTTEIGER2020102954}; for instance, it can be
 used to deflect distributed denial of service attacks
-\cite{prathyusha2020review}; besides, it has been proved effective against
-exfiltration techniques via the use of an open source framework called
-MoonRaker \cite{shade2020moonraker}. Several techniques have been
-applied recently; for instance, natural randomization in services can
-be enhanced \cite{kansal2020improving}; or, beyond the technique that
-is used, deep reinforcement learning can try and find the best moment
-for changing configurations \cite{eghtesad2019deep}, a topic that is
-normally left behind. These techniques have been surveyed in
+\cite{prathyusha2020review}; besides, it has been proved effective
+against exfiltration techniques via the use of an open source
+framework called MoonRaker \cite{shade2020moonraker} or to protect
+software defined networks \cite{al2011toward}. Several techniques have
+been applied recently; for instance, natural randomization in services
+can be enhanced \cite{kansal2020improving}; or, beyond the technique
+that is used, deep reinforcement learning can try and find the best
+moment for changing configurations \cite{eghtesad2019deep}, a topic
+that is normally left behind. These techniques have been surveyed in
 \cite{Zheng2019207,cho2019toward}, to which we direct the interested
 reader.
 
@@ -183,27 +183,24 @@ systems that would behave in a way that would be similar to a
 symbiotically-induced immune system. Besides that principled
 biological inspiration, SEMs used mutation as a mechanism for avoiding
 signature based detection methods and thus become a MTD system.
-% Larsen "Larsen201428
+
 Other early MTD solutions included the use of rotating virtual webservers
 \cite{huang2011introducing}, every one with a different attack
-surface, to avoid predictability and achieve a variable attack
-surface. However, while this was a practical and actionable defense,
+surface, to avoid predictability and achieve the variable attack
+surface that was being sought. However, while this was a practical and
+actionable kind of defense,
 no specific technique was proposed to individually configure every
 virtual server, proposing instead manual configuration of web servers
-(such as nginx and Apache), combined with plug-ins\footnote{It should
-  be noted that some of the proposed configurations, such as {\sf nginx} +
-  {\tt mod\_rails}, are simply impossible, since {\tt mod\_rails} is an Apache
-  plugin, apart from being specifically designed for Ruby on Rails
-  applications}. A similar technique, taken to the cloud, was proposed
-by Peng et al. \cite{peng2014moving}. In this case, a specific
-mechanism that uses different cloud instances and mechanism for moving
-virtual machines between them is proposed; still, no specific
-mechanism was proposed to establish these configurations.
-Although most of the effort is devoted to creating a MTD for servers,
-it can also be applied to software defined networks \cite{al2011toward}.
+(such as nginx and Apache), combined with plug-ins (some of which do
+not actually work together). A similar technique, taken to the cloud, was proposed
+by Peng et al. \cite{peng2014moving}:  a specific
+mechanism that uses different cloud instances and procedures for moving
+virtual machines between them; still, no other
+mechanism was proposed to establish these configurations, which were
+simply left to being designed by hand, as long as there were enough of them.
 
-After the early {\em bioinspired} approaches to MTD, explicit
-solutions using evolutionary algorithms were conceptually described for the first
+Bioinspired solutions filled that gap: after the early {\em bioinspired} approaches to MTD, explicit
+methodologies that used evolutionary algorithms were conceptually described for the first
 time by Crouse and Fulp in \cite{6111663}. This was intended mainly as
 a proof of concept, and describes 80 parameters, of which just half
 are evolved. The GA minimizes the number of vulnerabilities, but the
@@ -225,23 +222,6 @@ to an actual system, to the point of implementing it in a real virtual
 machine, and second, the problematic of scoring the generated
 configurations. In the next section we will explain our proposed
 solutions to these two problems.
-
-MTD can also be applied at a network level. Makanju et al applied
-evolutionary algorithms in e defined networks by Champagne et al. in
-\cite{Makanju:2017:ECM:3067695.3075604}. In this case the SDN have to
-respect the service level agreements, and a fitness function that
-takes into account the adaptation of the SDN to the environment. This work was continued by
-others in \cite{champagne_genetic_2018}, but in this case the EA
-dynamically placed the controller in a network.
-
-
-Moving target defense has many applications in the field of
-cybersecurity. For example, in hardware systems, such as the Morpheus
-processor that is able to change its internal configuration every 50
-milliseconds to difficult attacks \cite{gallagher_morpheus:_2019}, a
-technique like this would have prevented the Spectre vulnerability
-suffered by Intel processors that exploited failures in the
-speculative execution feature.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
