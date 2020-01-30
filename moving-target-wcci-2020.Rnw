@@ -503,7 +503,9 @@ evolution, which was probably due to a naïve implementation of the
 evolutionary algorithm, so the main objective of this research was to
 improve the evolutionary algorithm so that exploration is better and
 is able to find solutions way beyond the immediate vicinity of the
-initial set of solutions.
+initial set of solutions. Of course, this might also be due to the
+fact that we were only doing 15 generations, which is why we are
+increasing this number during the current phase of research.
 
 \begin{figure*}[h!tb]
   
