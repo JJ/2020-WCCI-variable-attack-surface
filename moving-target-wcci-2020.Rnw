@@ -281,11 +281,10 @@ work}
 \end{table}
 %
 
-These are the directives that have been used in this paper; their
+These are the {\sf nginx} directives that have been used in this paper; their
 equivalent STIG ID is shown in Table
-\ref{table:nginx_directives}.
-% It would be convenient to rewrite most of these directives.
-\begin{itemize}
+\ref{table:nginx_directives} along with the range of values for
+generation and ulterior evolution:\begin{itemize}
 \item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
 \item \texttt{keepalive\_timeout}: Period during which a server-side client
   connection will remain open  before timing out.
@@ -307,10 +306,11 @@ equivalent STIG ID is shown in Table
 \item
 \texttt{client\_max\_body\_size}: Maximum allowed size of the client request body, specified in the {\tt
   Content-Length} field of the request header. The value will indicate
-the number of Megabytes allowed.
-\item
-\texttt{server\_tokens}: Enable or disable the broadcast of the {\sf
-  nginx} version on the error pages and in the `Server' response
+the maximum number of Megabytes allowed. Over that value, requests
+will simply return an error.
+
+\item \texttt{server\_tokens}: Enable or disable the broadcast of the {\sf
+  nginx} version on the error pages and in the {\tt Server} response
 header. It's on by default, and we admit on or off values, although the
 directive can also use a {\em build} value and simply a string.
 \item
@@ -343,9 +343,9 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 
 \end{table}
 %
-The web servers also send a number of headers, which can be configured
-also. These are presented next, with possible values represented in
-Table \ref{table:http_headers}.
+The web servers also send a number of headers, whose value can be
+configured from the {\sf nginx} configuration file. These are
+presented next, with possible values represented in Table \ref{table:http_headers}.
 \begin{itemize}
 \item
 \texttt{X-Frame-Options}: The header that has the same name as this
