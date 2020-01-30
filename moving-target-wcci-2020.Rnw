@@ -216,7 +216,8 @@ use of an evolutionary algorithm, describing a host-level
 defense system, that is, one that operates at the level of a single
 node in the network, not network-wide, and works on the configuration
 of the Apache server, evolving them and evaluating at the parameter
-level using the above mentioned CVSS score. These two systems
+level using the so called CVSS score \cite{cvss}, a score that is computed from a
+the categories of vulnerabilities detected and how severe they are. These two systems
 highlighted the need for, first, a practical way of applying the MTD
 to an actual system, to the point of implementing it in a real virtual
 machine, and second, the problematic of scoring the generated
@@ -230,7 +231,7 @@ solutions to these two problems.
 
 % 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
 
-As in our previous paper \cite{\cite{erseco:evostar}}, we have chosen
+As in our previous paper \cite{erseco:evostar}, we have chosen
 {\sf nginx}; it's a very popular static web server, which is also used
 as an inverse proxy, API gateway and load balancer. Latest versions
 of{\sf nginx} (1.17.x) have more than 700 configuration
@@ -248,13 +249,15 @@ results will be presented last in Subsection \ref{subs:results}.
 
 \subsection{Description of the attack surface parameters}
 
-There is a huge number parameters that could potentially be chosen for
-our experiments so to validate our hypothesis we choose a subset of 9
-{\sf nginx} directives (\ref{table:nginx_directives}) and 6 HTTP headers
-(\ref{table:http_headers}), all of them related to security
-hardening. The subset is extracted from the DISA STIG recommendations
-for hardening webservers based in the CVSS score. Most of this values
-are defined as Apache HTTP server configuration values but have a
+From all the parameters used to change the behavior of {\sf nginx}, we
+have used fifteen, the same as in out previous paper
+\cite{erseco:evostar}; nine of then are {\sf nginx} directives
+(shown in Table \ref{table:nginx_directives}) and 6 are set from the same
+configuration file, but affect HTTP headers (shown in Table
+\ref{table:http_headers}), which in turn affect how the browser
+receving the information behaves. This subset is extracted from the DISA STIG recommendations
+for hardening webservers based in the CVSS score \cite{disa20:apache}. Most of these values
+are defined in the original document as Apache HTTP server configuration values but have a
 {\sf nginx} equivalent directive.
 
 \begin{table}
