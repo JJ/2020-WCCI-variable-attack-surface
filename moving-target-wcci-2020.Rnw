@@ -15,7 +15,7 @@
 <<setup, cache=FALSE,echo=FALSE>>=
 library(ggplot2)
 library(ggthemes)
-data <- read.csv("results/all_results.csv")
+active.fitness.data <- read.csv("results/initial-fitness.dat")
 @
 
 \title{Improving evolution of service configurations for moving target
@@ -104,7 +104,7 @@ security or some other measure, like performance. % Performance of what? less ov
 % Good call, but a bit late for that... - JJ
 
 
-Our previous paper \cite{erseco:evostar} was a proof of concept and
+Our previous paper \cite{erseco:evostar}ww was a proof of concept and
 tested the framework we have created for evolving a set of
 configurations that can be used in a MTD policy. Our target was
 hardening {\sf nginx} installations and we used as a fitness function
@@ -408,7 +408,89 @@ also secure, attack surface.
 
 \subsection{Experimental setup}
 \label{subs:setup}
-% 2. Proceed to the evolutionary algorithm used
+
+The most important part of the evolutionary algorithm is designing
+correctly the fitness function that is going to be tested and used.
+A configuration is meaningless without
+content behind, and we need to choose what is going to be the
+content. In our previous paper \cite{evostar:erseco}, a basic application was created, and
+additionale, a intentionally vulnerable application, OWASP's Juice
+Shop \cite{juice-shop}, were also tested. Since their vulnerabilities are different, the
+scores are going to be different. In this paper, we will focus on the
+Juice Shop, which is intended to be vulnerable and is thus a bigger
+challenge for the evolutionary algorithm.
+
+The setup used for computing this score is exactly the same as in the
+last paper: standard docker containers for the juice shop and the ZAP
+API were composed (using Docker Compose) together with the container
+hosting the evolutionary algorithm, which calls from the fitness
+function the ZAP library, written in Python. What ZAP does is to run
+over all pages in the site, making different attacks and raising
+alerts if they detect any vulnerability; the score is equivalent to
+the number of alerts raised. From these alerts a CVSS standard score
+could be computed, but this is a direct transformation so we will
+stick to this score for our evolutionary algorithm. A 0 score will
+imply a totally secure configuration, while higher scores are related
+to the number of alerts. Please bear in mind that it is not a linear
+scale: a score of 58 does not indicate that the site is 20 times less
+secure than one with score equal to 3, it can mean that a new alert
+has been raised on 55 different pages. As a matter of fact, a score
+equal to 3 is due to a single alert raised three times in 3 different
+web pages of the Juice Shop store. This also implies that a score of
+58 does not really indicate a very insecure place; it just means that
+it is less secure than a configuration with score equal to
+3. Additionally, we are using a score of 999 as indicative of a
+invalid configuration, as checked by nginx command line.
+
+The evaluation is then performed in the following sequence:\begin{itemize}
+  
+\item A new configuration is generated from the evolutionary algorithm
+  values and stored in a configuration file with random name. This has
+  been introduced in this version, and makes sure that every
+  configuration is evaluated only once.
+
+\item This configuration is checked for correctness, and 999 returned
+  as score if it's incorrect.
+\item The program ensures the previous instance of the server has been
+  killed, and starts up the server.
+\item ZAP scans the site
+\item The program kills the server, checking several times until it's gone
+
+\end{itemize}
+
+The more time-consuming part of this process is the scanning, which
+might take up to 15 seconds; this means that evaluation is a very slow
+process, which is a problem. Besides, ZAP is able to perform two types
+of scanning: passive and active. In our previous paper, we focused on
+active scanning, which makes requests and examines responses; however,
+one of the things we wanted to try in this case was passive scanning,
+which besides checks headers and performs other analyses on the
+requests and responses. Before actually using it in the evolutionary
+algorithm, we generated a series of random configurations and tested
+its score; its distribution is shown in Table \ref{table:fitness}.
+%
+\begin{table}
+\centering
+\caption{Distribution of ZAP passive scanning scores}
+\label{table:fitness}
+<<passive-scan, cache=FALSE,echo=FALSE>>=
+kable(col.names=c("Zap Score","Number of instances"),as.data.frame(table(active.fitness.data)))
+@
+\end{table}
+%
+There are several problems with this fitness landscape: there are just
+a few values, which makes evolution extremely difficult, since most of
+the fitness landscape is flat, and most changes in configuration will
+not result in a change of fitness. But the bigger problem is the
+amount of time passive scanning adds, which makes this way of
+evaluating fitness score totally impracticable. Eventually, we will
+have to use only active scanning, the same as in our previous paper.
+
+
+As in our previous paper, \cite{erseco:evostar}, we have designed an
+evolutionary algorithm in Python that is able to minimize the ZAP
+score of the chosen sites. 
+
 To write the genetic algorithm we have chosen the Python programming
 language due to the availability of the OWASP ZAP API in that
 language. In addition, although this project does not require high
