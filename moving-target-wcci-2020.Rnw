@@ -498,7 +498,7 @@ have to use only active scanning, the same as in our previous paper.
   \caption{3D mesh representation of evolution of fitness, with z axis
     representing score (lower is better), $y$ axis representing simply
     the rank order of every individual in the population, and $x$ axis
-    representing generations; evolution proceeds from left to right.}
+    representing generations; evolution proceeds from right to left.}
   \label{fig:evolution}
   \end{figure*}
 %
