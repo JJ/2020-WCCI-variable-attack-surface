@@ -487,11 +487,21 @@ evaluating fitness score totally impracticable. Eventually, we will
 have to use only active scanning, the same as in our previous paper.
 
 
+\begin{figure*}[h!tb]
+  
+  \includegraphics[width=0.9\linewidth]{fitness-evolution-32-32.png}
+  \caption{3D mesh representation of evolution of fitness, with z axis
+    representing score (lower is better), $y$ axis representing simply
+    the rank order of every individual in the population, and $x$ axis
+    representing generations; evolution proceeds from left to right.}
+  \label{fig:evolution}
+  \end{figure*}
+%
 As in our previous paper, \cite{erseco:evostar}, we have designed the
 rest of the algorithm in Python, to be able to acommodate the ZAPpy
 library which is written in that language; Python has a reasonable
 performance on evolutionary algorithms
-\cite{merelo-guervos_comparison_2016}, but in this case the bottleneck
+\cite{DBLP:conf/cec/GuervosBCRRVHR16}, but in this case the bottleneck
 is actually scanning, with evolutionary operations themselves taking
 but a very small fraction of the total time, so this choice is not
 really critical. But one of the main problems of our former
@@ -507,16 +517,6 @@ initial set of solutions. Of course, this might also be due to the
 fact that we were only doing 15 generations, which is why we are
 increasing this number during the current phase of research.
 
-\begin{figure*}[h!tb]
-  
-  \includegraphics[width=0.9\linewidth]{fitness-evolution-32-32.png}
-  \caption{3D mesh representation of evolution of fitness, with z axis
-    representing score (lower is better), $y$ axis representing simply
-    the rank order of every individual in the population, and $x$ axis
-    representing generations; evolution proceeds from left to right.}
-  \label{fig:evolution}
-  \end{figure*}
-%
 The next part of the implementation of the evolutionary algorithms is
 choosing a data structure that is able to hold it efficiently and
 expressively. We have used a simple Python list of 15 integers, one
