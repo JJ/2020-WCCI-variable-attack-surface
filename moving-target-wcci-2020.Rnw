@@ -496,6 +496,16 @@ is actually scanning, with evolutionary operations themselves taking
 but a very small fraction of the total time, so this choice is not
 really critical. 
 
+\begin{figure*}[h!tb]
+  
+  \includegraphics[width=0.9\linewidth]{fitness-evolution-32-32.png}
+  \caption{3D mesh representation of evolution of fitness, with z axis
+    representing score (lower is better), $y$ axis representing simply
+    the rank order of every individual in the population, and $x$ axis
+    representing generations; evolution proceeds from left to right.}
+  \label{fig:evolution}
+  \end{figure*}
+%
 The next part of the implementation of the evolutionary algorithms is
 choosing a data structure that is able to hold it efficiently and
 expressively. We have used a simple Python list of 15 integers, one
@@ -537,21 +547,29 @@ this new set of individuals is evaluated; the result is merged with
 the previous population, with just the best ones selected to pass to
 the next generation.
 
-\begin{figure*}
-  
-  \includegraphics[width=0.9\linewidth]{fitness-evolution-32-32.png}
-  \caption{3D mesh representation of evolution of fitness, with z axis
-    representing score (lower is better), $y$ axis representing simply
-    the rank order of every individual in the population, and $x$ axis
-    representing generations; evolution proceeds from left to right.}
-  \label{fig:evolution}
-  \end{figure*}
+
 This evolutionary algorithm should offer better results than the
 previous naïve one, so we explored its result by making some test runs
 using 32 individuals and 32 generations, double the number of
 generations we had used in our previous paper. How the fitness score
-evolves along all the generations is shown in Figure \ref{fig:evolution}
+evolves along all the generations is shown in Figure
+\ref{fig:evolution}, which is an overview on how evolution
+proceeds. It shows many plateaus, first at score equal to 68 and then
+a big plateau for value = 62, to a point in which all the population
+has that score. However, exploration proceeds apace and eventually we
+obtain a ZAP score of 59 by the end of the evaluation budget.
 
+From this initial exploration of values, we can conclude that even a
+small number of evaluations (only 1024) is able to obtain good
+results, and that the evolutionary agorithm is able to overcome, at
+least in some cases, plateaus with low fitness diversity across all
+the population. It is also evident that the evaluation budget is not
+enough and that more generations could be used to obtain better values
+of this score, down to 3 which seems to be the absolute minimum for
+the Juice Shop. This initial exploration took 6 hours in a Lenovo
+Carbon X5 laptop with a i7 CPU and Ubuntu 16.04, which also gave us an
+idea of the time we were going to need to devote to these
+experiments. The results of these will be shown next.
 
 \subsection{Experimental results}
 \label{subs:results}
