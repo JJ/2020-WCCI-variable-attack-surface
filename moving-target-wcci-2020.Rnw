@@ -368,7 +368,9 @@ security by itself but adds entropy to the generated configurations.
 \texttt{X-Content-Type-Options}: This directive controls the opration
 of the homonym HTTP response header; when set,  changing the \textit{MIME} types
 announced in the `Content-Type' is disabled, which is used to avoid
-`MIME type sniffing' attacks. % Add something about these attacks - JJ
+`MIME type sniffing' attacks; that is, using what browser's heuristics
+for detecting MIME type from content to launch a cross-site scripting
+attack. 
 \item
 \texttt{server}: This directive is related to the {\tt Server} HTTP
 header, which is used to communicate to browsers metadata about the
@@ -377,7 +379,10 @@ as misleading as we want; as a matter of fact, it is a good practice
 not to give too
 extensive information of software versions, but we can cheat the
 attacker telling wrong server version info. Doesn't affect directly to
-the security but adds entropy to the generated configurations. % Difference with X-Powered-By? - JJ
+the security but adds entropy to the generated configurations. This
+directive, along with {\tt X-Powered-By}, are mainly used for
+informative or statistics purposes and do not really change anything
+either in content or how it is rendered by the server.
 \item
 \texttt{X-XSS-Protection}: This directive is used to set the value of
 the corresponding HTTP response header; as the rest of these server
@@ -393,10 +398,13 @@ it's loaded from the same page ({\tt self}), loading from nowhere
 this case mainly for user tracking. These values are shown in Table
 \end{itemize}
 
-% Say something about how every one of these directives has a value
-% that is generally more secure than others, or at least corresponds
-% to better practices, but in some cases it covers cases that are not
-% really an issue in the specific application - JJ
+The problem of optimizing security in configuration is two fold: some
+of these directives are security-neutral, and do not actually alter
+the security score, they simply add to overall byte-level diversity;
+some of them, by themselves, will make a site more secure; in some
+other cases, it will be its combination what makes it safer. That is
+why a global optimization algorithm is needed to get variable, and
+also secure, attack surface.
 
 \subsection{Experimental setup}
 \label{subs:setup}
