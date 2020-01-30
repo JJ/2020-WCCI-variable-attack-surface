@@ -101,6 +101,7 @@ security or some other measure, like performance. % Performance of what? less ov
 % The above could be easier to understand if we say first:
 % ... does not specify either the kind of attack, the service is protecting or the technique ..
 % and after that we give the examples. - Mario
+% Good call, but a bit late for that... - JJ
 
 
 Our previous paper \cite{erseco:evostar} was a proof of concept and
@@ -115,10 +116,12 @@ better), and also that every execution of the algorithm yields several
 configurations with the same fitness, which can then be used straight
 away to change the configuration of the server.
 
-However, that was intended as a proof of concept, and we needed to
+However, that was intended as an initial exploration of the concept of
+using evolutionary algorithms to generate low-vulnerability and
+diverse nginx configurations. We needed to
 explore the possibilities of the evolutionary algorithm further, by
-tuning the parameters of the evolutionary algorithm so that better
-configurations can be found in less time. Also, we needed to explore
+tuning its parameters so that better
+configurations can be found with less evaluations. Also, we needed to explore
 different possibilities of the scoring tool, to check which mode would
 be better for the MTD task. These will be the two main objectives of
 this paper.
