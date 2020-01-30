@@ -42,7 +42,7 @@ def in_range_change( value, change, gene ):
     """
        Changes the value in gene by the quantity change taking into account ranges. Circles back to max or min if these are exceeded
     """
-    
+
     new_value = value + change
 #    print( "New value ", new_value, " gene ", gene )
     if new_value < gene_ranges[gene][0]:
@@ -141,7 +141,7 @@ def generate(config=generate_random_config()):
                 # root='/var/lib/nginx/html/',
                 root='/tester/site/',
                 index='index.html index.htm',
-                proxy_pass='http://juice-shop:3000',
+                # proxy_pass='http://juice-shop:3000',
             ),
             server_name='www.exampletfm.com',
             listen=80,
