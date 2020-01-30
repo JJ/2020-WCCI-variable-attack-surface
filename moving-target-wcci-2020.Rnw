@@ -413,7 +413,7 @@ The most important part of the evolutionary algorithm is designing
 correctly the fitness function that is going to be tested and used.
 A configuration is meaningless without
 content behind, and we need to choose what is going to be the
-content. In our previous paper \cite{evostar:erseco}, a basic application was created, and
+content. In our previous paper \cite{erseco:evostar}, a basic application was created, and
 additionale, a intentionally vulnerable application, OWASP's Juice
 Shop \cite{juice-shop}, were also tested. Since their vulnerabilities are different, the
 scores are going to be different. In this paper, we will focus on the
@@ -487,77 +487,71 @@ evaluating fitness score totally impracticable. Eventually, we will
 have to use only active scanning, the same as in our previous paper.
 
 
-As in our previous paper, \cite{erseco:evostar}, we have designed an
-evolutionary algorithm in Python that is able to minimize the ZAP
-score of the chosen sites. 
+As in our previous paper, \cite{erseco:evostar}, we have designed the
+rest of the algorithm in Python, to be able to acommodate the ZAPpy
+library which is written in that language; Python has a reasonable
+performance on evolutionary algorithms
+\cite{merelo-guervos_comparison_2016}, but in this case the bottleneck
+is actually scanning, with evolutionary operations themselves taking
+but a very small fraction of the total time, so this choice is not
+really critical. 
 
-To write the genetic algorithm we have chosen the Python programming
-language due to the availability of the OWASP ZAP API in that
-language. In addition, although this project does not require high
-performance, several publications indicate a very good performance of
-the Python language when working with genetic algorithms
-\cite{merelo-guervos_comparison_2016}. The implementation has been
-written for this project, and is a simple implementation of a
-canonical genetic algorithm; this has been released as free software
-together with the rest of the framework. The genetic algorithm works
-generating a population of $n$ individuals. Each individual is a
-chromosome of 15 gens, each gen referring to the {\sf nginx} directive
-or HTTP security headers shown in the previous subsection.
+The next part of the implementation of the evolutionary algorithms is
+choosing a data structure that is able to hold it efficiently and
+expressively. We have used a simple Python list of 15 integers, one
+per directive; this list is converted to a configuration file using a
+specific Python library, {\tt nginx.config}, which makes easier the
+generation of configuration files. When the chromosome is evaluated,
+it becomes a two-element list, whose first element is the fitness and
+a second containing the data structure itself. This speeds sorting of
+the population, since these can simply be sorted by the first element
+in the list.
 
-After generating the population we calculate the fitness of that
-population using OWASP ZAP, which gives a scalar value with the number of
-known vulnerabilities a configuration has. The OWASP ZAP Python API
-calling a container with the Docker version of OWASP ZAP; this simulates a
-real environment using the {\tt example.com} domain and the generated
-configuration. This API will yield the mentioned
-scalar value depending on the number of known vulnerabilities found
-for that configuration.
+After testing different types of crossover and mutation in our
+previous paper \cite{erseco:evostar} in this paper we have tried to
+simplify; those experiments resulted in any kind of mutation and
+crossover being approximately as effective as the next one. However,
+mutation used was too disruptive, and didn't allow for gradual change
+and exploration of the configuration space, so in this case we have
+used a {\em incremental} mutation, that adds or substracts one from
+current values, and circles back to the opposite end of the range if
+these are exceeded; thus, if the value of the {\tt disable\_symlinks}
+element is 1, it will become 0 no matter what (either if it's added
+one or subsctracted one); if the value of {\tt worker\_connections} is
+2048 it will become 512 if it's added one. This guarantees that every
+mutation will result in a different value; also, only one randomly
+chosen value is changed every time.
 
-Once every individual has been assigned a fitness, we sort the population list
-in reverse order to set the better ones at the end of the list and
-get the $p$ (pressure) values that we will evolve using mutation and
-crossover. This will be repeated  during 15 generations.
+Crossover will be 2-point crossover, and it will return a single
+value, with pieces taken from both parents.
 
-For evolving the configuration we have written two different crossover
-functions that use either one or two points. We will run the
-experiments for each function to find out which
-one gives better results \cite{LNCS2439:ID186:pp142}.
+While in the previous paper we were using a simple rank-based,
+non-fitness-proportional selection, which probably resulted in less
+exploitation of the best results, which is why in this paper we have
+changed that to 2-tournament selection.
 
-Also, we are mutating the population with a chance of 0.4 using two
-different mutation methods. One changing random gen with a random
-correct value or increasing/decreasing random gen.
-After the mutation, we calculate the fitness of the new element, sort
-the population and run again the algorithm until no more generations
-left.
+All together, every generation, a reproduction pool of the same size
+as the population is created; these are randomly picked in couples,
+crossed and the result mutated, creating a new set of individuals;
+this new set of individuals is evaluated; the result is merged with
+the previous population, with just the best ones selected to pass to
+the next generation.
 
-% 4. Detail the cloud infrastructure that has been created for this.
+\begin{figure*}
+  
+  \includegraphics[width=0.9\linewidth]{fitness-evolution-32-32.png}
+  \caption{3D mesh representation of evolution of fitness, with z axis
+    representing score (lower is better), $y$ axis representing simply
+    the rank order of every individual in the population, and $x$ axis
+    representing generations; evolution proceeds from left to right.}
+  \label{fig:evolution}
+  \end{figure*}
+This evolutionary algorithm should offer better results than the
+previous naïve one, so we explored its result by making some test runs
+using 32 individuals and 32 generations, double the number of
+generations we had used in our previous paper. How the fitness score
+evolves along all the generations is shown in Figure \ref{fig:evolution}
 
-OWASP ZAP is a heavy-weight process taking a certain amount of time to analyze
-each web configuration so we ran the experiments in three AWS EC2 t3.medium
-instances all running Ubuntu 18.04 LTS with Docker installed, each
-instance has 2 vCPU and 4 GiB of RAM. Each instance runs a different
-set of experiments of 16, 32 and 64 population size. To orchestrate
-the instances we used a simple Ansible playbook.
-
-For the 16 individuals population size the experiment took an average
-of 35 minutes, taking 80 minutes in the 32 individuals population size
-and 180 minutes for the 64 individuals population size. This times are
-the reason of running each population size in different EC2
-instances. The running time of all instances was 266 hours, equivalent
-to 11 days of total processing time, having a total cost of \$11.07.
-
-A set of experiments has been carried out with the static site and the juice shop. These have been the parameters that have varied \begin{itemize}
-\item Mutation is either {\sf random} or {\sf one}. In the first case, the selected configuration variable is changed by another random value. In the second case, one is added or subtracted from its value.
-\item Crossover uses either one or two points.
-\item Population goes from 16 to 64 in the case of the static web site, it stops at 32 in the juice shop.
-\item The evolutionary algorithm is run for 15 generations.
-\end{itemize}
-
-In this case, it's difficult to know in advance what would be the
-correct configuration for the evolutionary algorithm, so all these
-options have been tested and evaluated to check its influence in the
-eventual result. Experiments have been repeated, for each
-configuration, 15 times.
 
 \subsection{Experimental results}
 \label{subs:results}
