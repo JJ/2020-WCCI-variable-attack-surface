@@ -23,6 +23,7 @@ services:
       - ./run.sh:/tester/run.sh
       - ./results/:/tester/results/
       - ./cgroup/:/sys/fs/cgroup/:rw
+      - ./site:/tester/site
 
     # ports:
     #   - "80:80"
