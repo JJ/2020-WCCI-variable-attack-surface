@@ -5,10 +5,10 @@ To deploy a server:
 
 wget -qO- https://get.docker.com/ | sh
 sudo usermod -aG docker $USER
-git clone https://github.com/JJ/2020-WCCI-variable-attack-surface.git
-sudo apt install -y htop fail2ban
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+sudo apt install -y htop fail2ban git
+git clone https://github.com/JJ/2020-WCCI-variable-attack-surface.git
 
 How to run the sample code:
 
