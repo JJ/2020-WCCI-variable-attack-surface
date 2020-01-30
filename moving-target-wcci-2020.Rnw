@@ -659,10 +659,34 @@ be reused with a free license.
 \label{sec:conclusions}
 
 % Write conclusions here
+In this paper our main objective was to try and improve the
+evolutionary algorithm used for hardening and obtaining multiple
+configurations that can be used in a MTD policy. We tried first to use
+different options of the vulnerability scanning tool, finding them too
+costly to use, but also worse from the point of view of giving diverse
+scores to the configurations so that the evolutionary algorithm will
+work on them.
+
+We then focused on working on a very limited evaluation budget, and
+used a 512 and 1024 evaluation evolutionary algorithm to try and
+generate a good set of configurations. In general, there are many
+``good'' values that can be generated randomly for {\sf nginx}
+configuration; however, to generate a diverse set of them with a low
+vulnerability score is more complicated. In this case, an evolutionary
+algorithm succeeded in finding that set, with 32 individuals being
+actually the minimum configuration that should be used in case we want
+to obtain configurations with a low average ZAP score; the few
+experiments we managed to do achieved a consistent score of around
+58.
+
+However, while these experiments are promising, and in fact deliver
+what we were looking for, diverse configurations in a reasonable
+amount of time, they did reveal the need for faster evaluation, or
+simply another way of computing fitness.
 
 
 % Future lins of work.
-In the immediate future, now that the evolutionary algorithm is
+This is why, in the immediate future, now that the evolutionary algorithm is
 working correctly, we will focus in trying to obtain the ZAP score
 faster. This is one of the main drawbacks of the algorithm right now,
 and although part of it is inherent, we could try to achieve faster
