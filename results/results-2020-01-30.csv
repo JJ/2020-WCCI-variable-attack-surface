@@ -1,6 +1,6 @@
-Web, Population, Fitness, Copies
-Juice Shop, 32, 2, random, 3, 0.03125
-Juice Shop, 16, 2, random, 12, 1
-Juice Shop, 16, 2, random, 12, 1
-Juice Shop, 32, 2, random, 53, 0.25
-Juice Shop, 16, 2, random, 12, 1
+Population, Fitness, Copies
+32, 3, 0.03125
+16, 12, 1
+16, 12, 1
+32, 53, 0.25
+16, 12, 1
