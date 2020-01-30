@@ -494,7 +494,16 @@ performance on evolutionary algorithms
 \cite{merelo-guervos_comparison_2016}, but in this case the bottleneck
 is actually scanning, with evolutionary operations themselves taking
 but a very small fraction of the total time, so this choice is not
-really critical. 
+really critical. But one of the main problems of our former
+implementation was that there was very little exploration of the
+search space, with final values being mostly small modifications of
+configurations that were already present in the initial
+population. There was little actual improvement of score during
+evolution, which was probably due to a naïve implementation of the
+evolutionary algorithm, so the main objective of this research was to
+improve the evolutionary algorithm so that exploration is better and
+is able to find solutions way beyond the immediate vicinity of the
+initial set of solutions.
 
 \begin{figure*}[h!tb]
   
@@ -573,6 +582,9 @@ experiments. The results of these will be shown next.
 
 \subsection{Experimental results}
 \label{subs:results}
+
+% Show average results and how many of the same value are generated in
+% the last generation.
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
