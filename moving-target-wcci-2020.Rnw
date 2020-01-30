@@ -16,6 +16,7 @@
 library(ggplot2)
 library(ggthemes)
 active.fitness.data <- read.csv("results/initial-fitness.dat")
+experiments.data <- read.csv("results/all_results.csv")
 @
 
 \title{Improving evolution of service configurations for moving target
@@ -587,6 +588,25 @@ experiments. The results of these will be shown next.
 
 % Show average results and how many of the same value are generated in
 % the last generation.
+
+We performed several runs for population 16 and population 32, in
+every case with 32 generations. The main objective of these runs was
+not so much to measure the final result, since there are not so many
+evaluations, but to evaluate in which measure the evolutionary
+algorithm contributed to the improvement of the score of the generated
+configurations, as well as how many configurations, in the last
+generation, had the best score. We will examine individual results,
+shown in table \ref{tab:experiments}.
+%
+\begin{table*}
+\centering
+\caption{Experiment results for every run made for population 16 and 32.}
+\label{tab:experiments}
+<<experiments, cache=FALSE,echo=FALSE>>=
+kable(experiments.data)
+@
+\end{table*}
+
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
