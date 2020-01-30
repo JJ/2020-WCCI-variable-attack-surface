@@ -108,7 +108,7 @@ Our previous paper \cite{erseco:evostar} was a proof of concept and
 tested the framework we have created for evolving a set of
 configurations that can be used in a MTD policy. Our target was
 hardening {\sf nginx} installations and we used as a fitness function
-{\em Zep Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
+{\em Zed Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
 number of {\em alerts}, or possible security vulnerabilities, it
 raises. We tested different configurations and found that evolutionary
 algorithms are able to generate configurations with a low score (lower is
@@ -230,20 +230,19 @@ solutions to these two problems.
 
 % 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
 
-Considering the huge amount of network services with its multiple
-configuration options, it has been decided to limit this project to
-alter and optimize the configuration of an HTTP server, specifically
-{\sf nginx}. In recent years {\sf nginx} has surpassed Apache as the most used
-HTTP server in the world \cite{w3techs_usage_2019}. This service was
-chosen over Apache, as was John et al. did in
-\cite{john_evolutionary_2014}, since this web server is nowadays much
-more popular, and can act as static webserver as well as a reverse
-proxy for web services; both configurations will be used and tested.
+As in our previous paper \cite{\cite{erseco:evostar}}, we have chosen
+{\sf nginx}; it's a very popular static web server, which is also used
+as an inverse proxy, API gateway and load balancer. Latest versions
+of{\sf nginx} (1.17.x) have more than 700 configuration
+directives. As a matter of fact, {\sf nginx} has been the target of
+optimization by evolutionary algorithms recently \cite{chi2018hybrid},
+but this is not the main focus of our work presently.
 
-The last stable version of {\sf nginx} (1.17) has more than 700
-configuration directives, which in general constitute the user-facing
-attack surface. These parameters, focusing on the ones that will be
-evolved, will be analyzed next. The next Subsection \ref{subs:setup}
+
+These directives affect in different ways the behavior of
+the web site (or service) that is behind it, or simply change the
+values in the response headers; we will show the ones we will working
+with next. The following Subsection \ref{subs:setup}
 will outline the setup actually used for running the experiments, and
 results will be presented last in Subsection \ref{subs:results}.
 
