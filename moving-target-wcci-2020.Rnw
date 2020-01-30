@@ -23,9 +23,13 @@ experiments.data <- read.csv("results/all_results.csv")
 defense}
 
 \author{\IEEEauthorblockN{Ernesto Serrano-Collado}
-\textit{University of Granada}\\
+\IEEEauthorblockA{\textit{University of Granada}\\
 Granada, Spain \\
-info@ernesto.es % Add your name here
+info@ernesto.es}% Add your name here
+\and
+\IEEEauthorblockN{Mario Garc\'ia-Valdez}
+\IEEEauthorblockA{\textit{Instituto Tecnol\'ogico de Tijuana} \\
+  mario@tectijuana.edu.mx}
 \and
 \IEEEauthorblockN{Juan J. Merelo-Guerv\'os}
 \IEEEauthorblockA{\textit{Dept. of Computer Architecture and Technology} \\
@@ -81,7 +85,7 @@ modern cloud-native deployments facilitate that kind of defense: since
 the whole deployment is software defined, we can embed these changes
 within the deployment instructions themselves.
 
-The kind of defense tecnhique that tries to present a variable target
+The kind of defense technique that tries to present a variable target
 to possible attackers is called {\em moving target defense} or
 MTD. The concept was proposed initially by the Federal Networking and
 Information Technology Research and Development (NITRD) Program for the first time in 2009
@@ -89,14 +93,14 @@ Information Technology Research and Development (NITRD) Program for the first ti
 \cite{nitrd} and books that bind the papers presented in the first
 symposium dedicated to the topic \cite{jajodia2011moving}. The moving
 target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
-is being put up against, which could be from privilege scalation to
+is being put up against, which could be from privilege escalation to
 denial of service attacks, the service that is being hardened or secured
 using this technique, which can go from a web or proxy server to a
 software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
 the kind of technique that is used to generate a moving target, which
 can also be simple randomization \cite{gallagher_morpheus:_2019} of
 the user-facing information through churn, that is, changing often
-from a set of pre-established configurations through more ellaborate
+from a set of pre-established configurations through more elaborate
 systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
 security or some other measure, like performance. % Performance of what? less overhead?
 % The above could be easier to understand if we say first:
@@ -105,7 +109,7 @@ security or some other measure, like performance. % Performance of what? less ov
 % Good call, but a bit late for that... - JJ
 
 
-Our previous paper \cite{erseco:evostar}ww was a proof of concept and
+Our previous paper \cite{erseco:evostar} was a proof of concept and
 tested the framework we have created for evolving a set of
 configurations that can be used in a MTD policy. Our target was
 hardening {\sf nginx} installations and we used as a fitness function
@@ -256,7 +260,7 @@ have used fifteen, the same as in out previous paper
 (shown in Table \ref{table:nginx_directives}) and 6 are set from the same
 configuration file, but affect HTTP headers (shown in Table
 \ref{table:http_headers}), which in turn affect how the browser
-receving the information behaves. This subset is extracted from the DISA STIG recommendations
+receiving the information behaves. This subset is extracted from the DISA STIG recommendations
 for hardening webservers based in the CVSS score \cite{disa20:apache}. Most of these values
 are defined in the original document as Apache HTTP server configuration values but have a
 {\sf nginx} equivalent directive.
@@ -319,7 +323,7 @@ directive can also use a {\em build} value and simply a string.
 responses. This directive doesn't affect directly the security but
 adds entropy to the different generated configurations; it also
 affects the performance of the server and its throughput. You can
-additionaly use {\tt gzip\_min\_length} to establish the length under
+additionally use {\tt gzip\_min\_length} to establish the length under
 which there will be no compression.
 \end{itemize}
 
@@ -366,7 +370,7 @@ finding and exploiting security flaws for specific versions just
 looking up in an online database. Setting different values do not affect directly to the
 security by itself but adds entropy to the generated configurations.
 \item
-\texttt{X-Content-Type-Options}: This directive controls the opration
+\texttt{X-Content-Type-Options}: This directive controls the operation
 of the homonym HTTP response header; when set,  changing the \textit{MIME} types
 announced in the `Content-Type' is disabled, which is used to avoid
 `MIME type sniffing' attacks; that is, using what browser's heuristics
@@ -415,7 +419,7 @@ correctly the fitness function that is going to be tested and used.
 A configuration is meaningless without
 content behind, and we need to choose what is going to be the
 content. In our previous paper \cite{erseco:evostar}, a basic application was created, and
-additionale, a intentionally vulnerable application, OWASP's Juice
+additionally, a intentionally vulnerable application, OWASP's Juice
 Shop \cite{juice-shop}, were also tested. Since their vulnerabilities are different, the
 scores are going to be different. In this paper, we will focus on the
 Juice Shop, which is intended to be vulnerable and is thus a bigger
@@ -499,7 +503,7 @@ have to use only active scanning, the same as in our previous paper.
   \end{figure*}
 %
 As in our previous paper, \cite{erseco:evostar}, we have designed the
-rest of the algorithm in Python, to be able to acommodate the ZAPpy
+rest of the algorithm in Python, to be able to accommodate the ZAPpy
 library which is written in that language; Python has a reasonable
 performance on evolutionary algorithms
 \cite{DBLP:conf/cec/GuervosBCRRVHR16}, but in this case the bottleneck
@@ -510,7 +514,7 @@ implementation was that there was very little exploration of the
 search space, with final values being mostly small modifications of
 configurations that were already present in the initial
 population. There was little actual improvement of score during
-evolution, which was probably due to a naïve implementation of the
+evolution, which was probably due to a naive implementation of the
 evolutionary algorithm, so the main objective of this research was to
 improve the evolutionary algorithm so that exploration is better and
 is able to find solutions way beyond the immediate vicinity of the
@@ -535,11 +539,11 @@ simplify; those experiments resulted in any kind of mutation and
 crossover being approximately as effective as the next one. However,
 mutation used was too disruptive, and didn't allow for gradual change
 and exploration of the configuration space, so in this case we have
-used a {\em incremental} mutation, that adds or substracts one from
+used a {\em incremental} mutation, that adds or subtracts one from
 current values, and circles back to the opposite end of the range if
 these are exceeded; thus, if the value of the {\tt disable\_symlinks}
 element is 1, it will become 0 no matter what (either if it's added
-one or subsctracted one); if the value of {\tt worker\_connections} is
+one or subtracted one); if the value of {\tt worker\_connections} is
 2048 it will become 512 if it's added one. This guarantees that every
 mutation will result in a different value; also, only one randomly
 chosen value is changed every time.
@@ -561,7 +565,7 @@ the next generation.
 
 
 This evolutionary algorithm should offer better results than the
-previous naïve one, so we explored its result by making some test runs
+previous naive one, so we explored its result by making some test runs
 using 32 individuals and 32 generations, double the number of
 generations we had used in our previous paper. How the fitness score
 evolves along all the generations is shown in Figure
@@ -573,7 +577,7 @@ obtain a ZAP score of 59 by the end of the evaluation budget.
 
 From this initial exploration of values, we can conclude that even a
 small number of evaluations (only 1024) is able to obtain good
-results, and that the evolutionary agorithm is able to overcome, at
+results, and that the evolutionary algorithm is able to overcome, at
 least in some cases, plateaus with low fitness diversity across all
 the population. It is also evident that the evaluation budget is not
 enough and that more generations could be used to obtain better values
@@ -610,7 +614,7 @@ kable(experiments.data)
 \end{table*}
 %
 Experiments with population = 16 took around 6 hours in an Amazon EC2
-instance, while experimetns with population = 32 took twice as much;
+instance, while experiments with population = 32 took twice as much;
 this is the main reason why no more results are shown. In practice,
 moving target defense would change configuration every few hours,
 which makes these results acceptable for its purpose, although it
