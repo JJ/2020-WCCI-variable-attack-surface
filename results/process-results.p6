@@ -6,8 +6,8 @@ constant $prefix = "results_";
 
 my @files = dir( ".", test => { /^^$prefix/ } );
 
-say "Population, Fitness, Copies";
-for @files -> $f {
+say "Population, Final Best, Initial Best, Copies, Initial Avg, Final Avg";
+for @files.sort -> $f {
     my $match = ($f ~~ /$<juice> = ["juice"?] "_" $<population> = [\d+] "_" $<crossover> = [\d] "_" $<mutation> = [\w+] "_" $<rank> = [\d+] / );
     my ($juice, $population, $crossover, $mutation) =
         ($<juice>, $<population>, $<crossover>, $<mutation>); # save before match
@@ -18,7 +18,12 @@ for @files -> $f {
         next;
     }
     my @fitnesses = ( @final-pop[1] ~~ m:g/"("(\d+)/ ).map( *[0].Int );
+    my @initial-pop = @final-pop[0].split( / "inicial:" \s+ | \s+ "Población f" /);
+    my @initial-fitnesses = ( @initial-pop[1] ~~ m:g/"("(\d+)/ ).map( *[0].Int );
     my $best = @fitnesses.sort.first;
     my @best = @fitnesses.grep: * == $best;
-    say  ~$population, ", ",  $best, ", ",  @best.elems/@fitnesses.elems;
+    say  ~$population, ", ",  $best, ", ", @initial-fitnesses.sort.first, ", ",
+    @best.elems/@fitnesses.elems, ", ", 
+        @fitnesses.sum/ @fitnesses.elems , ", " ,  @initial-fitnesses.sum / @initial-fitnesses.elems;
+
 }
