@@ -135,7 +135,9 @@ def generate(config=generate_random_config()):
                 EmptyBlock(add_header=['X-Content-Type-Options', set_directive_list(config[11], ['nosniff', '""'])]),
                 EmptyBlock(add_header=['Server', set_directive_list(config[12], ['apache', 'caddy', 'nginx/1.16.0'])]),
                 EmptyBlock(add_header=['X-XSS-Protection', set_directive_list(config[13], ["0", "1", '"1; mode=block"'])]),
-                EmptyBlock(add_header=['Content-Security-Policy', set_directive_list(config[14], ["\"default-src 'self'\"", "\"default-src 'none'\"", "\"default-src 'host *.google.com'\""])]),
+                EmptyBlock(add_header=['Content-Security-Policy',
+                                       set_directive_list(config[14],
+                                                          ["\"default-src 'self'; frame-ancestors 'self';\"", "\"default-src 'none'; frame-ancestors 'none';\"", "\"default-src 'https://*.google.com';\""])]),
 
                 # add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'
                 # root='/var/lib/nginx/html/',
