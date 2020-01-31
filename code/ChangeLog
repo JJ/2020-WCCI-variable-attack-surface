@@ -1,6 +1,6 @@
 2020-01-31  Juan J. merelo  <jmerelo@penny>
 
-	* generate_nginx_config.py: Eliminates wrong directive (used for test purposes) for X-Frame-Options
+	* generate_nginx_config.py: Eliminates wrong directive (used for test purposes) for X-Frame-Options. Change also WRONG SERVER in X-Powered-By
 
 	* zap.py: The page spider has been moved to the module startup, eliminating the need to spider the site every single time. This should speed up things, and is the first change for GECCO.
 
