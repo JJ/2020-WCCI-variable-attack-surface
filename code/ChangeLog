@@ -1,3 +1,7 @@
+2020-01-31  Juan J. merelo  <jmerelo@penny>
+
+	* zap.py: The page spider has been moved to the module startup, eliminating the need to spider the site every single time. This should speed up things, and is the first change for GECCO.
+
 2020-01-27  JJMerelo  <jmerelo@bojack>
 
 	* zap.py (zap_test): Reduce sleep time all over.

@@ -56,11 +56,6 @@ def zap_test():
 
     print('Active Scan completed', file=sys.stderr)
 
-    # Report the results (for debug purposes)
-    # print('Hosts: {}'.format(', '.join(zap.core.hosts)))
-    # print('Alerts: ')
-    # pprint(zap.core.alerts())
-
     print("Total: %s" % len(zap.core.alerts()), file=sys.stderr)
 
     print("Stopping all scans...", file=sys.stderr)
