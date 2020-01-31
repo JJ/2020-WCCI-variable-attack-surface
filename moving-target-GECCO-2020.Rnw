@@ -28,7 +28,7 @@
 
 %\acmArticle{4}
 \acmPrice{15.00}
-\usepackage{cite}
+% \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
@@ -40,8 +40,10 @@
 
 
 <<setup, cache=FALSE,echo=FALSE>>=
-library(ggplot2)
-library(ggthemes)
+suppressPackageStartupMessages({
+    library(ggplot2)
+    library(ggthemes)
+})
 active.fitness.data <- read.csv("results/initial-fitness.dat")
 experiments.data <- read.csv("results/all_results.csv")
 @
@@ -186,9 +188,10 @@ security or some other measure, like performance. % Performance of what? less ov
 % ... does not specify either the kind of attack, the service is protecting or the technique ..
 % and after that we give the examples. - Mario
 % Good call, but a bit late for that... - JJ
+% Will try to fix it now
 
 
-Our previous paper \cite{erseco:evostar} was a proof of concept and
+Our previous paper \cite{erseco:evostar:anon} was a proof of concept and
 tested the framework we have created for evolving a set of
 configurations that can be used in a MTD policy. Our target was
 hardening {\sf nginx} installations and we used as a fitness function
@@ -315,7 +318,7 @@ solutions to these two problems.
 
 % 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
 
-As in our previous paper \cite{erseco:evostar}, we have chosen
+As in our previous paper \cite{erseco:evostar:anon}, we have chosen
 {\sf nginx}; it's a very popular static web server, which is also used
 as an inverse proxy, API gateway and load balancer. Latest versions
 of{\sf nginx} (1.17.x) have more than 700 configuration
@@ -335,7 +338,7 @@ results will be presented last in Subsection \ref{subs:results}.
 
 From all the parameters used to change the behavior of {\sf nginx}, we
 have used fifteen, the same as in out previous paper
-\cite{erseco:evostar}; nine of then are {\sf nginx} directives
+\cite{erseco:evostar:anon}; nine of then are {\sf nginx} directives
 (shown in Table \ref{table:nginx_directives}) and 6 are set from the same
 configuration file, but affect HTTP headers (shown in Table
 \ref{table:http_headers}), which in turn affect how the browser
@@ -497,7 +500,7 @@ The most important part of the evolutionary algorithm is designing
 correctly the fitness function that is going to be tested and used.
 A configuration is meaningless without
 content behind, and we need to choose what is going to be the
-content. In our previous paper \cite{erseco:evostar}, a basic application was created, and
+content. In our previous paper \cite{erseco:evostar:anon}, a basic application was created, and
 additionally, a intentionally vulnerable application, OWASP's Juice
 Shop \cite{juice-shop}, were also tested. Since their vulnerabilities are different, the
 scores are going to be different. In this paper, we will focus on the
@@ -581,7 +584,7 @@ have to use only active scanning, the same as in our previous paper.
   \label{fig:evolution}
   \end{figure*}
 %
-As in our previous paper, \cite{erseco:evostar}, we have designed the
+As in our previous paper, \cite{erseco:evostar:anon}, we have designed the
 rest of the algorithm in Python, to be able to accommodate the ZAPpy
 library which is written in that language; Python has a reasonable
 performance on evolutionary algorithms
@@ -613,7 +616,7 @@ the population, since these can simply be sorted by the first element
 in the list.
 
 After testing different types of crossover and mutation in our
-previous paper \cite{erseco:evostar} in this paper we have tried to
+previous paper \cite{erseco:evostar:anon} in this paper we have tried to
 simplify; those experiments resulted in any kind of mutation and
 crossover being approximately as effective as the next one. However,
 mutation used was too disruptive, and didn't allow for gradual change
