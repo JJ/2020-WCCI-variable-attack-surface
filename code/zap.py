@@ -10,6 +10,8 @@ import time
 from pprint import pprint
 from zapv2 import ZAPv2
 import sys
+import random
+
 # Code from https://github.com/zaproxy/zap-api-python/blob/master/src/examples/basic-spider-scan.py with a free license
 # Change to match the API key set in ZAP, or use None if the API key is disabled
 apikey = None
@@ -22,17 +24,19 @@ target = 'http://www.exampletfm.com'
 zap = ZAPv2(apikey=apikey, proxies={'http': proxy})
 
 def new_session():
-    zap.core.new_session(name="abc", overwrite=True)
+    name = "gecco"+str(random.randint(1,333))
+    zap.core.new_session(name=name, overwrite=True)
     # Proxy a request to the target so that ZAP has something to deal with
     print('→ Accessing target {}'.format(target), file=sys.stderr)
     # zap.urlopen(target)
     zap.core.access_url(url=target)
     # Give the sites tree a chance to get updated
     time.sleep(2)
+    return name
 
 def zap_spider():
-    new_session()
-    print('Spidering target {}'.format(target), file=sys.stderr)
+    name = new_session()
+    print('Spidering target {} {}'.format(name,target), file=sys.stderr)
     # scanid = zap.spider.scan(target, maxchildren="10", recurse="false", subtreeonly="true")
     scanid = zap.spider.scan(target, maxchildren="20")
     # Give the Spider a chance to start
@@ -44,18 +48,17 @@ def zap_spider():
 
     print('Spider completed', file=sys.stderr)
     zap.spider.stop_all_scans()
+    return name
 
-zap_spider() # Spider only once
 
 def zap_test():
 
-    new_session()
-    print('Active Scanning target {}'.format(target), file=sys.stderr)
+    name=zap_spider()
+    print('Active Scanning target {} {}'.format(name,target), file=sys.stderr)
 
     print('Enable all scanners -> ' + zap.ascan.enable_all_scanners(), file=sys.stderr)
 
     scanid = zap.ascan.scan(target)
-    print("scanid: ", scanid)
     while (int(zap.ascan.status(scanid)) < 100):
         # Loop until the scanner has finished
         print('Scan progress %: {}'.format(zap.ascan.status(scanid)), file=sys.stderr)
