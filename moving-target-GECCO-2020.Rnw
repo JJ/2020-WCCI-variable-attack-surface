@@ -352,9 +352,8 @@ V-13736 & client\_max\_body\_size        & 512 - 2048 \\ \hline
 V-6724  & server\_tokens                 & True/False \\ \hline
         & gzip                           & True/False \\ \hline
 \end{tabular}
-\label{table:nginx_directives}
-\caption{List of {\sf nginx} directives whose value is evolved in this
-work}
+\caption{List of {\sf nginx} directives whose value is evolved here.}
+ \label{table:nginx_directives}
 \end{table}
 %
 
@@ -403,8 +402,8 @@ which there will be no compression.
 
   \centering
   \caption{Selected list of directives affecting HTTP headers, and the
-  values that we are using in this paper.}
-  \label{table:http_headers}
+  values that we are using in this paper. \label{table:http_headers}}
+ 
 
 \begin{tabular}{|l|l|}
 \hline
@@ -548,8 +547,8 @@ its score; its distribution is shown in Table \ref{table:fitness}.
 %
 \begin{table}
 \centering
-\caption{Distribution of ZAP passive scanning scores}
-\label{table:fitness}
+\caption{Distribution of ZAP passive scanning scores. \label{table:fitness}}
+
 <<passive-scan, cache=FALSE,echo=FALSE>>=
 kable(col.names=c("Zap Score","Number of instances"),as.data.frame(table(active.fitness.data)))
 @
