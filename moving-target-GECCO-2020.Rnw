@@ -470,17 +470,71 @@ scripting (XSS) attacks. % Need to clarify this.
 different values to avoid the load of certain kind of content. We have
 three different values for this directive, allowing content only if
 it's loaded from the same page ({\tt self}), loading from nowhere
-({\tt none}), or including google domains {\tt hots:*.google.com}, in
+({\tt none}), or including Google domains (with the directive {\tt hosts:*.google.com}), in
 this case mainly for user tracking. These values are shown in Table
 \end{itemize}
 
-The problem of optimizing security in configuration is two fold: some
+The problem of optimizing security in configuration is twofold: some
 of these directives are security-neutral, and do not actually alter
 the security score, they simply add to overall byte-level diversity;
 some of them, by themselves, will make a site more secure; in some
 other cases, it will be its combination what makes it safer. That is
 why a global optimization algorithm is needed to get variable, and
-also secure, attack surface.
+also secure, attack surface. Eventually, a {\sf nginx} configuration
+file such as this one will be generated:
+
+\begin{verbatim}
+user nginx;
+pid /var/run/nginx.pid;
+worker_processes 1;
+daemon on;
+error_log /tmp/nginx-error.log warn;
+events {
+    worker_connections 757;
+}
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+    access_log /tmp/nginx-access.log;
+    sendfile on;
+    keepalive_timeout 60;
+    disable_symlinks off;
+    autoindex on;
+    send_timeout 1;
+    large_client_header_buffers 4 1386;
+    client_max_body_size 1895424;
+    server_tokens off;
+    gzip off;
+    log_format my_tracking $request_body;
+    resolver 8.8.8.8 valid=30s;
+    server {
+        server_name www.exampletfm.com;
+        listen 80;
+        error_page 500 502 503 504 /50x.html;
+        location ^~ /assets/public/assets/ {
+            deny all;
+        }
+        location ^~ /assets/assets/ {
+            deny all;
+        }
+        location /form {
+            access_log /tmp/access.log my_tracking;
+        }
+        location / {
+            root /tester/site/;
+            index index.html index.htm;
+            add_header X-Frame-Options: \
+              "ALLOW-FROM http://www.exampletfm.com/";
+            add_header X-Powered-By: nginx/1.16.0;
+            add_header X-Content-Type-Options: "";
+            add_header Server: nginx/1.16.0;
+            add_header X-XSS-Protection: 1;
+            add_header Content-Security-Policy: \
+              "default-src 'none'";
+        }
+    }
+}
+\end{verbatim}
 
 \subsection{Experimental setup}
 \label{subs:setup}
