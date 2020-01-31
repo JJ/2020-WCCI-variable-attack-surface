@@ -21,29 +21,35 @@ target = 'http://www.exampletfm.com'
 
 zap = ZAPv2(apikey=apikey, proxies={'http': proxy})
 
-zap.core.new_session(name="abc", overwrite=True)
-# Proxy a request to the target so that ZAP has something to deal with
-print('→ Accessing target {}'.format(target), file=sys.stderr)
-# zap.urlopen(target)
-zap.core.access_url(url=target)
-# Give the sites tree a chance to get updated
-time.sleep(2)
-
-print('Spidering target {}'.format(target), file=sys.stderr)
-# scanid = zap.spider.scan(target, maxchildren="10", recurse="false", subtreeonly="true")
-scanid = zap.spider.scan(target, maxchildren="20")
-# Give the Spider a chance to start
-time.sleep(2)
-while (int(zap.spider.status(scanid)) < 100):
-    # Loop until the spider has finished
-    print('Spider progress %: {}'.format(int(zap.spider.status(scanid))), file=sys.stderr)
+def new_session():
+    zap.core.new_session(name="abc", overwrite=True)
+    # Proxy a request to the target so that ZAP has something to deal with
+    print('→ Accessing target {}'.format(target), file=sys.stderr)
+    # zap.urlopen(target)
+    zap.core.access_url(url=target)
+    # Give the sites tree a chance to get updated
     time.sleep(2)
 
-print('Spider completed', file=sys.stderr)
-zap.spider.stop_all_scans()
+def zap_spider():
+    new_session()
+    print('Spidering target {}'.format(target), file=sys.stderr)
+    # scanid = zap.spider.scan(target, maxchildren="10", recurse="false", subtreeonly="true")
+    scanid = zap.spider.scan(target, maxchildren="20")
+    # Give the Spider a chance to start
+    time.sleep(2)
+    while (int(zap.spider.status(scanid)) < 100):
+        # Loop until the spider has finished
+        print('Spider progress %: {}'.format(int(zap.spider.status(scanid))), file=sys.stderr)
+        time.sleep(2)
+
+    print('Spider completed', file=sys.stderr)
+    zap.spider.stop_all_scans()
+
+zap_spider() # Spider only once
 
 def zap_test():
 
+    new_session()
     print('Active Scanning target {}'.format(target), file=sys.stderr)
 
     print('Enable all scanners -> ' + zap.ascan.enable_all_scanners(), file=sys.stderr)
@@ -62,5 +68,5 @@ def zap_test():
     print("Stopping all scans...", file=sys.stderr)
     alerts = len(zap.core.alerts())
     zap.ascan.stop_all_scans()
-    time.sleep(2)
+
     return alerts
