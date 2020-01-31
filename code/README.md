@@ -1,5 +1,15 @@
 # Moving Target Defense
 
+To deploy a server:
+
+
+wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker $USER
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo apt install -y htop fail2ban git
+git clone https://github.com/JJ/2020-WCCI-variable-attack-surface.git
+
 How to run the sample code:
 
 ```
@@ -12,7 +22,7 @@ Inside the www.exampletfm.com container:
 python3 genetic.py
 ```
 
-or 
+or
 
 ```
 docker-compose exec www.exampletfm.com python3 genetic.py --individuals=16
