@@ -45,6 +45,7 @@ def zap_spider():
         time.sleep(2)
 
     print('Spider completed', file=sys.stderr)
+    print('\n'.join(map(str, zap.spider.results(scanid))))
     zap.spider.stop_all_scans()
 
 
@@ -66,6 +67,7 @@ def zap_test():
     print("Total: %s" % len(zap.core.alerts()), file=sys.stderr)
 
     print("Stopping all scans...", file=sys.stderr)
+    print("Alerts ", zap.core.alerts())
     alerts = len(zap.core.alerts())
     zap.ascan.stop_all_scans()
 
