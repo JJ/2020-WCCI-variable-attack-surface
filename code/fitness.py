@@ -51,7 +51,7 @@ def calculate_fitness(config):
     with open(filename, 'w') as f:
         f.write(str(nginx))
 
-    print("Configuration →", nginx )
+#    print("Configuration →", nginx )
     check_kill_process("nginx")
 
     p = run(['nginx', '-t', '-c', filename], stdout=PIPE)

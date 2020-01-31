@@ -1,5 +1,7 @@
 2020-01-31  Juan J. merelo  <jmerelo@penny>
 
+	* zap.py (zap_test): This changes fitness landscape, so that different risks are scored in a different way. Informational risks are set to 0, while other risks will get a score that depends on its level, with "High" getting 4.
+
 	* generate_nginx_config.py: Eliminates wrong directive (used for test purposes) for X-Frame-Options. Change also WRONG SERVER in X-Powered-By
 	(generate): Change the number of worker processes to speed up spidering.
 

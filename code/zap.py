@@ -45,10 +45,12 @@ def zap_spider():
         time.sleep(2)
 
     print('Spider completed', file=sys.stderr)
-    print('\n'.join(map(str, zap.spider.results(scanid))))
+#    print('\n'.join(map(str, zap.spider.results(scanid))))
     zap.spider.stop_all_scans()
 
 
+
+risk_score = { 'Informational' : 0, 'Low' : 1, 'Medium': 2, 'High': 4 }
 
 def zap_test():
     zap_spider() # Initial scan
@@ -64,11 +66,18 @@ def zap_test():
 
     print('Active Scan completed', file=sys.stderr)
 
-    print("Total: %s" % len(zap.core.alerts()), file=sys.stderr)
-
     print("Stopping all scans...", file=sys.stderr)
-    print("Alerts ", zap.core.alerts())
-    alerts = len(zap.core.alerts())
+#    print("Alerts ", zap.core.alerts())
+    zap_score = 0
+    for i in zap.core.alerts():
+        print( "Alert →\n\t",
+               i['url'], "\n\t",
+               i['evidence'], "\n\t",
+               i['description'], "\n\t",
+               i['risk'] )
+        zap_score = zap_score + risk_score[i['risk']]
+        
+    print("Total: ", len(zap.core.alerts()), " Fitness ", zap_score, file=sys.stderr)
     zap.ascan.stop_all_scans()
 
-    return alerts
+    return zap_score
