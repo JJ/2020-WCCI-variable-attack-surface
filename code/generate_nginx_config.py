@@ -21,7 +21,7 @@ gene_ranges = [[512, 2048],   # worker_connections
                [512, 2048],   # client_max_body_size
                [0, 1],        # server_tokens
                [0, 1],        # gzip
-               [0, 3],        # X-Frame-Options
+               [0, 2],        # X-Frame-Options
                [0, 5],        # X-Powered-By
                [0, 1],        # X-Content-Type-Options
                [0, 2],        # server
@@ -130,7 +130,7 @@ def generate(config=generate_random_config()):
             ),
             Location(
                 '/',
-                EmptyBlock(add_header=['X-Frame-Options:', set_directive_list(config[9], ['SAMEORIGIN', '"ALLOW-FROM http://www.exampletfm.com/"', 'DENY', 'WRONG VALUE'])]),
+                EmptyBlock(add_header=['X-Frame-Options:', set_directive_list(config[9], ['SAMEORIGIN', '"ALLOW-FROM http://www.exampletfm.com/"', 'DENY')]),
                 EmptyBlock(add_header=['X-Powered-By:', set_directive_list(config[10], ['PHP/5.3.3', 'PHP/5.6.8', 'PHP/7.2.1', 'Django2.2', 'nginx/1.16.0', 'WRONG SERVER'])]),
                 EmptyBlock(add_header=['X-Content-Type-Options:', set_directive_list(config[11], ['nosniff', '""'])]),
                 EmptyBlock(add_header=['Server:', set_directive_list(config[12], ['apache', 'caddy', 'nginx/1.16.0'])]),
