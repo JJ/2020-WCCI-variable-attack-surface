@@ -48,10 +48,9 @@ def zap_spider():
     zap.spider.stop_all_scans()
 
 
-zap_spider() # Initial scan
 
 def zap_test():
-    new_session()
+    zap_spider() # Initial scan
     print('Active Scanning target {}'.format(target), file=sys.stderr)
 
     print('Enable all scanners -> ' + zap.ascan.enable_all_scanners(), file=sys.stderr)
