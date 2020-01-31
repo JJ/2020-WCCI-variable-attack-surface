@@ -49,6 +49,7 @@ def zap_test():
     print('Enable all scanners -> ' + zap.ascan.enable_all_scanners(), file=sys.stderr)
 
     scanid = zap.ascan.scan(target)
+    print("scanid: ", scanid)
     while (int(zap.ascan.status(scanid)) < 100):
         # Loop until the scanner has finished
         print('Scan progress %: {}'.format(zap.ascan.status(scanid)), file=sys.stderr)
@@ -61,5 +62,5 @@ def zap_test():
     print("Stopping all scans...", file=sys.stderr)
     alerts = len(zap.core.alerts())
     zap.ascan.stop_all_scans()
-
+    time.sleep(2)
     return alerts
