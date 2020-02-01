@@ -22,6 +22,7 @@ proxy = "%s:%s" % (proxy_host, proxy_port)
 target = 'http://www.exampletfm.com'
 
 zap = ZAPv2(apikey=apikey, proxies={'http': proxy})
+spidered = False
 
 def new_session():
     zap.core.new_session(name="gecco", overwrite=True)
@@ -33,6 +34,7 @@ def new_session():
     time.sleep(2)
 
 def zap_spider():
+    global spidered
     new_session()
     print('Spidering target {}'.format(target), file=sys.stderr)
     # scanid = zap.spider.scan(target, maxchildren="10", recurse="false", subtreeonly="true")
@@ -47,13 +49,16 @@ def zap_spider():
     print('Spider completed', file=sys.stderr)
 #    print('\n'.join(map(str, zap.spider.results(scanid))))
     zap.spider.stop_all_scans()
-
+    spidered=True
 
 
 risk_score = { 'Informational' : 0, 'Low' : 1, 'Medium': 2, 'High': 4 }
 
 def zap_test():
-    zap_spider() # Initial scan
+    global spidered
+    if spidered == False:
+        zap_spider() # Initial scan
+        
     print('Active Scanning target {}'.format(target), file=sys.stderr)
 
     print('Enable all scanners -> ' + zap.ascan.enable_all_scanners(), file=sys.stderr)
