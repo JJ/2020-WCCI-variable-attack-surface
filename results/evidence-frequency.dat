@@ -1,0 +1,16 @@
+Evidence, frequency
+X-Powered-By: PHP/7.2.1, 186
+516607038, 179
+, 171
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>, 139
+<form action="../form" method="post" enctype="multipart/form-data">, 120
+20160320, 95
+134348800, 95
+20131229, 44
+0000000000, 44
+default-src 'https://*.google.com';, 32
+X-Powered-By: Django2.2, 23
+X-Powered-By: PHP/5.6.8, 22
+X-XSS-Protection: 0, 4
+X-Powered-By: PHP/5.3.3, 4
+X-Powered-By: nginx/1.16.0, 2

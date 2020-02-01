@@ -10,4 +10,7 @@ for $alerts.list -> $alert {
     %evidences{$alert.lines()[2]}++;
 }
 
-say %evidences;
+say "Evidence, frequency";
+for %evidences.sort( -*.value) -> $k {
+    say $k.key.trim, ", ", $k.value;
+}
