@@ -617,9 +617,30 @@ hosting the evolutionary algorithm, which calls from the fitness
 function (written in Python) the ZAP library. What ZAP does is to run
 (spider) 
 over all pages in the site, making different attacks and raising
-alerts if they detect any vulnerability
+alerts if they detect any vulnerability. For every vulnerability
+found, it raises an alert. In our previous paper we simply used the
+number of alerts as a fitness score (to be minimized); while being
+adequate for a proof of concept, it does not actually reflect the
+state of vulnerability created by the configuration under evaluation,
+mainly because these alerts have different nature.
 
-% Rewrite this part with the new fitness function
+ZAP classifies alerts in four different classes, depending on its
+severity: High, Medium, Low and Informational. Of these kind of
+vulnerabilities, Informational can be dismissed, since they are simply
+notes about some best practice not being followed strictly. For
+instance, one such alert could be:
+
+\begin{verbatim}
+The response appears to contain suspicious comments which may help an
+attacker.
+\end{verbatim}
+
+We decided to work with the rest to assign a vulnerability score to
+every configuration: Low will be scored with 1, Medium will get 2 as
+score, and High will get a 4 score.
+
+This score is to be minimized, but a ``good'' configuration will be
+one that does not have any ``Medium''-scored alert. 
 
 Evaluation of every configuration is carried out in the following way:\begin{itemize}
   
