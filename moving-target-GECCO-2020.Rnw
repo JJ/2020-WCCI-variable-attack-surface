@@ -225,6 +225,16 @@ of the algorithm, obtains more secure configurations, and is also able
 to obtain many more low-vulnerability {\sf nginx} configurations in a
 single run.
 
+Additionally, we have made several piecewise improvements to our
+previous system; we have debugged the configuration extensively to
+ensure they produced only valid values; at the same time, we have
+eliminated invalid values that were introduced originally for testing
+purposes. We have also performed an analysis of the vulnerabilities
+reported, in order to check what is the actual impact of configuration
+changes on them.
+% And we need to change the sorting value so that it does not sort on
+% the value of the first element of the chromosome - JJ
+
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
 Section \ref{sec:met} will present the methodology used in this paper,
