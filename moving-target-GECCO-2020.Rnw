@@ -90,7 +90,9 @@ experiments.data <- read.csv("results/all_results.csv")
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-The term {\em moving target defense} or MTD describes a series of
+
+  % Check it's copied from the one submitted - JJ
+  The term {\em moving target defense} or MTD describes a series of
 techniques that change the configuration of an Internet-facing system; in
 general, the technique consists of changing the visible configuration to
 avoid offering a fixed target to service profiling
@@ -136,72 +138,75 @@ also looking at finding as many solutions as possible.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-While security is a constant concern in modern computer systems, the
-amount of services a typical application relies on and offers, and the
-sheer quantity of services and microservices, modern cloud-native,
-applications are composed of, makes extremely complicated to create
-configurations, for every one of them, that are at the same time
-secure and performant.
+% We need to rewrite all this ---------------------------------------------
+% -------------------------------------------------------------------------
 
-The wide variety of attacks and attack techniques also makes it difficult
-to create a single, static defense that can deflect every
-possible attack an interested third party might mount. Defense needs
-then to adapt to be able to confuse, deflect or avoid this kind of
-attacks. As an example, we can simply imagine that the name or IP of a node
-in a service is constantly changing; the attacker will be unable to
-use stored information (such as vulnerabilities) from that particular
-node to, later on, scale privileges, extract information (exfiltrate)
-from the net, or simply check if that service is up. Fortunately,
-modern cloud-native deployments facilitate that kind of defense: since
-the whole deployment is software defined, we can embed these changes
-within the deployment instructions themselves.
+% While security is a constant concern in modern computer systems, the
+% amount of services a typical application relies on and offers, and the
+% sheer quantity of services and microservices, modern cloud-native,
+% applications are composed of, makes extremely complicated to create
+% configurations, for every one of them, that are at the same time
+% secure and performant.
 
-The kind of defense technique that tries to present a variable target
-to possible attackers is called {\em moving target defense} or
-MTD. The concept was proposed initially by the Federal Networking and
-Information Technology Research and Development (NITRD) Program for the first time in 2009
-\cite{moving-target}, and presented in a series of documents
-\cite{nitrd} and books that bind the papers presented in the first
-symposium dedicated to the topic \cite{jajodia2011moving}. The moving
-target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
-is being put up against, which could be from privilege escalation to
-denial of service attacks, the service that is being hardened or secured
-using this technique, which can go from a web or proxy server to a
-software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
-the kind of technique that is used to generate a moving target, which
-can also be simple randomization \cite{gallagher_morpheus:_2019} of
-the user-facing information through churn, that is, changing often
-from a set of pre-established configurations through more elaborate
-systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
-security or some other measure, like performance. % Performance of what? less overhead?
-% The above could be easier to understand if we say first:
-% ... does not specify either the kind of attack, the service is protecting or the technique ..
-% and after that we give the examples. - Mario
-% Good call, but a bit late for that... - JJ
-% Will try to fix it now
+% The wide variety of attacks and attack techniques also makes it difficult
+% to create a single, static defense that can deflect every
+% possible attack an interested third party might mount. Defense needs
+% then to adapt to be able to confuse, deflect or avoid this kind of
+% attacks. As an example, we can simply imagine that the name or IP of a node
+% in a service is constantly changing; the attacker will be unable to
+% use stored information (such as vulnerabilities) from that particular
+% node to, later on, scale privileges, extract information (exfiltrate)
+% from the net, or simply check if that service is up. Fortunately,
+% modern cloud-native deployments facilitate that kind of defense: since
+% the whole deployment is software defined, we can embed these changes
+% within the deployment instructions themselves.
+
+% The kind of defense technique that tries to present a variable target
+% to possible attackers is called {\em moving target defense} or
+% MTD. The concept was proposed initially by the Federal Networking and
+% Information Technology Research and Development (NITRD) Program for the first time in 2009
+% \cite{moving-target}, and presented in a series of documents
+% \cite{nitrd} and books that bind the papers presented in the first
+% symposium dedicated to the topic \cite{jajodia2011moving}. The moving
+% target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
+% is being put up against, which could be from privilege escalation to
+% denial of service attacks, the service that is being hardened or secured
+% using this technique, which can go from a web or proxy server to a
+% software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
+% the kind of technique that is used to generate a moving target, which
+% can also be simple randomization \cite{gallagher_morpheus:_2019} of
+% the user-facing information through churn, that is, changing often
+% from a set of pre-established configurations through more elaborate
+% systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
+% security or some other measure, like performance. % Performance of what? less overhead?
+% % The above could be easier to understand if we say first:
+% % ... does not specify either the kind of attack, the service is protecting or the technique ..
+% % and after that we give the examples. - Mario
+% % Good call, but a bit late for that... - JJ
+% % Will try to fix it now
 
 
-Our previous paper \cite{erseco:evostar:anon} was a proof of concept and
-tested the framework we have created for evolving a set of
-configurations that can be used in a MTD policy. Our target was
-hardening {\sf nginx} installations and we used as a fitness function
-{\em Zed Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
-number of {\em alerts}, or possible security vulnerabilities, it
-raises. We tested different configurations and found that evolutionary
-algorithms are able to generate configurations with a low score (lower is
-better), and also that every execution of the algorithm yields several
-configurations with the same fitness, which can then be used straight
-away to change the configuration of the server.
+% Our previous paper \cite{erseco:evostar:anon} was a proof of concept and
+% tested the framework we have created for evolving a set of
+% configurations that can be used in a MTD policy. Our target was
+% hardening {\sf nginx} installations and we used as a fitness function
+% {\em Zed Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
+% number of {\em alerts}, or possible security vulnerabilities, it
+% raises. We tested different configurations and found that evolutionary
+% algorithms are able to generate configurations with a low score (lower is
+% better), and also that every execution of the algorithm yields several
+% configurations with the same fitness, which can then be used straight
+% away to change the configuration of the server.
 
-However, that was intended as an initial exploration of the concept of
-using evolutionary algorithms to generate low-vulnerability and
-diverse nginx configurations. We needed to
-explore the possibilities of the evolutionary algorithm further, by
-tuning its parameters so that better
-configurations can be found with less evaluations. Also, we needed to explore
-different possibilities of the scoring tool, to check which mode would
-be better for the MTD task. These will be the two main objectives of
-this paper.
+% However, that was intended as an initial exploration of the concept of
+% using evolutionary algorithms to generate low-vulnerability and
+% diverse nginx configurations. We needed to
+% explore the possibilities of the evolutionary algorithm further, by
+% tuning its parameters so that better
+% configurations can be found with less evaluations. Also, we needed to explore
+% different possibilities of the scoring tool, to check which mode would
+% be better for the MTD task. These will be the two main objectives of
+% this paper.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
@@ -213,69 +218,75 @@ finishing with our conclusions and future lines of work.
 \label{sec:soa}
 
 
-MTD was proposed by the first time in 2009 \cite{moving-target} by an
-organism called NITRD as part of an officially sponsored research
-program to improve the cyberdefense skills in the United States. MTD is targeted % America -> USA? - Mario
-% right, fixed - JJ
-towards making what is called the attack surface
-\cite{manadhata2011formal}, that is, the different mechanisms by which
-the attacker would be able to gain access, unpredictable
-\cite{jajodia2011moving}, and thus rendering attacks against it either too
-expensive or too complex to pursue, possibly forcing the attacker to
-choose some other, more affordable, place. For instance, an attacker
-analyzing byte patterns coming from different nodes such as the one
-described in \cite{piskozub2019resilience} will find those patterns
-disrupted, and so profiling of specific nodes impossible.
+% And also rewrite as much of this as possible -------------------------------------
+
+% Maybe make a big summary out of this part, which is focused on MTD
+% -------------------------------------------------------------------
+% MTD was proposed by the first time in 2009 \cite{moving-target} by an
+% organism called NITRD as part of an officially sponsored research
+% program to improve the cyberdefense skills in the United States. MTD is targeted 
+% towards making what is called the attack surface
+% \cite{manadhata2011formal}, that is, the different mechanisms by which
+% the attacker would be able to gain access, unpredictable
+% \cite{jajodia2011moving}, and thus rendering attacks against it either too
+% expensive or too complex to pursue, possibly forcing the attacker to
+% choose some other, more affordable, place. For instance, an attacker
+% analyzing byte patterns coming from different nodes such as the one
+% described in \cite{piskozub2019resilience} will find those patterns
+% disrupted, and so profiling of specific nodes impossible.
 
 
-This program was pursued using different kind of techniques, of which
-a good initial survey was made in \cite{Cai2016}, reexamined in
-\cite{Larsen201428} and more recently in
-\cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a
-defense as well as detection technique
-\cite{tian2019moving,POTTEIGER2020102954}; for instance, it can be
-used to deflect distributed denial of service attacks
-\cite{prathyusha2020review}; besides, it has been proved effective
-against exfiltration techniques via the use of an open source
-framework called MoonRaker \cite{shade2020moonraker} or to protect
-software defined networks \cite{al2011toward}. Several techniques have
-been applied recently; for instance, natural randomization in services
-can be enhanced \cite{kansal2020improving}; or, beyond the technique
-that is used, deep reinforcement learning can try and find the best
-moment for changing configurations \cite{eghtesad2019deep}, a topic
-that is normally left behind. These techniques have been surveyed in
-\cite{Zheng2019207,cho2019toward}, to which we direct the interested
-reader.
+% This program was pursued using different kind of techniques, of which
+% a good initial survey was made in \cite{Cai2016}, reexamined in
+% \cite{Larsen201428} and more recently in
+% \cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a
+% defense as well as detection technique
+% \cite{tian2019moving,POTTEIGER2020102954}; for instance, it can be
+% used to deflect distributed denial of service attacks
+% \cite{prathyusha2020review}; besides, it has been proved effective
+% against exfiltration techniques via the use of an open source
+% framework called MoonRaker \cite{shade2020moonraker} or to protect
+% software defined networks \cite{al2011toward}. Several techniques have
+% been applied recently; for instance, natural randomization in services
+% can be enhanced \cite{kansal2020improving}; or, beyond the technique
+% that is used, deep reinforcement learning can try and find the best
+% moment for changing configurations \cite{eghtesad2019deep}, a topic
+% that is normally left behind. These techniques have been surveyed in
+% \cite{Zheng2019207,cho2019toward}, to which we direct the interested
+% reader.
 
-However, in this paper we focus on those that use evolutionary
-algorithms as a method of optimization as well as generation of new
-configurations; evolutionary algorithms are no strangers in the
-cybersecurity world, and in fact, since early on, they were applied to intrusion
-detection systems \cite{WU20101}. It was only natural that they were
-also applied, since the inception of the technique, to MTD. An
-evolutionary-like bioinspired algorithm  called {\em
-  symbiotic embedded machines} (SEM) was proposed by Cui and Stolfo
-\cite{cui2011symbiotes} as a methodology for {\em injecting} code into
-systems that would behave in a way that would be similar to a
-symbiotically-induced immune system. Besides that principled
-biological inspiration, SEMs used mutation as a mechanism for avoiding
-signature based detection methods and thus become a MTD system.
+% However, in this paper we focus on those that use evolutionary
+% algorithms as a method of optimization as well as generation of new
+% configurations; evolutionary algorithms are no strangers in the
+% cybersecurity world, and in fact, since early on, they were applied to intrusion
+% detection systems \cite{WU20101}. It was only natural that they were
+% also applied, since the inception of the technique, to MTD. An
+% evolutionary-like bioinspired algorithm  called {\em
+%   symbiotic embedded machines} (SEM) was proposed by Cui and Stolfo
+% \cite{cui2011symbiotes} as a methodology for {\em injecting} code into
+% systems that would behave in a way that would be similar to a
+% symbiotically-induced immune system. Besides that principled
+% biological inspiration, SEMs used mutation as a mechanism for avoiding
+% signature based detection methods and thus become a MTD system.
 
-Other early MTD solutions included the use of rotating virtual webservers
-\cite{huang2011introducing}, every one with a different attack
-surface, to avoid predictability and achieve the variable attack
-surface that was being sought. However, while this was a practical and
-actionable kind of defense,
-no specific technique was proposed to individually configure every
-virtual server, proposing instead manual configuration of web servers
-(such as nginx and Apache), combined with plug-ins (some of which do
-not actually work together). A similar technique, taken to the cloud, was proposed
-by Peng et al. \cite{peng2014moving}:  a specific
-mechanism that uses different cloud instances and procedures for moving
-virtual machines between them; still, no other
-mechanism was proposed to establish these configurations, which were
-simply left to being designed by hand, as long as there were enough of them.
+% Other early MTD solutions included the use of rotating virtual webservers
+% \cite{huang2011introducing}, every one with a different attack
+% surface, to avoid predictability and achieve the variable attack
+% surface that was being sought. However, while this was a practical and
+% actionable kind of defense,
+% no specific technique was proposed to individually configure every
+% virtual server, proposing instead manual configuration of web servers
+% (such as nginx and Apache), combined with plug-ins (some of which do
+% not actually work together). A similar technique, taken to the cloud, was proposed
+% by Peng et al. \cite{peng2014moving}:  a specific
+% mechanism that uses different cloud instances and procedures for moving
+% virtual machines between them; still, no other
+% mechanism was proposed to establish these configurations, which were
+% simply left to being designed by hand, as long as there were enough of them.
 
+
+% And expand a lot this part, which is focused in application of evolutionary algorithms to this technique - JJ
+---------------------------------------------------------------------------------------------------------------
 Bioinspired solutions filled that gap: after the early {\em bioinspired} approaches to MTD, explicit
 methodologies that used evolutionary algorithms were conceptually described for the first
 time by Crouse and Fulp in \cite{6111663}. This was intended mainly as
@@ -306,7 +317,7 @@ solutions to these two problems.
 \section{Methodology, experimental setup and results}
 \label{sec:met}
 
-% 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
+% Maybe rewrite a part of this, expanding if possible - JJ
 
 As in our previous paper \cite{erseco:evostar:anon}, we have chosen
 {\sf nginx}; it's a very popular static web server, which is also used
@@ -413,15 +424,24 @@ X-Frame-Options                & \shortstack[l]{SAMEORIGIN \\
 X-Powered-By                   & \shortstack[l]{PHP/5.3.3 \\ PHP/5.6.8 \\ PHP/7.2.1 \\ Django2.2 \\ nginx/1.16.0} \\ \hline
 X-Content-Type-Options         & nosniff \\ \hline
 Server                         & \shortstack[l]{apache \\ caddy \\ nginx/1.16.0} \\ \hline
-X-XSS-Protection	           & \shortstack[l]{0 \\ 1 \\ 1; mode=block} \\ \hline
-Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src 'none' \\ default-src 'host *.google.com'} \\ \hline
+X-XSS-Protection	       & \shortstack[l]{0 \\ 1 \\ 1; mode=block} \\ \hline
+Content-Security-Policy	       & \shortstack[l]{default-src 'self' \\ default-src 'none' \\ default-src 'host *.google.com'} \\ \hline
 \end{tabular}
 
 \end{table}
 %
-The web servers also send a number of headers, whose value can be
-configured from the {\sf nginx} configuration file. These are
-presented next, with possible values represented in Table \ref{table:http_headers}.
+
+
+With every web page, the HTTP response from the server includes a
+number of headers; part of them are automatically added by the server
+or have a default value, while others can be configured; these headers
+sometimes simply add metadata (like the system date, for instance),
+while others have a precise value that is interpreted by the browser,
+and thus can have security implications; these headers, which usually
+are preceded by {\tt X}, are also usually {\em de facto} standards,
+with certain standard values. The ones we have chosen are explained
+below, and the values they can take in this research represented in
+Table \ref{table:http_headers}.
 \begin{itemize}
 \item
 \texttt{X-Frame-Options}: The header that has the same name as this
@@ -483,6 +503,7 @@ why a global optimization algorithm is needed to get variable, and
 also secure, attack surface. Eventually, a {\sf nginx} configuration
 file such as this one will be generated:
 
+% We need to copy the new values here - JJ
 \begin{verbatim}
 user nginx;
 pid /var/run/nginx.pid;
@@ -572,7 +593,7 @@ it is less secure than a configuration with score equal to
 3. Additionally, we are using a score of 999 as indicative of a
 invalid configuration, as checked by nginx command line.
 
-The evaluation is then performed in the following sequence:\begin{itemize}
+Evaluation of every configuration is carried out in the following way:\begin{itemize}
   
 \item A new configuration is generated from the evolutionary algorithm
   values and stored in a configuration file with random name. This has
@@ -588,75 +609,16 @@ The evaluation is then performed in the following sequence:\begin{itemize}
 
 \end{itemize}
 
-The more time-consuming part of this process is the scanning, which
-might take up to 15 seconds; this means that evaluation is a very slow
-process, which is a problem. Besides, ZAP is able to perform two types
-of scanning: passive and active. In our previous paper, we focused on
-active scanning, which makes requests and examines responses; however,
-one of the things we wanted to try in this case was passive scanning,
-which besides checks headers and performs other analyses on the
-requests and responses. Before actually using it in the evolutionary
-algorithm, we generated a series of random configurations and tested
-its score; its distribution is shown in Table \ref{table:fitness}.
-%
-\begin{table}
-\centering
-\caption{Distribution of ZAP passive scanning scores. \label{table:fitness}}
+Scanning is the part of this process that takes the most time, since
+it implies making requests to every single page in the system and
+analyzing the response. In this version of the tester we have
+increased the number of maximum workers the {\sf nginx} server is able
+to process, which might speed it up a bit. Still, a single run takes
+several hours, leaving us with just a few possible experiments to
+conform, and every one of them with just a few evaluations, much less
+that are standard in the industry.
 
-<<passive-scan, cache=FALSE,echo=FALSE>>=
-kable(col.names=c("Zap Score","Number of instances"),as.data.frame(table(active.fitness.data)))
-@
-\end{table}
-%
-There are several problems with this fitness landscape: there are just
-a few values, which makes evolution extremely difficult, since most of
-the fitness landscape is flat, and most changes in configuration will
-not result in a change of fitness. But the bigger problem is the
-amount of time passive scanning adds, which makes this way of
-evaluating fitness score totally impracticable. Eventually, we will
-have to use only active scanning, the same as in our previous paper.
-
-
-\begin{figure*}[h!tb]
-  
-  \includegraphics[width=0.95\linewidth]{fitness-evolution-32-32.png}
-  \caption{3D mesh representation of evolution of fitness, with z axis
-    representing score (lower is better), $y$ axis representing simply
-    the rank order of every individual in the population, and $x$ axis
-    representing generations; evolution proceeds from right to left.}
-  \label{fig:evolution}
-  \end{figure*}
-%
-As in our previous paper, \cite{erseco:evostar:anon}, we have designed the
-rest of the algorithm in Python, to be able to accommodate the ZAPpy
-library which is written in that language; Python has a reasonable
-performance on evolutionary algorithms
-\cite{DBLP:conf/cec/GuervosBCRRVHR16}, but in this case the bottleneck
-is actually scanning, with evolutionary operations themselves taking
-but a very small fraction of the total time, so this choice is not
-really critical. But one of the main problems of our former
-implementation was that there was very little exploration of the
-search space, with final values being mostly small modifications of
-configurations that were already present in the initial
-population. There was little actual improvement of score during
-evolution, which was probably due to a naive implementation of the
-evolutionary algorithm, so the main objective of this research was to
-improve the evolutionary algorithm so that exploration is better and
-is able to find solutions way beyond the immediate vicinity of the
-initial set of solutions. Of course, this might also be due to the
-fact that we were only doing 15 generations, which is why we are
-increasing this number during the current phase of research.
-
-The next part of the implementation of the evolutionary algorithms is
-choosing a data structure that is able to hold it efficiently and
-expressively. We have used a simple Python list of 15 integers, one
-per directive; this list is converted to a configuration file using a
-specific Python library, {\tt nginx.config}, which makes easier the
-generation of configuration files. When the chromosome is evaluated,
-it becomes a two-element list, whose first element is the fitness and
-a second containing the data structure itself. This speeds sorting of
-the population, since these can simply be sorted by the first element
-in the list.
+% More explanations on current version - JJ
 
 After testing different types of crossover and mutation in our
 previous paper \cite{erseco:evostar:anon} in this paper we have tried to
