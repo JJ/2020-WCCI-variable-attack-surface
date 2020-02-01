@@ -13,7 +13,6 @@ from zap import *
 from generate_nginx_config import *
 
 from subprocess import run, Popen, PIPE
-
 import tempfile
 import os
 import sys
@@ -51,11 +50,10 @@ def calculate_fitness(config):
     with open(filename, 'w') as f:
         f.write(str(nginx))
 
-#    print("Configuration →", nginx )
+    print("Configuration →", nginx )
     check_kill_process("nginx")
 
     p = run(['nginx', '-t', '-c', filename], stdout=PIPE)
-
     # Print values (for debug purposes)
     # print(p.returncode)
     # print(p.stdout)
