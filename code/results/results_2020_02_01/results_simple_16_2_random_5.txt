@@ -1,0 +1,1070 @@
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+genes: 15
+individuals : 16
+generations: 32
+sorted
+[(21, [524, 91, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 1, 1871, 522, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 2, 0, 0, 2, 1, 2]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (21, [1423, 11, 1, 0, 1, 532, 1314, 0, 0, 2, 2, 0, 0, 1, 0]),
+ (21, [1471, 102, 1, 0, 1, 1920, 1456, 0, 0, 1, 4, 0, 1, 2, 2]),
+ (21, [1471, 102, 1, 0, 1, 1920, 1456, 0, 0, 2, 2, 0, 1, 1, 2]),
+ (21, [1529, 113, 0, 1, 0, 1474, 1918, 1, 1, 0, 2, 0, 2, 0, 2]),
+ (21, [1529, 113, 0, 1, 0, 1475, 1918, 1, 1, 0, 2, 0, 2, 0, 2]),
+ (24, [745, 117, 0, 0, 0, 1342, 648, 0, 1, 2, 1, 1, 1, 2, 0]),
+ (24, [840, 38, 0, 1, 1, 998, 968, 1, 1, 2, 4, 1, 0, 0, 2]),
+ (24, [1087, 52, 1, 1, 1, 1565, 1501, 0, 0, 1, 2, 1, 0, 1, 1]),
+ (24, [1087, 53, 1, 0, 0, 1565, 1501, 0, 0, 1, 2, 1, 0, 1, 2]),
+ (24, [1087, 53, 1, 1, 1, 1565, 1501, 0, 0, 1, 2, 1, 0, 1, 1]),
+ (24, [1087, 53, 1, 1, 1, 1565, 1501, 0, 1, 2, 2, 1, 0, 1, 1]),
+ (24, [1087, 53, 1, 1, 1, 1565, 1502, 0, 0, 1, 2, 1, 0, 1, 1])]
+sorted
+[(21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 1, 1871, 522, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 1, 1871, 522, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 1, 1, 1871, 522, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [1389, 90, 1, 1, 1, 1565, 1501, 0, 0, 2, 0, 0, 2, 1, 2]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 1, 2, 0, 2, 1, 2]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 2, 0, 0, 1, 1, 2]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 2, 0, 0, 2, 1, 2]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (21, [1423, 11, 1, 0, 1, 532, 1314, 0, 0, 2, 2, 0, 0, 1, 0]),
+ (21, [1471, 102, 1, 0, 1, 1920, 1456, 0, 0, 1, 4, 0, 1, 2, 2]),
+ (21, [1471, 102, 1, 0, 1, 1920, 1456, 0, 0, 2, 2, 0, 1, 1, 2]),
+ (21, [1471, 102, 1, 0, 1, 1920, 1501, 0, 0, 2, 2, 0, 1, 0, 2])]
+sorted
+[(21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 100, 1, 0, 1, 1871, 522, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [524, 101, 0, 0, 1, 1871, 521, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 1, 1871, 522, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 1, 1871, 522, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 0, 1, 1871, 522, 1, 1, 1, 4, 0, 0, 1, 1]),
+ (21, [524, 101, 0, 1, 1, 1871, 522, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [525, 101, 0, 0, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [1389, 90, 1, 0, 0, 1620, 1636, 1, 1, 1, 2, 0, 2, 1, 2])]
+sorted
+[(21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [524, 91, 0, 0, 1, 1620, 1637, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 2, 1]),
+ (21, [524, 91, 0, 1, 1, 1871, 522, 1, 0, 1, 0, 0, 1, 1, 1]),
+ (21, [524, 91, 1, 0, 0, 1620, 1637, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [524, 91, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 0, 1, 1620, 1636, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 1, 1, 1620, 1635, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 1, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1])]
+sorted
+[(21, [523, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 1, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 2, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 1, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1637, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 1, 0, 1620, 1636, 1, 0, 2, 0, 0, 0, 2, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 0, 0, 2, 0, 0, 0, 2, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 2, 1]),
+ (21, [524, 91, 0, 1, 1, 1620, 1636, 1, 0, 2, 0, 0, 2, 2, 1])]
+sorted
+[(21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 0, 0, 0, 2, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 1, 2, 0, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 1, 1620, 1636, 1, 1, 2, 4, 0, 0, 2, 1]),
+ (21, [524, 90, 1, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 1, 1, 1]),
+ (21, [524, 91, 0, 0, 1, 1620, 1636, 0, 0, 2, 0, 0, 0, 1, 1])]
+sorted
+[(21, [523, 89, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 0, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1619, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 90, 1, 0, 1, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1621, 1636, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 1, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 3, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [524, 90, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1])]
+sorted
+[(21, [523, 89, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 1, 1621, 1635, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 1, 0, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 0, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 2]),
+ (21, [523, 90, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 1]),
+ (21, [523, 90, 1, 0, 0, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 0, 1621, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1619, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 1, 0, 1, 1621, 1636, 1, 0, 2, 4, 0, 0, 0, 1])]
+sorted * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+
+[(21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 1, 1621, 1635, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [523, 89, 1, 0, 1, 1621, 1635, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 1, 1, 1]),
+ (21, [523, 90, 0, 0, 0, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 0, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 1, 0, 1620, 1637, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 1, 0, 1621, 1636, 1, 0, 2, 3, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 1, 0, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 90, 0, 1, 1, 1621, 1636, 1, 0, 2, 4, 0, 0, 1, 1])]
+sorted
+[(21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 1, 1, 1620, 1638, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 0, 1620, 1636, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 0, 0, 1620, 1637, 1, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [523, 89, 1, 0, 1, 1621, 1635, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [523, 89, 1, 0, 1, 1621, 1635, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [523, 89, 1, 0, 1, 1621, 1635, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 1, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 1, 1, 1620, 1636, 1, 0, 2, 3, 0, 0, 1, 1]),
+ (21, [523, 89, 1, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1])]
+sorted
+[(21, [522, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 1, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 1, 1620, 1636, 1, 0, 2, 3, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 1, 1621, 1635, 1, 1, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 1, 0, 1619, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 1, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 2, 1]),
+ (21, [523, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 1])]
+sorted
+[(21, [522, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 2]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 1, 1, 0])]
+sorted
+[(21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [522, 89, 0, 0, 0, 1620, 1635, 0, 1, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 2]),
+ (21, [522, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 2, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1637, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 0, 1, 2]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 1, 1]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [523, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1])]
+sorted
+[(21, [520, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1637, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1637, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [522, 89, 0, 0, 0, 1620, 1635, 0, 1, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 0, 2, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 2]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 0]),
+ (21, [522, 89, 0, 0, 0, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 2]),
+ (21, [522, 89, 0, 1, 1, 1619, 1637, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [522, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 1, 2])]
+sorted
+[(21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1621, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 0, 0, 1619, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 0, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 0, 1620, 1637, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [521, 89, 0, 1, 1, 1620, 1637, 0, 0, 2, 4, 0, 0, 0, 1])]
+sorted
+[(21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 1, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1621, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 1, 1, 1621, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [521, 89, 0, 0, 0, 1619, 1635, 0, 0, 2, 4, 0, 2, 0, 1])]
+sorted
+[(21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]) * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+,
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1637, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 1, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 90, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [520, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1])]
+sorted
+[(21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 1, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1635, 0, 1, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 0, 1, 1620, 1637, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 89, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 2])]
+sorted
+[(21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 1, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 1, 1, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1619, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 1, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [519, 88, 0, 1, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1])]
+sorted
+[(21, [519, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 1, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 2, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 1, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 1, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 4, 0, 2, 2, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1636, 1, 0, 2, 4, 0, 2, 0, 1])]
+sorted
+[(21, [518, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 1, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1634, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 2, 0, 2]),
+ (21, [519, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 1, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 2, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 1, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 1, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 1, 0, 2, 3, 0, 2, 0, 1])]
+sorted
+[(21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [518, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [519, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 1, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1634, 0, 0, 1, 3, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1634, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 1, 0, 2]),
+ (21, [519, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 2, 0, 2]),
+ (21, [519, 87, 1, 1, 1, 1620, 1636, 0, 0, 1, 4, 0, 2, 2, 1]),
+ (21, [519, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1619, 1635, 0, 0, 1, 4, 0, 0, 2, 1]),
+ (21, [519, 88, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 88, 0, 0, 1, 1620, 1635, 0, 0, 1, 4, 0, 0, 0, 1])]
+sorted
+[(21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 2, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [518, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 0]),
+ (21, [518, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [518, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [518, 88, 1, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [519, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 0, 1, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [519, 87, 0, 0, 1, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 2]),
+ (21, [519, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [519, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [519, 87, 0, 1, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 0])]
+sorted
+[(21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 1, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 1, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 1, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 2, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1636, 0, 0, 1, 4, 0, 0, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 1]),
+ (21, [518, 88, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 0]),
+ (21, [518, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 0]),
+ (21, [518, 88, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1])]
+sorted
+[(21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 1, 0, 1]),
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 0, 1]) * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+ * Manually resetting nginx to stopped state
+,
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 0, 1620, 1636, 0, 1, 2, 3, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 1, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 0, 1, 2, 3, 0, 1, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 1, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 1, 1620, 1636, 1, 0, 2, 3, 0, 2, 0, 1])]
+sorted
+[(21, [517, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [518, 86, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 0, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 1, 0, 1]),
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 1, 4, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 0, 1620, 1635, 0, 1, 1, 4, 0, 2, 0, 2]),
+ (21, [518, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [518, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 2])]
+sorted
+[(21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 0, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1621, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1621, 1636, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 1, 1, 1620, 1636, 0, 0, 1, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 0]),
+ (21, [517, 87, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 1, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0])]
+sorted
+[(21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [517, 86, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 0, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 1, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 0, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1635, 0, 0, 2, 4, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 0]),
+ (21, [517, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 1])]
+sorted
+[(21, [516, 86, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 4, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 1, 2, 3, 0, 2, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 1, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1637, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [517, 86, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 2, 0, 0]),
+ (21, [517, 87, 0, 0, 0, 1619, 1635, 0, 0, 2, 3, 0, 0, 0, 1]),
+ (21, [517, 87, 0, 0, 0, 1619, 1636, 0, 0, 2, 4, 0, 1, 0, 2]),
+ (21, [517, 87, 0, 0, 0, 1620, 1635, 0, 0, 2, 3, 0, 2, 0, 1]),
+ (21, [517, 87, 0, 0, 0, 1620, 1636, 0, 0, 1, 3, 0, 2, 0, 0])]
+sorted
+[(21, [516, 86, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 1]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 4, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 4, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 1, 2, 3, 0, 2, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 1, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1637, 1, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 0]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 1, 2])]
+sorted
+[(21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 86, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 1]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 2, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 2, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 4, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 4, 0, 1, 0, 2])]
+sorted
+[(21, [514, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 0, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 2, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [515, 87, 0, 1, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 86, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 0, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 1]),
+ (21, [516, 87, 0, 0, 0, 1619, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 1]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 1])]
+
+Población de 16 individuos durante 32 generaciones
+Población inicial:
+[(21, [524, 101, 0, 0, 1, 1871, 522, 1, 0, 2, 4, 0, 0, 1, 1]),
+ (21, [1389, 91, 1, 0, 0, 1620, 1636, 1, 1, 2, 0, 0, 2, 2, 2]),
+ (21, [1423, 11, 1, 0, 1, 532, 1314, 0, 0, 2, 2, 0, 0, 1, 0]),
+ (21, [1471, 102, 1, 0, 1, 1920, 1456, 0, 0, 1, 4, 0, 1, 2, 2]),
+ (21, [1529, 113, 0, 1, 0, 1475, 1918, 1, 1, 0, 2, 0, 2, 0, 2]),
+ (24, [745, 117, 0, 0, 0, 1342, 648, 0, 1, 2, 1, 1, 1, 2, 0]),
+ (24, [1087, 53, 1, 1, 1, 1565, 1501, 0, 0, 1, 2, 1, 0, 1, 1]),
+ (24, [1109, 91, 0, 0, 0, 1959, 1885, 1, 0, 1, 1, 1, 2, 1, 0]),
+ (999, [840, 38, 0, 1, 1, 998, 968, 1, 1, 2, 5, 1, 1, 0, 2]),
+ (999, [1007, 108, 0, 1, 0, 679, 944, 1, 0, 3, 4, 1, 1, 2, 2]),
+ (999, [1097, 117, 1, 0, 0, 1143, 901, 0, 0, 3, 3, 1, 1, 0, 0]),
+ (999, [1175, 36, 0, 1, 1, 977, 673, 0, 1, 3, 3, 0, 2, 2, 1]),
+ (999, [1371, 16, 0, 1, 0, 2036, 1385, 1, 1, 3, 1, 1, 2, 2, 1]),
+ (999, [1441, 50, 0, 0, 1, 1582, 781, 1, 1, 1, 5, 1, 2, 1, 2]),
+ (999, [1470, 80, 1, 1, 1, 1649, 1522, 1, 0, 3, 5, 1, 2, 0, 1]),
+ (999, [1698, 95, 0, 1, 0, 1625, 1227, 1, 1, 3, 2, 0, 0, 2, 2])]
+Población final:
+[(21, [514, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 0, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 2, 2]),
+ (21, [515, 87, 0, 0, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [515, 87, 0, 1, 1, 1619, 1636, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 86, 0, 0, 1, 1620, 1636, 0, 0, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 0, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 1]),
+ (21, [516, 87, 0, 0, 0, 1619, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 0, 1620, 1636, 0, 0, 2, 3, 0, 0, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 1]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 0, 2, 3, 0, 1, 1, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 0, 2]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 0]),
+ (21, [516, 87, 0, 0, 1, 1619, 1635, 0, 1, 2, 3, 0, 1, 1, 1])]
+Elapsed time is 7084.856489 seconds.
