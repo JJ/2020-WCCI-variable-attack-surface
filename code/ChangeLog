@@ -1,3 +1,7 @@
+2020-02-01  JJMerelo  <jmerelo@bojack>
+
+	* genetic.py (selection_and_reproduction): Sorts by the first element to avoid sorting by the first elements of the list too, which kills diversity. First results to results/gecco/test-run-2.log
+
 2020-01-31  Juan J. merelo  <jmerelo@penny>
 
 	* zap.py (zap_test): This changes fitness landscape, so that different risks are scored in a different way. Informational risks are set to 0, while other risks will get a score that depends on its level, with "High" getting 4.

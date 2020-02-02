@@ -122,7 +122,7 @@ def selection_and_reproduction(population):
     population = population + crossed_population
 
     # Sort again the population
-    population = sorted(population)[0:individuals]
+    population = sorted(population, key=lambda x: x[0])[0:individuals]
 
     print("sorted")
     pprint(population)
@@ -159,7 +159,7 @@ def main(individuals_number, crossover):
 
     population = [(calculate_fitness(i), i) for i in population] # Calculates the fitness of each individual, and stores it in pairs ordered in the form (5 , [1,2,1,1,1,4,1,8,9,4,1])
 
-    initial_population = sorted(population)
+    initial_population = sorted(population, key= lambda x: x[0])
 
     # Evolves the population
     for i in range(generations):
