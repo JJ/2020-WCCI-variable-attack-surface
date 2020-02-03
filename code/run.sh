@@ -8,7 +8,7 @@ export INDIVIDUALS=$2
 
 for i in `seq $1` ; do
     echo "Running $i execution..."
-    python3 genetic.py --individuals ${INDIVIDUALS} --crossover-two-points > results/results_simple_${INDIVIDUALS}_2_random_$i.txt
+    python3 genetic.py --individuals ${INDIVIDUALS} > results/results_simple_${INDIVIDUALS}_2_random_$i.txt
 
 done
 echo "Finised!"
