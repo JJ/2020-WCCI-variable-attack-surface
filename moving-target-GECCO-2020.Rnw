@@ -139,6 +139,20 @@ very limited evaluation budget.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
+Cybersecurity is a discipline that taps from all corners of computer
+science, including optimization in many cases. Many security problems
+can be formulated as a search problem, as long as the vulnerability of
+a system (along with any other objective we want to achieve, such as
+throughput or performance) can be given a fixed score.
+
+Defending targets against attacks includes many different
+techniques. Of course, hardening is one of them, and this is a problem
+that can effectively be formulated as an optimization one: minimizing
+the vulnerability. A hardened objective might still be attacked, as
+long as the person attacking is able to profile it and try different
+things on it, simultaneously or later on. Avoiding this is the main
+objetive of the so callec Moving Target Defense, or MTD.
+
 % We need to rewrite all this ---------------------------------------------
 % -------------------------------------------------------------------------
 
