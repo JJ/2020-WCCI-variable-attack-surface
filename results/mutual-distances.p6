@@ -1,14 +1,9 @@
 #!/usr/bin/env raku
 
-constant $prefix = "results_";
+use My::MTD;
 
-my @files = dir( ".", test => { /^^$prefix/ } );
+my $mtd = My::MTD.new( :dir("../code/results/results_2020_02_01") );
 
-for @files -> $f {
-    my @initial-pop = $f.slurp.split( / "inicial:" \s+ | \s+ "Población final" /);
-    if !@initial-pop[1] {
-        say "$f is empty";
-        exit(1);
-    }
-    say ( @initial-pop[1] ~~ m:g/"("(\d+)/ ).map( *[0].Int ).join("\n");
+for $mtd.final-pop.keys -> $f {
+    say $f, ", ", $_ for $mtd.mutual-distances( $mtd.final-pop{$f} );
 }

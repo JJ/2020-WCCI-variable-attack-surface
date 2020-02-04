@@ -13,7 +13,6 @@ submethod TWEAK() {
     @!files = dir( $!dir, test => { /^^$prefix/ } );
     for @!files -> $f {
 	my $key = ($f ~~ /"results_" (\w+) ".txt"/);
-	say $key;
 	my @populations = ( $f.IO.slurp ~~ m:g{ ("[(" \d+ .+? "])]") } );
 	my @initial-pop;
 	EVAL "\@initial-pop = " ~ @populations[*-2];
@@ -24,3 +23,13 @@ submethod TWEAK() {
     }
 }
 
+method mutual-distances( @population ) {
+    my @chromosomes-only = @population.map: *[1];
+    my @distances;
+    for @chromosomes-only.keys -> $i {
+        for @chromosomes-only[$i+1..*].keys -> $j {
+            @distances.append: [+] ( @chromosomes-only[$i][] Z- @chromosomes-only[$j][] ).map: *.abs;
+        }
+    }
+    return @distances;
+}
