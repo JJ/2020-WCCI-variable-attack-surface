@@ -2,7 +2,8 @@
 
 use My::MTD;
 
-my $mtd = My::MTD.new( :dir("../code/results/results_2020_02_01") );
+my $dir = @*ARGS[0] // "../code/results/results_2020_02_01";
+my $mtd = My::MTD.new( :dir($dir ) );
 
 say "File, Distance";
 for $mtd.final-pop.keys -> $f {

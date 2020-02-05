@@ -12,6 +12,7 @@ has %.initial-pop;
 submethod TWEAK() {
     @!files = dir( $!dir, test => { /^^$prefix/ } );
     for @!files -> $f {
+	say $f;
 	my $key = ($f ~~ /"results_" (\w+) ".txt"/);
 	my @populations = ( $f.IO.slurp ~~ m:g{ ("[(" \d+ .+? "])]") } );
 	my @initial-pop;
