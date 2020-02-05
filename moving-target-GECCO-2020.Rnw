@@ -91,18 +91,19 @@ experiments.data <- read.csv("results/all_results.csv")
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 
-  % Check it's copied from the one submitted - JJ
-  The term {\em moving target defense} or MTD describes a series of
-techniques that change the configuration of an Internet-facing system; in
-general, the technique consists of changing the visible configuration to
-avoid offering a fixed target to service profiling
-techniques. Additionally, configurations need to be as secure as
-possible and, since change needs to be frequent, to generate also as many as
-possible. We previously introduced a proof of concept where we used
-a simplified evolutionary algorithm for generating these configurations.
-In this paper we improve this algorithm, trying to
-adapt it to the specific characteristics of the fitness landscape, and
-also looking at finding as many solutions as possible.
+Moving target defense is a technique for protecting internet-facing
+systems via the creation of a variable attack surface. In the case of
+internet servers, it can be achieved via the generation of different
+configurations that change the server profile, and that can be
+included in a policy of restarting services with new configurations
+after a random time and with a random frequency. In this paper we will
+present a method based on evolutionary algorithm, that uses
+industry-standard practices to score the vulnerability of a server and
+is designed to generate multiple configurations with optimized score
+in every run of the algorithm. In this paper we will present how this
+is achieved via tuning of the evolutionary algorithm with the
+challenge of the very costly fitness evaluation that only allows for a
+very limited evaluation budget.
 \end{abstract}
 
 \begin{CCSXML}
@@ -137,6 +138,20 @@ also looking at finding as many solutions as possible.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+
+Cybersecurity is a discipline that taps from all corners of computer
+science, including optimization in many cases. Many security problems
+can be formulated as a search problem, as long as the vulnerability of
+a system (along with any other objective we want to achieve, such as
+throughput or performance) can be given a fixed score.
+
+Defending targets against attacks includes many different
+techniques. Of course, hardening is one of them, and this is a problem
+that can effectively be formulated as an optimization one: minimizing
+the vulnerability. A hardened objective might still be attacked, as
+long as the person attacking is able to profile it and try different
+things on it, simultaneously or later on. Avoiding this is the main
+objetive of the so callec Moving Target Defense, or MTD.
 
 % We need to rewrite all this ---------------------------------------------
 % -------------------------------------------------------------------------
