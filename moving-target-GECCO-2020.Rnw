@@ -275,7 +275,15 @@ finishing with our conclusions and future lines of work.
 
 % And expand a lot this part, which is focused in application of evolutionary algorithms to this technique - JJ
 % ---------------------------------------------------------------------------------------------------------------
-Bioinspired solutions filled that gap: after the early {\em bioinspired} approaches to MTD, explicit
+Moving target defense is a very popular technique, with dozens of
+papers published every year, including a yearly conference, the
+Workshop on Moving Target Defense.
+
+We will focus on bioinspired approaches to this field; a non-afiliated
+bioinsired technique, related to immune systems, was among the first
+ones to be proposed; it was denominated  {\em symbiotic embedded
+  machines} (SEM) and was proposed by Cui and Stolfo
+\cite{cui2011symbiotes}; after that one, explicit
 methodologies that used evolutionary algorithms were conceptually described for the first
 time by Crouse and Fulp in \cite{6111663}. This was intended mainly as
 a proof of concept, and describes 80 parameters, of which just half
@@ -286,15 +294,23 @@ MTD. Lucas et al. in \cite{lucas2014initial} applied those theoretical
 concepts to a framework called EAMT, a Python-based system that uses
 evolutionary algorithms to create new configurations, which are then
 implemented in a virtual machine and scored using scanning tools such
-as Nessus. Later on, John et
-al. \cite{john_evolutionary_2014} make a more explicit and practical
+as Nessus.
+
+We will focus specially on the work by John et
+al. \cite{john_evolutionary_2014}, which was also presented at a GECCO
+workshop in 2014. John and coauthors make a more explicit and practical
 use of an evolutionary algorithm, describing a host-level
 defense system, that is, one that operates at the level of a single
-node in the network, not network-wide, and works on the configuration
-of the Apache server, evolving them and evaluating at the parameter
-level using the so called CVSS score \cite{cvss}, a score that is computed from a
-the categories of vulnerabilities detected and how severe they are. These two systems
-highlighted the need for, first, a practical way of applying the MTD
+node in the network, evolving the configuration of the Apache web
+server using the so called CVSS score \cite{cvss}, a score that is computed from a
+the categories of vulnerabilities detected and how severe they
+are. This is a rich way of quantifying the vulnerability of a system,
+and also gives different ways of improving security; by reducing the
+number of vulnerabilities or by reducing its severity; this creates a
+rich fitness landscape that the evolutionary algorithm can leverage to
+find the best solutions.
+
+This work highlighted the need for, first, a practical way of applying the MTD
 to an actual system, to the point of implementing it in a real virtual
 machine, and second, the problematic of scoring the generated
 configurations. In the next section we will explain our proposed
