@@ -609,17 +609,15 @@ The most important part of the evolutionary algorithm is designing
 correctly the fitness function that is going to be tested and used.
 A configuration is meaningless without
 content behind, and we need to choose what is going to be the
-content. As in our previous paper \cite{erseco:evostar:anon}, a basic
-application with just a few pages and a form, was created, and
-additionally, a intentionally vulnerable application, OWASP's Juice
-Shop \cite{juice-shop}, was also tested.
-Since their vulnerabilities are different, the
-scores are going to be different.
+content. As in our previous papers
+\cite{erseco:evostar:anon,erseco:cec}, we have used a basic
+application with just a few pages and a form, intentionally done that
+way so that we can obtain results relatively fast for the new shape of
+the algorithm we are testing here.
 
-
-The setup used for computing this score is exactly the same as in the
-last paper: standard Docker containers for the juice shop and the ZAP
-API were composed (using Docker Compose) together with the container
+The setup used for computing this score is exactly the same as before:
+standard Docker containers for the juice shop and the ZAP 
+API were connected together using Docker Compose  with the container
 hosting the evolutionary algorithm, which calls from the fitness
 function (written in Python) the ZAP library. What ZAP does is to run
 (spider) 
