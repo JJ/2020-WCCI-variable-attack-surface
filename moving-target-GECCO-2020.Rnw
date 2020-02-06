@@ -640,8 +640,8 @@ notes about some best practice not being followed strictly. For
 instance, one such alert could be:
 
 \begin{verbatim}
-The response appears to contain suspicious comments which may help an
-attacker.
+The response appears to contain suspicious comments
+which may help an attacker.
 \end{verbatim}
 
 We decided to work with the rest to assign a vulnerability score to
@@ -679,58 +679,41 @@ that are standard in the industry.
 % More explanations on current version - JJ
 
 After testing different types of crossover and mutation in our
-previous paper \cite{erseco:evostar:anon} in this paper we have tried to
-simplify; those experiments resulted in any kind of mutation and
-crossover being approximately as effective as the next one. However,
-mutation used was too disruptive, and didn't allow for gradual change
-and exploration of the configuration space, so in this case we have
-used a {\em incremental} mutation, that adds or subtracts one from
+previous papers \cite{erseco:evostar:anon,erseco:cec}, in this paper
+we have used the simple combination of operators we tested in the
+previous version, that is, used an  {\em incremental} mutation, that
+adds or subtracts one from 
 current values, and circles back to the opposite end of the range if
-these are exceeded; thus, if the value of the {\tt disable\_symlinks}
-element is 1, it will become 0 no matter what (either if it's added
-one or subtracted one); if the value of {\tt worker\_connections} is
+these are exceeded; for instance,  the value of {\tt worker\_connections} is
 2048 it will become 512 if it's added one. This guarantees that every
-mutation will result in a different value; also, only one randomly
-chosen value is changed every time.
-
-Crossover will be 2-point crossover, and it will return a single
-value, with pieces taken from both parents.
-
-While in the previous paper we were using a simple rank-based,
-non-fitness-proportional selection, which probably resulted in less
-exploitation of the best results, which is why in this paper we have
-changed that to 2-tournament selection.
+mutation will result in a different value of the parameter under
+mutation; also, only one randomly chosen value is changed every
+time. Additionally, we are using a traditional 2-point crossover that
+returns a single chromosome (as opposed to the traditional two),
+combinining 3 segments, two taken from one parent, one taken from the
+other. Also, we are again using 2-tournament selection.
 
 All together, every generation, a reproduction pool of the same size
-as the population is created; these are randomly picked in couples,
-crossed and the result mutated, creating a new set of individuals;
-this new set of individuals is evaluated; the result is merged with
+as the population is created; these are randomly paired,
+crossed, obtaining a single result, that is then mutated; this new set
+of individuals is evaluated and the result is merged with
 the previous population, with just the best ones selected to pass to
 the next generation.
 
+A simple, but fundamental change has been added in this paper in the
+sorting algorithm used to sort the solutions and select the best
+ones: previously, we used the default {\tt sorted} Python function,
+which sorts data structures using all the elements of the data
+structure sorted. Since we store chromosomes in a list with two
+elements, the first of which is the fitness, and the second the a list
+containing the chromosome, the chromosome itself was included in this
+sorting, resulting in selected individuals being similar to each other
+as long as their fitness was exactly the same. However, in this paper
+we have changed the algorithm to use only the fitness, which is the
+first element. When fitness is the same, the chromosomes will be
+maintained in the same random order in which they entered the sort
+algorithm.
 
-This evolutionary algorithm should offer better results than the
-previous naive one, so we explored its result by making some test runs
-using 32 individuals and 32 generations, double the number of
-generations we had used in our previous paper. How the fitness score
-evolves along all the generations is shown in Figure
-\ref{fig:evolution}, which is an overview on how evolution
-proceeds. It shows many plateaus, first at score equal to 68 and then
-a big plateau for value = 62, to a point in which all the population
-has that score. However, exploration proceeds apace and eventually we
-obtain a ZAP score of 59 by the end of the evaluation budget.
-
-From this initial exploration of values, we can conclude that even a
-small number of evaluations (only 1024) is able to obtain good
-results, and that the evolutionary algorithm is able to overcome, at
-least in some cases, plateaus with low fitness diversity across all
-the population. It is also evident that the evaluation budget is not
-enough and that more generations could be used to obtain better values
-of this score, down to 3 which seems to be the absolute minimum for
-the Juice Shop. This initial exploration took 6 hours in a Lenovo
-Carbon X5 laptop with a i7 CPU and Ubuntu 16.04, which also gave us an
-idea of the time we were going to need to devote to these
-experiments. The results of these will be shown next.
 
 \subsection{Experimental results}
 \label{subs:results}
