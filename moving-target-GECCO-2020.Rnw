@@ -520,10 +520,19 @@ scripting (XSS) attacks. % Need to clarify this.
 different values to avoid the load of certain kind of content. We have
 three different values for this directive, allowing content only if
 it's loaded from the same page ({\tt self}), loading from nowhere
-({\tt none}), or including Google domains (with the directive {\tt hosts:*.google.com}), in
-this case mainly for user tracking. These values are shown in Table
+({\tt none}), or including Google domains (with the directive {\tt https//:*.google.com}), in
+this case mainly for user tracking. These values are shown in Table \ref{table:http_headers}
 \end{itemize}
-
+%
+\begin{figure}[h!tb]
+  
+  \includegraphics[width=0.95\columnwidth]{results/chromosome-diagram.svg}
+  \caption{Representation of the data structure that stores the
+    chromosome, and what the different values represent.}
+  \label{fig:chromosome}
+\end{figure}
+%
+This 
 The problem of optimizing security in configuration is twofold: some
 of these directives are security-neutral, and do not actually alter
 the security score, they simply add to overall byte-level diversity;
@@ -675,8 +684,6 @@ to process, which might speed it up a bit. Still, a single run takes
 several hours, leaving us with just a few possible experiments to
 conform, and every one of them with just a few evaluations, much less
 that are standard in the industry.
-
-% More explanations on current version - JJ
 
 After testing different types of crossover and mutation in our
 previous papers \cite{erseco:evostar:anon,erseco:cec}, in this paper

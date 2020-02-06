@@ -399,8 +399,8 @@ scripting (XSS) attacks. % Need to clarify this.
 different values to avoid the load of certain kind of content. We have
 three different values for this directive, allowing content only if
 it's loaded from the same page ({\tt self}), loading from nowhere
-({\tt none}), or including google domains {\tt hots:*.google.com}, in
-this case mainly for user tracking. These values are shown in Table
+({\tt none}), or including google domains {\tt hosts:*.google.com}, in
+this case mainly for user tracking. These values are shown in Table \ref{table:http_headers}.
 \end{itemize}
 
 The problem of optimizing security in configuration is two fold: some
@@ -500,7 +500,7 @@ have to use only active scanning, the same as in our previous paper.
     the rank order of every individual in the population, and $x$ axis
     representing generations; evolution proceeds from right to left.}
   \label{fig:evolution}
-  \end{figure*}
+\end{figure*}
 %
 As in our previous paper, \cite{erseco:evostar}, we have designed the
 rest of the algorithm in Python, to be able to accommodate the ZAPpy
