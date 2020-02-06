@@ -151,79 +151,25 @@ that can effectively be formulated as an optimization one: minimizing
 the vulnerability. A hardened objective might still be attacked, as
 long as the person attacking is able to profile it and try different
 things on it, simultaneously or later on. Avoiding this is the main
-objetive of the so callec Moving Target Defense, or MTD.
+objetive of the so callec Moving Target Defense, or MTD
+\cite{moving-target,jajodia2011moving,Cai2016}.
 
-% We need to rewrite all this ---------------------------------------------
-% -------------------------------------------------------------------------
+This kind of defense does not specify either the kind of attack, the
+service is protecting or the technique, it is a framework to define a
+series of policies where the essence is to change configuration of the
+service defended in that way after a random amount of time so that it
+creates different traffic and response patterns that makes impossible
+to identify a node that does a specific service in the network. In
+this sense, we have chosen to work on defending web services (or web
+sites) by optimizing the configuration of a web server, following the
+work of \cite{john_evolutionary_2014}, which was one of the first
+evolutionary approaches to this kind of methodology; unlike he did, we
+have chosen the {\sf nginx} static web server and proxy, while he
+focused on the well known Apache web server. Our chose was motivated
+by the fact that nowadays {\sf nginx} is more popular, and still
+growing in popularity nowadays.
 
-% While security is a constant concern in modern computer systems, the
-% amount of services a typical application relies on and offers, and the
-% sheer quantity of services and microservices, modern cloud-native,
-% applications are composed of, makes extremely complicated to create
-% configurations, for every one of them, that are at the same time
-% secure and performant.
-
-% The wide variety of attacks and attack techniques also makes it difficult
-% to create a single, static defense that can deflect every
-% possible attack an interested third party might mount. Defense needs
-% then to adapt to be able to confuse, deflect or avoid this kind of
-% attacks. As an example, we can simply imagine that the name or IP of a node
-% in a service is constantly changing; the attacker will be unable to
-% use stored information (such as vulnerabilities) from that particular
-% node to, later on, scale privileges, extract information (exfiltrate)
-% from the net, or simply check if that service is up. Fortunately,
-% modern cloud-native deployments facilitate that kind of defense: since
-% the whole deployment is software defined, we can embed these changes
-% within the deployment instructions themselves.
-
-% The kind of defense technique that tries to present a variable target
-% to possible attackers is called {\em moving target defense} or
-% MTD. The concept was proposed initially by the Federal Networking and
-% Information Technology Research and Development (NITRD) Program for the first time in 2009
-% \cite{moving-target}, and presented in a series of documents
-% \cite{nitrd} and books that bind the papers presented in the first
-% symposium dedicated to the topic \cite{jajodia2011moving}. The moving
-% target defense \cite{Cai2016,ward2018survey,lei2018moving} does not specify either the kind of attack that defense
-% is being put up against, which could be from privilege escalation to
-% denial of service attacks, the service that is being hardened or secured
-% using this technique, which can go from a web or proxy server to a
-% software defined network \cite{Makanju:2017:ECM:3067695.3075604}, or
-% the kind of technique that is used to generate a moving target, which
-% can also be simple randomization \cite{gallagher_morpheus:_2019} of
-% the user-facing information through churn, that is, changing often
-% from a set of pre-established configurations through more elaborate
-% systems like evolutionary algorithms \cite{john_evolutionary_2014} that, at the same time, optimize
-% security or some other measure, like performance. % Performance of what? less overhead?
-% % The above could be easier to understand if we say first:
-% % ... does not specify either the kind of attack, the service is protecting or the technique ..
-% % and after that we give the examples. - Mario
-% % Good call, but a bit late for that... - JJ
-% % Will try to fix it now
-
-
-% Our previous paper \cite{erseco:evostar:anon} was a proof of concept and
-% tested the framework we have created for evolving a set of
-% configurations that can be used in a MTD policy. Our target was
-% hardening {\sf nginx} installations and we used as a fitness function
-% {\em Zed Attack Proxy} (ZAP), an open source tool that gives as a score for an installation the
-% number of {\em alerts}, or possible security vulnerabilities, it
-% raises. We tested different configurations and found that evolutionary
-% algorithms are able to generate configurations with a low score (lower is
-% better), and also that every execution of the algorithm yields several
-% configurations with the same fitness, which can then be used straight
-% away to change the configuration of the server.
-
-% However, that was intended as an initial exploration of the concept of
-% using evolutionary algorithms to generate low-vulnerability and
-% diverse nginx configurations. We needed to
-% explore the possibilities of the evolutionary algorithm further, by
-% tuning its parameters so that better
-% configurations can be found with less evaluations. Also, we needed to explore
-% different possibilities of the scoring tool, to check which mode would
-% be better for the MTD task. These will be the two main objectives of
-% this paper.
-
-In our previous papers, we realized that one of the main challenges
+In our previous papers \cite{erseco:evostar:anon,erseco:cec}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
 in the vulnerabilities exposed by the site, even subtle ones. The
 fitness function we used seemed reasonable, and was simply based in
@@ -246,9 +192,9 @@ ensure they produced only valid values; at the same time, we have
 eliminated invalid values that were introduced originally for testing
 purposes. We have also performed an analysis of the vulnerabilities
 reported, in order to check what is the actual impact of configuration
-changes on them.
-% And we need to change the sorting value so that it does not sort on
-% the value of the first element of the chromosome - JJ
+changes on them; finally, we have made a small change to the selection
+method to increase the variability of individuals that will be used
+eventually for the variable configuration.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
