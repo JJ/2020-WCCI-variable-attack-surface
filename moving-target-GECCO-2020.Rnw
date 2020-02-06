@@ -308,13 +308,25 @@ are. This is a rich way of quantifying the vulnerability of a system,
 and also gives different ways of improving security; by reducing the
 number of vulnerabilities or by reducing its severity; this creates a
 rich fitness landscape that the evolutionary algorithm can leverage to
-find the best solutions.
+find the best solutions. They used two different mutation operators:
+one on the parameter domain, and other on the parameter value; this
+last is a ``smart'' operator that changes the value of a parameter in
+the direction of what has historically improved fitness; this
+essentially removes a parameter from the configuration setting it to a
+known value, or adds it to the configuration if it has been known to
+increase security. Besides checking and reporting on the score, the
+authors report on the diversity of the pairwise distance between
+individuals in every generation; this is important from the
+evolutionary point of view, but also to generate a last generation of
+configurations that can be completely used as moving target defense.
 
 This work highlighted the need for, first, a practical way of applying the MTD
 to an actual system, to the point of implementing it in a real virtual
 machine, and second, the problematic of scoring the generated
 configurations. In the next section we will explain our proposed
-solutions to these two problems.
+solutions to these two problems. In our work we will try to apply the
+methodology to a new server, test it on some real problems, and also
+create as many and as different secure configurations as possible.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
