@@ -225,9 +225,6 @@ finishing with our conclusions and future lines of work.
 
 
 % This program was pursued using different kind of techniques, of which
-% a good initial survey was made in \cite{Cai2016}, reexamined in
-% \cite{Larsen201428} and more recently in
-% \cite{lei2018moving,ward2018survey,cho2019toward}. MTD is used as a
 % defense as well as detection technique
 % \cite{tian2019moving,POTTEIGER2020102954}; for instance, it can be
 % used to deflect distributed denial of service attacks
@@ -277,9 +274,8 @@ finishing with our conclusions and future lines of work.
 % ---------------------------------------------------------------------------------------------------------------
 Moving target defense is a very popular technique, with dozens of
 papers published every year, including a yearly conference, the
-Workshop on Moving Target Defense.
-
-We will focus on bioinspired approaches to this field; a non-afiliated
+Workshop on Moving Target Defense; recent surveys include
+\cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}. However, we will focus on bioinspired approaches to this methodology; a non-afiliated
 bioinsired technique, related to immune systems, was among the first
 ones to be proposed; it was denominated  {\em symbiotic embedded
   machines} (SEM) and was proposed by Cui and Stolfo
