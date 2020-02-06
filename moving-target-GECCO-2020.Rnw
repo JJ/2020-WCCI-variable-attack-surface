@@ -718,73 +718,11 @@ algorithm.
 \subsection{Experimental results}
 \label{subs:results}
 
-% Show average results and how many of the same value are generated in
-% the last generation.
-
-We performed several runs for population 16 and population 32, in
-every case with 32 generations. The main objective of these runs was
-not so much to measure the final result, since there are not so many
-evaluations, but to evaluate in which measure the evolutionary
-algorithm contributed to the improvement of the score of the generated
-configurations, as well as how many configurations, in the last
-generation, had the best score. We will examine individual results,
-shown in table \ref{tab:experiments}.
-%
-\begin{table*}
-\centering
-\caption{Experiment results for every run made for population 16 and
-  32. ``Copies'' indicates the fraction of the population whose value
-  is the same as the best individual.}
-\label{tab:experiments}
-<<experiments, cache=FALSE,echo=FALSE>>=
-kable(experiments.data)
-@
-\end{table*}
-%
-Experiments with population = 16 took around 6 hours in an Amazon EC2
-instance, while experiments with population = 32 took twice as much;
-this is the main reason why no more results are shown. In practice,
-moving target defense would change configuration every few hours,
-which makes these results acceptable for its purpose, although it
-obviously would admit a certain degree of improvement.
-
-The results in which population is only 16 evidence that what it
-essentially does is to generate different configurations with the best
-fitness found originally in the population: the final population is
-filled with mutated copies of a configuration, all of which have the
-same fitness. It happens to be 12 in these cases, which is a low ZAP
-score, but in the case an element with that score wouldn't have been
-in the initial population it would have been difficult to achieve that
-value with just a few evaluations (512, in this case). However, this
-result is acceptable, and shows that an evolutionary algorithm is
-able, at least, to generate a good amount of diverse configuration,
-even if at this population level it's not able to improve initial
-scores, just to weed out invalid configurations, or simply those with
-a low score.
-
-The runs we were able to make with population = 32, and double the
-amount of evaluations we did before, 1024, do show a lot of
-improvement of initial configurations. In two cases, there's just one
-configuration with the same value, but most of them have a ZAP score
-below 62, which is a good value. In one case it was able to generate a
-quarter of the population with the same ZAP score, 53, but also a few
-more with values 54, 58 and 59, and all of them below 62, eliminating
-in any case all invalid configurations from the population. In all
-cases average is around 58, which is quite an improvement over initial
-averages, which are high mainly due to the presence of invalid
-configurations.
-
-At any case, these results prove that improving the evolutionary
-algorithm makes our method able to extract many more valid
-configurations that can be used in the movable target defense method,
-and is able to do so in a reasonable amount of time; compared to our
-previous paper, the exploitation of values present in the initial
-population is better, and we are also able to improve initial values
-by some measure.
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
-\url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and can
+% \url{https://github.com/JJ/2020-WCCI-variable-attack-surface}
+\url{https://github.com/anonymous/repo, and can
 be reused with a free license.
 
 \section{Conclusions and discussion}
