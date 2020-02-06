@@ -814,57 +814,40 @@ be reused with a free license.
 \label{sec:conclusions}
 
 % Write conclusions here
-In this paper our main objective was to try and improve the
-evolutionary algorithm used for hardening and obtaining multiple
-configurations that can be used in a MTD policy. We tried first to use
-different options of the vulnerability scanning tool, finding them too
-costly to use, but also worse from the point of view of giving diverse
-scores to the configurations so that the evolutionary algorithm will
-work on them.
-
-We then focused on working on a very limited evaluation budget, and
-used a 512 and 1024 evaluation evolutionary algorithm to try and
-generate a good set of configurations. In general, there are many
-``good'' values that can be generated randomly for {\sf nginx}
-configuration; however, to generate a diverse set of them with a low
-vulnerability score is more complicated. In this case, an evolutionary
-algorithm succeeded in finding that set, with 32 individuals being
-actually the minimum configuration that should be used in case we want
-to obtain configurations with a low average ZAP score; the few
-experiments we managed to do achieved a consistent score of around
-58.
-
-However, while these experiments are promising, and in fact deliver
-what we were looking for, diverse configurations in a reasonable
-amount of time, they did reveal the need for faster evaluation, or
-simply another way of computing fitness.
 
 
 % Future lins of work.
-This is why, in the immediate future, now that the evolutionary algorithm is
-working correctly, we will focus in trying to obtain the ZAP score
-faster. This is one of the main drawbacks of the algorithm right now,
-and although part of it is inherent, we could try to achieve faster
+In the immediate future our focus will be on analyzing the different
+parts of the experimental setup so that we can iron out all problems,
+and also attain whatever speed ups can be attained with it, so that
+evaluation can be faster; for instance, we should try and look at a
+way of evaluating several configurations in parallel, and maybe make
+the algorithm asynchronous so that it does not have to wait for a full
+generation before performing its operations. This is one of the main drawbacks of the algorithm right now,
+and although part of it is inherent (it still has to try every single
+page of a site), we could try to achieve faster
 evaluation by using a different web for generating the configuration
-and for deploying the configuration. Using the actual web for evolving
+and for deploying the configuration. Using the actual web we are
+testing for evolving
 configurations can be incredibly time-consuming; the use of surrogates
 would speed up evolution, either by creating surrogates of the web
 itself or by trying to make parts of the evaluation via surrogates
-found by using machine learning; this has been done already with CVSS
-scores \cite{edkrantz2015predicting} so it should be possible in principle. Simply working with implementation
-details might allow not only  making things faster, but also doing
-parallel evaluation of several configurations at the same time, which
-right now is impossible due mainly to the fact that we're fixing the
-ports that are used for the websites we are evaluating.
+obtained a deep learning algorithm which, besides, should give us some
+insight on the problems created by different features and what predict
+insecure configurations just by looking at them, without the need to
+put up an actual web site.
 
-But, more interestingly, we will try and expand the range of
-configurations we are using by going beyond initial requirements (used
-in STIG); this will expand the fitness landscape, so we might have to
-find a way of speeding up the evolutionary algorithm. 
-
-Finally, the evolutionary algorithm itself can be improved, by testing different
-types of selection procedures, and tuning its greediness. This is
-something that can be done immediately, and will be one of our next steps.
+In this paper we have also found that the baseline secure
+configuration has flaws that do not have anything to do with the
+configuration of the web server. We will try to expand the
+configuration to the content itself, and also to specific parts of
+this content or how it has been generated. We can also extend
+evolutionary MTD to other services, whose configurations can be
+evolved alongside the web server for more variable attack surfaces, or
+even change the web server so that the configuration is even more
+difficult to detect. Adding multi-objective evolution so that we
+improve performance alongside security is also something we intend to
+pursue in the future.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
