@@ -335,13 +335,18 @@ create as many and as different secure configurations as possible.
 
 % Maybe rewrite a part of this, expanding if possible - JJ
 
-As in our previous paper \cite{erseco:evostar:anon}, we have chosen
-{\sf nginx}; it's a very popular static web server, which is also used
-as an inverse proxy, API gateway and load balancer. Latest versions
+As in our previous papers \cite{erseco:evostar:anon,erseco:cec}, we have chosen
+{\sf nginx}, a  popular static web server, inverse proxy, API gateway
+and load balancer; we did that because web is one of the most popular
+(and vulnerable) user-facing services, and it has been also used by
+John et al. in their work; that way, we can compare our results.
+
+Latest versions
 of{\sf nginx} (1.17.x) have more than 700 configuration
-directives. As a matter of fact, {\sf nginx} has been the target of
-optimization by evolutionary algorithms recently \cite{chi2018hybrid},
-but this is not the main focus of our work presently.
+directives. As a matter of fact, the performance of {\sf nginx}
+servers has been optimized by  evolutionary algorithms recently
+\cite{chi2018hybrid}; however, we will be focused mainly in its
+vulnerabilities. 
 
 
 These directives affect in different ways the behavior of
