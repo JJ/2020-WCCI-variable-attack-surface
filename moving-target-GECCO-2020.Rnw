@@ -526,7 +526,7 @@ this case mainly for user tracking. These values are shown in Table \ref{table:h
 %
 \begin{figure}[h!tb]
   
-  \includegraphics[width=0.95\columnwidth]{results/chromosome-diagram.svg}
+  \includegraphics[width=0.95\columnwidth]{chromosome-diagram}
   \caption{Representation of the data structure that stores the
     chromosome, and what the different values represent.}
   \label{fig:chromosome}
