@@ -57,8 +57,8 @@ experiments.data <- read.csv("results/all_results.csv")
 \affiliation{%
   \institution{Institute for Clarity in Documentation}
   \streetaddress{P.O. Box 1212}
-  \city{Dublin} 
-  \state{Ohio} 
+  \city{Dublin}
+  \state{Ohio}
   \postcode{43017-6221}
 }
 \email{trovato@corporation.com}
@@ -68,8 +68,8 @@ experiments.data <- read.csv("results/all_results.csv")
 \affiliation{%
   \institution{Institute for Clarity in Documentation}
   \streetaddress{P.O. Box 1212}
-  \city{Dublin} 
-  \state{Ohio} 
+  \city{Dublin}
+  \state{Ohio}
   \postcode{43017-6221}
 }
 \email{webmaster@marysville-ohio.com}
@@ -80,7 +80,7 @@ experiments.data <- read.csv("results/all_results.csv")
 \affiliation{%
   \institution{The Th{\o}rv{\"a}ld Group}
   \streetaddress{1 Th{\o}rv{\"a}ld Circle}
-  \city{Hekla} 
+  \city{Hekla}
   \country{Iceland}}
 \email{larst@affiliation.org}
 
@@ -212,7 +212,7 @@ finishing with our conclusions and future lines of work.
 % -------------------------------------------------------------------
 % MTD was proposed by the first time in 2009 \cite{moving-target} by an
 % organism called NITRD as part of an officially sponsored research
-% program to improve the cyberdefense skills in the United States. MTD is targeted 
+% program to improve the cyberdefense skills in the United States. MTD is targeted
 % towards making what is called the attack surface
 % \cite{manadhata2011formal}, that is, the different mechanisms by which
 % the attacker would be able to gain access, unpredictable
@@ -342,7 +342,7 @@ of{\sf nginx} (1.17.x) have more than 700 configuration
 directives. As a matter of fact, the performance of {\sf nginx}
 servers has been optimized by  evolutionary algorithms recently
 \cite{chi2018hybrid}; however, we will be focused mainly in its
-vulnerabilities. 
+vulnerabilities.
 
 
 These directives affect in different ways the behavior of
@@ -442,7 +442,7 @@ length of files actually compressed.
   \centering
   \caption{Selected list of directives affecting HTTP headers, and the
   values that we are using in this paper. \label{table:http_headers}}
- 
+
 
 \begin{tabular}{|l|l|}
 \hline
@@ -496,7 +496,7 @@ of the homonym HTTP response header; when set,  changing the \textit{MIME} types
 announced in the `Content-Type' is disabled, which is used to avoid
 `MIME type sniffing' attacks; that is, using what browser's heuristics
 for detecting MIME type from content to launch a cross-site scripting
-attack. 
+attack.
 \item
 \texttt{server}: This directive is related to the {\tt Server} HTTP
 header, which is used to communicate to browsers metadata about the
@@ -573,7 +573,7 @@ http {
         location / {
             root /tester/site/;
             index index.html index.htm;
-            add_header X-Frame-Options DENY; # 
+            add_header X-Frame-Options DENY; #
             add_header X-Powered-By PHP/7.2.1; #
             add_header X-Content-Type-Options nosniff; #
             add_header Server caddy; #
@@ -612,11 +612,19 @@ way so that we can obtain results relatively fast for the new shape of
 the algorithm we are testing here.
 
 The setup used for computing this score is exactly the same as before:
-standard Docker containers for the juice shop and the ZAP 
+standard Docker containers for the juice shop and the ZAP
 API were connected together using Docker Compose  with the container
 hosting the evolutionary algorithm, which calls from the fitness
-function (written in Python) the ZAP library. What ZAP does is to run
-(spider) 
+function (written in Python) the ZAP library.
+
+For running the Docker containers a set of cloud servers were
+orquestrated in Microsoft Azure using standard B2s machine (2 vcpu,
+4 GiB of memory) for the 16 population size and standard D2s v3 machine
+(2 vcpu, 8 GiB of memory) for the 32 population one. The 16 population
+size machine was powered 18 days and the 32 population one was powered
+8 days having a total cost of €32.56.
+
+What ZAP does is to run (spider)
 over all pages in the site, making different attacks and raising
 alerts if they detect any vulnerability. For every vulnerability
 found, it raises an alert. In our previous paper we simply used the
@@ -641,10 +649,10 @@ every configuration: Low will be scored with 1, Medium will get 2 as
 score, and High will get a 4 score.
 
 This score is to be minimized, but a ``good'' configuration will be
-one that does not have any ``Medium''-scored alert. 
+one that does not have any ``Medium''-scored alert.
 
 Evaluation of every configuration is carried out in the following way:\begin{itemize}
-  
+
 \item A new configuration is generated from the evolutionary algorithm
   values and stored in a configuration file with random name. This has
   been introduced in this version, and makes sure that every
@@ -789,7 +797,7 @@ configurations that can be used in the movable target defense method,
 and is able to do so in a reasonable amount of time; compared to our
 previous paper, the exploitation of values present in the initial
 population is better, and we are also able to improve initial values
-by some measure. 
+by some measure.
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
