@@ -718,11 +718,45 @@ algorithm.
 \subsection{Experimental results}
 \label{subs:results}
 
+First we will test what are the results with the new fitness function,
+as well as the rest of the incremental improvements we made to the
+implementation of the evolutionary moving target defense method. 
+%
+\begin{figure}[h!tb]
+<<data, cache=FALSE,echo=FALSE>>=
+old.fitness.data <- read.csv("results/results-gecco-2020-old-fitness.csv")
+old.fitness.data$Experiment <- "Evostar2020"
+new.fitness.badsort.data <- read.csv("results/results-gecco-2020.csv")
+new.fitness.badsort.data$Experiment <- "Initial sorting"
+new.fitness.data <- read.csv("results/results-gecco-2020-ordered.csv")
+new.fitness.data$Experiment <- "Current sorting"
+data <- rbind (old.fitness.data, new.fitness.badsort.data, new.fitness.data)
+ggplot(data,aes(x=Experiment,y=Initial.Avg))+geom_boxplot()+theme_tufte()
+@
+\caption{Boxplot of initial values of fitness for the EvoStar
+  experiment, which used the old fitness and, besides, included
+  invalid configuration values, as well as for the new fitness
+  function used this paper, with or without any kind of sorting. \label{fig:initial:fitness}}
+\end{figure}
+One of the changes introduced in this paper, besides the new fitness
+function, is the fact that there are no invalid configurations
+generated, since all invalid test values have been eliminated from the
+chromosome. The previous experiments showed that eventually those
+values were eliminated from the population, but they were still
+present, adding invalid configurations to the pool of evaluations we
+cannot afford. Figure \ref{fig:initial:fitness} shows a boxplot of the
+value of the initial fitness; the average for the new fitness
+functions, irrespective of sorting used (which has no influence in the
+first one). What it shows is that when invalid configurations were
+used (and scored at 999) the initial average was too high; the values
+now are quite low, and reflect the fact that all configurations are
+valid.
+
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
 % \url{https://github.com/JJ/2020-WCCI-variable-attack-surface}
-\url{https://github.com/anonymous/repo, and can
+\url{https://github.com/anonymous/repo}, and can
 be reused with a free license.
 
 \section{Conclusions and discussion}
