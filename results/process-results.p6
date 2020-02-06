@@ -6,7 +6,7 @@ constant $prefix = "results_";
 
 my @files = dir( ".", test => { /^^$prefix/ } );
 
-say "Population, Final Best, Initial Best, Copies, Initial Avg, Final Avg";
+say "Population, Final Best, Initial Best, Copies, Final Avg, Initial Avg";
 for @files.sort -> $f {
     my $match = ($f ~~ /$<juice> = ["juice"?] "_" $<population> = [\d+] "_" $<crossover> = [\d] "_" $<mutation> = [\w+] "_" $<rank> = [\d+] / );
     my ($juice, $population, $crossover, $mutation) =
