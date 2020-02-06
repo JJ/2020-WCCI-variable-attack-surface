@@ -359,13 +359,15 @@ results will be presented last in Subsection \ref{subs:results}.
 \subsection{Description of the attack surface parameters}
 
 From all the parameters used to change the behavior of {\sf nginx}, we
-have used fifteen, the same as in out previous paper
-\cite{erseco:evostar:anon}, from where this section is largely taken
+have chosen just fifteen, the same as in out previous papers
+\cite{erseco:evostar:anon,erseco:cec}, from where this section is largely taken
 and expanded.
 
-This subset is extracted from the DISA STIG recommendations for
+The fifteen parameters we have used in this paper is extracted from the DISA STIG recommendations for
 hardening webservers based in the CVSS score
-\cite{disa20:apache}. Most of these values are defined in the original
+\cite{disa20:apache}, and is also similar to the ones that were chosen
+by John et al. \cite{john_evolutionary_2014}.
+. Most of these values are defined in the original
 document as Apache HTTP server configuration values but have a {\sf
 nginx} equivalent directive. All configuration parameters used are
 {\sf nginx} directives, with nine of them, shown in Table
@@ -377,18 +379,18 @@ infornation contained in them.
 
 \begin{table}
 \centering
-\begin{tabular}{|l|l|c|}
+\begin{tabular}{|l|l|c|c|}
 \hline
-\textbf{STIG ID} & \textbf{Directive name} 	   & \textbf{Possible values} \\ \hline
-V-13730 & worker\_connections            & 512 - 2048 \\ \hline
-V-13726 & keepalive\_timeout             & 10 - 120 \\ \hline
-V-13732 & disable\_symlinks              & True/False \\ \hline
-V-13735 & autoindex                      & True/False \\ \hline
-V-13724 & send\_timeout                  & True/False \\ \hline
-V-13738 & large\_client\_header\_buffers & 512 - 2048 \\ \hline
-V-13736 & client\_max\_body\_size        & 512 - 2048 \\ \hline
-V-6724  & server\_tokens                 & True/False \\ \hline
-        & gzip                           & True/False \\ \hline
+\textbf{STIG ID} &\textbf{Directive name}& \textbf{Possible values} &  \textbf{Used in \cite{john_evolutionary_2014}}\\ \hline
+V-13730 & worker\_connections            & 512 - 2048 & \\ \hline
+V-13726 & keepalive\_timeout             & 10 - 120 & \checkmark \\ \hline
+V-13732 & disable\_symlinks              & True/False & \checkmark \\ \hline
+V-13735 & autoindex                      & True/False & \checkmark \\ \hline
+V-13724 & send\_timeout                  & True/False & \checkmark \\ \hline
+V-13738 & large\_client\_header\_buffers & 512 - 2048 & \\ \hline
+V-13736 & client\_max\_body\_size        & 512 - 2048 & \\ \hline
+V-6724  & server\_tokens                 & True/False & \checkmark \\ \hline
+        & gzip                           & True/False & \\ \hline
 \end{tabular}
 \caption{List of {\sf nginx} directives whose value is evolved here.}
  \label{table:nginx_directives}
@@ -417,8 +419,7 @@ generation and ulterior evolution:\begin{itemize}
   headers, and their size. We just evolve the second number, while the
   first one is set to 4.
 
-\item
-\texttt{client\_max\_body\_size}: Maximum allowed size of the client request body, specified in the {\tt
+\item \texttt{client\_max\_body\_size}: Maximum allowed size of the client request body, specified in the {\tt
   Content-Length} field of the request header. The value will indicate
 the maximum number of Megabytes allowed. Over that value, requests
 will simply return an error.
@@ -431,9 +432,9 @@ directive can also use a {\em build} value and simply a string.
 \texttt{gzip}: This directive enables or disables compression of HTTP
 responses. This directive doesn't affect directly the security but
 adds entropy to the different generated configurations; it also
-affects the performance of the server and its throughput. You can
-additionally use {\tt gzip\_min\_length} to establish the length under
-which there will be no compression.
+affects the performance of the server and its throughput. The
+additional parameter {\tt gzip\_min\_length} can be used to limit the
+length of files actually compressed.
 \end{itemize}
 
 \begin{table}
