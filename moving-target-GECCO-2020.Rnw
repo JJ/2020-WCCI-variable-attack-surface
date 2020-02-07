@@ -37,8 +37,6 @@
 \usepackage{hyperref}
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
-
 
 <<setup, cache=FALSE,echo=FALSE>>=
 suppressPackageStartupMessages({
@@ -276,7 +274,10 @@ finishing with our conclusions and future lines of work.
 Moving target defense is a very popular technique, with dozens of
 papers published every year, including a yearly conference, the
 Workshop on Moving Target Defense; recent surveys include
-\cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}. However, we will focus on bioinspired approaches to this methodology; a non-afiliated
+\cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}.
+
+
+However, we will focus on bioinspired approaches to this methodology; a non-afiliated
 bioinsired technique, related to immune systems, was among the first
 ones to be proposed; it was denominated  {\em symbiotic embedded
   machines} (SEM) and was proposed by Cui and Stolfo
