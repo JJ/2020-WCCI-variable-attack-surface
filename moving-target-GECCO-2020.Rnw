@@ -43,8 +43,6 @@ suppressPackageStartupMessages({
     library(ggplot2)
     library(ggthemes)
 })
-active.fitness.data <- read.csv("results/initial-fitness.dat")
-experiments.data <- read.csv("results/all_results.csv")
 @
 
 \title{Moving target defense through evolutionary algorithms}
@@ -812,6 +810,33 @@ ggplot(data.32,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
   \label{fig:entropy}
 \end{figure}
 %
+%
+\begin{figure}[h!tb]
+<<component.entropy, cache=FALSE,echo=FALSE>>=
+entropy.initial <- read.csv("results/component-entropy-evostar.csv")
+entropy.new <- read.csv("results/component-entropy-sorted.csv")
+entropy.unsorted <- read.csv("results/component-entropy-gecco.csv")
+
+entropy.initial$Experiment <- "Evostar"
+entropy.new$Experiment <- "Sorted"
+entropy.unsorted$Experiment <- "GECCO"
+
+entropy.data <- rbind(entropy.initial, entropy.new, entropy.unsorted)
+
+entropy.data$Population <- substr( entropy.data$File, 16, 17 )
+
+ggplot( entropy.data[entropy.data$Population==16,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
+ggplot( entropy.data[entropy.data$Population==32,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
+@
+\caption{Component-level entropy for individuals in the last
+  generation for experiments with population = 16 (top) and 32
+  (bottom). Labels as above, with GECCO tagging the ones we have
+  proposed in this paper.}
+  \label{fig:component:entropy}
+\end{figure}
+%
+
+
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
 % \url{https://github.com/JJ/2020-WCCI-variable-attack-surface}
