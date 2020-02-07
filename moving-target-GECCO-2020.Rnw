@@ -274,7 +274,13 @@ finishing with our conclusions and future lines of work.
 Moving target defense is a very popular technique, with dozens of
 papers published every year, including a yearly conference, the
 Workshop on Moving Target Defense; recent surveys include
-\cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}.
+\cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}. A
+recent survey published by Zheng and Namin \cite{Zheng2019207}
+explains the kind of attacks that MTD can defend against, and also
+explains the concept of entropy as the key measurement of the
+unpredictability of the defense policy. They mention the importance of
+a network-level MTD, but this can be complemented by service-level MTD
+such as the one we propose in this paper.
 
 
 However, we will focus on bioinspired approaches to this methodology; a non-afiliated
@@ -772,10 +778,42 @@ be reused with a free license.
 \label{sec:conclusions}
 
 % Write conclusions here
+In this paper we have presented an improved evolutionary algorithm
+that generates diverse configurations for the {\sf nginx} server, as a
+showcase of service-level (and, to a certain point, network-level)
+moving target defense. This work has been the result of progressive
+code-level refinement of the evolutionary algorith, as well as an
+improvement in the selection strategy and the fitness function.
 
+The main effect of changing the fitness function has been to eliminate
+configuration values that created medium-severity vulnerabilities; in
+our previous paper \cite{erseco:cec} all vulnerabilities received the
+same score, and there could be cases where these stayed in the final
+population. But the biggest impact on entropy of the final
+configurations has been achieved by changing the sorting
+algorithm. While in \cite{erseco:cec} final configurations were
+different, parameter-level entropy was small; by making population
+selection depend only on fitness and disregard the rest of the
+parameter, parameter-level entropy has received a big boost, which
+makes the set of configurations defined by this method better.
 
-% Future lins of work.
-In the immediate future our focus will be on analyzing the different
+What we have not detected in this work is combinations of
+configuration values that can create a vulnerability; in general, it's
+specific parameter values what make a certain configuration more
+secure or not. This, in turn, implies that any hillclimbing approach,
+at least for this specific set of parameters selected, valid in the
+hardening part of the optimization. However, using an evolutionary
+algorithm is still valid because it is able to find secure
+configurations at the same time it generates sets of combinations with
+a high entropy, as proved in this paper. In general, tricky
+combinations of configuration that would make the system insecure
+would not be reasonable. Still, a system with many configuration
+parameters, as many as 700, will improve security if it totally or in
+part is set automatically using optimization algorithms such as this one.
+
+% Future lines of work.
+The main challenge of this kind of problem and solving it with
+evolutionary algorithms is still evaluation speed, so in the immediate future our focus will be on analyzing the different
 parts of the experimental setup so that we can iron out all problems,
 and also attain whatever speed ups can be attained with it, so that
 evaluation can be faster; for instance, we should try and look at a
