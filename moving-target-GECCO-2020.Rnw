@@ -148,7 +148,7 @@ that can effectively be formulated as an optimization one: minimizing
 the vulnerability. A hardened objective might still be attacked, as
 long as the person attacking is able to profile it and try different
 things on it, simultaneously or later on. Avoiding this is the main
-objetive of the so called Moving Target Defense, or MTD
+objective of the so called Moving Target Defense, or MTD
 \cite{moving-target,jajodia2011moving,Cai2016}.
 
 This kind of defense does not specify either the kind of attack, the
@@ -215,8 +215,8 @@ a network-level MTD, but this can be complemented by service-level MTD
 such as the one we propose in this paper.
 
 
-However, we will focus on bioinspired approaches to this methodology; a non-afiliated
-bioinsired technique, related to immune systems, was among the first
+However, we will focus on bioinspired approaches to this methodology; a non-affiliated
+bioinspired technique, related to immune systems, was among the first
 ones to be proposed; it was denominated  {\em symbiotic embedded
   machines} (SEM) and was proposed by Cui and Stolfo
 \cite{cui2011symbiotes}; after that one, explicit
@@ -311,7 +311,7 @@ nginx} equivalent directive. All configuration parameters used are
 server, and six affecting the values of specific HTTP headers (shown
 in Table \ref{table:http_headers}), which in turn affect how the
 browser receiving the information deals with the pages and the
-infornation contained in them.
+information contained in them.
 
 \begin{table*}
 \centering
@@ -567,9 +567,9 @@ hosting the evolutionary algorithm, which calls from the fitness
 function (written in Python) the ZAP library.
 
 For running the Docker containers a set of cloud servers were
-orquestrated in Microsoft Azure using standard B2s machine (2 vcpu,
+orchestrated in Microsoft Azure using standard B2s machine (2 vCPU,
 4 GiB of memory) for the 16 population size and standard D2s v3 machine
-(2 vcpu, 8 GiB of memory) for the 32 population one. The 16 population
+(2 vCPU, 8 GiB of memory) for the 32 population one. The 16 population
 size machine was powered 18 days and the 32 population one was powered
 8 days having a total cost of €32.56.
 
@@ -637,7 +637,7 @@ mutation will result in a different value of the parameter under
 mutation; also, only one randomly chosen value is changed every
 time. Additionally, we are using a traditional 2-point crossover that
 returns a single chromosome (as opposed to the traditional two),
-combinining 3 segments, two taken from one parent, one taken from the
+combining 3 segments, two taken from one parent, one taken from the
 other. Also, we are again using 2-tournament selection.
 
 All together, every generation, a reproduction pool of the same size
@@ -811,7 +811,7 @@ In this paper we have presented an improved evolutionary algorithm
 that generates diverse configurations for the {\sf nginx} server, as a
 showcase of service-level (and, to a certain point, network-level)
 moving target defense. This work has been the result of progressive
-code-level refinement of the evolutionary algorith, as well as an
+code-level refinement of the evolutionary algorithm, as well as an
 improvement in the selection strategy and the fitness function.
 
 The main effect of changing the fitness function has been to eliminate
