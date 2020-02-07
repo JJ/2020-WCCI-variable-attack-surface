@@ -823,8 +823,13 @@ configurations has been achieved by changing the sorting
 algorithm. While in \cite{erseco:cec} final configurations were
 different, parameter-level entropy was small; by making population
 selection depend only on fitness and disregard the rest of the
-parameter, parameter-level entropy has received a big boost, which
-makes the set of configurations defined by this method better.
+chromosome, parameter-level entropy has received a big boost, which
+makes the set of configurations defined by this method better. This
+move has had the side effect of keeping diversity high, by introducing
+a random element (the order in which individuals were drawn originally
+from the population) in the selection procedure, something that was
+missing when chromosomes with the same fitness were sorted in
+lexicographical order.
 
 What we have not detected in this work is combinations of
 configuration values that can create a vulnerability; in general, it's
