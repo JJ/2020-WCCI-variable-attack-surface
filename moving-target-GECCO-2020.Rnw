@@ -732,6 +732,19 @@ population = 32.}
   \label{fig:md}
 \end{figure}
 %
+The figures clearly show that the per-file average mutual distances
+between different individuals have increased, thanks to the simple
+change of using a better sorting routine for selection. Average
+distances were very similar before that change, and didn't depend on
+the type of fitness. All that could be affirmed about the previous set
+of solutions was that they were pairwise different; now we can also
+affirm that there's a good average distance between them; this
+distance is not normalized, however, and could be dominated by a few
+components whose range is bigger; this is why we have also computed
+the entropy of these distances, charted in Figure
+\ref{fig:entropy}. This is the Jenssen-Shannon entropy computed over
+the list of pairwise distances.
+%
 \begin{figure}[h!tb]
 <<entropy, cache=FALSE,echo=FALSE>>=
 ggplot(data.16,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
@@ -744,6 +757,12 @@ ggplot(data.32,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
   \label{fig:entropy}
 \end{figure}
 %
+Again, entropy is much higher in the new experiment, with this
+indicating that how far away a component is going to be from others
+has an element of surprise, which is what we are looking for in the
+MTD methodology. Still, we need to look at the component-level
+entropy, that is, the degree of surprise of a particular element in
+the chromosome: see Figure \ref{fig:component:entropy}
 %
 \begin{figure}[h!tb]
 <<component.entropy, cache=FALSE,echo=FALSE>>=
@@ -769,7 +788,14 @@ ggplot( entropy.data[entropy.data$Population==32,], aes(x=Experiment,y=Entropy))
   \label{fig:component:entropy}
 \end{figure}
 %
-
+Once again, added entropy for all components is much higher;
+component-wise, there might not be much variation, mainly in those
+components that have few values and/or have only some values that
+result in low or no vulnerability; the added value, however, is that
+this new version of the evolutionary moving target defense framework
+is able to generate low-vulnerability, high-diversity, sets of
+configurations that can then be used successively in setting
+configuration for {\sf nginx} servers, changing them with high frequency.
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
