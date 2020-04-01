@@ -378,6 +378,7 @@ venv.bak/
 
 # R
 .Rhistory
+.RData
 
 # Texpad
 .texpadtmp
@@ -386,3 +387,4 @@ wordcount
 .Rproj.user
 sftp-config.json
 comment.cut
+
