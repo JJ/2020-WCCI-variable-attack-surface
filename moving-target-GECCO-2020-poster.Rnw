@@ -37,6 +37,7 @@
 \usepackage{hyperref}
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 <<setup, cache=FALSE,echo=FALSE>>=
 suppressPackageStartupMessages({
@@ -48,37 +49,27 @@ suppressPackageStartupMessages({
 \title{Moving target defense through evolutionary algorithms}
 
 %%% The submitted version for review should be ANONYMOUS
-\author{Ben Trovato}
-\authornote{Dr.~Trovato insisted his name be first.}
-\orcid{1234-5678-9012}
+\author{Ernesto Serrano-Collado}
 \affiliation{%
-  \institution{Institute for Clarity in Documentation}
-  \streetaddress{P.O. Box 1212}
-  \city{Dublin}
-  \state{Ohio}
-  \postcode{43017-6221}
+  \institution{University of Granada}
+  \city{Granada}
+  \country{Spain}
 }
-\email{trovato@corporation.com}
+\email{info@ernesto.es}
 
-\author{G.K.M. Tobin}
-\authornote{The secretary disavows any knowledge of this author's actions.}
+\author{Mario García-Valdez}
 \affiliation{%
-  \institution{Institute for Clarity in Documentation}
-  \streetaddress{P.O. Box 1212}
-  \city{Dublin}
-  \state{Ohio}
-  \postcode{43017-6221}
+  \institution{Instituto Tecnológico de Tijuana}
+  \city{Tijuana, Baja California}
+  \country{Mexico}
 }
-\email{webmaster@marysville-ohio.com}
+\email{mario@tectijuana.edu.mx}
 
-\author{Lars Th{\o}rv{\"a}ld}
-\authornote{This author is the
-  one who did all the really hard work.}
+\author{Juan-Julián Merelo Guervós}
 \affiliation{%
-  \institution{The Th{\o}rv{\"a}ld Group}
-  \streetaddress{1 Th{\o}rv{\"a}ld Circle}
-  \city{Hekla}
-  \country{Iceland}}
+  \institution{University of Granada}
+  \city{Granada}
+  \country{Spain}}
 \email{larst@affiliation.org}
 
 % The default list of authors is too long for headers.
@@ -875,7 +866,7 @@ this content or how it has been generated. We can also extend
 evolutionary MTD to other services, whose configurations can be
 evolved alongside the web server for more variable attack surfaces, or
 even change the web server so that the configuration is even more
-difficult to detect. Adding multi-objective evolution so that we
+difficult to detect. Addinfg multi-objective evolution so that we
 improve performance alongside security is also something we intend to
 pursue in the future.
 
