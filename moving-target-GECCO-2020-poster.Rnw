@@ -123,7 +123,7 @@ the vulnerability. A hardened objective might still be attacked, as
 long as the person attacking is able to profile it and try different
 things on it, simultaneously or later on. Avoiding this is the main
 objective of the so called Moving Target Defense, or MTD
-\cite{moving-target,jajodia2011moving,Cai2016}.
+\cite{moving-target}.
 
 In our case, and like \cite{john_evolutionary_2014}, we have chosen to work on defending web services by optimizing the configuration of a web server unlike he did, we
 have chosen the {\sf nginx} static web server and proxy. In our previous papers \cite{erseco:evostar}, we realized that one of the main challenges
