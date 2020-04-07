@@ -1,4 +1,4 @@
-%\documentclass[sigconf, authordraft]{acmart}
+%\documentclass[sigconf, authordraft]{acmart} -*- mode: Latex -*-
 \documentclass[sigconf]{acmart}
 
 \usepackage{booktabs} % For formal tables
@@ -61,16 +61,18 @@ suppressPackageStartupMessages({
 \begin{abstract}
 
 Moving target defense is a technique for protecting internet-facing
-systems via the creation of a variable attack surface. In the case of
+systems via the creation of a {\em variable attack surface}, that is,
+a changing profile that, however, is able to provide the same service
+to letitimate users. In the case of
 internet servers, it can be achieved via the generation of different
-configurations that change the server profile, and that can be
+configurations that change the service profile, and that can be
 included in a policy of restarting services with new configurations
 after a random time and with a random frequency. In this paper we will
-present a method based on evolutionary algorithm, that uses
+present a method based on evolutionary algorithms that uses
 industry-standard practices to score the vulnerability of a server and
 is designed to generate multiple configurations with optimized score
-in every run of the algorithm. In this paper we will present how this
-is achieved via tuning of the evolutionary algorithm with the
+in every run of the algorithm. We make improvements over a previous
+version of the method by tuning the evolutionary algorithm with the
 challenge of the very costly fitness evaluation that only allows for a
 very limited evaluation budget.
 \end{abstract}
@@ -123,54 +125,14 @@ things on it, simultaneously or later on. Avoiding this is the main
 objective of the so called Moving Target Defense, or MTD
 \cite{moving-target,jajodia2011moving,Cai2016}.
 
-This kind of defense does not specify either the kind of attack, the
-service is protecting or the technique, it is a framework to define a
-series of policies where the essence is to change the configuration of the
-service defended in that way after a random amount of time so that it
-creates different traffic and response patterns that make impossible
-to identify a node that does a specific service in the network. In
-this sense, we have chosen to work on defending web services (or web
-sites) by optimizing the configuration of a web server, following the
-work of \cite{john_evolutionary_2014}, which was one of the first
-evolutionary approaches to this kind of methodology; unlike he did, we
-have chosen the {\sf nginx} static web server and proxy, while he
-focused on the well known Apache web server. Our chose was motivated
-by the fact that nowadays {\sf nginx} is more popular, and still
-growing in popularity nowadays.
-
-In our previous papers \cite{erseco:evostar:anon,erseco:cec}, we realized that one of the main challenges
+In our case, and like \cite{john_evolutionary_2014}, we have chosen to work on defending web services by optimizing the configuration of a web server unlike he did, we
+have chosen the {\sf nginx} static web server and proxy. In our previous papers \cite{erseco:evostar}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
-in the vulnerabilities exposed by the site, even subtle ones. The
-fitness function we used seemed reasonable, and was simply based in
-counting the number of alerts raised by ZAP. While this is reasonable,
-there are several problems with this, but from the point of view of an
-evolutionary algorithm with a very limited budget, the main one is
-that most changes in the chromosome will not imply a change in the
-fitness; most importantly, a change in the severity of a particular
-vulnerability will not be counted as such. This paper will be mainly
-devoted to examine a new fitness function, that really takes into
-account the severity of the vulnerability raised. We will try to prove
-that this new fitness function improves the exploitation capabilities
-of the algorithm, obtains more secure configurations, and is also able
-to obtain many more low-vulnerability {\sf nginx} configurations in a
-single run.
-
-Additionally, we have made several piecewise improvements to our
-previous system; we have debugged the configuration extensively to
-ensure they produced only valid values; at the same time, we have
-eliminated invalid values that were introduced originally for testing
-purposes. We have also performed an analysis of the vulnerabilities
-reported, in order to check what is the actual impact of configuration
-changes on them; finally, we have made a small change to the selection
-method to increase the variability of individuals that will be used
-eventually for the variable configuration.
-
-The rest of the paper is organized as follows: next we will present
-the state of the art in evolutionary methods applied to MTD; the next
-Section \ref{sec:met} will present the methodology used in this paper,
-followed by the experimental results, which we will discuss in Section \ref{sec:met}
-finishing with our conclusions and future lines of work.
-
+in the vulnerabilities exposed by the site, even subtle ones. This paper will be mainly
+devoted to examine a new fitness function that takes into
+account the severity of the vulnerability raised, together with several piecewise improvements to our
+previous system. We will briefly present the methodology we have
+followed next.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
