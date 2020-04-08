@@ -46,12 +46,13 @@ def test_generate_config_good():
     assert("client_max_body_size 1979392;" in nginx_config)
     assert("server_tokens on;" in nginx_config)
     assert("gzip off;" in nginx_config)
-    assert("add_header X-Frame-Options: \"ALLOW-FROM http://www.exampletfm.com/\";" in nginx_config)
-    assert("add_header Server: caddy;" in nginx_config)
-    assert("add_header X-Content-Type-Options: \"\";" in nginx_config)
-    assert("add_header X-Powered-By: PHP/5.3.3;" in nginx_config)
-    assert("add_header X-XSS-Protection: 0" in nginx_config)
-    assert("add_header Content-Security-Policy: \"default-src 'none'\"" in nginx_config)
+    print(nginx_config)
+    assert("add_header X-Frame-Options \"ALLOW-FROM http://www.exampletfm.com/\";" in nginx_config)
+    assert("add_header Server caddy;" in nginx_config)
+    assert("add_header X-Content-Type-Options \"\";" in nginx_config)
+    assert("add_header X-Powered-By PHP/5.3.3;" in nginx_config)
+    assert("add_header X-XSS-Protection 0" in nginx_config)
+    assert("add_header Content-Security-Policy \"default-src 'none'; frame-ancestors 'none';\"" in nginx_config)
 
 
 def test_generate_config_bad():
@@ -68,5 +69,5 @@ def test_generate_config_bad():
     assert("large_client_header_buffers 4 1;" not in nginx_config)
     assert("add_header Server: Apache;" not in nginx_config)
     assert("add_header X-Content-Type-Options: '';" not in nginx_config)
-    assert("add_header X-Powered-By: PHP5.6;" not in nginx_config)
-    assert("add_header X-Frame-Options: ALLOW;" not in nginx_config)
+    assert("add_header X-Powered-By PHP5.6;" not in nginx_config)
+    assert("add_header X-Frame-Options ALLOW;" not in nginx_config)
