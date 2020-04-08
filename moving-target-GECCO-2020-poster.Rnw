@@ -171,7 +171,7 @@ As in our previous paper, the best fitness obtained is already present
 in an individual in the first generation, so that the evolution
 process consists in eventually {\em filling} the population with
 individuals with this, highest, fitness. The main difference from
-\cite{erseco:evostar:anon,erseco:cec} to this paper is that, in this case,
+\cite{erseco:evostar} to this paper is that, in this case,
 there will be no chromosome in the last generation with medium
 vulnerabilities: all of them, thanks to the new fitness designed, have
 low vulnerability, as well as "information-level" vulnerabilities
@@ -188,15 +188,12 @@ data.md <- read.csv("results/mutual-distances-averages-entropy.csv")
 data.16 = data.md[ data.md$Population == 16, ]
 data.32 = data.md[ data.md$Population == 32, ]
 ggplot(data.16,aes(x=Experiment,y=Avg.Distance))+ geom_boxplot() + theme_tufte()
-ggplot(data.32,aes(x=Experiment,y=Avg.Distance))+ geom_boxplot() + theme_tufte()
 @
 \caption{Average mutual distance for individuals in the last
-  generation for experiments with population = 16 (top) and 32
-  (bottom). GECCO labels the ones that use the new sort method, while
+  generation for experiments with population = 16. GECCO labels the ones that use the new sort method, while
   "Sorted" uses the same algorithm, but the whole chromosome, not only
 the fitness, is sorted; the data labeled "Evostar" uses the previous
-fitness function, sorted in the same way; this one was not tested with
-population = 32.}
+fitness function, sorted in the same way.}
   \label{fig:md}
 \end{figure}
 %
@@ -216,11 +213,9 @@ the list of pairwise distances.
 \begin{figure}[h!tb]
 <<entropy, cache=FALSE,echo=FALSE>>=
 ggplot(data.16,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
-ggplot(data.32,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
 @
 \caption{Population-level mutual distance entropy for individuals in the last
-  generation for experiments with population = 16 (top) and 32
-  (bottom). Labels as above, with GECCO tagging the ones we have
+  generation for experiments with population = 16 (top). Labels as above, with GECCO tagging the ones we have
   proposed in this paper.}
   \label{fig:entropy}
 \end{figure}
@@ -247,11 +242,9 @@ entropy.data <- rbind(entropy.initial, entropy.new, entropy.unsorted)
 entropy.data$Population <- substr( entropy.data$File, 16, 17 )
 
 ggplot( entropy.data[entropy.data$Population==16,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
-ggplot( entropy.data[entropy.data$Population==32,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
 @
 \caption{Component-level entropy for individuals in the last
-  generation for experiments with population = 16 (top) and 32
-  (bottom). Labels as above, with GECCO tagging the ones we have
+  generation for experiments with population = 16 (top). Labels as above, with GECCO tagging the ones we have
   proposed in this paper.}
   \label{fig:component:entropy}
 \end{figure}
