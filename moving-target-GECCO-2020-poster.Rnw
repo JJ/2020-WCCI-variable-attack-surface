@@ -148,7 +148,7 @@ ones: previously, we used the default {\tt sorted} Python function,
 which sorts data structures using all the elements of the data
 structure sorted; for equal fitness, it will use the chromosome
 values. In this paper
-we have changed the algorithm to only use the fitness; when it is the
+we have changed the algorithm to sort only by fitness; when it is the
 same, the chromosomes will be kept  in the same random order in which they entered the sort
 algorithm. Let's check results next.
 
@@ -156,30 +156,14 @@ algorithm. Let's check results next.
 \section{Experimental results}
 \label{subs:results}
 
-First we will test what are the results with the new fitness function,
-as well as the rest of the incremental improvements we made to the
-implementation of the evolutionary moving target defense method.
-%
- introduced in this paper, besides the new fitness
-function, is the fact that there are no invalid configurations
-generated, since all invalid test values have been eliminated from the
-chromosome. The previous experiments showed that eventually those
-values were eliminated from the population, but they were still
-present, adding invalid configurations to the pool of evaluations we
-cannot afford. 
-As in our previous paper, the best fitness obtained is already present
-in an individual in the first generation, so that the evolution
-process consists in eventually {\em filling} the population with
-individuals with this, highest, fitness. The main difference from
-\cite{erseco:evostar} to this paper is that, in this case,
-there will be no chromosome in the last generation with medium
-vulnerabilities: all of them, thanks to the new fitness designed, have
-low vulnerability, as well as "information-level" vulnerabilities
-which are not really considered in this new fitness. As was the case
-before, 100\% of all chromosomes share this low vulnerability score.
-
-But the real improvement lays in the use of the new sorting function
-to select chromosomes. We represent the average distances in Figure
+The experiments confirm the result in \cite{erseco:evostar}:
+configurations with the lowest vulnerability are already present in
+the first generations, so that the evolution
+process consists in  {\em filling} the population with
+individuals with individuals that have that low vulnerability index
+and that, besides, are different enough. The new sorting function,
+however, makes the whole last generation usable and sufficiently
+different from each other. We represent the average distances in Figure
 \ref{fig:md}.
 %
 \begin{figure}[h!tb]
@@ -197,17 +181,10 @@ fitness function, sorted in the same way.}
   \label{fig:md}
 \end{figure}
 %
-The figures clearly show that the per-file average mutual distances
-between different individuals have increased, thanks to the simple
-change of using a better sorting routine for selection. Average
-distances were very similar before that change, and didn't depend on
-the type of fitness. All that could be affirmed about the previous set
-of solutions was that they were pairwise different; now we can also
-affirm that there's a good average distance between them; this
-distance is not normalized, however, and could be dominated by a few
-components whose range is bigger; this is why we have also computed
-the entropy of these distances, charted in Figure
-\ref{fig:entropy}. This is the Jenssen-Shannon entropy computed over
+While before last-generation individuals were different, difference
+was not so high due to the sorgint function. This fitness function
+diversifies also distances between them, charted in Figure
+\ref{fig:entropy}, which shows the Jenssen-Shannon entropy computed over
 the list of pairwise distances.
 %
 \begin{figure}[h!tb]
@@ -220,49 +197,11 @@ ggplot(data.16,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
   \label{fig:entropy}
 \end{figure}
 %
-Again, entropy is much higher in the new experiment, with this
-indicating that how far away a component is going to be from others
-has an element of surprise, which is what we are looking for in the
-MTD methodology. Still, we need to look at the component-level
-entropy, that is, the degree of surprise of a particular element in
-the chromosome: see Figure \ref{fig:component:entropy}
-%
-\begin{figure}[h!tb]
-<<component.entropy, cache=FALSE,echo=FALSE>>=
-entropy.initial <- read.csv("results/component-entropy-evostar.csv")
-entropy.new <- read.csv("results/component-entropy-sorted.csv")
-entropy.unsorted <- read.csv("results/component-entropy-gecco.csv")
-
-entropy.initial$Experiment <- "Evostar"
-entropy.new$Experiment <- "Sorted"
-entropy.unsorted$Experiment <- "GECCO"
-
-entropy.data <- rbind(entropy.initial, entropy.new, entropy.unsorted)
-
-entropy.data$Population <- substr( entropy.data$File, 16, 17 )
-
-ggplot( entropy.data[entropy.data$Population==16,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
-@
-\caption{Component-level entropy for individuals in the last
-  generation for experiments with population = 16 (top). Labels as above, with GECCO tagging the ones we have
-  proposed in this paper.}
-  \label{fig:component:entropy}
-\end{figure}
-%
-Once again, added entropy for all components is much higher;
-component-wise, there might not be much variation, mainly in those
-components that have few values and/or have only some values that
-result in low or no vulnerability; the added value, however, is that
-this new version of the evolutionary moving target defense framework
-is able to generate low-vulnerability, high-diversity, sets of
-configurations that can then be used successively in setting
-configuration for {\sf nginx} servers, changing them with high frequency.
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
-% \url{https://github.com/JJ/2020-WCCI-variable-attack-surface}
-\url{https://github.com/anonymous/repo}, and can
-be reused with a free license.
+\url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and can
+be reused under a free license.
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
