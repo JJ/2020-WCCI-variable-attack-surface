@@ -1,6 +1,6 @@
 %\documentclass[sigconf, authordraft]{acmart} -*- mode: Latex -*-
 \documentclass[sigconf]{acmart}
-
+\usepackage[utf8]{inputenc}
 \usepackage{booktabs} % For formal tables
 
 % Conference
@@ -38,7 +38,7 @@ suppressPackageStartupMessages({
 }
 \email{info@ernesto.es}
 
-\author{Mario Garc`ia-Valdez}
+\author{Mario García-Valdez}
 \affiliation{%
   \institution{Instituto Tecnológico de Tijuana}
   \city{Tijuana, Baja California}
@@ -113,12 +113,6 @@ very limited evaluation budget.
 Defending targets against cyberattacks includes many different
 techniques, like hardening, which  can effectively be formulated as an optimization one: minimizing vulnerabilities; this will include minimizing the possibility of profiling a target, which is the main objective of the so called Moving Target Defense, or MTD \cite{moving-target}. The moving target in this paper will be the {\sf nginx} static web server (like  \cite{john_evolutionary_2014}) and proxy. We are here improving on  the algorithm in \cite{erseco:evostar}, exploring a new  fitness function that takes into
 account the severity of the vulnerability raised
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methodology, experimental setup and results}
-\label{sec:met}
-
-% Maybe rewrite a part of this, expanding if possible - JJ
 
 As in our previous papers \cite{erseco:evostar:anon,erseco:cec}, we have chosen
 {\sf nginx}, a  popular static web server, inverse proxy, API gateway
