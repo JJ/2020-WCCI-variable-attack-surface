@@ -116,8 +116,7 @@ account the severity of the vulnerability. {\sf nginx} is a  popular static web 
 and load balancer. Its latest versions have more than 700 configuration
 directives, but we
 have chosen just fifteen \cite{erseco:evostar}; nine of them affecting the global behavior of the
-server, and six affecting the values of specific HTTP headers (shown
-in Table \ref{table:http_headers}), which in turn affect how the
+server, and six affecting the values of specific HTTP headers, which in turn affect how the
 browser receiving the information deals with the pages and the
 information contained in them. Some
 of these directives are security-neutral, and do not actually alter
@@ -129,76 +128,32 @@ kind of vulnerabilities; most of them are about (purported) revelation
 of data, but some of them, mainly those related to headers, might
 result in some low-level vulnerability.
 
-But first we need to design where to measure that vulnerabilities. As previously \cite{erseco:evostar}, we have used a basic
+But first we need to design where to measure those vulnerabilities. As previously \cite{erseco:evostar}, we have used a basic
 application with just a few pages and a form with the ZAP application getting the vulnerabilities that affect it. ZAP classifies alerts in four different classes, depending on its
 severity: High, Medium, Low and Informational. Of these kind of
 vulnerabilities, Informational can be dismissed: Low will be scored with 1, Medium will get 2 as
 score, and High will get a 4 score. Overall score needs to be minimized; a ``good'' configuration will be
-one that does not have any ``Medium''-scored alert.
+one that does not have any ``Medium''-scored alert. Every evaluation
+is a lengthy process, taking up several seconds.
 
-Evaluation of every configuration is carried out in the following way:\begin{itemize}
-
-\item A new configuration is generated from the evolutionary algorithm
-  values and stored in a configuration file with random name. This has
-  been introduced in this version, and makes sure that every
-  configuration is evaluated only once.
-
-\item This configuration is checked for correctness, and 999 returned
-  as score if it's incorrect.
-\item The program ensures the previous instance of the server has been
-  killed, and starts up the server.
-\item ZAP scans the site
-\item The program kills the server, checking several times until it's gone
-
-\end{itemize}
-
-Scanning is the part of this process that takes the most time, since
-it implies making requests to every single page in the system and
-analyzing the response. In this version of the tester we have
-increased the number of maximum workers the {\sf nginx} server is able
-to process, which might speed it up a bit. Still, a single run takes
-several hours, leaving us with just a few possible experiments to
-conform, and every one of them with just a few evaluations, much less
-that are standard in the industry.
-
-After testing different types of crossover and mutation in our
-previous papers \cite{erseco:evostar:anon,erseco:cec}, in this paper
-we have used the simple combination of operators we tested in the
-previous version, that is, used an  {\em incremental} mutation, that
-adds or subtracts one from
-current values, and circles back to the opposite end of the range if
-these are exceeded; for instance,  the value of {\tt worker\_connections} is
-2048 it will become 512 if it's added one. This guarantees that every
-mutation will result in a different value of the parameter under
-mutation; also, only one randomly chosen value is changed every
-time. Additionally, we are using a traditional 2-point crossover that
+The evolutionary algorithm also uses an  {\em incremental circular}
+mutation, a traditional 2-point crossover that
 returns a single chromosome (as opposed to the traditional two),
 combining 3 segments, two taken from one parent, one taken from the
-other. Also, we are again using 2-tournament selection.
+other and 2-tournament selection.
 
-All together, every generation, a reproduction pool of the same size
-as the population is created; these are randomly paired,
-crossed, obtaining a single result, that is then mutated; this new set
-of individuals is evaluated and the result is merged with
-the previous population, with just the best ones selected to pass to
-the next generation.
-
-A simple, but fundamental change has been added in this paper in the
-sorting algorithm used to sort the solutions and select the best
+The main change in this paper has been the 
+sorting algorithm used to rank the solutions and select the best
 ones: previously, we used the default {\tt sorted} Python function,
 which sorts data structures using all the elements of the data
-structure sorted. Since we store chromosomes in a list with two
-elements, the first of which is the fitness (see Figure \ref{fig:chromosome}, and the second  a list
-containing the chromosome, the chromosome itself was included in this
-sorting, resulting in selected individuals being similar to each other
-as long as their fitness was exactly the same. However, in this paper
-we have changed the algorithm to use only the fitness, which is the
-first element. When fitness is the same, the chromosomes will be
-maintained in the same random order in which they entered the sort
-algorithm.
+structure sorted; for equal fitness, it will use the chromosome
+values. In this paper
+we have changed the algorithm to only use the fitness; when it is the
+same, the chromosomes will be kept  in the same random order in which they entered the sort
+algorithm. Let's check results next.
 
 
-\subsection{Experimental results}
+\section{Experimental results}
 \label{subs:results}
 
 First we will test what are the results with the new fitness function,
