@@ -112,274 +112,28 @@ very limited evaluation budget.
 
 Defending targets against cyberattacks includes many different
 techniques, like hardening, which  can effectively be formulated as an optimization one: minimizing vulnerabilities; this will include minimizing the possibility of profiling a target, which is the main objective of the so called Moving Target Defense, or MTD \cite{moving-target}. The moving target in this paper will be the {\sf nginx} static web server (like  \cite{john_evolutionary_2014}) and proxy. We are here improving on  the algorithm in \cite{erseco:evostar}, exploring a new  fitness function that takes into
-account the severity of the vulnerability raised
-
-As in our previous papers \cite{erseco:evostar:anon,erseco:cec}, we have chosen
-{\sf nginx}, a  popular static web server, inverse proxy, API gateway
-and load balancer; we did that because web is one of the most popular
-(and vulnerable) user-facing services, and it has been also used by
-John et al. in their work; that way, we can compare our results.
-
-Latest versions
-of{\sf nginx} (1.17.x) have more than 700 configuration
-directives. As a matter of fact, the performance of {\sf nginx}
-servers has been optimized by  evolutionary algorithms recently
-\cite{chi2018hybrid}; however, we will be focused mainly in its
-vulnerabilities.
-
-
-These directives affect in different ways the behavior of
-the web site (or service) that is behind it, or simply change the
-values in the response headers; we will show the ones we will working
-with next. The following Subsection \ref{subs:setup}
-will outline the setup actually used for running the experiments, and
-results will be presented last in Subsection \ref{subs:results}.
-
-\subsection{Description of the attack surface parameters}
-
-From all the parameters used to change the behavior of {\sf nginx}, we
-have chosen just fifteen, the same as in out previous papers
-\cite{erseco:evostar:anon,erseco:cec}, from where this section is largely taken
-and expanded.
-
-The fifteen parameters we have used in this paper is extracted from the DISA STIG recommendations for
-hardening webservers based in the CVSS score
-\cite{disa20:apache}, and is also similar to the ones that were chosen
-by John et al. \cite{john_evolutionary_2014}.
-. Most of these values are defined in the original
-document as Apache HTTP server configuration values but have a {\sf
-nginx} equivalent directive. All configuration parameters used are
-{\sf nginx} directives, with nine of them, shown in Table
-\ref{table:nginx_directives}, affecting the global behavior of the
+account the severity of the vulnerability. {\sf nginx} is a  popular static web server, inverse proxy, API gateway
+and load balancer. Its latest versions have more than 700 configuration
+directives, but we
+have chosen just fifteen \cite{erseco:evostar}; nine of them affecting the global behavior of the
 server, and six affecting the values of specific HTTP headers (shown
 in Table \ref{table:http_headers}), which in turn affect how the
 browser receiving the information deals with the pages and the
-information contained in them.
-
-\begin{table*}
-\centering
-\begin{tabular}{|l|l|c|c|}
-\hline
-\textbf{STIG ID} &\textbf{Directive name}& \textbf{Possible values} &  \textbf{Used in \cite{john_evolutionary_2014}}\\ \hline
-V-13730 & worker\_connections            & 512 - 2048 & \\ \hline
-V-13726 & keepalive\_timeout             & 10 - 120 & \checkmark \\ \hline
-V-13732 & disable\_symlinks              & True/False & \checkmark \\ \hline
-V-13735 & autoindex                      & True/False & \checkmark \\ \hline
-V-13724 & send\_timeout                  & True/False & \checkmark \\ \hline
-V-13738 & large\_client\_header\_buffers & 512 - 2048 & \\ \hline
-V-13736 & client\_max\_body\_size        & 512 - 2048 & \\ \hline
-V-6724  & server\_tokens                 & True/False & \checkmark \\ \hline
-        & gzip                           & True/False & \\ \hline
-\end{tabular}
-\vspace{3ex}\\
-\caption{List of {\sf nginx} HTTP parameters whose value is evolved
-  here. Also featured is their presence in
-  \cite{john_evolutionary_2014}, although being a different web
-  server, the names might be somewhat different.}
- \label{table:nginx_directives}
-\end{table*}
-%
-
-These are the {\sf nginx} directives that have been used in this paper; their
-equivalent STIG ID is shown in Table
-\ref{table:nginx_directives} along with the range of values for
-generation and ulterior evolution:\begin{itemize}
-\item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
-\item \texttt{keepalive\_timeout}: Period during which a server-side client
-  connection will remain open  before timing out.
-\item \texttt{disable\_symlinks}: Restricts opening files that are
-  actually symbolic links. When set to off (the default), if  some component of the
-  path is a symbolic link the access to that file is denied. An
-  additional value, {\tt if\_not\_owner}, is not considered in this study.
-\item \texttt{autoindex}: When activated it shows the contents of the directories, otherwise it does not show anything.
-\item \texttt{send\_timeout}: sets a value for the waiting time to
-  transmit a response to the client; the client will close the
-  connection if nothing is received during that time. It is set by
-  default to 60s, we will disable it completely (setting it to 0) or
-  set it to 1 second.
-\item \texttt{large\_client\_header\_buffers}: This directive has two
-  values: the number of buffers that will read large client request
-  headers, and their size. We just evolve the second number, while the
-  first one is set to 4.
-
-\item \texttt{client\_max\_body\_size}: Maximum allowed size of the client request body, specified in the {\tt
-  Content-Length} field of the request header. The value will indicate
-the maximum number of Megabytes allowed. Over that value, requests
-will simply return an error.
-
-\item \texttt{server\_tokens}: Enable or disable the broadcast of the {\sf
-  nginx} version on the error pages and in the {\tt Server} response
-header. It's on by default, and we admit on or off values, although the
-directive can also use a {\em build} value and simply a string.
-\item
-\texttt{gzip}: This directive enables or disables compression of HTTP
-responses. This directive doesn't affect directly the security but
-adds entropy to the different generated configurations; it also
-affects the performance of the server and its throughput. The
-additional parameter {\tt gzip\_min\_length} can be used to limit the
-length of files actually compressed.
-\end{itemize}
-
-\begin{table}
-
-  \centering
-  \caption{Selected list of directives affecting HTTP headers, and the
-  values that we are using in this paper. \label{table:http_headers}}
-
-
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Header name}           & \textbf{Possible values} \\ \hline
-X-Frame-Options                & \shortstack[l]{SAMEORIGIN \\
-  ALLOW-FROM \\ DENY} \\ \hline
-X-Powered-By                   & \shortstack[l]{PHP/5.3.3 \\ PHP/5.6.8
-  \\ PHP/7.2.1 \\ Django2.2 \\ nginx/1.16.0 \\  nginx/1.17.8} \\ \hline
-X-Content-Type-Options         & nosniff \\ \hline
-Server                         & \shortstack[l]{apache \\ caddy \\ nginx/1.16.0} \\ \hline
-X-XSS-Protection	       & \shortstack[l]{0 \\ 1 \\ 1; mode=block} \\ \hline
-Content-Security-Policy	       & \shortstack[l]{default-src 'self';\\~frame-ancestors 'self' \\ default-src 'none';\\~frame-ancestors 'none' \\ default-src 'https://*.google.com'} \\ \hline
-\end{tabular}
-
-\end{table}
-%
-
-
-With every web page, the HTTP response from the server includes a
-number of headers; part of them are automatically added by the server
-or have a default value, while others can be configured; these headers
-sometimes simply add metadata (like the system date, for instance),
-while others have a precise value that is interpreted by the browser,
-and thus can have security implications; these headers, which usually
-are preceded by {\tt X}, are also usually {\em de facto} standards,
-with certain standard values. The ones we have chosen are explained
-below, and the values they can take in this research represented in
-Table \ref{table:http_headers}. These servers, which do have an
-influence in the security, were not used in
-\cite{john_evolutionary_2014}.
-\begin{itemize}
-\item \texttt{X-Frame-Options}: The header that has the same name as this
-directive, when set, bans browsers rendering of frame-embedded pages. Web servers can use it to prevent what are called
-\textit{clickjacking} attacks on their pages, that is, overlaying a
-transparent frame over a site to make users click on the transparent
-layer believing they are clicking on the one below. Several values are
-possible: only allow if the embedding page belongs to the same site,
-for instance, but you can also directly ban it. We have 4 different
-options for this, including a value that's intentionally wrong.
-\item \texttt{X-Powered-By}: This string should inform of the
-name and versions of the application that generated the response, the
-webserver or whatever. It
-is generally recommended not giving too extensive information in this
-header because can reveal details that can facilitate the task of
-finding and exploiting security flaws for specific versions just
-looking up in an online database. Setting different values do not affect directly to the
-security by itself but adds entropy to the generated configurations.
-\item
-\texttt{X-Content-Type-Options}: This directive controls the operation
-of the homonym HTTP response header; when set,  changing the \textit{MIME} types
-announced in the `Content-Type' is disabled, which is used to avoid
-`MIME type sniffing' attacks; that is, using what browser's heuristics
-for detecting MIME type from content to launch a cross-site scripting
-attack.
-\item
-\texttt{server}: This directive is related to the {\tt Server} HTTP
-header, which is used to communicate to browsers metadata about the
-server software used by the application. This can be as informative or
-as misleading as we want; as a matter of fact, it is a good practice
-not to give too
-extensive information of software versions, but we can cheat the
-attacker telling wrong server version info. Doesn't affect directly to
-the security but adds entropy to the generated configurations. This
-directive, along with {\tt X-Powered-By}, are mainly used for
-informative or statistics purposes and do not really change anything
-either in content or how it is rendered by the server.
-\item
-\texttt{X-XSS-Protection}: This directive is used to set the value of
-the corresponding HTTP response header; as the rest of these server
-directives, it's interpreted by browsers and used by them to avoid
-loading pages when they detect reflected cross-site
-scripting (XSS) attacks. % Need to clarify this.
-\item
-\texttt{Content-Security-Policy}: we can set this directive to
-different values to avoid the load of certain kind of content. We have
-three different values for this directive, allowing content only if
-it's loaded from the same page ({\tt self}), loading from nowhere
-({\tt none}), or including Google domains (with the directive {\tt https//:*.google.com}), in
-this case mainly for user tracking. These values are shown in Table \ref{table:http_headers}
-\end{itemize}
-
-This
-The problem of optimizing security in configuration is twofold: some
+information contained in them. Some
 of these directives are security-neutral, and do not actually alter
-the security score, they simply add to overall byte-level diversity;
-some of them, by themselves, will make a site more secure; in some
-other cases, it will be its combination what makes it safer. That is
-why a global optimization algorithm is needed to get variable, and
-also secure, attack surface. Eventually, a {\sf nginx} configuration
-file will be generated:
-
-The fifteen parameters that have been generated by the evolutionary
-algorithm are marked with a hash mark \# in the block of text
-above. The upper block are global
-directives, the lower {\tt server} block  affects only the root location, leaving
-other subdirectories unaffected.
-
+the security score, they simply add to overall byte-level diversity, that is, they put the {\em motion} in the{\em moving} target;
+some of them, by themselves, will concern the site security.
 Not all of these directive actually affect fitness, and thus
 vulnerability of the site, and those that do, they create different
 kind of vulnerabilities; most of them are about (purported) revelation
 of data, but some of them, mainly those related to headers, might
 result in some low-level vulnerability.
 
-\subsection{Experimental setup}
-\label{subs:setup}
-
-The most important part of the evolutionary algorithm is designing
-correctly the fitness function that is going to be tested and used.
-A configuration is meaningless without
-content behind, and we need to choose what is going to be the
-content. As in our previous papers
-\cite{erseco:evostar:anon,erseco:cec}, we have used a basic
-application with just a few pages and a form, intentionally done that
-way so that we can obtain results relatively fast for the new shape of
-the algorithm we are testing here.
-
-The setup used for computing this score is exactly the same as before:
-standard Docker containers for the juice shop and the ZAP
-API were connected together using Docker Compose  with the container
-hosting the evolutionary algorithm, which calls from the fitness
-function (written in Python) the ZAP library.
-
-For running the Docker containers a set of cloud servers were
-orchestrated in Microsoft Azure using standard B2s machine (2 vCPU,
-4 GiB of memory) for the 16 population size and standard D2s v3 machine
-(2 vCPU, 8 GiB of memory) for the 32 population one. The 16 population
-size machine was powered 18 days and the 32 population one was powered
-8 days having a total cost of €32.56.
-
-What ZAP does is to run (spider)
-over all pages in the site, making different attacks and raising
-alerts if they detect any vulnerability. For every vulnerability
-found, it raises an alert. In our previous paper we simply used the
-number of alerts as a fitness score (to be minimized); while being
-adequate for a proof of concept, it does not actually reflect the
-state of vulnerability created by the configuration under evaluation,
-mainly because these alerts have different nature.
-
-ZAP classifies alerts in four different classes, depending on its
+But first we need to design where to measure that vulnerabilities. As previously \cite{erseco:evostar}, we have used a basic
+application with just a few pages and a form with the ZAP application getting the vulnerabilities that affect it. ZAP classifies alerts in four different classes, depending on its
 severity: High, Medium, Low and Informational. Of these kind of
-vulnerabilities, Informational can be dismissed, since they are simply
-notes about some best practice not being followed strictly. For
-instance, one such alert could be:
-
-\begin{verbatim}
-The response appears to contain suspicious comments
-which may help an attacker.
-\end{verbatim}
-
-We decided to work with the rest to assign a vulnerability score to
-every configuration: Low will be scored with 1, Medium will get 2 as
-score, and High will get a 4 score.
-
-This score is to be minimized, but a ``good'' configuration will be
+vulnerabilities, Informational can be dismissed: Low will be scored with 1, Medium will get 2 as
+score, and High will get a 4 score. Overall score needs to be minimized; a ``good'' configuration will be
 one that does not have any ``Medium''-scored alert.
 
 Evaluation of every configuration is carried out in the following way:\begin{itemize}
