@@ -108,31 +108,11 @@ very limited evaluation budget.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+\section{Introduction, methodology and experimental setup}
 
-Cybersecurity is a discipline that taps from all corners of computer
-science, including optimization in many cases. Many security problems
-can be formulated as a search problem, as long as the vulnerability of
-a system (along with any other objective we want to achieve, such as
-throughput or performance) can be given a fixed score.
-
-Defending targets against attacks includes many different
-techniques. Of course, hardening is one of them, and this is a problem
-that can effectively be formulated as an optimization one: minimizing
-the vulnerability. A hardened objective might still be attacked, as
-long as the person attacking is able to profile it and try different
-things on it, simultaneously or later on. Avoiding this is the main
-objective of the so called Moving Target Defense, or MTD
-\cite{moving-target}.
-
-In our case, and like \cite{john_evolutionary_2014}, we have chosen to work on defending web services by optimizing the configuration of a web server unlike he did, we
-have chosen the {\sf nginx} static web server and proxy. In our previous papers \cite{erseco:evostar}, we realized that one of the main challenges
-was to define a fitness function that would be able to reflect changes
-in the vulnerabilities exposed by the site, even subtle ones. This paper will be mainly
-devoted to examine a new fitness function that takes into
-account the severity of the vulnerability raised, together with several piecewise improvements to our
-previous system. We will briefly present the methodology we have
-followed next.
+Defending targets against cyberattacks includes many different
+techniques, like hardening, which  can effectively be formulated as an optimization one: minimizing vulnerabilities; this will include minimizing the possibility of profiling a target, which is the main objective of the so called Moving Target Defense, or MTD \cite{moving-target}. The moving target in this paper will be the {\sf nginx} static web server (like  \cite{john_evolutionary_2014}) and proxy. We are here improving on  the algorithm in \cite{erseco:evostar}, exploring a new  fitness function that takes into
+account the severity of the vulnerability raised
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Methodology, experimental setup and results}
