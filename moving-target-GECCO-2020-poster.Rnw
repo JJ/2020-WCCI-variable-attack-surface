@@ -54,7 +54,7 @@ suppressPackageStartupMessages({
 \email{larst@affiliation.org}
 
 % The default list of authors is too long for headers.
-\renewcommand{\shortauthors}{B. Trovato et al.}
+\renewcommand{\shortauthors}{Serrano Collado, García-Valdez, Merelo}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,7 +63,7 @@ suppressPackageStartupMessages({
 Moving target defense is a technique for protecting internet-facing
 systems via the creation of a {\em variable attack surface}, that is,
 a changing profile that, however, is able to provide the same service
-to letitimate users. In the case of
+to legitimate users. In the case of
 internet servers, it can be achieved via the generation of different
 configurations that change the service profile, and that can be
 included in a policy of restarting services with new configurations
@@ -111,16 +111,21 @@ very limited evaluation budget.
 \section{Introduction, methodology and experimental setup}
 
 Defending targets against cyberattacks includes many different
-techniques, like hardening, which  can effectively be formulated as an optimization one: minimizing vulnerabilities; this will include minimizing the possibility of profiling a target, which is the main objective of the so called Moving Target Defense, or MTD \cite{moving-target}. The moving target in this paper will be the {\sf nginx} static web server (like  \cite{john_evolutionary_2014}) and proxy. We are here improving on  the algorithm in \cite{erseco:evostar}, exploring a new  fitness function that takes into
-account the severity of the vulnerability. {\sf nginx} is a  popular static web server, inverse proxy, API gateway
-and load balancer. Its latest versions have more than 700 configuration
+techniques, like hardening, which  can effectively be formulated the
+problem of minimizing vulnerabilities; this will include minimizing
+the possibility of an attacker profiling a target, which is the main objective of the so called Moving Target Defense, or MTD \cite{moving-target}. The moving target in this paper will be the {\sf nginx} static web server (like  \cite{john_evolutionary_2014}) and proxy. We are here improving on  the algorithm in \cite{erseco:evostar}, exploring a new  fitness function that takes into
+account the severity of the vulnerability.
+
+Optimizing {\sf nginx} involves creating configuration files that will
+then be checked for vulnerabilities. The latest versions of this
+server have more than 700 configuration
 directives, but we
 have chosen just fifteen \cite{erseco:evostar}; nine of them affecting the global behavior of the
 server, and six affecting the values of specific HTTP headers, which in turn affect how the
 browser receiving the information deals with the pages and the
 information contained in them. Some
 of these directives are security-neutral, and do not actually alter
-the security score, they simply add to overall byte-level diversity, that is, they put the {\em motion} in the{\em moving} target;
+the vulnerability score; they simply add to overall byte-level diversity, that is, they put the {\em motion} in the{\em moving} target;
 some of them, by themselves, will concern the site security.
 Not all of these directive actually affect fitness, and thus
 vulnerability of the site, and those that do, they create different
@@ -142,7 +147,7 @@ returns a single chromosome (as opposed to the traditional two),
 combining 3 segments, two taken from one parent, one taken from the
 other and 2-tournament selection.
 
-The main change in this paper has been the 
+The main change in this paper has been the
 sorting algorithm used to rank the solutions and select the best
 ones: previously, we used the default {\tt sorted} Python function,
 which sorts data structures using all the elements of the data
@@ -170,19 +175,18 @@ different from each other. We represent the average distances in Figure
 <<distances, cache=FALSE,echo=FALSE>>=
 data.md <- read.csv("results/mutual-distances-averages-entropy.csv")
 data.16 = data.md[ data.md$Population == 16, ]
-data.32 = data.md[ data.md$Population == 32, ]
 ggplot(data.16,aes(x=Experiment,y=Avg.Distance))+ geom_boxplot() + theme_tufte()
 @
 \caption{Average mutual distance for individuals in the last
   generation for experiments with population = 16. GECCO labels the ones that use the new sort method, while
-  "Sorted" uses the same algorithm, but the whole chromosome, not only
+  {\tt sorted} uses the same algorithm, but the whole chromosome, not only
 the fitness, is sorted; the data labeled "Evostar" uses the previous
 fitness function, sorted in the same way.}
   \label{fig:md}
 \end{figure}
 %
 While before last-generation individuals were different, difference
-was not so high due to the sorgint function. This fitness function
+was not so high due to the sorting function. This fitness function
 diversifies also distances between them, charted in Figure
 \ref{fig:entropy}, which shows the Jenssen-Shannon entropy computed over
 the list of pairwise distances.
