@@ -1,6 +1,6 @@
-%\documentclass[sigconf, authordraft]{acmart}
+%\documentclass[sigconf, authordraft]{acmart} -*- mode: Latex -*-
 \documentclass[sigconf]{acmart}
-
+\usepackage[utf8]{inputenc}
 \usepackage{booktabs} % For formal tables
 
 
@@ -45,7 +45,7 @@ suppressPackageStartupMessages({
 })
 @
 
-\title{Moving target defense through evolutionary algorithms}
+\title{}
 
 %%% The submitted version for review should be ANONYMOUS
 \author{Ben Trovato}
@@ -135,12 +135,6 @@ very limited evaluation budget.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-
-Cybersecurity is a discipline that taps from all corners of computer
-science, including optimization in many cases. Many security problems
-can be formulated as a search problem, as long as the vulnerability of
-a system (along with any other objective we want to achieve, such as
-throughput or performance) can be given a fixed score.
 
 Defending targets against attacks includes many different
 techniques. Of course, hardening is one of them, and this is a problem
