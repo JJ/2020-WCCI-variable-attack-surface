@@ -136,29 +136,25 @@ very limited evaluation budget.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Defending targets against attacks includes many different
-techniques. Of course, hardening is one of them, and this is a problem
-that can effectively be formulated as an optimization one: minimizing
-the vulnerability. A hardened objective might still be attacked, as
+Defending a system against cyberattacks includes many different
+techniques; the vulnerability of the system needs to be minimized, a procedure usually called {\em hardening}, which is a problem that can effectively be formulated as an optimization one. A hardened objective might still be attacked, as
 long as the person attacking is able to profile it and try different
-things on it, simultaneously or later on. Avoiding this is the main
+things on it, simultaneously or later on. Avoiding this kind of profiling is the main
 objective of the so called Moving Target Defense, or MTD
-\cite{moving-target,jajodia2011moving,Cai2016}.
+\cite{moving-target,jajodia2011moving,Cai2016,sengupta2020survey}.
 
-This kind of defense does not specify either the kind of attack, the
-service is protecting or the technique, it is a framework to define a
+Moving target defense does not specify either the kind of attack, the
+service is protecting or the technique; it is a framework to define a
 series of policies where the essence is to change the configuration of the
-service defended in that way after a random amount of time so that it
+service defended in that way after a random amount of time (or after an attack has been detected) so that it
 creates different traffic and response patterns that make impossible
-to identify a node that does a specific service in the network. In
-this sense, we have chosen to work on defending web services (or web
+to identify a node that does a specific service in the network. In our work we have chosen to work on defending web services (or web
 sites) by optimizing the configuration of a web server, following the
-work of \cite{john_evolutionary_2014}, which was one of the first
-evolutionary approaches to this kind of methodology; unlike he did, we
+work of \cite{john_evolutionary_2014}, which was one of the first to apply evolutionary algorithms to evolve web server configurations that can be used in a moving target defense; unlike they did, we
 have chosen the {\sf nginx} static web server and proxy, while he
-focused on the well known Apache web server. Our chose was motivated
+focused on the well known Apache web server. Our choice was motivated
 by the fact that nowadays {\sf nginx} is more popular, and still
-growing in popularity nowadays.
+growing in popularity nowadays; anyway, configuration of web servers is similar in a number of ways and whatever results are obtained can be applied to that or other web servers like Caddy.
 
 In our previous papers \cite{erseco:evostar:anon,erseco:cec}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
