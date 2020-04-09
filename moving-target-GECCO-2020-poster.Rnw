@@ -209,7 +209,8 @@ needed to generate this data can be found in
 \section{Conclusions and discussion}
 \label{sec:conclusions}
 
-The main effect of the new fitness function has been to eliminate
+The main effect of the new fitness that takes into account the
+severity of the vulnerabilities has been to eliminate
 configuration values that created medium-severity vulnerabilities; by making population
 selection depend only on fitness and disregard the rest of the
 chromosome, parameter-level entropy has received a big boost, which
@@ -232,7 +233,7 @@ part is set automatically using optimization algorithms such as this one.
 In this paper we have also found that the baseline secure
 configuration has flaws that do not have anything to do with the
 configuration of the web server. In the future, we will try to expand the
-configuration to the content itself, and also to specific parts of
+optimization to changing the content itself, and also to specific parts of
 this content or how it has been generated. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
