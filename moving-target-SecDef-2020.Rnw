@@ -156,7 +156,7 @@ focused on the well known Apache web server. Our choice was motivated
 by the fact that nowadays {\sf nginx} is more popular, and still
 growing in popularity nowadays; anyway, configuration of web servers is similar in a number of ways and whatever results are obtained can be applied to that or other web servers like Caddy.
 
-In our previous papers \cite{erseco:evostar:anon,erseco:cec}, we realized that one of the main challenges
+In our previous papers \cite{erseco:evostar:anon,erseco:cec,mtd:gecco:anon}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
 in the vulnerabilities exposed by the site, even subtle ones. The
 fitness function we used seemed reasonable, and was simply based in
