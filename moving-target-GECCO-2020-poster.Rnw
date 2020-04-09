@@ -200,36 +200,16 @@ ggplot(data.16,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
-\url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and can
-be reused under a free license.
+\url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and reused under a free license.
 
 \section{Conclusions and discussion}
 \label{sec:conclusions}
 
-% Write conclusions here
-In this paper we have presented an improved evolutionary algorithm
-that generates diverse configurations for the {\sf nginx} server, as a
-showcase of service-level (and, to a certain point, network-level)
-moving target defense. This work has been the result of progressive
-code-level refinement of the evolutionary algorithm, as well as an
-improvement in the selection strategy and the fitness function.
-
-The main effect of changing the fitness function has been to eliminate
-configuration values that created medium-severity vulnerabilities; in
-our previous paper \cite{erseco:cec} all vulnerabilities received the
-same score, and there could be cases where these stayed in the final
-population. But the biggest impact on entropy of the final
-configurations has been achieved by changing the sorting
-algorithm. While in \cite{erseco:cec} final configurations were
-different, parameter-level entropy was small; by making population
+The main effect of the new fitness function has been to eliminate
+configuration values that created medium-severity vulnerabilities; by making population
 selection depend only on fitness and disregard the rest of the
 chromosome, parameter-level entropy has received a big boost, which
-makes the set of configurations defined by this method better. This
-move has had the side effect of keeping diversity high, by introducing
-a random element (the order in which individuals were drawn originally
-from the population) in the selection procedure, something that was
-missing when chromosomes with the same fitness were sorted in
-lexicographical order.
+makes the set of configurations defined by this method much more diverse.
 
 What we have not detected in this work is combinations of
 configuration values that can create a vulnerability; in general, it's
@@ -245,39 +225,11 @@ would not be reasonable. Still, a system with many configuration
 parameters, as many as 700, will improve security if it totally or in
 part is set automatically using optimization algorithms such as this one.
 
-% Future lines of work.
-The main challenge of this kind of problem and solving it with
-evolutionary algorithms is still evaluation speed, so in the immediate future our focus will be on analyzing the different
-parts of the experimental setup so that we can iron out all problems,
-and also attain whatever speed ups can be attained with it, so that
-evaluation can be faster; for instance, we should try and look at a
-way of evaluating several configurations in parallel, and maybe make
-the algorithm asynchronous so that it does not have to wait for a full
-generation before performing its operations. This is one of the main drawbacks of the algorithm right now,
-and although part of it is inherent (it still has to try every single
-page of a site), we could try to achieve faster
-evaluation by using a different web for generating the configuration
-and for deploying the configuration. Using the actual web we are
-testing for evolving
-configurations can be incredibly time-consuming; the use of surrogates
-would speed up evolution, either by creating surrogates of the web
-itself or by trying to make parts of the evaluation via surrogates
-obtained a deep learning algorithm which, besides, should give us some
-insight on the problems created by different features and what predict
-insecure configurations just by looking at them, without the need to
-put up an actual web site.
-
 In this paper we have also found that the baseline secure
 configuration has flaws that do not have anything to do with the
-configuration of the web server. We will try to expand the
+configuration of the web server. In the future, we will try to expand the
 configuration to the content itself, and also to specific parts of
-this content or how it has been generated. We can also extend
-evolutionary MTD to other services, whose configurations can be
-evolved alongside the web server for more variable attack surfaces, or
-even change the web server so that the configuration is even more
-difficult to detect. Addinfg multi-objective evolution so that we
-improve performance alongside security is also something we intend to
-pursue in the future.
+this content or how it has been generated. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
