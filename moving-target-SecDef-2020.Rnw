@@ -759,7 +759,7 @@ entropy, that is, the degree of surprise of a particular element in
 the chromosome: see Figure \ref{fig:component:entropy}
 %
 \begin{figure}[h!tb]
-<<component.entropy, cache=FALSE,echo=FALSE>>=
+<<component_entropy, cache=FALSE,echo=FALSE>>=
 entropy.initial <- read.csv("results/component-entropy-evostar.csv")
 entropy.new <- read.csv("results/component-entropy-sorted.csv")
 entropy.unsorted <- read.csv("results/component-entropy-gecco.csv")
