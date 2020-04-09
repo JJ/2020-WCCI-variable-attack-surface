@@ -12,15 +12,23 @@ has %.initial-pop;
 submethod TWEAK() {
     @!files = dir( $!dir, test => { /^^$prefix/ } );
     for @!files -> $f {
-	say $f;
-	my $key = ($f ~~ /"results_" (\w+) ".txt"/);
-	my @populations = ( $f.IO.slurp ~~ m:g{ ("[(" \d+ .+? "])]") } );
-	my @initial-pop;
-	EVAL "\@initial-pop = " ~ @populations[*-2];
-	%!initial-pop{$key} = @initial-pop;
-	my @final-pop;
-	EVAL "\@final-pop = " ~ @populations[*-1];
-	%!final-pop{$key} = @final-pop;
+		say $f;
+		my $key = ($f ~~ /"results_" (\w+) ".txt"/);
+		my $log = $f.IO.slurp;
+		my $meta = $log ~~ /
+						"genes:" \s+ (\d+) \s+
+						"individuals :" \s+ (\d+) \s
+						"generations:" \s+ (\d+)
+						/;
+		my ($genes, $individuals, $generations ) = $meta[^3];
+		say $genes;
+		my @populations = ( $log ~~ m:g{ ("[(" \d+ .+? "])]") } );
+		my @initial-pop;
+		EVAL "\@initial-pop = " ~ @populations[*-2];
+		%!initial-pop{$key} = @initial-pop;
+		my @final-pop;
+		EVAL "\@final-pop = " ~ @populations[*-1];
+		%!final-pop{$key} = @final-pop;
     }
 }
 
