@@ -9,6 +9,7 @@ has @.fitnesses;
 has %.vulnerabilities;
 has %.final-pop;
 has %.initial-pop;
+has %.meta;
 
 submethod TWEAK() {
     @!files = dir( $!dir, test => { /^^$prefix/ } );
@@ -21,6 +22,7 @@ submethod TWEAK() {
 						"individuals :" \s+ (\d+) \s
 						"generations:" \s+ (\d+)
 						/;
+		%!meta{$f} = $meta;
 		my ($genes, $individuals, $generations ) = $meta[^3];
 		my @generations = $log.split: /\s+ sorted \s+/;
 		@generations.pop; # Last does not include something.
