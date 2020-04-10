@@ -87,20 +87,7 @@ suppressPackageStartupMessages({
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
-Moving target defense is a technique for protecting internet-facing
-systems via the creation of a variable attack surface. In the case of
-internet servers, it can be achieved via the generation of different
-configurations that change the server profile, and that can be
-included in a policy of restarting services with new configurations
-after a random time and with a random frequency. In this paper we will
-present a method based on evolutionary algorithm, that uses
-industry-standard practices to score the vulnerability of a server and
-is designed to generate multiple configurations with optimized score
-in every run of the algorithm. In this paper we will present how this
-is achieved via tuning of the evolutionary algorithm with the
-challenge of the very costly fitness evaluation that only allows for a
-very limited evaluation budget.
+Creating diverse service configurations that can be swiftly swapped is the essence of the so called Moving Target Defense: presenting a different {\em attack surface} for attackers profiling a system for further advances can be applied to many different services and systems. In this paper we focus on using evolutionary algorithms to generate a host of web server configurations. We will prove how evolutionary algorithms provide a supply of secure and diverse configurations, with minimum intervention of experts, even with the added challenge of the time the evaluation of a single system takes.
 \end{abstract}
 
 \begin{CCSXML}
