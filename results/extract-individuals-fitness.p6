@@ -3,5 +3,5 @@
 use My::MTD;
 
 my $mtd-analysis = My::MTD.new( :dir("../code/results/results_2020_02_05/") );
-say $mtd-analysis;
+say $mtd-analysis.vulnerabilities;
 
