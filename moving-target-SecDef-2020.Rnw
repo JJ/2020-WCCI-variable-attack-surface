@@ -642,7 +642,7 @@ sorting algorithm used to sort the solutions and select the best
 ones: previously, we used the default {\tt sorted} Python function,
 which sorts data structures using all the elements of the data
 structure sorted. Since we store chromosomes in a list with two
-elements, the first of which is the fitness (see Figure \ref{fig:chromosome}, and the second  a list
+elements, the first of which is the fitness (see Figure \ref{fig:chromosome}), and the second  a list
 containing the chromosome, the chromosome itself was included in this
 sorting, resulting in selected individuals being similar to each other
 as long as their fitness was exactly the same. However, in this paper
