@@ -161,7 +161,9 @@ def main(individuals_number):
 
     # Evolves the population
     for i in range(generations):
+        print("→→", i)
         population = selection_and_reproduction(population)
+        print("←←")
 
     # Print the results
     print_results(initial_population, population)
