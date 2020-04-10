@@ -21,7 +21,14 @@ submethod TWEAK() {
 						"generations:" \s+ (\d+)
 						/;
 		my ($genes, $individuals, $generations ) = $meta[^3];
-		say $genes;
+		my @generations = $log.split: /\s+ sorted \s+/;
+		my @vulnerabilities-per-generation;
+		for @generations -> $g {
+			my @vulnerabilities = ($g ~~ m:g/\s+("Low"||"Medium"||"High")\s+/);
+			my %these-vulnerabilities;
+			@vulnerabilities.map: { %these-vulnerabilities{$_.trim}++ };
+			@vulnerabilities-per-generation.push: %these-vulnerabilities;
+		}
 		my @populations = ( $log ~~ m:g{ ("[(" \d+ .+? "])]") } );
 		my @initial-pop;
 		EVAL "\@initial-pop = " ~ @populations[*-2];
