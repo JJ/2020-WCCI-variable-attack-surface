@@ -8,7 +8,7 @@ export INDIVIDUALS=$2
 
 for i in `seq $1` ; do
     echo "Running $i execution..."
-    docker-compose exec -T www.exampletfm.com python3 genetic.py --individuals  ${INDIVIDUALS} > results/secdef_${INDIVIDUALS}_$i.txt
+    docker-compose exec -T www.exampletfm.com python3 genetic.py --individuals  ${INDIVIDUALS} > results/secdef/secdef_${INDIVIDUALS}_$i.txt
 
 done
 echo "Finished!"
