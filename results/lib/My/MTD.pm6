@@ -27,12 +27,14 @@ submethod TWEAK() {
 		my @generations = $log.split: /\s+ sorted \s+/;
 		@generations.pop; # Last does not include something.
 		my @vulnerabilities-per-generation;
+		my $t = now;
 		for @generations -> $g {
 			my @vulnerabilities = ($g ~~ m:g/\s+("Low"||"Medium"||"High")\s+/);
 			my %these-vulnerabilities;
 			@vulnerabilities.map: { %these-vulnerabilities{$_.trim}++ };
 			@vulnerabilities-per-generation.push: %these-vulnerabilities;
 		}
+		say now - $t;
 		%!vulnerabilities{$f} = @vulnerabilities-per-generation;
 		my @populations = ( $log ~~ m:g{ ("[(" \d+ .+? "])]") } );
 		my @initial-pop;
