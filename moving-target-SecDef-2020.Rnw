@@ -180,7 +180,7 @@ finishing with our conclusions and future lines of work.
 \label{sec:soa}
 
 
-Moving target defense is a very popular technique, with dozens of
+Moving target defense is a very popular technique, with dozens of new
 papers published every year, including a yearly conference, the
 Workshop on Moving Target Defense; recent surveys include
 \cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}. A
