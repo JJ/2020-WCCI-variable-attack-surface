@@ -157,19 +157,17 @@ finishing with our conclusions and future lines of work.
 \label{sec:soa}
 
 
-Moving target defense is a very popular technique, with dozens of new
+We chose to focus on the moving target defense because it is a very popular technique, with dozens of new
 papers published every year, including a yearly conference, the
 Workshop on Moving Target Defense; recent surveys include
-\cite{Larsen201428,lei2018moving,ward2018survey,cho2019toward}. A
+\cite{Cai2016,Larsen201428,lei2018moving,ward2018survey,cho2019toward,sengupta2020survey,TORQUATO2020101742}. A
 recent survey published by Zheng and Namin \cite{Zheng2019207}
-explains the kind of attacks that MTD can defend against, and also
-explains the concept of entropy as the key measurement of the
-unpredictability of the defense policy. They mention the importance of
-a network-level MTD, but this can be complemented by service-level MTD
+explains the kind of attacks that MTD can defend against and introduces the concept of entropy as the key measurement of the
+unpredictability of the defense policy. The best defense should be done at a network level, but this can be complemented by service-level MTD
 such as the one we propose in this paper.
 
 
-However, we will focus on bioinspired approaches to this methodology; a non-affiliated
+We will be using evolutionary algorithms in this paper, so we will focus on bioinspired approaches to this methodology, which were used from the beginning: a non-affiliated
 bioinspired technique, related to immune systems, was among the first
 ones to be proposed; it was denominated  {\em symbiotic embedded
   machines} (SEM) and was proposed by Cui and Stolfo
@@ -184,15 +182,13 @@ MTD. Lucas et al. in \cite{lucas2014initial} applied those theoretical
 concepts to a framework called EAMT, a Python-based system that uses
 evolutionary algorithms to create new configurations, which are then
 implemented in a virtual machine and scored using scanning tools such
-as Nessus.
+as Nessus. The fact that cyberdefense must evolve with threats makes researchers revisit this kind of model; recently, Ahmed et al. \cite{ahmed2020bio} proposed a similar one for creating diverse virtual machines in a cloud computing environment.x
 
-We will focus specially on the work by John et
-al. \cite{john_evolutionary_2014}, which was also presented at a GECCO
-workshop in 2014. John and coauthors make a more explicit and practical
-use of an evolutionary algorithm, describing a host-level
+Our work has been initially inspired by John et
+al. \cite{john_evolutionary_2014}, which was also presented in the SecDef 2014 workshop. John and coauthors use an evolutionary algoritm for a a host-level
 defense system, that is, one that operates at the level of a single
 node in the network, evolving the configuration of the Apache web
-server using the so called CVSS score \cite{cvss}, a score that is computed from a
+server using the so called CVSS score \cite{cvss}, which is computed from 
 the categories of vulnerabilities detected and how severe they
 are. This is a rich way of quantifying the vulnerability of a system,
 and also gives different ways of improving security; by reducing the
@@ -214,7 +210,7 @@ This work highlighted the need for, first, a practical way of applying the MTD
 to an actual system, to the point of implementing it in a real virtual
 machine, and second, the problematic of scoring the generated
 configurations. In the next section we will explain our proposed
-solutions to these two problems. In our work we will try to apply the
+solutions to these two problems, which was briefly introduced in \cite{mtd:gecco:anon}. In our work we will try to apply the
 methodology to a new server, test it on some real problems, and also
 create as many and as different secure configurations as possible.
 
