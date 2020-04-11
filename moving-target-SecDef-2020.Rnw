@@ -726,7 +726,6 @@ be reused with a free license.
 \section{Conclusions and discussion}
 \label{sec:conclusions}
 
-% Write conclusions here
 In this paper we have presented an improved evolutionary algorithm
 that generates diverse configurations for the {\sf nginx} server, as a
 showcase of service-level (and, to a certain point, network-level)
@@ -750,6 +749,8 @@ a random element (the order in which individuals were drawn originally
 from the population) in the selection procedure, something that was
 missing when chromosomes with the same fitness were sorted in
 lexicographical order.
+
+From the point of view of an evolutionary algorithm, this is not really a hard problem; however, the main challenge is not finding a single solution with the best possible fitness (lowest possible vulnerability), but finding a whole set of them. By using an evolutionary algorithm, once a solution with the minimum amount of low-risk vulnerabilities has been found, new ones can every generation; in a laptop, a generation takes just a few minutes, so there low-vulnerability configurations can be directly used in a moving target defense. This would beat a human operator, since they would still have to run checks; also random generation, since many randomly generated configurations will have to be discarded due to the presence of medium risk or low-level vulnerabilities that can be avoided. 
 
 What we have not detected in this work is combinations of
 configuration values that can create a vulnerability; in general, it's
