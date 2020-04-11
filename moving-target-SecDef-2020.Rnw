@@ -87,7 +87,7 @@ suppressPackageStartupMessages({
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Creating diverse service configurations that can be swiftly swapped is the essence of the so called Moving Target Defense: presenting a different {\em attack surface} for attackers profiling a system for further advances can be applied to many different services and systems. In this paper we focus on using evolutionary algorithms to generate a host of web server configurations. We will prove how evolutionary algorithms provide a supply of secure and diverse configurations, with minimum intervention of experts, even with the added challenge of the time the evaluation of a single system takes.
+Creating diverse service configurations that can be swiftly swapped is the essence of the so called Moving Target Defense: presenting a different {\em attack surface} for attackers profiling a system for further advances can be applied to many different services and systems. In this paper we focus on using evolutionary algorithms to generate a host of web server configurations. Even if this is an easy target for evolutionary algorithms, we will prove how evolutionary algorithms provide a supply of secure and diverse configurations, with minimum intervention of experts, even with the added challenge of the time the evaluation of a single system takes. 
 \end{abstract}
 
 \begin{CCSXML}
@@ -145,30 +145,7 @@ growing in popularity nowadays; anyway, configuration of web servers is similar 
 
 In our previous papers \cite{erseco:evostar:anon,erseco:cec,mtd:gecco:anon}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
-in the vulnerabilities exposed by the site, even subtle ones. The
-fitness function we used seemed reasonable, and was simply based in
-counting the number of alerts raised by ZAP. While this is reasonable,
-there are several problems with this, but from the point of view of an
-evolutionary algorithm with a very limited budget, the main one is
-that most changes in the chromosome will not imply a change in the
-fitness; most importantly, a change in the severity of a particular
-vulnerability will not be counted as such. This paper will be mainly
-devoted to examine a new fitness function, that really takes into
-account the severity of the vulnerability raised. We will try to prove
-that this new fitness function improves the exploitation capabilities
-of the algorithm, obtains more secure configurations, and is also able
-to obtain many more low-vulnerability {\sf nginx} configurations in a
-single run.
-
-Additionally, we have made several piecewise improvements to our
-previous system; we have debugged the configuration extensively to
-ensure they produced only valid values; at the same time, we have
-eliminated invalid values that were introduced originally for testing
-purposes. We have also performed an analysis of the vulnerabilities
-reported, in order to check what is the actual impact of configuration
-changes on them; finally, we have made a small change to the selection
-method to increase the variability of individuals that will be used
-eventually for the variable configuration.
+in the vulnerabilities exposed by the site, even subtle ones. Improving on results published in \ref{mtd:gecco:anon}, that introduced a new fitness function that takes into account severity of vulnerabilities, in this paper we will show how the evolutionary algorithm can provide a steady supply of new configurations by just letting it run for a number of generations. Since the optimum is found in just a few generations, running past the point the whole population has reached zero medium vulnerabilities will provide system administrators or chief security officers with a good amount of secure configurations for their servers.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
