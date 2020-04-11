@@ -496,9 +496,9 @@ result in some low-level vulnerability.
 \subsection{Experimental setup}
 \label{subs:setup}
 
+ This paper uses the same method as described in \cite{mtd:gecco:anon}, where it was omitted for brevity. 
 The most important part of the evolutionary algorithm is designing
-correctly the fitness function that is going to be tested and used.
-A configuration is meaningless without
+correctly the fitness function that is going to be tested and used. A configuration is meaningless without
 content behind, and we need to choose what is going to be the
 content. As in our previous papers
 \cite{erseco:evostar:anon,erseco:cec}, we have used a basic
@@ -607,74 +607,52 @@ first element. When fitness is the same, the chromosomes will be
 maintained in the same random order in which they entered the sort
 algorithm.
 
-
 \subsection{Experimental results}
 \label{subs:results}
 
 First we will test what are the results with the new fitness function,
 as well as the rest of the incremental improvements we made to the
-implementation of the evolutionary moving target defense method.
-%
-\begin{figure}[h!tb]
-<<data, cache=FALSE,echo=FALSE>>=
-old.fitness.data <- read.csv("results/results-gecco-2020-old-fitness.csv")
-old.fitness.data$Experiment <- "Evostar2020"
-new.fitness.badsort.data <- read.csv("results/results-gecco-2020.csv")
-new.fitness.badsort.data$Experiment <- "Initial sorting"
-new.fitness.data <- read.csv("results/results-gecco-2020-ordered.csv")
-new.fitness.data$Experiment <- "Current sorting"
-data <- rbind (old.fitness.data, new.fitness.badsort.data, new.fitness.data)
-ggplot(data,aes(x=Experiment,y=Initial.Avg))+geom_boxplot()+theme_tufte()
-@
-\caption{Boxplot of initial values of fitness for the EvoStar
-  experiment, which used the old fitness and, besides, included
-  invalid configuration values, as well as for the new fitness
-  function used this paper, with or without any kind of sorting. \label{fig:initial:fitness}}
-\end{figure}
-One of the changes introduced in this paper, besides the new fitness
-function, is the fact that there are no invalid configurations
-generated, since all invalid test values have been eliminated from the
-chromosome. The previous experiments showed that eventually those
-values were eliminated from the population, but they were still
-present, adding invalid configurations to the pool of evaluations we
-cannot afford. Figure \ref{fig:initial:fitness} shows a boxplot of the
-value of the initial fitness; the average for the new fitness
-functions, irrespective of sorting used (which has no influence in the
-first one). What it shows is that when invalid configurations were
-used (and scored at 999) the initial average was too high; the values
-now are quite low, and reflect the fact that all configurations are
-valid.
+implementation of the evolutionary moving target defense method. In \cite{mtd:gecco:anon} we published results for a population of 16; however, we expected to obtain better results with a population of 32, since more population implies more diversity.
 
 As in our previous paper, the best fitness obtained is already present
 in an individual in the first generation, so that the evolution
 process consists in eventually {\em filling} the population with
 individuals with this, highest, fitness. The main difference from
 \cite{erseco:evostar:anon,erseco:cec} to this paper is that, in this case,
-there will be no chromosome in the last generation with medium
+there is a very low likelihood of finding a chromosome in the last generation with medium
 vulnerabilities: all of them, thanks to the new fitness designed, have
 low vulnerability, as well as "information-level" vulnerabilities
 which are not really considered in this new fitness. As was the case
-before, 100\% of all chromosomes share this low vulnerability score.
+before, in most cases all chromosomes share this low vulnerability score.
 
-But the real improvement lays in the use of the new sorting function
-to select chromosomes. We represent the average distances in Figure
-\ref{fig:md}.
+We can observe that in Figure \ref{fig:vulnerabilities}.
+%
+\begin{figure}[h!tb]
+<<vulnerabilities, cache=FALSE,echo=FALSE>>=
+data <- read.csv("results/vulnerabilities-per-generation-results-02-05-2020.csv")
+data$individual.medium <- data$Medium / data$Population
+data$individual.low <- data$Low / data$Population
+data$Generation <- as.factor(data$Generation)
+ggplot(data[data$Population==16,],aes(x=Generation))+geom_boxplot(aes(y=individual.medium,color="Medium"))+geom_boxplot(aes(y=individual.low,color="Low"))+theme_tufte()
+ggplot(data[data$Population==32,],aes(x=Generation))+geom_boxplot(aes(y=individual.medium,color="Medium"))+geom_boxplot(aes(y=individual.low,color="Low"))+theme_tufte()
+@
+\caption{Boxplot of the number and class of vulnerabilities across 15 executions of the evolutionary algorithm for population = 16 (top) and 32 (bottom); it shows the average number of medium and low-risk vulnerabilities per generation.}
+  \label{fig:vulnerabilities}
+\end{figure}
+
+This figure, that represents the average across 15 runs, whows how medium-risk vulnerabilities are essentially 0 after the third generation, with more steep descent for the bigger-size population, 32; this proves that using a fitness function based on the type, and not only the number, of vulnerabilities, makes the population reach a low vulnerability score really fast. But the real improvement lays in the use of the new sorting function 
+to select chromosomes. In \cite{mtd:gecco:anon} we have shown that a population of 16 (with 32 generations) is already enough to generate a high variability; here we represent, in Figure \ref{fig:md}, average distances for population equal to 32.
 %
 \begin{figure}[h!tb]
 <<distances, cache=FALSE,echo=FALSE>>=
 data.md <- read.csv("results/mutual-distances-averages-entropy.csv")
-data.16 = data.md[ data.md$Population == 16, ]
 data.32 = data.md[ data.md$Population == 32, ]
-ggplot(data.16,aes(x=Experiment,y=Avg.Distance))+ geom_boxplot() + theme_tufte()
 ggplot(data.32,aes(x=Experiment,y=Avg.Distance))+ geom_boxplot() + theme_tufte()
 @
 \caption{Average mutual distance for individuals in the last
-  generation for experiments with population = 16 (top) and 32
-  (bottom). GECCO labels the ones that use the new sort method, while
+  generation for experiments with population 32. GECCO labels the ones that use the new sort method, while
   "Sorted" uses the same algorithm, but the whole chromosome, not only
-the fitness, is sorted; the data labeled "Evostar" uses the previous
-fitness function, sorted in the same way; this one was not tested with
-population = 32.}
+the fitness, is sorted.}
   \label{fig:md}
 \end{figure}
 %
@@ -684,7 +662,7 @@ change of using a better sorting routine for selection. Average
 distances were very similar before that change, and didn't depend on
 the type of fitness. All that could be affirmed about the previous set
 of solutions was that they were pairwise different; now we can also
-affirm that there's a good average distance between them; this
+affirm that there's a good average distance between them, which makes them much more useful in a MTD context; this
 distance is not normalized, however, and could be dominated by a few
 components whose range is bigger; this is why we have also computed
 the entropy of these distances, charted in Figure
@@ -693,12 +671,10 @@ the list of pairwise distances.
 %
 \begin{figure}[h!tb]
 <<entropy, cache=FALSE,echo=FALSE>>=
-ggplot(data.16,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
 ggplot(data.32,aes(x=Experiment,y=Entropy))+ geom_boxplot() + theme_tufte()
 @
 \caption{Population-level mutual distance entropy for individuals in the last
-  generation for experiments with population = 16 (top) and 32
-  (bottom). Labels as above, with GECCO tagging the ones we have
+  generation for experiments with population 32. Labels as above, with GECCO tagging the ones we have
   proposed in this paper.}
   \label{fig:entropy}
 \end{figure}
@@ -724,12 +700,10 @@ entropy.data <- rbind(entropy.initial, entropy.new, entropy.unsorted)
 
 entropy.data$Population <- substr( entropy.data$File, 16, 17 )
 
-ggplot( entropy.data[entropy.data$Population==16,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
 ggplot( entropy.data[entropy.data$Population==32,], aes(x=Experiment,y=Entropy)) + geom_boxplot()+ theme_tufte()
 @
 \caption{Component-level entropy for individuals in the last
-  generation for experiments with population = 16 (top) and 32
-  (bottom). Labels as above, with GECCO tagging the ones we have
+  generation for experiments with population 32. Labels as above, with GECCO tagging the ones we have
   proposed in this paper.}
   \label{fig:component:entropy}
 \end{figure}
