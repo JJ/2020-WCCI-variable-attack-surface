@@ -45,7 +45,7 @@ suppressPackageStartupMessages({
 })
 @
 
-\title{}
+\title{Delivering diverse web server configuration in a moving target defense using evolutionary algorithms}
 
 %%% The submitted version for review should be ANONYMOUS
 \author{Ben Trovato}
