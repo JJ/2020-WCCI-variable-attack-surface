@@ -145,7 +145,7 @@ growing in popularity nowadays; anyway, configuration of web servers is similar 
 
 In our previous papers \cite{erseco:evostar:anon,erseco:cec,mtd:gecco:anon}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
-in the vulnerabilities exposed by the site, even subtle ones. Improving on results published in \ref{mtd:gecco:anon}, that introduced a new fitness function that takes into account severity of vulnerabilities, in this paper we will show how the evolutionary algorithm can provide a steady supply of new configurations by just letting it run for a number of generations. Since the optimum is found in just a few generations, running past the point the whole population has reached zero medium vulnerabilities will provide system administrators or chief security officers with a good amount of secure configurations for their servers.
+in the vulnerabilities exposed by the site, even subtle ones. Improving on results published in \cite{mtd:gecco:anon}, that introduced a new fitness function that takes into account severity of vulnerabilities, in this paper we will show how the evolutionary algorithm can provide a steady supply of new configurations by just letting it run for a number of generations. Since the optimum is found in just a few generations, running past the point the whole population has reached zero medium vulnerabilities will provide system administrators or chief security officers with a good amount of secure configurations for their servers. Our objective is to run a single evolutionary algorithm, and after a few generations (and minutes) use generated configurations with zero medium vulnerabilities to change configuration in a moving target defense.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
@@ -219,21 +219,17 @@ create as many and as different secure configurations as possible.
 \section{Methodology, experimental setup and results}
 \label{sec:met}
 
-% Maybe rewrite a part of this, expanding if possible - JJ
-
-As in our previous papers \cite{erseco:evostar:anon,erseco:cec}, we have chosen
+As in our previous papers \cite{erseco:evostar:anon,erseco:cec,mtd:gecco:anon}, we have chosen
 {\sf nginx}, a  popular static web server, inverse proxy, API gateway
 and load balancer; we did that because web is one of the most popular
 (and vulnerable) user-facing services, and it has been also used by
 John et al. in their work; that way, we can compare our results.
-
 Latest versions
 of{\sf nginx} (1.17.x) have more than 700 configuration
 directives. As a matter of fact, the performance of {\sf nginx}
 servers has been optimized by  evolutionary algorithms recently
 \cite{chi2018hybrid}; however, we will be focused mainly in its
 vulnerabilities.
-
 
 These directives affect in different ways the behavior of
 the web site (or service) that is behind it, or simply change the
