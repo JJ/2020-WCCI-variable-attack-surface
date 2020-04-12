@@ -185,7 +185,7 @@ implemented in a virtual machine and scored using scanning tools such
 as Nessus. The fact that cyberdefense must evolve with threats makes researchers revisit this kind of model; recently, Ahmed et al. \cite{ahmed2020bio} proposed a similar one for creating diverse virtual machines in a cloud computing environment.x
 
 Our work has been initially inspired by John et
-al. \cite{john_evolutionary_2014}, which was also presented in the SecDef 2014 workshop. John and coauthors use an evolutionary algoritm for a a host-level
+al. \cite{john_evolutionary_2014}, which was also presented in the SecDef 2014 workshop. John and coauthors use an evolutionary algorithm for a a host-level
 defense system, that is, one that operates at the level of a single
 node in the network, evolving the configuration of the Apache web
 server using the so called CVSS score \cite{cvss}, which is computed from 
@@ -642,7 +642,7 @@ ggplot(data[data$Population==32,],aes(x=Generation))+geom_boxplot(aes(y=individu
   \label{fig:vulnerabilities}
 \end{figure}
 
-This figure, that represents the average across 15 runs, whows how medium-risk vulnerabilities are essentially 0 after the third generation, with more steep descent for the bigger-size population, 32; this proves that using a fitness function based on the type, and not only the number, of vulnerabilities, makes the population reach a low vulnerability score really fast. But the real improvement lays in the use of the new sorting function 
+This figure, that represents the average across 15 runs, shows how medium-risk vulnerabilities are essentially 0 after the third generation, with more steep descent for the bigger-size population, 32; this proves that using a fitness function based on the type, and not only the number, of vulnerabilities, makes the population reach a low vulnerability score really fast. But the real improvement lays in the use of the new sorting function 
 to select chromosomes. In \cite{mtd:gecco:anon} we have shown that a population of 16 (with 32 generations) is already enough to generate a high variability; here we represent, in Figure \ref{fig:md}, average distances for population equal to 32.
 %
 \begin{figure}[h!tb]
@@ -760,7 +760,7 @@ itself or by trying to make parts of the evaluation via surrogates
 obtained a deep learning algorithm which, besides, should give us some
 insight on the problems created by different features and what predict
 insecure configurations just by looking at them, without the need to
-put up an actual web site. A static analyzer of the configuration will also void the need for a expensive setun and run by yielding a vulnerability score inmediately. Some applications like {\tt gixy} are able to do that for a limited amount of configurations. 
+put up an actual web site. A static analyzer of the configuration will also void the need for a expensive setup and run by yielding a vulnerability score immediately. Some applications like {\tt gixy} are able to do that for a limited amount of configurations. 
 
 In this paper we have also found that the baseline secure
 configuration has flaws that do not have anything to do with the
