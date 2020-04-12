@@ -736,7 +736,7 @@ improvement in the selection strategy and the fitness function.
 The result of changing the fitness function has been to eliminate
 configuration values that created medium-severity vulnerabilities is that the evolutionary can be used to be run continuously, and provide a steady supply of serviceable configurations in a moving target defense; the key factors to achieving this was, besides using a fitness function that distinguishes low and medium level vulnerabilities, to use a selection procedure that preserves the randomness present in the population in a flat fitness landscape, by not using always the first individuals sorted in some non-changing order, but giving all individuals with the same fitness a chance to reproduce.
 
-This procedure can be generalized to any kind of service, as long as configurations can be evaluated automatically (which they can, most of the times) and optimal configurations can be found with relative ease; keeping the evolutionary algorithm running, and extracting all solutions that are secure, will keep the moving target defense moving, so to say.
+This procedure can be generalized to any kind of service, as long as configurations can be evaluated automatically (which they can, most of the times) and optimal configurations can be found with relative ease; keeping the evolutionary algorithm running, and extracting all solutions that are secure, will keep the moving target defense moving, so to say. In both cases, this will be more efficient that a systematic change (or a random one) by an expert, since new configurations generated are guaranteed to be optimal (at least in most cases in the population).
 
 % Future lines of work.
 The main challenge of this kind of problem and solving it with
