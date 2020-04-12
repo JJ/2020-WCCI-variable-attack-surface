@@ -607,6 +607,8 @@ first element. When fitness is the same, the chromosomes will be
 maintained in the same random order in which they entered the sort
 algorithm.
 
+Performing the experiments consists then in firing up, using docker-compose, the three docker containers used, starting an evolutionary algorithm from one of the containers, and collecting information in a text log file. The logs of all experiments are available, under a free license, from the GitHub repository mentioned above.
+
 \subsection{Experimental results}
 \label{subs:results}
 
