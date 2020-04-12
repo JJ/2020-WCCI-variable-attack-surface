@@ -758,7 +758,7 @@ itself or by trying to make parts of the evaluation via surrogates
 obtained a deep learning algorithm which, besides, should give us some
 insight on the problems created by different features and what predict
 insecure configurations just by looking at them, without the need to
-put up an actual web site.
+put up an actual web site. A static analyzer of the configuration will also void the need for a expensive setun and run by yielding a vulnerability score inmediately. Some applications like {\tt gixy} are able to do that for a limited amount of configurations. 
 
 In this paper we have also found that the baseline secure
 configuration has flaws that do not have anything to do with the
