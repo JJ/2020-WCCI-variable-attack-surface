@@ -1,4 +1,4 @@
-\documentclass[sigconf]{acmart}
+\documentclass[sigconf]{acmart} -*- mode: Latex -*-
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs} % For formal tables
 
@@ -28,7 +28,6 @@ suppressPackageStartupMessages({
 
 \title{Moving target defense through evolutionary algorithms}
 
-%%% The submitted version for review should be ANONYMOUS
 \author{Ernesto Serrano-Collado}
 \affiliation{%
   \institution{University of Granada}

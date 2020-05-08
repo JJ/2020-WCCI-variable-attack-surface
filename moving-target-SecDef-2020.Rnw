@@ -47,42 +47,31 @@ suppressPackageStartupMessages({
 
 \title{Delivering diverse web server configuration in a moving target defense using evolutionary algorithms}
 
-%%% The submitted version for review should be ANONYMOUS
-\author{Ben Trovato}
-\authornote{Dr.~Trovato insisted his name be first.}
-\orcid{1234-5678-9012}
+\author{Ernesto Serrano-Collado}
 \affiliation{%
-  \institution{Institute for Clarity in Documentation}
-  \streetaddress{P.O. Box 1212}
-  \city{Dublin}
-  \state{Ohio}
-  \postcode{43017-6221}
+  \institution{University of Granada}
+  \city{Granada}
+  \country{Spain}
 }
-\email{trovato@corporation.com}
+\email{info@ernesto.es}
 
-\author{G.K.M. Tobin}
-\authornote{The secretary disavows any knowledge of this author's actions.}
+\author{Mario García-Valdez}
 \affiliation{%
-  \institution{Institute for Clarity in Documentation}
-  \streetaddress{P.O. Box 1212}
-  \city{Dublin}
-  \state{Ohio}
-  \postcode{43017-6221}
+  \institution{Instituto Tecnológico de Tijuana}
+  \city{Tijuana, Baja California}
+  \country{Mexico}
 }
-\email{webmaster@marysville-ohio.com}
+\email{mario@tectijuana.edu.mx}
 
-\author{Lars Th{\o}rv{\"a}ld}
-\authornote{This author is the
-  one who did all the really hard work.}
+\author{Juan-Juli\'an Merelo Guerv\'os}
 \affiliation{%
-  \institution{The Th{\o}rv{\"a}ld Group}
-  \streetaddress{1 Th{\o}rv{\"a}ld Circle}
-  \city{Hekla}
-  \country{Iceland}}
-\email{larst@affiliation.org}
+  \institution{University of Granada}
+  \city{Granada}
+  \country{Spain}}
+\email{jmerelo@ugr.es}
 
 % The default list of authors is too long for headers.
-\renewcommand{\shortauthors}{B. Trovato et al.}
+\renewcommand{\shortauthors}{E. Serrano-Collado et al.}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -721,8 +710,7 @@ configuration for {\sf nginx} servers, changing them with high frequency.
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
-% \url{https://github.com/JJ/2020-WCCI-variable-attack-surface}
-\url{https://github.com/anonymous/repo}, and can
+\url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and can
 be reused with a free license.
 
 \section{Conclusions and discussion}
@@ -777,8 +765,7 @@ pursue in the future.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgements}
 
-Hidden for double-blind review
-% This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P).
+This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P).
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{geneura,moving-target}
