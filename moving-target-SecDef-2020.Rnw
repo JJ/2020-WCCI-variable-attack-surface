@@ -276,8 +276,8 @@ equivalent STIG ID is shown in Table
 \ref{table:nginx_directives} along with the range of values for
 generation and ulterior evolution:\begin{itemize}
 \item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
-\item \texttt{keepalive\_timeout}: Period during which a server-side client
-  connection will remain open  before timing out.
+\item \texttt{keepalive\_timeout}: Period during which a server-side
+  connection from a client will remain open  before timing out.
 \item \texttt{disable\_symlinks}: Restricts opening files that are
   actually symbolic links. When set to off (the default), if  some component of the
   path is a symbolic link the access to that file is denied. An
@@ -458,12 +458,13 @@ http {
             index index.html index.htm;
             add_header X-Frame-Options DENY; #
             add_header X-Powered-By PHP/7.2.1; #
-            add_header X-Content-Type-Options nosniff; #
+            add_header X-Content-Type-Options nosniff;
             add_header Server caddy; #
-            add_header X-XSS-Protection "1; mode=block"; #
-            add_header \\
-               Content-Security-Policy "default-src 'self';\\
-               frame-ancestors 'self';";#
+            add_header X-XSS-Protection "1; mode=block";
+            add_header
+               Content-Security-Policy
+                 "default-src 'self';
+                 frame-ancestors 'self';";
         }
     }
 }
