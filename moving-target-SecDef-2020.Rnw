@@ -2,7 +2,7 @@
 \documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs} % For formal tables
-
+\usepackage{balance}
 
 % Copyright
 %\setcopyright{none}
@@ -45,7 +45,7 @@ suppressPackageStartupMessages({
 })
 @
 
-\title{Delivering diverse web server configuration in a moving target defense using evolutionary algorithms}
+\title[Delivering diverse web configurations in a MTD using EAs]{Delivering diverse web server configuration in a moving target defense using evolutionary algorithms}
 
 \author{Ernesto Serrano-Collado}
 \affiliation{%
@@ -54,7 +54,6 @@ suppressPackageStartupMessages({
   \country{Spain}
 }
 \email{info@ernesto.es}
-
 \author{Mario García-Valdez}
 \affiliation{%
   \institution{Instituto Tecnológico de Tijuana}
@@ -103,7 +102,7 @@ Creating diverse service configurations that can be swiftly swapped is the essen
 \ccsdesc[500]{Theory of computation~Evolutionary algorithms}
 \ccsdesc[300]{Computer systems organization~Cloud computing}
 
-\keywords{Security, cyberattacks, performance evaluation, moving
+\keywords{Security, cyber-attacks, performance evaluation, moving
   target defense, evolutionary algorithms, cloud computing, CVSS}
 
 \maketitle
@@ -112,7 +111,7 @@ Creating diverse service configurations that can be swiftly swapped is the essen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
-Defending a system against cyberattacks includes many different
+Defending a system against cyber-attacks includes many different
 techniques; the vulnerability of the system needs to be minimized, a procedure usually called {\em hardening}, which is a problem that can effectively be formulated as an optimization one. A hardened objective might still be attacked, as
 long as the person attacking is able to profile it and try different
 things on it, simultaneously or later on. Avoiding this kind of profiling is the main
@@ -134,7 +133,7 @@ growing in popularity nowadays; anyway, configuration of web servers is similar 
 
 In our previous papers \cite{erseco:evostar,erseco:cec,mtd:gecco}, we realized that one of the main challenges
 was to define a fitness function that would be able to reflect changes
-in the vulnerabilities exposed by the site, even subtle ones. Improving on results published in \cite{mtd:gecco}, that introduced a new fitness function that takes into account severity of vulnerabilities, in this paper we will show how the evolutionary algorithm can provide a steady supply of new configurations by just letting it run for a number of generations. Since the optimum is found in just a few generations, running past the point the whole population has reached zero medium vulnerabilities will provide system administrators or chief security officers with a good amount of secuyre configurations for their servers. Our objective is to run a single evolutionary algorithm, and after a few generations (and minutes) use generated configurations with zero medium vulnerabilities to change configuration in a moving target defense.
+in the vulnerabilities exposed by the site, even subtle ones. Improving on results published in \cite{mtd:gecco}, that introduced a new fitness function that takes into account severity of vulnerabilities, in this paper we will show how the evolutionary algorithm can provide a steady supply of new configurations by just letting it run for a number of generations. Since the optimum is found in just a few generations, running past the point the whole population has reached zero medium vulnerabilities will provide system administrators or chief security officers with a good amount of secure configurations for their servers. Our objective is to run a single evolutionary algorithm, and after a few generations (and minutes) use generated configurations with zero medium vulnerabilities to change configuration in a moving target defense.
 
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
