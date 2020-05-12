@@ -1,4 +1,4 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[conference]{IEEEtran} % -*- mode: LaTeX -*-
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
@@ -134,12 +134,13 @@ this paper.
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
 Section \ref{sec:met} will present the methodology used in this paper,
-followed by the experimental results, which we will discuss in Section \ref{sec:met}
+followed by the experimental results, which we will discuss in Section \ref{sec:res}
 finishing with our conclusions and future lines of work.
 
 \section{State of the art}
 \label{sec:soa}
 
+% This part is different from SecDef, but we need to change the parts that look the same - JJ
 
 MTD was proposed by the first time in 2009 \cite{moving-target} by an
 organism called NITRD as part of an officially sponsored research
@@ -235,6 +236,7 @@ solutions to these two problems.
 \label{sec:met}
 
 % 1. Indicate why nginx has been chosen, refer to other papers and what kind of services they chose and why this is new. This must include also a brief explanation of tables 1 and 2 and what the parameters mean, as well as the possible influence on vulnerability they might have.
+% We need to essentially rewrite this section. Now it's too similar to a paper that has already been acepted. Even if this part does not vary, and it will be published after this one, we really need to rewrite as much as possible - JJ
 
 As in our previous paper \cite{erseco:evostar}, we have chosen
 {\sf nginx}; it's a very popular static web server, which is also used
@@ -255,7 +257,7 @@ results will be presented last in Subsection \ref{subs:results}.
 \subsection{Description of the attack surface parameters}
 
 From all the parameters used to change the behavior of {\sf nginx}, we
-have used fifteen, the same as in out previous paper
+have used fifteen, the same as in the previous paper in this line of work
 \cite{erseco:evostar}; nine of then are {\sf nginx} directives
 (shown in Table \ref{table:nginx_directives}) and 6 are set from the same
 configuration file, but affect HTTP headers (shown in Table
