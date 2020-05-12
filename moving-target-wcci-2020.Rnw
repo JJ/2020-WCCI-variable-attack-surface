@@ -342,29 +342,19 @@ configured via the configuration file. These are
 presented next, with possible values represented in Table \ref{table:http_headers}.
 \begin{itemize}
 \item
-\texttt{X-Frame-Options}: The header that has the same name as this
-directive, when set, bans browsers rendering of frame-embedded pages. Web servers can use it to prevent what are called
-\textit{clickjacking} attacks on their pages, that is, overlaying a
-transparent frame over a site to make users click on the transparent
-layer believing they are clicking on the one below. Several values are
-possible: only allow if the embedding page belongs to the same site,
-for instance, but you can also directly ban it. We have 4 different
-options for this, including a value that's intentionally wrong.
+\texttt{X-Frame-Options}: Tells the browser to don't allow embedding the page
+in HTML frames. This is useful to prevent \textit{clickjacking} attacks where
+the attackers set a malicious transparent overlay layer on top of a real page.
+
 \item
-\texttt{X-Powered-By}: This is a string that is supposed to tell the
-name and versions of the application that generated the response. It
-is generally recommended not giving too extensive information in this
-header because can reveal details that can facilitate the task of
-finding and exploiting security flaws for specific versions just
-looking up in an online database. Setting different values do not affect directly to the
-security by itself but adds entropy to the generated configurations.
+\texttt{X-Powered-By}: This header has a similar behavior as the
+\texttt{server\_tokens} directive. Show the name and version of the application
+that generated the response. Setting different values does not affect directly
+the security by itself but adds entropy to the generated configurations.
 \item
-\texttt{X-Content-Type-Options}: This directive controls the operation
-of the homonym HTTP response header; when set,  changing the \textit{MIME} types
-announced in the `Content-Type' is disabled, which is used to avoid
-`MIME type sniffing' attacks; that is, using what browser's heuristics
-for detecting MIME type from content to launch a cross-site scripting
-attack.
+\texttt{X-Content-Type-Options}: Tells browser the requested document
+\textit{MIME}. This is useful to avoid  `MIME type sniffing' attacks where the
+attacker changes the requested document to do a cross-site scripting attack.
 \item
 \texttt{server}: This directive is related to the {\tt Server} HTTP
 header, which is used to communicate to browsers metadata about the
@@ -378,27 +368,25 @@ directive, along with {\tt X-Powered-By}, are mainly used for
 informative or statistics purposes and do not really change anything
 either in content or how it is rendered by the server.
 \item
-\texttt{X-XSS-Protection}: This directive is used to set the value of
-the corresponding HTTP response header; as the rest of these server
-directives, it's interpreted by browsers and used by them to avoid
-loading pages when they detect reflected cross-site
-scripting (XSS) attacks. % Need to clarify this.
+\texttt{X-XSS-Protection}: This response header was a built-in filter firstly
+released by Microsoft for Internet Explorer and later by Google for Chrome that
+stopped pages from loading when they detect cross-site scripting (XSS) attacks.
+Although this header is unnecessary in today's browsers adds entropy to the
+generated configurations.
 \item
-\texttt{Content-Security-Policy}: we can set this directive to
-different values to avoid the load of certain kind of content. We have
-three different values for this directive, allowing content only if
-it's loaded from the same page ({\tt self}), loading from nowhere
-({\tt none}), or including google domains {\tt hosts:*.google.com}, in
-this case mainly for user tracking. These values are shown in Table \ref{table:http_headers}.
+\texttt{Content-Security-Policy}: This header tells the browser to avoid loading
+of some kind of content. we can set this directive to different values to avoid
+the load of certain kinds of content. We can allow content only if it's loaded
+from the same page ({\tt self}), loading from nowhere ({\tt none}), or including
+a specific domain {\tt hosts:*.example.com}.
 \end{itemize}
 
-The problem of optimizing security in configuration is two fold: some
-of these directives are security-neutral, and do not actually alter
-the security score, they simply add to overall byte-level diversity;
-some of them, by themselves, will make a site more secure; in some
-other cases, it will be its combination what makes it safer. That is
-why a global optimization algorithm is needed to get variable, and
-also secure, attack surface.
+The problem of optimizing security in the configuration is two-fold: some of
+these directives are security-neutral and do not actually alter the security
+score, they simply add to overall byte-level diversity; some of them, by
+themselves, will make a site more secure; in some other cases, it will be its
+combination what makes it safer. That is why a global optimization algorithm is
+needed to get variable, and also secure, attack surface.
 
 \subsection{Experimental setup}
 \label{subs:setup}
