@@ -256,16 +256,15 @@ results will be presented last in Subsection \ref{subs:results}.
 
 \subsection{Description of the attack surface parameters}
 
-From all the parameters used to change the behavior of {\sf nginx}, we
-have used fifteen, the same as in the previous paper in this line of work
-\cite{erseco:evostar}; nine of then are {\sf nginx} directives
-(shown in Table \ref{table:nginx_directives}) and 6 are set from the same
-configuration file, but affect HTTP headers (shown in Table
-\ref{table:http_headers}), which in turn affect how the browser
-receiving the information behaves. This subset is extracted from the DISA STIG recommendations
+From the more than 700 directives available in {\sf nginx} we chosen nine
+(shown in Table \ref{table:nginx_directives}), the same used in a previous
+paper in the same line of work \cite{erseco:evostar}. Also we get from the same
+paper 6 HTTP headers (shown in Table \ref{table:http_headers}), which affects
+how the browser process the received pages.
+This subset of 15 is extracted from the more extense DISA STIG recommendations
 for hardening webservers based in the CVSS score \cite{disa20:apache}. Most of these values
-are defined in the original document as Apache HTTP server configuration values but have a
-{\sf nginx} equivalent directive.
+are defined in the original document as Apache HTTP server configuration values
+but we look for a {\sf nginx} equivalent directive.
 
 \begin{table}
 \centering
@@ -292,41 +291,29 @@ These are the {\sf nginx} directives that have been used in this paper; their
 equivalent STIG ID is shown in Table
 \ref{table:nginx_directives} along with the range of values for
 generation and ulterior evolution:\begin{itemize}
-\item \texttt{worker\_connections}: Maximum number of simultaneous connections that can be opened by an {\sf nginx} process.
-\item \texttt{keepalive\_timeout}: Period during which a server-side client
-  connection will remain open  before timing out.
-\item \texttt{disable\_symlinks}: Restricts opening files that are
-  actually symbolic links. When set to off (the default), if  some component of the
-  path is a symbolic link the access to that file is denied. An
-  additional value, {\tt if\_not\_owner}, is not considered in this study.
-\item \texttt{autoindex}: When activated it shows the contents of the directories, otherwise it does not show anything.
-\item \texttt{send\_timeout}: sets a value for the waiting time to
-  transmit a response to the client; the client will close the
-  connection if nothing is received during that time. It is set by
-  default to 60s, we will disable it completely (setting it to 0) or
-  set it to 1 second.
-\item \texttt{large\_client\_header\_buffers}: This directive has two
-  values: the number of buffers that will read large client request
-  headers, and their size. We just evolve the second number, while the
-  first one is set to 4.
-
+\item \texttt{worker\_connections}: Number of concurrent connections opened per
+each {\sf nginx} process.
+\item \texttt{keepalive\_timeout}: Time to wait for new connections before
+closing the current one.
+\item \texttt{disable\_symlinks}: Allows returning symbolic links as files.
+When off (default value) accessing a file
+that is a symbolic link raises a denied access error.
+\item \texttt{autoindex}: Allows showing a page listing the content of the
+current directory. Set off by default.
+\item \texttt{send\_timeout}: Defines the maximum allowed time to transmit a
+response to the client. 60 seconds by default.
+\item \texttt{large\_client\_header\_buffers}: Number and size of buffers for
+large client requests headers. We are just evolving the size of the buffers,
+leaving a default number of 4 buffers.
 \item
-\texttt{client\_max\_body\_size}: Maximum allowed size of the client request body, specified in the {\tt
-  Content-Length} field of the request header. The value will indicate
-the maximum number of Megabytes allowed. Over that value, requests
-will simply return an error.
+\texttt{client\_max\_body\_size}: The maximum size allowed per a client request
+body. If the client exceed this value the server will return an error.
 
-\item \texttt{server\_tokens}: Enable or disable the broadcast of the {\sf
-  nginx} version on the error pages and in the {\tt Server} response
-header. It's on by default, and we admit on or off values, although the
-directive can also use a {\em build} value and simply a string.
+\item \texttt{server\_tokens}: Return some server info in the {\tt Server}
+response header. By default show the {\sf nginx} version.
 \item
-\texttt{gzip}: This directive enables or disables compression of HTTP
-responses. This directive doesn't affect directly the security but
-adds entropy to the different generated configurations; it also
-affects the performance of the server and its throughput. You can
-additionally use {\tt gzip\_min\_length} to establish the length under
-which there will be no compression.
+\texttt{gzip}: Enables the compression of HTTP responses. It's not a security
+relative directive but adds some entropy to the generated configurations.
 \end{itemize}
 
 \begin{table}
@@ -350,8 +337,8 @@ Content-Security-Policy		   & \shortstack[l]{default-src 'self' \\ default-src '
 
 \end{table}
 %
-The web servers also send a number of headers, whose value can be
-configured from the {\sf nginx} configuration file. These are
+{\sf nginx} sends some HTTP headers, whose value can be
+configured via the configuration file. These are
 presented next, with possible values represented in Table \ref{table:http_headers}.
 \begin{itemize}
 \item
@@ -377,7 +364,7 @@ of the homonym HTTP response header; when set,  changing the \textit{MIME} types
 announced in the `Content-Type' is disabled, which is used to avoid
 `MIME type sniffing' attacks; that is, using what browser's heuristics
 for detecting MIME type from content to launch a cross-site scripting
-attack. 
+attack.
 \item
 \texttt{server}: This directive is related to the {\tt Server} HTTP
 header, which is used to communicate to browsers metadata about the
@@ -450,7 +437,7 @@ it is less secure than a configuration with score equal to
 invalid configuration, as checked by nginx command line.
 
 The evaluation is then performed in the following sequence:\begin{itemize}
-  
+
 \item A new configuration is generated from the evolutionary algorithm
   values and stored in a configuration file with random name. This has
   been introduced in this version, and makes sure that every
@@ -495,7 +482,7 @@ have to use only active scanning, the same as in our previous paper.
 
 
 \begin{figure*}[h!tb]
-  
+
   \includegraphics[width=0.95\linewidth]{fitness-evolution-32-32.png}
   \caption{3D mesh representation of evolution of fitness, with z axis
     representing score (lower is better), $y$ axis representing simply
@@ -654,7 +641,7 @@ configurations that can be used in the movable target defense method,
 and is able to do so in a reasonable amount of time; compared to our
 previous paper, the exploitation of values present in the initial
 population is better, and we are also able to improve initial values
-by some measure. 
+by some measure.
 
 All the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
@@ -711,7 +698,7 @@ ports that are used for the websites we are evaluating.
 But, more interestingly, we will try and expand the range of
 configurations we are using by going beyond initial requirements (used
 in STIG); this will expand the fitness landscape, so we might have to
-find a way of speeding up the evolutionary algorithm. 
+find a way of speeding up the evolutionary algorithm.
 
 Finally, the evolutionary algorithm itself can be improved, by testing different
 types of selection procedures, and tuning its greediness. This is
