@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
-\usepackage{hyperref}
+\usepackage[bookmarks=false]{hyperref}
 \usepackage{balance}
 
 \begin{document}
