@@ -8,6 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{balance}
 
 \begin{document}
 
@@ -695,6 +696,7 @@ something that can be done immediately, and will be one of our next steps.
 
 This paper has been supported in part by projects DeepBio (TIN2017-85727-C4-2-P).
 
+\balance
 \bibliographystyle{IEEEtran}
 \bibliography{geneura,moving-target}
 
