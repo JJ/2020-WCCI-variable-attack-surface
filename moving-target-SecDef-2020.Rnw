@@ -4,19 +4,23 @@
 \usepackage{booktabs} % For formal tables
 \usepackage{balance}
 
-\copyrightyear{2020}
-\acmYear{2020}
-\setcopyright{rightsretained}
-\acmConference[GECCO '20 Companion]{Genetic and Evolutionary Computation Conference Companion}{July 8--12, 2020}{Cancún, Mexico}
-\acmBooktitle{Genetic and Evolutionary Computation Conference Companion (GECCO '20 Companion), July 8--12, 2020, Cancún, Mexico}\acmDOI{10.1145/3377929.3390034}
-\acmISBN{978-1-4503-7127-8/20/07}
-
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{hyperref}
+
+\copyrightyear{2020}
+\acmYear{2020}
+\setcopyright{acmlicensed}\acmConference[GECCO '20 Companion]{Genetic
+and Evolutionary Computation Conference Companion}{July 8--12,
+2020}{Cancún, Mexico}
+\acmBooktitle{Genetic and Evolutionary Computation Conference Companion
+(GECCO '20 Companion), July 8--12, 2020, Cancún, Mexico}
+\acmPrice{15.00}
+\acmDOI{10.1145/3377929.3398083}
+\acmISBN{978-1-4503-7127-8/20/07}
 
 \begin{document}
 
