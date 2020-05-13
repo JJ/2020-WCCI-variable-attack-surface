@@ -261,7 +261,7 @@ From the more than 700 directives available in {\sf nginx} we chose nine
 (shown in Table \ref{table:nginx_directives}), the same used in a previous
 paper in the same line of work \cite{erseco:evostar}. Also we get from the same
 paper 6 HTTP headers (shown in Table \ref{table:http_headers}), a set of directives that affect
-how the browser processes the received pages. They add up a subset of fifteen directives, that also matches a few of the  more extense DISA STIG recommendations
+how the browser processes the received pages. They add up a subset of fifteen directives, that also matches a few of the  more extended DISA STIG recommendations
 for hardening webservers based in the CVSS score \cite{disa20:apache}. Most of these values
 are defined in the original document as Apache HTTP server configuration values
 but we look for the {\sf nginx} equivalent.
@@ -520,7 +520,7 @@ thus, besides performing exploration of the space in a smoother way,
 eliminates invalid individuals from the population in very few
 generations.
 
-The other varioation operator, crossover, will be 2-point crossover,
+The other variation operator, crossover, will be 2-point crossover,
 and it will return a single value, with pieces taken from both
 parents. We have chosen only this one, as opposed to the 1-point
 crossover used in \cite{erseco:evostar}.
