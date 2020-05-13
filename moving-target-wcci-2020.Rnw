@@ -134,8 +134,8 @@ this paper.
 The rest of the paper is organized as follows: next we will present
 the state of the art in evolutionary methods applied to MTD; the next
 Section \ref{sec:met} will present the methodology used in this paper,
-followed by the experimental results, which we will discuss in Section \ref{sec:res}
-finishing with our conclusions and future lines of work.
+followed by the experimental results, 
+finishing with our conclusions (in Section \ref{sec:conclusions} and future lines of work.
 
 \section{State of the art}
 \label{sec:soa}
@@ -286,7 +286,7 @@ work}
 \end{table}
 %
 %
-The {\sf nginx} directives that have been used here paper (as well as in \ref{erseco:evostar} and their equivalent STIG ID are shown in Table
+The {\sf nginx} directives that have been used here paper (as well as in \cite{erseco:evostar}) and their equivalent STIG ID are shown in Table
 \ref{table:nginx_directives} along with the range of values for
 generation and ulterior evolution. They are also described next:
 \begin{itemize}
@@ -629,7 +629,7 @@ previous paper, the exploitation of values present in the initial
 population is better, and we are also able to improve initial values
 by some measure.
 
-All the results of experiments, as well as their code and the scripts
+We are committed to open science and the reproducibility of results, which is why all the results of experiments, as well as their code and the scripts
 needed to generate this data can be found in
 \url{https://github.com/JJ/2020-WCCI-variable-attack-surface}, and can
 be reused with a free license.
