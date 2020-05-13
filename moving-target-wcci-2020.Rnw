@@ -460,7 +460,7 @@ the fitness landscape is flat, and most changes in configuration will
 not result in a change of fitness. But the bigger problem is the
 amount of time passive scanning adds, which makes this way of
 evaluating fitness score totally impracticable. Eventually, we will
-have to use only active scanning, the same as in our previous paper.
+have to use only active scanning, the same as in the initial paper.
 
 
 \begin{figure*}[h!tb]
@@ -504,6 +504,7 @@ a second containing the data structure itself. This speeds sorting of
 the population, since these can simply be sorted by the first element
 in the list.
 
+% Needs rewrite.
 After testing different types of crossover and mutation in our
 previous paper \cite{erseco:evostar} in this paper we have tried to
 simplify; those experiments resulted in any kind of mutation and
@@ -527,6 +528,7 @@ non-fitness-proportional selection, which probably resulted in less
 exploitation of the best results, which is why in this paper we have
 changed that to 2-tournament selection.
 
+% needs rewrite
 All together, every generation, a reproduction pool of the same size
 as the population is created; these are randomly picked in couples,
 crossed and the result mutated, creating a new set of individuals;
