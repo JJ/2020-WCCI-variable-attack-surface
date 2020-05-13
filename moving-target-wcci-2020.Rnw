@@ -256,16 +256,15 @@ results will be presented last in Subsection \ref{subs:results}.
 
 \subsection{Description of the attack surface parameters}
 
-From the more than 700 directives available in {\sf nginx} we chosen nine
+From the more than 700 directives available in {\sf nginx} we chose nine
 (shown in Table \ref{table:nginx_directives}), the same used in a previous
 paper in the same line of work \cite{erseco:evostar}. Also we get from the same
-paper 6 HTTP headers (shown in Table \ref{table:http_headers}), which affects
-how the browser process the received pages.
-This subset of 15 is extracted from the more extense DISA STIG recommendations
+paper 6 HTTP headers (shown in Table \ref{table:http_headers}), a set of directives that affect
+how the browser processes the received pages. They add up a subset of fifteen directives, that also matches a few of the  more extense DISA STIG recommendations
 for hardening webservers based in the CVSS score \cite{disa20:apache}. Most of these values
 are defined in the original document as Apache HTTP server configuration values
-but we look for a {\sf nginx} equivalent directive.
-
+but we look for the {\sf nginx} equivalent.
+%
 \begin{table}
 \centering
 \begin{tabular}{|l|l|c|}
@@ -286,11 +285,11 @@ V-6724  & server\_tokens                 & True/False \\ \hline
 work}
 \end{table}
 %
-
-These are the {\sf nginx} directives that have been used in this paper; their
-equivalent STIG ID is shown in Table
+%
+The {\sf nginx} directives that have been used here paper (as well as in \ref{erseco:evostar} and their equivalent STIG ID are shown in Table
 \ref{table:nginx_directives} along with the range of values for
-generation and ulterior evolution:\begin{itemize}
+generation and ulterior evolution. They are also described next:
+\begin{itemize}
 \item \texttt{worker\_connections}: Number of concurrent connections opened per
 each {\sf nginx} process.
 \item \texttt{keepalive\_timeout}: Time to wait for new connections before
