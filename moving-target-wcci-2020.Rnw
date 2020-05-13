@@ -505,30 +505,41 @@ the population, since these can simply be sorted by the first element
 in the list.
 
 % Needs rewrite.
-After testing different types of crossover and mutation in our
-previous paper \cite{erseco:evostar} in this paper we have tried to
-simplify; those experiments resulted in any kind of mutation and
-crossover being approximately as effective as the next one. However,
-mutation used was too disruptive, and didn't allow for gradual change
-and exploration of the configuration space, so in this case we have
-used a {\em incremental} mutation, that adds or subtracts one from
-current values, and circles back to the opposite end of the range if
-these are exceeded; thus, if the value of the {\tt disable\_symlinks}
-element is 1, it will become 0 no matter what (either if it's added
-one or subtracted one); if the value of {\tt worker\_connections} is
-2048 it will become 512 if it's added one. This guarantees that every
-mutation will result in a different value; also, only one randomly
-chosen value is changed every time.
+In  \cite{erseco:evostar} we made a proof of concept, that resulted in
+the genetic operators having more or less the same influence in the
+final result. However, the mutation operator used was too explorative,
+since it changed a value in a gene by a random one. This contributed
+to a high diversity, which is important and something we are
+interested in, but in the other hand we also need a mutation operator
+with a certain degree of exploitation, so in this paper we have used
+an arithmetic mutation that changes a gene value by $\pm 1$,
+circling back or forward to the value extremes if they are
+reached. This {\em circular} arithmetic operator ensures that the
+values of every chromosome are kept within its allowed range, and
+thus, besides performing exploration of the space in a smoother way,
+eliminates invalid individuals from the population in very few
+generations.
 
-Crossover will be 2-point crossover, and it will return a single
-value, with pieces taken from both parents.
+The other varioation operator, crossover, will be 2-point crossover,
+and it will return a single value, with pieces taken from both
+parents. We have chosen only this one, as opposed to the 1-point
+crossover used in \cite{erseco:evostar}.
 
 While in the previous paper we were using a simple rank-based,
 non-fitness-proportional selection, which probably resulted in less
-exploitation of the best results, which is why in this paper we have
-changed that to 2-tournament selection.
+exploitation of the best results, in this paper we have
+changed that to 2-tournament selection, which increases the selective
+pressure, eliminating invalid individuals more efficiently.
 
-The source for the evolutionary algorithm is open and hosted in the same repository as this paper, with a free license. It follows a standard evolutionary algorithm, with selection via 2-individual tournament, crossover of two randomly picked individuals, followed by mutation. The old and new population are ranked, and just the best individuals are included in the following generation. In this case, we were more focused on how to analyze the fitness of every individual than on the evolutionary algorithm itself, which, in any case, is not facing a hard problem.
+The source for the evolutionary algorithm is open and hosted in the
+same repository as this paper, with a free license. It follows a
+standard evolutionary algorithm, with selection via 2-individual
+tournament, crossover of two randomly picked individuals, followed by
+mutation. The old and new population are ranked, and just the best
+individuals are included in the following generation. In this case, we
+were more focused on how to analyze the fitness of every individual
+than on the evolutionary algorithm itself, which, in any case, is not
+facing a hard problem. 
 
 This evolutionary algorithm should offer better results than the
 previous naive one, so we explored its result by making some test runs
