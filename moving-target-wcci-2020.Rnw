@@ -528,14 +528,7 @@ non-fitness-proportional selection, which probably resulted in less
 exploitation of the best results, which is why in this paper we have
 changed that to 2-tournament selection.
 
-% needs rewrite
-All together, every generation, a reproduction pool of the same size
-as the population is created; these are randomly picked in couples,
-crossed and the result mutated, creating a new set of individuals;
-this new set of individuals is evaluated; the result is merged with
-the previous population, with just the best ones selected to pass to
-the next generation.
-
+The source for the evolutionary algorithm is open and hosted in the same repository as this paper, with a free license. It follows a standard evolutionary algorithm, with selection via 2-individual tournament, crossover of two randomly picked individuals, followed by mutation. The old and new population are ranked, and just the best individuals are included in the following generation. In this case, we were more focused on how to analyze the fitness of every individual than on the evolutionary algorithm itself, which, in any case, is not facing a hard problem.
 
 This evolutionary algorithm should offer better results than the
 previous naive one, so we explored its result by making some test runs
