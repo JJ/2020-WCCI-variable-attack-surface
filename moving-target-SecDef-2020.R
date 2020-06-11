@@ -10,9 +10,10 @@ data <- read.csv("results/vulnerabilities-per-generation-results-02-05-2020.csv"
 data$individual.medium <- data$Medium / data$Population
 data$individual.low <- data$Low / data$Population
 data$Generation <- as.factor(data$Generation)
-ggplot(data[data$Population==16,],aes(x=Generation))+geom_boxplot(aes(y=individual.medium,color="Medium"))+geom_boxplot(aes(y=individual.low,color="Low"))+theme_tufte()
-ggplot(data[data$Population==32,],aes(x=Generation))+geom_boxplot(aes(y=individual.medium,color="Medium"))+geom_boxplot(aes(y=individual.low,color="Low"))+theme_tufte()
-
+ggplot(data[data$Population==16,],aes(x=Generation))+geom_boxplot(aes(y=individual.medium,color="Medium"))+geom_boxplot(aes(y=individual.low,color="Low"))+theme_tufte()+ylab("Number of vulnerabilities")+ scale_x_discrete(name ="Generation", limits=c("0","10","20","30"))+ggtitle("Vulnerabilities, pop = 16")
+ggsave("vulnerabilities-population-16.png",width=1600,height=1200)
+ggplot(data[data$Population==32,],aes(x=Generation))+geom_boxplot(aes(y=individual.medium,color="Medium"))+geom_boxplot(aes(y=individual.low,color="Low"))+theme_tufte()+ylab("Number of vulnerabilities")+ scale_x_discrete(name ="Generation", limits=c("0","10","20","30"))+ggtitle("Vulnerabilities, pop = 32")
+ggsave("vulnerabilities-population-32.png",width=1600,height=1200)
 
 ## ----distances, cache=FALSE,echo=FALSE----------------------------------------
 data.md <- read.csv("results/mutual-distances-averages-entropy.csv")
