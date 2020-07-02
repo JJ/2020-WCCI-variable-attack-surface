@@ -1,6 +1,7 @@
 ## ----setup, cache=FALSE,echo=FALSE--------------------------------------------
 library(ggplot2)
 library(ggthemes)
+library(knitr)
 active.fitness.data <- read.csv("results/initial-fitness.dat")
 experiments.data <- read.csv("results/all_results.csv")
 
