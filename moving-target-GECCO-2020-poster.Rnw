@@ -1,4 +1,4 @@
-\documentclass[sigconf]{acmart} -*- mode: Latex -*-
+\documentclass[sigconf]{acmart}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs} % For formal tables
 
@@ -10,7 +10,7 @@
 \acmBooktitle{Genetic and Evolutionary Computation Conference Companion (GECCO '20 Companion), July 8--12, 2020, Cancún, Mexico}\acmDOI{10.1145/3377929.3390034}
 \acmISBN{978-1-4503-7127-8/20/07}
 
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
