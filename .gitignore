@@ -388,3 +388,6 @@ wordcount
 sftp-config.json
 comment.cut
 
+# RStudio
+
+*.Rproj
